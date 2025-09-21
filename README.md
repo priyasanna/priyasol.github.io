@@ -21,3 +21,5 @@ A professional portfolio showcasing my expertise in AI-augmented test automation
 ## Visit
 
 The portfolio is live at: [https://elamcb.github.io](https://elamcb.github.io)
+
+Connect with me on LinkedIn: [https://linkedin.com/in/elenamereanu](https://linkedin.com/in/elenamereanu)
