@@ -2,13 +2,13 @@
 
 A professional portfolio showcasing my expertise in AI-augmented test automation, QA leadership, and development of robust testing frameworks.
 
-## Features
+## Core Components
 
-- Responsive design that works on desktop and mobile
-- Skills section highlighting technical expertise
-- Project showcase with descriptions and technologies
-- GitHub statistics section
-- Clean, modern UI with smooth animations
+- **Responsive Technical Portfolio**: Mobile-optimized professional presentation
+- **Skills Taxonomy**: AI testing, automation frameworks, and programming languages
+- **Project Demonstrations**: Real-world implementations with technical specifications  
+- **Development Metrics**: GitHub contribution analytics and code activity
+- **Performance Engineered**: Optimized loading and smooth UX interactions
 
 ## Technologies Used
 
