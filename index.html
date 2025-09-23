@@ -162,6 +162,124 @@
             margin-right: 10px;
         }
         
+        .demo-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+        
+        .demo-card {
+            background: #44475a;
+            border-radius: 15px;
+            overflow: hidden;
+            transition: transform 0.3s, box-shadow 0.3s;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            border: 2px solid transparent;
+        }
+        
+        .demo-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+            border-color: var(--secondary);
+        }
+        
+        .demo-header {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+            padding: 1.5rem;
+            text-align: center;
+            color: white;
+        }
+        
+        .demo-header i {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            display: block;
+        }
+        
+        .demo-header h3 {
+            font-size: 1.4rem;
+            margin: 0;
+        }
+        
+        .demo-content {
+            padding: 1.5rem;
+        }
+        
+        .demo-content p {
+            margin-bottom: 1.5rem;
+            color: var(--light);
+        }
+        
+        .demo-example {
+            background: #1e1e2e;
+            padding: 1rem;
+            border-radius: 8px;
+            margin-bottom: 1.5rem;
+            border-left: 4px solid var(--accent);
+        }
+        
+        .demo-example h4 {
+            color: var(--accent);
+            margin-bottom: 0.5rem;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        
+        .demo-example code {
+            background: #2d2b55;
+            color: var(--light);
+            padding: 0.5rem;
+            border-radius: 4px;
+            display: block;
+            margin: 0.5rem 0;
+            font-family: 'Courier New', monospace;
+            font-size: 0.9rem;
+        }
+        
+        .demo-example pre {
+            background: #2d2b55;
+            color: var(--light);
+            padding: 1rem;
+            border-radius: 4px;
+            overflow-x: auto;
+            margin: 0.5rem 0;
+        }
+        
+        .demo-example pre code {
+            background: none;
+            padding: 0;
+            margin: 0;
+        }
+        
+        .demo-example ul {
+            margin: 0.5rem 0;
+            padding-left: 1.5rem;
+        }
+        
+        .demo-example li {
+            color: var(--light);
+            margin-bottom: 0.3rem;
+        }
+        
+        .demo-btn {
+            background: var(--secondary);
+            color: var(--dark);
+            border: none;
+            padding: 0.8rem 1.5rem;
+            border-radius: 25px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s;
+            width: 100%;
+        }
+        
+        .demo-btn:hover {
+            background: #ff92d0;
+            transform: translateY(-2px);
+        }
+        
         .projects-grid {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
@@ -386,6 +504,81 @@
         </div>
     </section>
 
+    <section id="demos">
+        <div class="container">
+            <h2>AI Testing Demos</h2>
+            <div class="demo-grid">
+                <div class="demo-card">
+                    <div class="demo-header">
+                        <i class="fas fa-robot"></i>
+                        <h3>Test Case Generation</h3>
+                    </div>
+                    <div class="demo-content">
+                        <p><strong>Use Case:</strong> Generate comprehensive test cases from user stories</p>
+                        <div class="demo-example">
+                            <h4>Input:</h4>
+                            <code>"As a user, I want to register with email and password"</code>
+                            <h4>AI Output:</h4>
+                            <ul>
+                                <li>Valid email/password registration</li>
+                                <li>Invalid email format validation</li>
+                                <li>Password strength requirements</li>
+                                <li>Duplicate email handling</li>
+                                <li>Email verification flow</li>
+                            </ul>
+                        </div>
+                        <button class="demo-btn" onclick="showPrompt('test-generation')">Try Prompt</button>
+                    </div>
+                </div>
+                
+                <div class="demo-card">
+                    <div class="demo-header">
+                        <i class="fas fa-code"></i>
+                        <h3>Code Generation</h3>
+                    </div>
+                    <div class="demo-content">
+                        <p><strong>Use Case:</strong> Generate Playwright test automation code</p>
+                        <div class="demo-example">
+                            <h4>Input:</h4>
+                            <code>"Test login functionality with valid credentials"</code>
+                            <h4>AI Output:</h4>
+                            <pre><code>test('login with valid credentials', async ({ page }) => {
+  await page.goto('/login');
+  await page.fill('[data-testid="email"]', 'user@example.com');
+  await page.fill('[data-testid="password"]', 'password123');
+  await page.click('[data-testid="login-button"]');
+  await expect(page).toHaveURL('/dashboard');
+});</code></pre>
+                        </div>
+                        <button class="demo-btn" onclick="showPrompt('code-generation')">Try Prompt</button>
+                    </div>
+                </div>
+                
+                <div class="demo-card">
+                    <div class="demo-header">
+                        <i class="fas fa-bug"></i>
+                        <h3>Defect Analysis</h3>
+                    </div>
+                    <div class="demo-content">
+                        <p><strong>Use Case:</strong> Analyze test failures and suggest fixes</p>
+                        <div class="demo-example">
+                            <h4>Input:</h4>
+                            <code>Test failure: Element not found after 5s timeout</code>
+                            <h4>AI Output:</h4>
+                            <ul>
+                                <li>Check if element selector is correct</li>
+                                <li>Verify page load timing</li>
+                                <li>Add explicit wait conditions</li>
+                                <li>Consider dynamic content loading</li>
+                            </ul>
+                        </div>
+                        <button class="demo-btn" onclick="showPrompt('defect-analysis')">Try Prompt</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <section id="projects">
         <div class="container">
             <h2>Featured Projects</h2>
@@ -507,7 +700,7 @@
                 threshold: 0.1
             });
             
-            const elementsToAnimate = document.querySelectorAll('.project-card, .skill-category, .stat-card');
+            const elementsToAnimate = document.querySelectorAll('.project-card, .skill-category, .stat-card, .demo-card');
             elementsToAnimate.forEach(el => {
                 el.style.opacity = 0;
                 el.style.transform = 'translateY(20px)';
@@ -515,6 +708,67 @@
                 observer.observe(el);
             });
         });
+
+        // Demo prompt functionality
+        function showPrompt(type) {
+            const prompts = {
+                'test-generation': `Generate comprehensive test cases for the following user story:
+
+"As a user, I want to register with email and password so I can access the application"
+
+Please include:
+- Happy path scenarios
+- Edge cases and boundary conditions
+- Negative test cases
+- Security considerations
+- Accessibility requirements
+
+Format the output as a structured test plan with test case IDs, descriptions, steps, and expected results.`,
+
+                'code-generation': `Generate Playwright test automation code for the following scenario:
+
+"Test login functionality with valid credentials"
+
+Requirements:
+- Use TypeScript
+- Include proper selectors and data-testid attributes
+- Add explicit waits and assertions
+- Handle error cases
+- Make it maintainable and reusable
+
+Include setup, test execution, and cleanup steps.`,
+
+                'defect-analysis': `Analyze the following test failure and provide debugging suggestions:
+
+"Test failure: Element not found after 5s timeout"
+
+Please provide:
+- Root cause analysis
+- Debugging steps to identify the issue
+- Potential fixes and improvements
+- Prevention strategies for similar issues
+- Code examples for better element handling
+
+Consider timing issues, selector problems, and dynamic content loading.`
+            };
+
+            const prompt = prompts[type];
+            if (prompt) {
+                // Copy to clipboard
+                navigator.clipboard.writeText(prompt).then(() => {
+                    alert('Prompt copied to clipboard! You can now paste it into your AI tool.');
+                }).catch(() => {
+                    // Fallback for older browsers
+                    const textArea = document.createElement('textarea');
+                    textArea.value = prompt;
+                    document.body.appendChild(textArea);
+                    textArea.select();
+                    document.execCommand('copy');
+                    document.body.removeChild(textArea);
+                    alert('Prompt copied to clipboard! You can now paste it into your AI tool.');
+                });
+            }
+        }
     </script>
 </body>
 </html>
