@@ -54,11 +54,21 @@
             height: 150px;
             border-radius: 50%;
             border: 4px solid var(--accent);
-            object-fit: cover;
-            background-color: #44475a;
+            overflow: hidden;
             display: flex;
             align-items: center;
             justify-content: center;
+            background-color: #44475a;
+        }
+        
+        .profile-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 50%;
+        }
+        
+        .profile-img i {
             color: var(--accent);
             font-size: 3rem;
         }
@@ -466,14 +476,13 @@
         <div class="container">
             <div class="profile">
                 <div class="profile-img">
-                    <i class="fas fa-user"></i>
+                    <img src="./images/profile.jpg" alt="Ela MCB - QA Lead" />
                 </div>
                 <h1>Ela MCB</h1>
                 <p class="tagline">QA Lead Specializing in AI-Augmented Test Automation</p>
                 <div class="social-links">
                     <a href="https://github.com/ElaMCB" target="_blank"><i class="fab fa-github"></i></a>
-                    <a href="https://linkedin.com/in/yourprofile" target="_blank"><i class="fab fa-linkedin"></i></a>
-                    <a href="https://twitter.com/yourprofile" target="_blank"><i class="fab fa-twitter"></i></a>
+                    <a href="https://linkedin.com/in/elenamereanu" target="_blank"><i class="fab fa-linkedin"></i></a>
                 </div>
             </div>
         </div>
