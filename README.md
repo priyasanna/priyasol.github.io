@@ -34,14 +34,6 @@ A real-world demonstration of AI-powered automation for job searching and career
 - **Key Features**: Intelligent job matching, application tracking, interview analytics, resume optimization
 - **Results**: 60% reduction in job search time, improved application quality and targeting
 
-## Technologies Used
-
-- HTML5
-- CSS3 with Flexbox and Grid
-- JavaScript (for animations)
-- Font Awesome icons
-- GitHub Pages for hosting
-
 ## QA & SDET AI Prompt Library
 
 This repository also includes a collection of AI prompts designed for Quality Assurance Engineers and SDETs:
