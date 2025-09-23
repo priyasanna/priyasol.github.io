@@ -10,9 +10,9 @@
 
 A professional portfolio showcasing my expertise in AI-augmented test automation, QA leadership, and development of robust testing frameworks.
 
-🌐 **Live Site**: [https://elamcb.github.io](https://elamcb.github.io)
+**Live Site**: [https://elamcb.github.io](https://elamcb.github.io)
 
-## 📸 Preview
+## Preview
 
 ![Portfolio Preview](./screenshots/desktop-hero.png)
 *Professional portfolio showcasing AI-augmented testing expertise*
@@ -53,43 +53,43 @@ This repository also includes a collection of AI prompts designed for Quality As
 - **[Mobile Testing Prompts](./qa-prompts/prompts/mobile-testing.md)** - Native and mobile web testing
 - **[Example Outputs](./qa-prompts/examples/sample-outputs.md)** - Sample AI responses using these prompts
 
-## 📁 Project Structure
+## Project Structure
 
 ```
-📁 Portfolio Repository
-├── 📄 index.html                    # Main portfolio website
-├── 📄 README.md                     # Project documentation
-├── 📁 .github/workflows/            # CI/CD automation
-├── 📁 docs/                         # Detailed documentation
-│   ├── 📄 ARCHITECTURE.md           # Technical architecture
-│   └── 📄 FEATURES.md               # Feature documentation
-├── 📁 images/                       # Visual assets
-│   └── 📄 profile.jpg               # Professional profile photo
-├── 📁 screenshots/                  # Portfolio screenshots
-├── 📁 scripts/                      # Setup and validation scripts
-├── 📁 job-search-automation/        # Featured project
-│   ├── 📄 README.md                 # Project documentation
-│   ├── 📄 demo-screenshots.md       # Visual demonstrations
-│   └── 📄 ethical-automation-guide.md # Best practices guide
-└── 📁 qa-prompts/                   # QA & SDET AI Prompt Library
-    ├── 📄 README.md                 # Library documentation
-    ├── 📁 prompts/                  # Organized prompt categories
-    │   ├── 📄 test-generation.md    # Test case creation
-    │   ├── 📄 code-generation.md    # Framework automation
-    │   ├── 📄 api-testing.md        # API testing prompts
-    │   └── 📄 mobile-testing.md     # Mobile testing prompts
-    └── 📁 examples/                 # Sample AI outputs
-        └── 📄 sample-outputs.md     # Example responses
+Portfolio Repository/
+├── index.html                    # Main portfolio website
+├── README.md                     # Project documentation
+├── .github/workflows/            # CI/CD automation
+├── docs/                         # Detailed documentation
+│   ├── ARCHITECTURE.md           # Technical architecture
+│   └── FEATURES.md               # Feature documentation
+├── images/                       # Visual assets
+│   └── profile.jpg               # Professional profile photo
+├── screenshots/                  # Portfolio screenshots
+├── scripts/                      # Setup and validation scripts
+├── job-search-automation/        # Featured project
+│   ├── README.md                 # Project documentation
+│   ├── demo-screenshots.md       # Visual demonstrations
+│   └── ethical-automation-guide.md # Best practices guide
+└── qa-prompts/                   # QA & SDET AI Prompt Library
+    ├── README.md                 # Library documentation
+    ├── prompts/                  # Organized prompt categories
+    │   ├── test-generation.md    # Test case creation
+    │   ├── code-generation.md    # Framework automation
+    │   ├── api-testing.md        # API testing prompts
+    │   └── mobile-testing.md     # Mobile testing prompts
+    └── examples/                 # Sample AI outputs
+        └── sample-outputs.md     # Example responses
 ```
 
-## 🚀 Quick Start
+## Quick Start
 
 1. **View Live**: Visit [https://elamcb.github.io](https://elamcb.github.io)
 2. **Explore Locally**: Clone and open `index.html` in your browser
 3. **Run Validation**: Use `node scripts/validate.js` to check project integrity
 4. **Read Documentation**: Check the `docs/` folder for detailed information
 
-## 📞 Contact
+## Contact
 
 **Portfolio**: [https://elamcb.github.io](https://elamcb.github.io)  
 **LinkedIn**: [https://linkedin.com/in/elenamereanu](https://linkedin.com/in/elenamereanu)  
