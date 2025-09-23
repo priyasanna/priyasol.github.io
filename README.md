@@ -18,6 +18,17 @@ A professional portfolio showcasing my expertise in AI-augmented test automation
 - Font Awesome icons
 - GitHub Pages for hosting
 
+## QA & SDET AI Prompt Library
+
+This repository also includes a collection of AI prompts designed for Quality Assurance Engineers and SDETs:
+
+- **[QA Prompts Library](./qa-prompts/)** - Organized collection of AI prompts for testing workflows
+- **[Test Generation Prompts](./qa-prompts/prompts/test-generation.md)** - Convert user stories to test cases
+- **[Code Generation Prompts](./qa-prompts/prompts/code-generation.md)** - Automate test framework setup
+- **[API Testing Prompts](./qa-prompts/prompts/api-testing.md)** - REST API and GraphQL testing
+- **[Mobile Testing Prompts](./qa-prompts/prompts/mobile-testing.md)** - Native and mobile web testing
+- **[Example Outputs](./qa-prompts/examples/sample-outputs.md)** - Sample AI responses using these prompts
+
 ## Visit
 
 The portfolio is live at: [https://elamcb.github.io](https://elamcb.github.io)
