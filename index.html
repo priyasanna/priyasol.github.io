@@ -89,45 +89,185 @@
             display: flex;
             flex-direction: column;
             align-items: center;
-            gap: 1rem;
+            gap: 1.5rem;
+            position: relative;
+        }
+        
+        .profile::before {
+            content: '';
+            position: absolute;
+            top: -20px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 300px;
+            height: 2px;
+            background: linear-gradient(90deg, 
+                transparent 0%, 
+                var(--neon-blue) 20%, 
+                var(--neon-purple) 50%, 
+                var(--neon-blue) 80%, 
+                transparent 100%);
+            animation: scanLine 2s ease-in-out infinite;
+        }
+        
+        .profile::after {
+            content: '';
+            position: absolute;
+            bottom: -20px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 300px;
+            height: 2px;
+            background: linear-gradient(90deg, 
+                transparent 0%, 
+                var(--neon-blue) 20%, 
+                var(--neon-purple) 50%, 
+                var(--neon-blue) 80%, 
+                transparent 100%);
+            animation: scanLine 2s ease-in-out infinite reverse;
+        }
+        
+        @keyframes scanLine {
+            0%, 100% { opacity: 0.3; }
+            50% { opacity: 1; }
         }
         
         .profile-img {
-            width: 150px;
-            height: 150px;
-            border-radius: 50%;
-            border: 3px solid var(--neon-blue);
-            overflow: hidden;
+            width: 180px;
+            height: 180px;
+            position: relative;
             display: flex;
             align-items: center;
             justify-content: center;
-            background: var(--card-bg);
-            box-shadow: 
-                0 0 20px rgba(0, 245, 255, 0.5),
-                inset 0 0 20px rgba(0, 245, 255, 0.1);
-            position: relative;
+            background: linear-gradient(135deg, 
+                rgba(15, 15, 23, 0.95) 0%, 
+                rgba(30, 30, 45, 0.95) 50%, 
+                rgba(15, 15, 23, 0.95) 100%);
+            clip-path: polygon(
+                20% 0%, 80% 0%, 100% 20%, 100% 80%, 
+                80% 100%, 20% 100%, 0% 80%, 0% 20%
+            );
+            overflow: hidden;
         }
         
         .profile-img::before {
             content: '';
             position: absolute;
-            inset: -2px;
-            border-radius: 50%;
-            background: conic-gradient(from 0deg, var(--neon-blue), var(--neon-purple), var(--neon-blue));
+            inset: 0;
+            background: linear-gradient(45deg, 
+                var(--neon-blue) 0%, 
+                transparent 20%, 
+                transparent 80%, 
+                var(--neon-purple) 100%);
+            clip-path: polygon(
+                20% 0%, 80% 0%, 100% 20%, 100% 80%, 
+                80% 100%, 20% 100%, 0% 80%, 0% 20%
+            );
             z-index: -1;
-            animation: rotate 4s linear infinite;
+            animation: energyFlow 3s ease-in-out infinite;
         }
         
-        @keyframes rotate {
-            0% { transform: rotate(0deg); }
-            100% { transform: rotate(360deg); }
+        .profile-img::after {
+            content: '';
+            position: absolute;
+            inset: 2px;
+            background: linear-gradient(135deg, 
+                rgba(0, 245, 255, 0.1) 0%, 
+                rgba(191, 0, 255, 0.05) 50%, 
+                rgba(0, 245, 255, 0.1) 100%);
+            clip-path: polygon(
+                20% 0%, 80% 0%, 100% 20%, 100% 80%, 
+                80% 100%, 20% 100%, 0% 80%, 0% 20%
+            );
+            z-index: -1;
+        }
+        
+        .profile-frame {
+            position: absolute;
+            inset: -4px;
+            background: linear-gradient(45deg, 
+                rgba(0, 245, 255, 0.8) 0%, 
+                rgba(120, 58, 237, 0.6) 25%,
+                rgba(191, 0, 255, 0.8) 50%,
+                rgba(120, 58, 237, 0.6) 75%,
+                rgba(0, 245, 255, 0.8) 100%);
+            clip-path: polygon(
+                20% 0%, 80% 0%, 100% 20%, 100% 80%, 
+                80% 100%, 20% 100%, 0% 80%, 0% 20%
+            );
+            z-index: -2;
+            animation: frameGlow 4s linear infinite;
+        }
+        
+        .profile-corners {
+            position: absolute;
+            inset: -8px;
+            z-index: -3;
+        }
+        
+        .profile-corners::before,
+        .profile-corners::after {
+            content: '';
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            border: 2px solid var(--neon-blue);
+            background: rgba(0, 245, 255, 0.1);
+        }
+        
+        .profile-corners::before {
+            top: 0;
+            left: 0;
+            border-right: none;
+            border-bottom: none;
+            clip-path: polygon(0 0, 100% 0, 0 100%);
+        }
+        
+        .profile-corners::after {
+            bottom: 0;
+            right: 0;
+            border-left: none;
+            border-top: none;
+            clip-path: polygon(100% 0, 100% 100%, 0 100%);
+        }
+        
+        @keyframes energyFlow {
+            0%, 100% { 
+                background: linear-gradient(45deg, 
+                    var(--neon-blue) 0%, 
+                    transparent 20%, 
+                    transparent 80%, 
+                    var(--neon-purple) 100%);
+            }
+            50% { 
+                background: linear-gradient(45deg, 
+                    var(--neon-purple) 0%, 
+                    transparent 20%, 
+                    transparent 80%, 
+                    var(--neon-blue) 100%);
+            }
+        }
+        
+        @keyframes frameGlow {
+            0%, 100% { 
+                opacity: 0.8;
+                filter: blur(1px);
+            }
+            50% { 
+                opacity: 1;
+                filter: blur(2px);
+            }
         }
         
         .profile-img img {
-            width: 100%;
-            height: 100%;
+            width: calc(100% - 8px);
+            height: calc(100% - 8px);
             object-fit: cover;
-            border-radius: 50%;
+            clip-path: polygon(
+                20% 0%, 80% 0%, 100% 20%, 100% 80%, 
+                80% 100%, 20% 100%, 0% 80%, 0% 20%
+            );
+            filter: brightness(1.1) contrast(1.1);
         }
         
         .profile-img i {
@@ -640,6 +780,8 @@
         <div class="container">
             <div class="profile">
                 <div class="profile-img">
+                    <div class="profile-frame"></div>
+                    <div class="profile-corners"></div>
                     <img src="./images/profile.jpg" alt="Ela MCB - QA Lead">
                 </div>
                 <h1>Ela MCB</h1>
