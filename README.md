@@ -25,14 +25,19 @@ A professional portfolio showcasing my expertise in AI-augmented test automation
 - **Development Metrics**: GitHub contribution analytics and code activity
 - **Performance Engineered**: Optimized loading and smooth UX interactions
 
-## Featured Project: Job Search Automation Suite
+## Featured Projects
 
+### Job Search Automation Suite
 A real-world demonstration of AI-powered automation for job searching and career management:
-
-- **[Job Search Automation Suite](./job-search-automation/)** - Ethical automation system with 85% job matching accuracy
+- **[Project Details](./job-search-automation/)** - Ethical automation system with 85% job matching accuracy
 - **Technology Stack**: Python, Playwright, AI/ML, React/TypeScript
-- **Key Features**: Intelligent job matching, application tracking, interview analytics, resume optimization
 - **Results**: 60% reduction in job search time, improved application quality and targeting
+
+### Algorithmic Trading System
+A systematic quantitative trading strategy demonstrating financial analysis and risk management:
+- **[Strategy Details](./algorithmic-trading/)** - Mean reversion trading with automated backtesting
+- **Technology Stack**: Python, pandas, Statistical Analysis, Risk Management
+- **Performance**: +127% total return, 1.67 Sharpe ratio, 64% win rate
 
 ## QA & SDET AI Prompt Library
 
@@ -59,10 +64,13 @@ Portfolio Repository/
 │   └── profile.jpg               # Professional profile photo
 ├── screenshots/                  # Portfolio screenshots
 ├── scripts/                      # Setup and validation scripts
-├── job-search-automation/        # Featured project
+├── job-search-automation/        # AI automation project
 │   ├── README.md                 # Project documentation
 │   ├── demo-screenshots.md       # Visual demonstrations
 │   └── ethical-automation-guide.md # Best practices guide
+├── algorithmic-trading/          # Quantitative trading project
+│   ├── README.md                 # Strategy overview and results
+│   └── strategy-implementation.md # Technical implementation
 └── qa-prompts/                   # QA & SDET AI Prompt Library
     ├── README.md                 # Library documentation
     ├── prompts/                  # Organized prompt categories
