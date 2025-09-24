@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ela MCB - QA & AI Test Automation Specialist</title>
+    <title>Ela MCB - QA &amp; AI Test Automation Specialist</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         :root {
@@ -476,13 +476,13 @@
         <div class="container">
             <div class="profile">
                 <div class="profile-img">
-                    <img src="./images/profile.jpg" alt="Ela MCB - QA Lead" />
+                    <img src="./images/profile.jpg" alt="Ela MCB - QA Lead">
                 </div>
                 <h1>Ela MCB</h1>
                 <p class="tagline">QA Lead Specializing in AI-Augmented Test Automation</p>
                 <div class="social-links">
-                    <a href="https://github.com/ElaMCB" target="_blank"><i class="fab fa-github"></i></a>
-                    <a href="https://linkedin.com/in/elenamereanu" target="_blank"><i class="fab fa-linkedin"></i></a>
+                    <a href="https://github.com/ElaMCB" target="_blank" aria-label="GitHub Profile"><i class="fab fa-github"></i></a>
+                    <a href="https://linkedin.com/in/elenamereanu" target="_blank" aria-label="LinkedIn Profile"><i class="fab fa-linkedin"></i></a>
                 </div>
             </div>
         </div>
@@ -562,7 +562,7 @@
                                 <li>Email verification flow</li>
                             </ul>
                         </div>
-                        <button class="demo-btn" onclick="showPrompt('test-generation')">Try Prompt</button>
+                        <button type="button" class="demo-btn" onclick="showPrompt('test-generation')">Try Prompt</button>
                     </div>
                 </div>
                 
@@ -577,7 +577,7 @@
                             <h4>Input:</h4>
                             <code>"Test login functionality with valid credentials"</code>
                             <h4>AI Output:</h4>
-                            <pre><code>test('login with valid credentials', async ({ page }) => {
+                            <pre><code>test('login with valid credentials', async ({ page }) =&gt; {
   await page.goto('/login');
   await page.fill('[data-testid="email"]', 'user@example.com');
   await page.fill('[data-testid="password"]', 'password123');
@@ -585,7 +585,7 @@
   await expect(page).toHaveURL('/dashboard');
 });</code></pre>
                         </div>
-                        <button class="demo-btn" onclick="showPrompt('code-generation')">Try Prompt</button>
+                        <button type="button" class="demo-btn" onclick="showPrompt('code-generation')">Try Prompt</button>
                     </div>
                 </div>
                 
@@ -607,7 +607,7 @@
                                 <li>Consider dynamic content loading</li>
                             </ul>
                         </div>
-                        <button class="demo-btn" onclick="showPrompt('defect-analysis')">Try Prompt</button>
+                        <button type="button" class="demo-btn" onclick="showPrompt('defect-analysis')">Try Prompt</button>
                     </div>
                 </div>
             </div>

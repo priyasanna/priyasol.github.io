@@ -8,7 +8,7 @@
 ![Playwright](https://img.shields.io/badge/Playwright-2EAD33?style=flat-square&logo=playwright&logoColor=white)
 ![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?style=flat-square&logo=typescript&logoColor=white)
 
-A professional portfolio showcasing my expertise in AI-augmented test automation, QA leadership, and development of robust testing frameworks.
+ My expertise in AI-augmented test automation, QA leadership, and development of robust testing frameworks.
 
 **Live Site**: [https://elamcb.github.io](https://elamcb.github.io)
 
