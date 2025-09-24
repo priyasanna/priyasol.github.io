@@ -315,6 +315,18 @@
             z-index: 10;
         }
         
+        .profile .subtitle {
+            font-size: 1.4rem;
+            font-weight: 700;
+            color: var(--neon-blue);
+            margin-bottom: 0.8rem;
+            text-shadow: 
+                1px 1px 4px rgba(0, 0, 0, 0.8),
+                0 0 10px rgba(0, 245, 255, 0.4);
+            position: relative;
+            z-index: 10;
+        }
+        
         .tagline {
             font-size: 2.5rem;
             font-weight: 900;
@@ -949,7 +961,8 @@
                     <img src="./images/profile.jpg" alt="Ela MCB - QA Lead">
                 </div>
                 <h1>Ela MCB</h1>
-                <p class="tagline">AI-First</p>
+                <h2 class="subtitle">AI-First Quality Engineer</h2>
+                <p class="tagline">Building the Validation Layer for Trustworthy AI Systems</p>
                 <div class="social-links">
                     <a href="https://github.com/ElaMCB" target="_blank" aria-label="GitHub Profile"><i class="fab fa-github"></i></a>
                     <a href="https://linkedin.com/in/elenamereanu" target="_blank" aria-label="LinkedIn Profile"><i class="fab fa-linkedin"></i></a>
@@ -963,9 +976,9 @@
                     <h2 data-text="About Me">About Me</h2>
             <div class="about-content">
                 <div class="about-text">
-                    <p>I'm a QA Lead with expertise in AI-augmented test automation, passionate about leveraging cutting-edge technologies to improve software quality and testing efficiency.</p>
-                    <p>With experience in TypeScript, Python, and modern testing frameworks, I specialize in creating robust test automation solutions that integrate AI capabilities for test generation, execution, and analysis.</p>
-                    <p>My focus is on developing intelligent testing systems that can adapt to complex applications and reduce maintenance overhead while increasing test coverage and reliability.</p>
+                    <p>I am an AI-First Quality Engineer dedicated to solving the fundamental challenge of reliability in generative AI and LLM applications. My expertise lies in building validation frameworks that ensure AI systems are safe, accurate, and trustworthy before they reach production.</p>
+                    <p>Specializing in LLM Testing, AI Model Validation, Prompt Engineering, and AI Safety protocols, I create systematic approaches to test the unpredictable nature of AI systems. My frameworks catch hallucinations, prevent prompt injections, and measure model drift before they impact users.</p>
+                    <p>My mission is to be the quality assurance layer that AI companies need but often overlook - ensuring their innovative systems don't embarrass them, lose customers, or create liability issues.</p>
                 </div>
             </div>
         </div>
@@ -1011,28 +1024,31 @@
 
     <section id="demos">
         <div class="container">
-                    <h2 data-text="AI Testing Demos">AI Testing Demos</h2>
+                    <h2 data-text="Real AI Projects">Real AI Projects</h2>
             <div class="demo-grid">
                 <div class="demo-card">
                     <div class="demo-header">
-                        <i class="fas fa-robot"></i>
-                        <h3>Test Case Generation</h3>
+                        <i class="fas fa-shield-alt"></i>
+                        <h3>LLMGuardian Testing Framework</h3>
                     </div>
                     <div class="demo-content">
-                        <p><strong>Use Case:</strong> Generate comprehensive test cases from user stories</p>
+                        <p><strong>Production Framework:</strong> Systematic LLM validation, safety testing, and performance monitoring</p>
                         <div class="demo-example">
-                            <h4>Input:</h4>
-                            <code>"As a user, I want to register with email and password"</code>
-                            <h4>AI Output:</h4>
+                            <h4>Real Capabilities:</h4>
                             <ul>
-                                <li>Valid email/password registration</li>
-                                <li>Invalid email format validation</li>
-                                <li>Password strength requirements</li>
-                                <li>Duplicate email handling</li>
-                                <li>Email verification flow</li>
+                                <li>Tests 100+ prompt/response pairs across LLM providers</li>
+                                <li>Measures accuracy, toxicity, and bias automatically</li>
+                                <li>Detects hallucinations and factual errors</li>
+                                <li>Prevents prompt injection attacks</li>
+                                <li>CI/CD pipeline integration for continuous testing</li>
                             </ul>
+                            <h4>Recent Results:</h4>
+                            <code>Math Accuracy: 94% | Safety Score: 87% | Overall: 91%</code>
                         </div>
-                        <button type="button" class="demo-btn" onclick="showPrompt('test-generation')">Try Prompt</button>
+                        <div class="project-links">
+                            <a href="https://github.com/ElaMCB/llm-guardian" target="_blank"><i class="fab fa-github"></i> View Code</a>
+                            <a href="#llm-demo"><i class="fas fa-play"></i> Live Demo</a>
+                        </div>
                     </div>
                 </div>
 
