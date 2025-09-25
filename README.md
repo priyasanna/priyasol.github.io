@@ -8,7 +8,7 @@
 ![Playwright](https://img.shields.io/badge/Playwright-2EAD33?style=flat-square&logo=playwright&logoColor=white)
 ![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?style=flat-square&logo=typescript&logoColor=white)
 
- My expertise in AI-augmented test automation, QA leadership, and development of robust testing frameworks.
+A professional portfolio showcasing my expertise as an AI-First Quality Engineer, specializing in LLM testing frameworks, RAG implementations, and advanced AI validation systems.
 
 **Live Site**: [https://elamcb.github.io](https://elamcb.github.io)
 
@@ -26,6 +26,13 @@
 - **Performance Engineered**: Optimized loading and smooth UX interactions
 
 ## Featured Projects
+
+### LLMGuardian - AI Testing Framework
+A production-ready framework for validating Large Language Models for safety, accuracy, and reliability:
+- **[Project Documentation](./llm-guardian/)** - Flagship LLM testing framework with RAG, MCP, and advanced reasoning
+- **[Live Demo](./llm-guardian/demo.html)** - Interactive demonstrations of AI validation capabilities
+- **Technology Stack**: JavaScript/Node.js, AI/ML APIs, RAG, MCP, Advanced Reasoning
+- **Real Results**: Caught 23% accuracy degradation, prevented 3 critical safety violations, 60% faster testing
 
 ### Job Search Automation Suite
 A real-world demonstration of AI-powered automation for job searching and career management:
@@ -71,6 +78,20 @@ Portfolio Repository/
 ├── algorithmic-trading/          # Quantitative trading project
 │   ├── README.md                 # Strategy overview and results
 │   └── strategy-implementation.md # Technical implementation
+├── llm-guardian/                 # LLM Testing Framework (Flagship Project)
+│   ├── README.md                 # Framework documentation
+│   ├── index.html                # Project overview page
+│   ├── demo.html                 # Interactive live demonstrations
+│   ├── package.json              # npm package configuration
+│   ├── src/                      # Core framework source code
+│   │   ├── index.js              # Main entry point
+│   │   ├── llm-tester.js         # Core testing logic
+│   │   ├── safety-evaluator.js   # Safety validation
+│   │   ├── rag-evaluator.js      # RAG demonstrations
+│   │   └── mcp-server.js         # MCP integration
+│   ├── examples/                 # Usage examples and demos
+│   ├── reasoning-examples/       # Advanced AI reasoning demos
+│   └── test/                     # Test suites
 └── qa-prompts/                   # QA & SDET AI Prompt Library
     ├── README.md                 # Library documentation
     ├── prompts/                  # Organized prompt categories
