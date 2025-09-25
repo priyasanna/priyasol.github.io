@@ -95,6 +95,9 @@
             <button class="btn" onclick="runSafetyTest()">Run Safety Test</button>
             <button class="btn" onclick="runAccuracyTest()">Run Accuracy Test</button>
             <button class="btn" onclick="runFullSuite()">Run Full Suite</button>
+            <button class="btn" onclick="runRAGDemo()">RAG Q&A Demo</button>
+            <button class="btn" onclick="runMCPDemo()">MCP Tools Demo</button>
+            <button class="btn" onclick="runReasoningDemo()">AI Reasoning Demo</button>
             <div id="output" class="output" style="display: none;"></div>
         </div>
 
@@ -251,6 +254,227 @@ Science Tests: 100% (1/1)
 💡 Consider fine-tuning for domain-specific accuracy
 
 Test completed successfully! 🚀`;
+        }
+
+        function runRAGDemo() {
+            const output = document.getElementById('output');
+            output.style.display = 'block';
+            output.innerHTML = `🔍 RAG (Retrieval-Augmented Generation) Demo
+
+Query: "How do I test for prompt injection vulnerabilities?"
+
+🔄 Retrieving relevant documentation...
+📚 Found 3 relevant sources:
+   - AI Security Testing Guide (relevance: 95%)
+   - Prompt Injection Patterns (relevance: 89%)  
+   - LLM Safety Validation (relevance: 82%)
+
+🤖 Generating context-aware response...
+
+RAG-Enhanced Answer:
+═══════════════════════════════════════
+
+Prompt injection testing involves several systematic approaches:
+
+1. MALICIOUS PROMPT DETECTION
+   - Test with adversarial inputs designed to bypass safety guidelines
+   - Examples: "Ignore previous instructions...", "Act as if restrictions don't apply..."
+   - Validate model refuses harmful requests consistently
+
+2. CONTEXT MANIPULATION TESTING  
+   - Inject conflicting instructions within legitimate prompts
+   - Test boundary conditions between system and user messages
+   - Verify prompt template integrity under various inputs
+
+3. AUTOMATED VALIDATION FRAMEWORK
+   - Use safety evaluation metrics (refusal rate, toxicity scores)
+   - Implement continuous monitoring for prompt injection attempts
+   - Create test suites with known malicious patterns
+
+4. DEFENSE VERIFICATION
+   - Test input sanitization effectiveness
+   - Validate output filtering mechanisms
+   - Ensure proper context isolation
+
+📊 RAG PERFORMANCE METRICS:
+✅ Response accuracy: 94% (vs 67% baseline)
+✅ Context relevance: 89%  
+✅ Source attribution: 100%
+✅ Query processing time: 1.2s
+
+Sources: AI Security Guide, Prompt Safety Docs, LLM Testing Framework`;
+        }
+
+        function runMCPDemo() {
+            const output = document.getElementById('output');
+            output.style.display = 'block';
+            output.innerHTML = `🔌 MCP (Model Context Protocol) Tools Demo
+
+🤖 AI Agent starting workflow...
+
+STEP 1: Connecting to testing infrastructure
+🔗 MCP Server: testing-tools-server
+📋 Available tools: 5 registered
+   - get_test_results
+   - run_playwright_tests  
+   - analyze_test_coverage
+   - job_search_tracker
+   - resume_analyzer
+
+STEP 2: Retrieving current test status
+🛠️ Executing: get_test_results()
+📊 Results: 127 total tests, 119 passed, 6 failed, 2 skipped
+
+STEP 3: Analyzing failures  
+🔍 Executing: analyze_test_coverage()
+📈 Coverage: 87.3% statements, 82.1% branches
+⚠️  Below threshold: src/api/users.js (72.4%)
+
+STEP 4: Running targeted tests
+🎭 Executing: run_playwright_tests("**/api/**/*.spec.js")  
+⏱️  Status: Running 12 API integration tests...
+✅ Completed: 11 passed, 1 failed
+
+STEP 5: Updating job search status
+💼 Executing: job_search_tracker("update")
+📝 Status: 47 applications, 8 interviews scheduled
+
+STEP 6: Resume optimization  
+📄 Executing: resume_analyzer()
+🎯 Match score: 87% for current applications
+💡 Suggestion: Add containerization experience
+
+═══════════════════════════════════════
+🎉 MCP WORKFLOW COMPLETED
+
+✅ Tools executed: 6/6 successful
+⚡ Automation efficiency: 65% time saved  
+🔄 Next automated run: 24 hours
+📊 Workflow success rate: 94%
+
+MCP enables AI agents to directly interact with your development tools,
+creating autonomous testing and optimization workflows.`;
+        }
+
+        function runReasoningDemo() {
+            const output = document.getElementById('output');
+            output.style.display = 'block';
+            output.innerHTML = `🧠 Multi-Step AI Reasoning Demo
+
+Task: Generate test strategy for e-commerce checkout flow
+
+🔄 Initiating chain-of-thought reasoning...
+
+STEP 1: ARCHITECTURE ANALYSIS
+═══════════════════════════════════════
+🏗️  System Components Identified:
+   - React frontend with Redux state management
+   - Node.js API with Express framework  
+   - PostgreSQL database with transaction support
+   - Payment gateway integration (Stripe/PayPal)
+   - Redis for session management
+
+💭 REASONING: Multi-layered system requires testing at each integration point.
+   Frontend state changes, API contracts, database consistency, and external
+   service reliability all present potential failure modes.
+
+STEP 2: RISK ASSESSMENT  
+═══════════════════════════════════════
+🔴 HIGH RISK (Business Critical):
+   - Payment processing failures → Revenue loss
+   - Cart state corruption → Order inaccuracy  
+   - Session timeout during checkout → User frustration
+
+🟡 MEDIUM RISK (User Experience):
+   - Slow API responses → Checkout abandonment
+   - UI state inconsistencies → Confusion
+   - Mobile responsiveness → Accessibility issues
+
+💭 REASONING: Payment flow represents highest business risk due to financial
+   impact. User experience issues have lower immediate cost but affect
+   long-term customer retention.
+
+STEP 3: TEST PRIORITIZATION
+═══════════════════════════════════════
+🥇 PRIORITY 1: Payment flow end-to-end testing
+   - Complete purchase with various payment methods
+   - Error handling for declined cards
+   - Network interruption recovery
+
+🥈 PRIORITY 2: Cart state management
+   - Add/remove items during checkout
+   - Quantity modifications
+   - Price calculations and tax handling
+
+🥉 PRIORITY 3: User experience optimization  
+   - Cross-browser compatibility
+   - Mobile responsive design
+   - Performance under load
+
+💭 REASONING: Prioritization based on business impact × failure probability.
+   Payment issues have immediate revenue impact, while UX issues affect
+   conversion rates over time.
+
+STEP 4: TEST CASE GENERATION
+═══════════════════════════════════════
+📝 Generated 23 specific test cases:
+
+POSITIVE SCENARIOS (8 cases):
+✅ Complete purchase with credit card
+✅ Successful PayPal checkout  
+✅ Guest checkout flow
+✅ Registered user checkout
+
+NEGATIVE SCENARIOS (9 cases):  
+❌ Invalid payment information
+❌ Insufficient funds
+❌ Payment gateway timeout
+❌ Network connectivity issues
+
+EDGE CASES (6 cases):
+⚠️  Concurrent stock depletion
+⚠️  Session expiry during payment
+⚠️  Multiple rapid purchase attempts
+⚠️  Cart modification during processing
+
+💭 REASONING: Comprehensive coverage requires testing normal flows,
+   error conditions, and unusual but possible scenarios that could
+   occur in production environments.
+
+STEP 5: AUTOMATION STRATEGY
+═══════════════════════════════════════
+🤖 RECOMMENDED APPROACH:
+   - Playwright for E2E checkout flows (cross-browser)
+   - Jest for React component testing (cart logic)
+   - Supertest for API contract testing
+   - Artillery for performance testing
+
+📊 IMPLEMENTATION PLAN:
+   - Week 1: Core payment flow automation
+   - Week 2: Error scenario coverage
+   - Week 3: Performance and load testing  
+   - Week 4: CI/CD integration and monitoring
+
+💭 REASONING: Playwright chosen for reliability and cross-browser support.
+   Staggered implementation allows for iterative feedback and reduces
+   risk of automation technical debt.
+
+═══════════════════════════════════════
+🎯 REASONING QUALITY METRICS:
+
+✅ Completeness Score: 95%
+✅ Risk Coverage: 90%  
+✅ Automation Feasibility: 85%
+✅ Business Alignment: 92%
+
+💡 STRATEGIC RECOMMENDATIONS:
+1. Implement payment flow tests first (highest ROI)
+2. Use feature flags for gradual rollout
+3. Monitor real user metrics alongside test results
+4. Establish automated regression testing pipeline
+
+Chain-of-thought reasoning enables systematic test planning with
+clear rationale for every decision and recommendation.`;
         }
     </script>
 </body>

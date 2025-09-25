@@ -1,0 +1,56 @@
+{
+  "name": "@elamcb/llm-guardian",
+  "version": "1.0.0",
+  "description": "Production-ready framework for systematic LLM validation, safety testing, and performance monitoring",
+  "main": "src/index.js",
+  "type": "module",
+  "scripts": {
+    "test": "node test/run-tests.js",
+    "demo": "node examples/demo.js",
+    "validate": "node src/cli.js",
+    "start": "node examples/demo.js"
+  },
+  "keywords": [
+    "llm",
+    "ai-testing",
+    "prompt-testing",
+    "ai-safety",
+    "llm-validation",
+    "openai",
+    "anthropic",
+    "ai-quality",
+    "machine-learning",
+    "testing-framework"
+  ],
+  "author": {
+    "name": "Ela MCB",
+    "email": "elena.mereanu@gmail.com",
+    "url": "https://elamcb.github.io"
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ElaMCB/llm-guardian.git"
+  },
+  "homepage": "https://github.com/ElaMCB/llm-guardian#readme",
+  "bugs": {
+    "url": "https://github.com/ElaMCB/llm-guardian/issues"
+  },
+  "engines": {
+    "node": ">=16.0.0"
+  },
+  "dependencies": {
+    "openai": "^4.0.0",
+    "anthropic": "^0.20.0",
+    "dotenv": "^16.0.0"
+  },
+  "devDependencies": {
+    "eslint": "^8.0.0"
+  },
+  "files": [
+    "src/",
+    "examples/",
+    "README.md",
+    "LICENSE"
+  ]
+}
