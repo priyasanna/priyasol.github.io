@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+  <rect width="32" height="32" fill="#0a0a0f"/>
+  <!-- AI-First "A" symbol with circuit nodes -->
+  <path d="M16 4 L8 28 L12 28 L14 22 L18 22 L20 28 L24 28 L16 4 Z M15 12 L17 18 L15 18 L15 12 Z" fill="#00f5ff"/>
+  <!-- Circuit connection points -->
+  <circle cx="16" cy="4" r="2" fill="#00f5ff"/>
+  <circle cx="8" cy="28" r="1.5" fill="#00f5ff"/>
+  <circle cx="24" cy="28" r="1.5" fill="#00f5ff"/>
+  <!-- Glow effect -->
+  <defs>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="2" result="coloredBlur"/>
+      <feMerge> 
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  <g filter="url(#glow)">
+    <path d="M16 4 L8 28 L12 28 L14 22 L18 22 L20 28 L24 28 L16 4 Z" fill="#00f5ff" opacity="0.3"/>
+  </g>
+</svg>
