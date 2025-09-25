@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Favicon Generator</title>
+    <style>
+        body {
+            background: #0a0a0f;
+            color: #00f5ff;
+            font-family: Arial, sans-serif;
+            padding: 20px;
+            text-align: center;
+        }
+        canvas {
+            border: 2px solid #00f5ff;
+            margin: 10px;
+        }
+        .download-btn {
+            background: #00f5ff;
+            color: #0a0a0f;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin: 10px;
+            font-weight: bold;
+        }
+        .download-btn:hover {
+            background: #00d4ff;
+        }
+    </style>
+</head>
+<body>
+    <h1>AI-First Favicon Generator</h1>
+    <p>Click the buttons below to download your favicon files:</p>
+    
+    <canvas id="favicon32" width="32" height="32"></canvas>
+    <canvas id="favicon16" width="16" height="16"></canvas>
+    <canvas id="appleIcon" width="180" height="180"></canvas>
+    
+    <div>
+        <button class="download-btn" onclick="downloadFavicon('favicon32', 'favicon-32x32.png')">Download 32x32</button>
+        <button class="download-btn" onclick="downloadFavicon('favicon16', 'favicon-16x16.png')">Download 16x16</button>
+        <button class="download-btn" onclick="downloadFavicon('appleIcon', 'apple-touch-icon.png')">Download 180x180</button>
+        <button class="download-btn" onclick="generateICO()">Generate favicon.ico</button>
+    </div>
+
+    <script>
+        // Generate AI-First themed favicon
+        function generateFavicon(canvasId, size) {
+            const canvas = document.getElementById(canvasId);
+            const ctx = canvas.getContext('2d');
+            
+            // Clear canvas
+            ctx.fillStyle = '#0a0a0f';
+            ctx.fillRect(0, 0, size, size);
+            
+            // Create futuristic AI symbol
+            const centerX = size / 2;
+            const centerY = size / 2;
+            const radius = size * 0.3;
+            
+            // Outer glow effect
+            const gradient = ctx.createRadialGradient(centerX, centerY, 0, centerX, centerY, radius * 1.5);
+            gradient.addColorStop(0, '#00f5ff');
+            gradient.addColorStop(0.7, '#00d4ff');
+            gradient.addColorStop(1, 'transparent');
+            
+            ctx.fillStyle = gradient;
+            ctx.fillRect(0, 0, size, size);
+            
+            // AI Circuit pattern
+            ctx.strokeStyle = '#00f5ff';
+            ctx.lineWidth = size > 32 ? 2 : 1;
+            
+            // Draw AI symbol (stylized A with circuit lines)
+            ctx.beginPath();
+            // Letter A shape with futuristic styling
+            ctx.moveTo(centerX - radius * 0.8, centerY + radius * 0.8);
+            ctx.lineTo(centerX, centerY - radius * 0.8);
+            ctx.lineTo(centerX + radius * 0.8, centerY + radius * 0.8);
+            ctx.moveTo(centerX - radius * 0.4, centerY + radius * 0.2);
+            ctx.lineTo(centerX + radius * 0.4, centerY + radius * 0.2);
+            ctx.stroke();
+            
+            // Add circuit nodes
+            ctx.fillStyle = '#00f5ff';
+            ctx.beginPath();
+            ctx.arc(centerX, centerY - radius * 0.8, size > 32 ? 2 : 1, 0, 2 * Math.PI);
+            ctx.fill();
+            
+            ctx.beginPath();
+            ctx.arc(centerX - radius * 0.8, centerY + radius * 0.8, size > 32 ? 2 : 1, 0, 2 * Math.PI);
+            ctx.fill();
+            
+            ctx.beginPath();
+            ctx.arc(centerX + radius * 0.8, centerY + radius * 0.8, size > 32 ? 2 : 1, 0, 2 * Math.PI);
+            ctx.fill();
+        }
+        
+        // Generate all favicon sizes
+        generateFavicon('favicon32', 32);
+        generateFavicon('favicon16', 16);
+        generateFavicon('appleIcon', 180);
+        
+        function downloadFavicon(canvasId, filename) {
+            const canvas = document.getElementById(canvasId);
+            const link = document.createElement('a');
+            link.download = filename;
+            link.href = canvas.toDataURL('image/png');
+            link.click();
+        }
+        
+        function generateICO() {
+            // For ICO, we'll use the 32x32 version
+            const canvas = document.getElementById('favicon32');
+            const link = document.createElement('a');
+            link.download = 'favicon.ico';
+            link.href = canvas.toDataURL('image/png');
+            link.click();
+        }
+    </script>
+</body>
+</html>

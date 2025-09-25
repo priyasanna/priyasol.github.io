@@ -1,0 +1,26 @@
+{
+    "name": "Ela MCB - AI-First Quality Engineer",
+    "short_name": "Ela MCB",
+    "description": "AI-First Quality Engineer specializing in LLM testing frameworks and advanced AI validation systems",
+    "icons": [
+        {
+            "src": "/images/favicon-32x32.png",
+            "sizes": "32x32",
+            "type": "image/png"
+        },
+        {
+            "src": "/images/favicon-16x16.png",
+            "sizes": "16x16",
+            "type": "image/png"
+        },
+        {
+            "src": "/images/apple-touch-icon.png",
+            "sizes": "180x180",
+            "type": "image/png"
+        }
+    ],
+    "theme_color": "#00f5ff",
+    "background_color": "#0a0a0f",
+    "display": "standalone",
+    "start_url": "/"
+}
