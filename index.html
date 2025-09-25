@@ -543,6 +543,8 @@
             mask-composite: xor;
             opacity: 0;
             transition: opacity 0.3s ease;
+            pointer-events: none;
+            z-index: 1;
         }
         
         .demo-card:hover {
@@ -554,6 +556,16 @@
         
         .demo-card:hover::before {
             opacity: 1;
+        }
+        
+        .demo-content {
+            position: relative;
+            z-index: 10;
+        }
+        
+        .project-links {
+            position: relative;
+            z-index: 20;
         }
         
         .demo-header {
@@ -725,6 +737,8 @@
             background: linear-gradient(135deg, rgba(0, 212, 255, 0.1), rgba(120, 58, 237, 0.1));
             opacity: 0;
             transition: opacity 0.3s ease;
+            pointer-events: none;
+            z-index: 1;
         }
         
         .project-card:hover {
@@ -737,6 +751,11 @@
         
         .project-card:hover::before {
             opacity: 1;
+        }
+        
+        .project-content {
+            position: relative;
+            z-index: 10;
         }
         
         .project-img {
@@ -1046,8 +1065,8 @@
                             <code>Math Accuracy: 94% | Safety Score: 87% | Overall: 91%</code>
                         </div>
                         <div class="project-links">
-                            <a href="https://github.com/ElaMCB/llm-guardian" target="_blank"><i class="fab fa-github"></i> View Code</a>
-                            <a href="#llm-demo"><i class="fas fa-play"></i> Live Demo</a>
+                            <a href="./llm-guardian/" target="_blank"><i class="fab fa-github"></i> View Code</a>
+                            <a href="./llm-guardian/examples/demo.js" target="_blank"><i class="fas fa-code"></i> Demo Script</a>
                         </div>
                     </div>
                 </div>
