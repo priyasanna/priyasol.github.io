@@ -339,49 +339,76 @@
             margin-bottom: 1rem;
         }
         
-        /* SUPER OBVIOUS CINEMATIC TEST */
+        /* ELEGANT FUTURISTIC METALLIC CINEMATIC EFFECT */
         .ai-first-text {
-            font-size: 4rem !important;
-            font-weight: 900 !important;
-            font-family: 'Arial Black', 'Helvetica', sans-serif !important;
-            color: #ff0000 !important;
-            text-transform: uppercase !important;
-            letter-spacing: 8px !important;
-            margin: 2rem 0 !important;
-            position: relative !important;
-            z-index: 999 !important;
-            text-align: center !important;
+            font-size: 1.8rem;
+            font-weight: 700;
+            font-family: 'Arial', 'Helvetica', sans-serif;
+            text-transform: uppercase;
+            letter-spacing: 4px;
+            margin: 1rem 0;
+            position: relative;
+            z-index: 10;
+            text-align: center;
             
-            /* IMPOSSIBLE TO MISS ANIMATION */
-            animation: impossibleToMiss 3s ease-in-out infinite !important;
+            /* Sophisticated metallic gradient */
+            background: linear-gradient(135deg, 
+                #c0c0c0 0%,   /* Silver */
+                #e8e8e8 25%,  /* Light silver */
+                #a8a8a8 50%,  /* Medium silver */
+                #d4d4d4 75%,  /* Bright silver */
+                #9a9a9a 100% /* Dark silver */
+            );
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            
+            /* Subtle cinematic entrance */
+            opacity: 0;
+            transform: translateY(20px) scale(0.95);
+            animation: cinematicEntrance 2.5s cubic-bezier(0.23, 1, 0.32, 1) 0.8s forwards;
+            
+            /* Elegant metallic shine effect */
+            position: relative;
+            overflow: hidden;
         }
         
-        @keyframes impossibleToMiss {
+        .ai-first-text::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, 
+                transparent, 
+                rgba(255, 255, 255, 0.3), 
+                transparent
+            );
+            animation: metallicShine 3s ease-in-out 2s infinite;
+        }
+        
+        @keyframes cinematicEntrance {
             0% { 
-                transform: scale(1) rotate(0deg);
-                color: #ff0000;
-                text-shadow: 0 0 20px #ff0000;
-            }
-            25% { 
-                transform: scale(1.5) rotate(90deg);
-                color: #00ff00;
-                text-shadow: 0 0 30px #00ff00;
+                opacity: 0; 
+                transform: translateY(20px) scale(0.95);
+                filter: blur(3px);
             }
             50% { 
-                transform: scale(2) rotate(180deg);
-                color: #0000ff;
-                text-shadow: 0 0 40px #0000ff;
-            }
-            75% { 
-                transform: scale(1.5) rotate(270deg);
-                color: #ffff00;
-                text-shadow: 0 0 30px #ffff00;
+                opacity: 0.8; 
+                transform: translateY(5px) scale(1.02);
+                filter: blur(1px);
             }
             100% { 
-                transform: scale(1) rotate(360deg);
-                color: #ff0000;
-                text-shadow: 0 0 20px #ff0000;
+                opacity: 1; 
+                transform: translateY(0) scale(1);
+                filter: blur(0);
             }
+        }
+        
+        @keyframes metallicShine {
+            0% { left: -100%; }
+            100% { left: 100%; }
         }
         
         @keyframes movieTitleReveal {
