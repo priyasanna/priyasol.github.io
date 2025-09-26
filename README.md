@@ -47,10 +47,11 @@ git push origin main
 
 **Your portfolio will be live at**: `https://YOUR_USERNAME.github.io`
 
-## Preview
+## Live Preview
 
-![Portfolio Preview](./screenshots/desktop-hero.png)
-*Professional portfolio showcasing AI-augmented testing expertise*
+**🔗 [View Live Portfolio](https://elamcb.github.io)**
+
+*Professional portfolio showcasing AI-First Quality Engineering with futuristic design, interactive demos, and comprehensive learning resources.*
 
 ## Core Components
 
