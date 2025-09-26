@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learn AI-First Development - Prompt Engineering & Workflow Integration</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="../images/favicon.svg">
+    <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+    <link rel="manifest" href="../images/site.webmanifest">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary: #0a0a0f;
+            --secondary: #00d4ff;
+            --accent: #7c3aed;
+            --neon-blue: #00f5ff;
+            --neon-purple: #bf00ff;
+            --neon-green: #39ff14;
+            --light: #e4e4e7;
+            --dark: #1a1a1f;
+            --glass: rgba(255, 255, 255, 0.1);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background: linear-gradient(135deg, var(--primary) 0%, #1a1a2e 50%, var(--dark) 100%);
+            background-attachment: fixed;
+            color: var(--light);
+            line-height: 1.6;
+            min-height: 100vh;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        header {
+            text-align: center;
+            padding: 4rem 0 2rem;
+            border-bottom: 2px solid var(--secondary);
+            margin-bottom: 3rem;
+        }
+
+        .header-content h1 {
+            font-size: 3rem;
+            background: linear-gradient(135deg, var(--neon-blue), var(--neon-purple));
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 1rem;
+            text-shadow: 0 0 30px rgba(0, 245, 255, 0.3);
+        }
+
+        .header-content p {
+            font-size: 1.2rem;
+            color: var(--secondary);
+            margin-bottom: 2rem;
+        }
+
+        .nav-links {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .nav-links a {
+            color: var(--light);
+            text-decoration: none;
+            padding: 0.8rem 1.5rem;
+            border: 2px solid var(--secondary);
+            border-radius: 25px;
+            transition: all 0.3s ease;
+            background: var(--glass);
+            backdrop-filter: blur(10px);
+        }
+
+        .nav-links a:hover {
+            background: var(--secondary);
+            color: var(--primary);
+            transform: translateY(-3px);
+            box-shadow: 0 10px 25px rgba(0, 212, 255, 0.3);
+        }
+
+        .learning-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+            margin: 3rem 0;
+        }
+
+        .learning-card {
+            background: var(--glass);
+            backdrop-filter: blur(15px);
+            border: 2px solid var(--secondary);
+            border-radius: 15px;
+            padding: 2rem;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .learning-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(0, 245, 255, 0.1), transparent);
+            transition: left 0.5s ease;
+        }
+
+        .learning-card:hover::before {
+            left: 100%;
+        }
+
+        .learning-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0, 245, 255, 0.2);
+            border-color: var(--neon-blue);
+        }
+
+        .card-icon {
+            font-size: 3rem;
+            color: var(--neon-blue);
+            margin-bottom: 1rem;
+        }
+
+        .card-title {
+            font-size: 1.5rem;
+            color: var(--secondary);
+            margin-bottom: 1rem;
+        }
+
+        .card-description {
+            color: var(--light);
+            margin-bottom: 1.5rem;
+        }
+
+        .card-features {
+            list-style: none;
+            margin-bottom: 1.5rem;
+        }
+
+        .card-features li {
+            padding: 0.3rem 0;
+            color: var(--light);
+        }
+
+        .card-features li::before {
+            content: '→';
+            color: var(--neon-green);
+            margin-right: 0.5rem;
+        }
+
+        .card-link {
+            display: inline-block;
+            color: var(--neon-blue);
+            text-decoration: none;
+            font-weight: bold;
+            padding: 0.5rem 1rem;
+            border: 1px solid var(--neon-blue);
+            border-radius: 5px;
+            transition: all 0.3s ease;
+        }
+
+        .card-link:hover {
+            background: var(--neon-blue);
+            color: var(--primary);
+        }
+
+        .stats-section {
+            background: var(--glass);
+            backdrop-filter: blur(15px);
+            border: 2px solid var(--accent);
+            border-radius: 15px;
+            padding: 2rem;
+            margin: 3rem 0;
+            text-align: center;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .stat-item {
+            padding: 1rem;
+        }
+
+        .stat-number {
+            font-size: 2.5rem;
+            color: var(--neon-blue);
+            font-weight: bold;
+        }
+
+        .stat-label {
+            color: var(--light);
+            margin-top: 0.5rem;
+        }
+
+        footer {
+            text-align: center;
+            padding: 2rem 0;
+            border-top: 2px solid var(--secondary);
+            margin-top: 4rem;
+        }
+
+        @media (max-width: 768px) {
+            .header-content h1 {
+                font-size: 2rem;
+            }
+            
+            .learning-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .nav-links {
+                gap: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <h1>Learn AI-First Development</h1>
+                <p>Master prompt engineering and AI-assisted development workflows</p>
+                <div class="nav-links">
+                    <a href="../"><i class="fas fa-home"></i> Portfolio</a>
+                    <a href="../llm-guardian/"><i class="fas fa-shield-alt"></i> LLMGuardian</a>
+                    <a href="https://github.com/ElaMCB/ElaMCB.github.io"><i class="fab fa-github"></i> Source Code</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <div class="container">
+            <div class="stats-section">
+                <h2>Real-World Results</h2>
+                <p>These techniques were used to build this entire portfolio template</p>
+                <div class="stats-grid">
+                    <div class="stat-item">
+                        <div class="stat-number">10x</div>
+                        <div class="stat-label">Faster Development</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">4-6</div>
+                        <div class="stat-label">Hours Total Build Time</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">100%</div>
+                        <div class="stat-label">Production Ready</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">3</div>
+                        <div class="stat-label">AI Systems Used</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="learning-grid">
+                <div class="learning-card">
+                    <div class="card-icon">
+                        <i class="fas fa-code"></i>
+                    </div>
+                    <h3 class="card-title">Prompt Engineering Guide</h3>
+                    <p class="card-description">
+                        Comprehensive guide to effective AI prompting for developers. Learn the exact prompts used to build this portfolio.
+                    </p>
+                    <ul class="card-features">
+                        <li>Code generation prompts</li>
+                        <li>Testing & QA automation</li>
+                        <li>Documentation generation</li>
+                        <li>Debugging strategies</li>
+                        <li>Best practices & pitfalls</li>
+                    </ul>
+                    <a href="../docs/PROMPT-ENGINEERING-GUIDE.md" class="card-link">
+                        <i class="fas fa-book"></i> Read Guide
+                    </a>
+                </div>
+
+                <div class="learning-card">
+                    <div class="card-icon">
+                        <i class="fas fa-workflow"></i>
+                    </div>
+                    <h3 class="card-title">AI Workflow Integration</h3>
+                    <p class="card-description">
+                        Seamlessly integrate AI into your daily development workflow for maximum productivity gains.
+                    </p>
+                    <ul class="card-features">
+                        <li>Morning planning routines</li>
+                        <li>Code review assistance</li>
+                        <li>Bug investigation workflows</li>
+                        <li>Performance optimization</li>
+                        <li>Team collaboration</li>
+                    </ul>
+                    <a href="../docs/AI-WORKFLOW-INTEGRATION.md" class="card-link">
+                        <i class="fas fa-cogs"></i> Learn Workflow
+                    </a>
+                </div>
+
+                <div class="learning-card">
+                    <div class="card-icon">
+                        <i class="fas fa-tools"></i>
+                    </div>
+                    <h3 class="card-title">Template Customization</h3>
+                    <p class="card-description">
+                        Step-by-step guide to customize this portfolio template for your own professional use.
+                    </p>
+                    <ul class="card-features">
+                        <li>Personal information updates</li>
+                        <li>Project customization</li>
+                        <li>Color scheme modification</li>
+                        <li>Advanced features</li>
+                        <li>Deployment guide</li>
+                    </ul>
+                    <a href="../docs/CUSTOMIZATION.md" class="card-link">
+                        <i class="fas fa-palette"></i> Customize
+                    </a>
+                </div>
+
+                <div class="learning-card">
+                    <div class="card-icon">
+                        <i class="fas fa-robot"></i>
+                    </div>
+                    <h3 class="card-title">LLMGuardian Framework</h3>
+                    <p class="card-description">
+                        Real AI testing framework with RAG, MCP, and advanced reasoning capabilities built using AI assistance.
+                    </p>
+                    <ul class="card-features">
+                        <li>LLM safety testing</li>
+                        <li>RAG implementation</li>
+                        <li>MCP integration</li>
+                        <li>Interactive demos</li>
+                        <li>Production ready</li>
+                    </ul>
+                    <a href="../llm-guardian/" class="card-link">
+                        <i class="fas fa-shield-alt"></i> Explore Framework
+                    </a>
+                </div>
+
+                <div class="learning-card">
+                    <div class="card-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3 class="card-title">Community & Contributions</h3>
+                    <p class="card-description">
+                        Join the community of developers using AI-first development practices and contribute to the template.
+                    </p>
+                    <ul class="card-features">
+                        <li>GitHub discussions</li>
+                        <li>Issue reporting</li>
+                        <li>Feature requests</li>
+                        <li>Pull requests</li>
+                        <li>Knowledge sharing</li>
+                    </ul>
+                    <a href="https://github.com/ElaMCB/ElaMCB.github.io/discussions" class="card-link">
+                        <i class="fas fa-comments"></i> Join Community
+                    </a>
+                </div>
+
+                <div class="learning-card">
+                    <div class="card-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <h3 class="card-title">Advanced Techniques</h3>
+                    <p class="card-description">
+                        Master advanced AI prompting techniques like chain-of-thought reasoning and role-based prompting.
+                    </p>
+                    <ul class="card-features">
+                        <li>Chain-of-thought prompting</li>
+                        <li>Role-based interactions</li>
+                        <li>Multi-step problem solving</li>
+                        <li>Context management</li>
+                        <li>Quality validation</li>
+                    </ul>
+                    <a href="../docs/PROMPT-ENGINEERING-GUIDE.md#advanced-techniques" class="card-link">
+                        <i class="fas fa-brain"></i> Advanced Guide
+                    </a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2023 Ela MCB. All rights reserved.</p>
+            <p class="development-note">
+                Learning hub developed using AI-First development practices with Cursor AI, Claude 4 Sonnet, and DeepSeek AI
+            </p>
+        </div>
+    </footer>
+</body>
+</html>

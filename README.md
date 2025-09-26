@@ -150,6 +150,31 @@ This portfolio demonstrates **AI-First development practices** using advanced AI
 
 **This approach mirrors the future of software development** - where cutting-edge AI systems amplify human expertise rather than replacing it.
 
+## Learn: AI-First Development
+
+**Master prompt engineering and AI-assisted development** with our comprehensive learning resources:
+
+### 📚 Learning Resources
+- **[Prompt Engineering Guide](./docs/PROMPT-ENGINEERING-GUIDE.md)** - Complete guide to effective AI prompting for developers
+- **[AI Workflow Integration](./docs/AI-WORKFLOW-INTEGRATION.md)** - Seamlessly integrate AI into your daily development workflow
+- **[Customization Guide](./docs/CUSTOMIZATION.md)** - Step-by-step template customization instructions
+
+### 🎯 What You'll Learn
+- **Practical Prompting**: Real prompts used to build this portfolio (10x faster development)
+- **Daily Integration**: Morning planning, code review, debugging, and documentation workflows
+- **Advanced Techniques**: Chain-of-thought prompting, role-based prompting, multi-step problem solving
+- **Quality Assurance**: Testing strategies, bug analysis, and performance optimization with AI
+- **Best Practices**: Security considerations, validation strategies, and common pitfalls to avoid
+
+### 💡 Real-World Examples
+Every technique in our guides was used to build this portfolio:
+- **Complete HTML/CSS generation** in minutes instead of hours
+- **Comprehensive documentation** created alongside code
+- **Advanced AI frameworks** (RAG, MCP, LLM testing) implemented with AI assistance
+- **Production-ready CI/CD** pipeline configured with AI guidance
+
+**Perfect for**: Developers wanting to 10x their productivity, QA engineers transitioning to AI-first practices, and teams adopting AI-assisted development workflows.
+
 ## Quick Start
 
 1. **View Live**: Visit [https://elamcb.github.io](https://elamcb.github.io)
