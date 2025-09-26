@@ -127,6 +127,6 @@ Built-in accessibility features:
 ## Sharing Your Customization
 
 If you create an awesome customization:
-1. Star the original repository
-2. Share your portfolio URL in Discussions
-3. Consider contributing improvements back to the template
+1. Share your portfolio URL in Discussions
+2. Consider contributing improvements back to the template
+3. Help others by sharing your customization techniques

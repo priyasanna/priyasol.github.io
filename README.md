@@ -14,7 +14,7 @@
 
 > **Production-ready portfolio template showcasing AI-First development practices with advanced testing frameworks, RAG implementations, and modern web technologies.**
 
-**Live Demo**: [https://elamcb.github.io](https://elamcb.github.io) | **Give it a ⭐ if you find it useful!**
+**Live Demo**: [https://elamcb.github.io](https://elamcb.github.io)
 
 ## Why This Portfolio Template?
 
@@ -201,11 +201,10 @@ Every technique in our guides was used to build this portfolio:
 - Add your own projects to the template
 - Improve the AI testing frameworks
 - Submit PRs for new features or bug fixes
-- Star the repo if you find it useful!
 
 ## Community & Contributions
 
-**Found this useful?** Give it a ⭐ and help others discover it!
+**Found this useful?** Help others discover it by sharing and contributing!
 
 **Want to contribute?** 
 - Report bugs via [Issues](https://github.com/ElaMCB/ElaMCB.github.io/issues)
@@ -227,4 +226,4 @@ MIT License - feel free to use this template for your own portfolio!
 
 ---
 
-**⭐ Star this repo if it helped you build an awesome portfolio!**
+**This template helped you build an awesome portfolio? Consider contributing back to help others!**
