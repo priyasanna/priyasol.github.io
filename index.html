@@ -334,36 +334,54 @@
         }
         
         .tagline {
-            font-size: 2.5rem;
-            font-weight: 900;
-            font-family: 'Arial Black', 'Helvetica', sans-serif;
-            color: #e8e8e8;
-            text-transform: uppercase;
-            letter-spacing: 8px;
+            font-size: 1.2rem;
+            color: var(--accent);
             margin-bottom: 1rem;
-            position: relative;
-            z-index: 10;
-            text-shadow: 
-                2px 2px 0px #4a4a4a,
-                4px 4px 0px #3a3a3a,
-                6px 6px 0px #2a2a2a,
-                8px 8px 15px rgba(0, 0, 0, 0.8),
-                0 0 30px rgba(0, 245, 255, 0.4);
-            background: linear-gradient(135deg, 
-                #f0f0f0 0%, 
-                #d4d4d4 25%, 
-                #b8b8b8 50%, 
-                #a0a0a0 75%, 
-                #8a8a8a 100%);
-            background-clip: text;
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            filter: drop-shadow(0 0 10px rgba(0, 245, 255, 0.3));
+        }
+        
+        /* SUPER OBVIOUS CINEMATIC TEST */
+        .ai-first-text {
+            font-size: 4rem !important;
+            font-weight: 900 !important;
+            font-family: 'Arial Black', 'Helvetica', sans-serif !important;
+            color: #ff0000 !important;
+            text-transform: uppercase !important;
+            letter-spacing: 8px !important;
+            margin: 2rem 0 !important;
+            position: relative !important;
+            z-index: 999 !important;
+            text-align: center !important;
             
-            /* CINEMATIC MOVIE EFFECT */
-            opacity: 0;
-            transform: translateY(100px) scale(2) rotateZ(45deg);
-            animation: movieTitleReveal 4s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.5s forwards;
+            /* IMPOSSIBLE TO MISS ANIMATION */
+            animation: impossibleToMiss 3s ease-in-out infinite !important;
+        }
+        
+        @keyframes impossibleToMiss {
+            0% { 
+                transform: scale(1) rotate(0deg);
+                color: #ff0000;
+                text-shadow: 0 0 20px #ff0000;
+            }
+            25% { 
+                transform: scale(1.5) rotate(90deg);
+                color: #00ff00;
+                text-shadow: 0 0 30px #00ff00;
+            }
+            50% { 
+                transform: scale(2) rotate(180deg);
+                color: #0000ff;
+                text-shadow: 0 0 40px #0000ff;
+            }
+            75% { 
+                transform: scale(1.5) rotate(270deg);
+                color: #ffff00;
+                text-shadow: 0 0 30px #ffff00;
+            }
+            100% { 
+                transform: scale(1) rotate(360deg);
+                color: #ff0000;
+                text-shadow: 0 0 20px #ff0000;
+            }
         }
         
         @keyframes movieTitleReveal {
@@ -1415,7 +1433,7 @@
     <footer>
         <div class="container">
             <p>&copy; 2023 Ela MCB. All rights reserved.</p>
-            <p>AI First.</p>
+            <p class="ai-first-text">AI First.</p>
             <p class="development-note">
                 Portfolio developed using AI-First development practices with Cursor AI, Claude 4 Sonnet, and DeepSeek AI -
                 demonstrating 10x faster iteration through human-AI collaboration
