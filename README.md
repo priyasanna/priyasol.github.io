@@ -155,6 +155,7 @@ This portfolio demonstrates **AI-First development practices** using advanced AI
 **Master prompt engineering and AI-assisted development** with our comprehensive learning resources:
 
 ### Learning Resources
+- **[AI-First Development Manifesto](./docs/AI-FIRST-MANIFESTO.md)** - Understanding the philosophy and practical approach to AI-assisted development
 - **[Prompt Engineering Guide](./docs/PROMPT-ENGINEERING-GUIDE.md)** - Complete guide to effective AI prompting for developers
 - **[AI Workflow Integration](./docs/AI-WORKFLOW-INTEGRATION.md)** - Seamlessly integrate AI into your daily development workflow
 - **[Customization Guide](./docs/CUSTOMIZATION.md)** - Step-by-step template customization instructions
