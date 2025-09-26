@@ -76,6 +76,12 @@ A real-world demonstration of AI-powered automation for job searching and career
 - **Technology Stack**: Python, Playwright, AI/ML, React/TypeScript
 - **Results**: 60% reduction in job search time, improved application quality and targeting
 
+### Legacy-AI Bridge Framework
+A practical solution for introducing AI capabilities into legacy enterprise systems without disruption:
+- **[Framework Details](./legacy-ai-bridge/)** - Gradual AI integration strategy for established companies
+- **Technology Stack**: Python, Legacy System Connectors, AI/ML Pipeline, Safety Mechanisms
+- **Results**: 40% faster processing, 60% fraud reduction, zero downtime
+
 ### Algorithmic Trading System
 A systematic quantitative trading strategy demonstrating financial analysis and risk management:
 - **[Strategy Details](./algorithmic-trading/)** - Mean reversion trading with automated backtesting
@@ -111,6 +117,11 @@ Portfolio Repository/
 │   ├── README.md                 # Project documentation
 │   ├── demo-screenshots.md       # Visual demonstrations
 │   └── ethical-automation-guide.md # Best practices guide
+├── legacy-ai-bridge/             # Enterprise AI integration framework
+│   ├── README.md                 # Framework overview and implementation
+│   ├── assessment-template.md    # Legacy system readiness evaluation
+│   ├── implementation-guide.md   # Step-by-step technical guide
+│   └── case-studies/             # Real-world success stories
 ├── algorithmic-trading/          # Quantitative trading project
 │   ├── README.md                 # Strategy overview and results
 │   └── strategy-implementation.md # Technical implementation
