@@ -164,7 +164,7 @@ Comprehensive learning resources for traditional developers transitioning to AI-
 1. **[START HERE Guide](./docs/START-HERE.md)** - Gentle introduction for traditional developers
 2. **[Prompt Engineering Guide](./docs/PROMPT-ENGINEERING-GUIDE.md)** - Master effective AI prompting
 3. **[AI Workflow Integration](./docs/AI-WORKFLOW-INTEGRATION.md)** - Daily workflow integration
-4. **[AI-First Manifesto](./docs/AI-FIRST-MANIFESTO.md)** - Philosophy and principles
+4. **[AI-First Principles](./docs/AI-FIRST-PRINCIPLES.md)** - Core philosophy and development approach
 5. **[AI Adoption Roadmap](./docs/AI-ADOPTION-ROADMAP.md)** - Team adoption strategy
 
 #### Interactive Hub

@@ -129,7 +129,7 @@ Once you're comfortable with basic AI assistance, explore these resources:
 ### Next Steps:
 - **[AI Workflow Integration](./AI-WORKFLOW-INTEGRATION.md)** - Integrate AI into your daily routine
 - **[Prompt Engineering Guide](./PROMPT-ENGINEERING-GUIDE.md)** - Get better results from AI
-- **[AI-First Manifesto](./AI-FIRST-MANIFESTO.md)** - Understand the philosophy
+- **[AI-First Principles](./AI-FIRST-PRINCIPLES.md)** - Understand the core philosophy
 
 ### Advanced Topics:
 - **[LLMGuardian Framework](../llm-guardian/)** - Real AI testing implementation

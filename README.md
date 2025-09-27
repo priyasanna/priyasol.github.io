@@ -83,7 +83,7 @@ Found this useful? Here's how you can help:
 ### AI-First Development Guides
 - **[Prompt Engineering Guide](./docs/PROMPT-ENGINEERING-GUIDE.md)** - Master effective AI prompting techniques
 - **[AI Workflow Integration](./docs/AI-WORKFLOW-INTEGRATION.md)** - Integrate AI into daily development workflows  
-- **[AI-First Manifesto](./docs/AI-FIRST-MANIFESTO.md)** - Philosophy and principles of AI-First development
+- **[AI-First Principles](./docs/AI-FIRST-PRINCIPLES.md)** - Core philosophy and development approach
 - **[AI Adoption Roadmap](./docs/AI-ADOPTION-ROADMAP.md)** - Step-by-step guide for teams adopting AI
 
 ### Quick Start

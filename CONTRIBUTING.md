@@ -91,7 +91,7 @@ This project embraces AI-assisted development. When contributing:
 
 ### New to AI-First Development?
 - Start with our [START HERE Guide](./docs/START-HERE.md)
-- Read the [AI-First Manifesto](./docs/AI-FIRST-MANIFESTO.md)
+- Read the [AI-First Principles](./docs/AI-FIRST-PRINCIPLES.md)
 - Check out the [Prompt Engineering Guide](./docs/PROMPT-ENGINEERING-GUIDE.md)
 
 ### Technical Resources
