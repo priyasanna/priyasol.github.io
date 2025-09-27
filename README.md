@@ -236,9 +236,19 @@ MIT License - feel free to use this template for your own portfolio!
 
 ## Contact
 
-**Portfolio**: [https://elamcb.github.io](https://elamcb.github.io)  
-**LinkedIn**: [https://linkedin.com/in/elenamereanu](https://linkedin.com/in/elenamereanu)  
-**GitHub**: [https://github.com/ElaMCB](https://github.com/ElaMCB)
+Elena Mereanu, AI-First Quality Engineer. Portfolio, 2025.
+
+```bibtex
+@portfolio{elamcb2025,
+    address = {USA},
+    author = {Elena Mereanu},
+    title = {{AI-First Quality Engineering Portfolio}},
+    url = {https://elamcb.github.io},
+    linkedin = {https://linkedin.com/in/elenamereanu},
+    github = {https://github.com/ElaMCB},
+    year = {2025}
+}
+```
 
 ---
 
