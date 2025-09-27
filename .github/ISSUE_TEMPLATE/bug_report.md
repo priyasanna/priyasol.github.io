@@ -1,6 +1,6 @@
 ---
-name: Bug report
-about: Create a report to help us improve the portfolio template
+name: Bug Report
+about: Create a report to help us improve
 title: '[BUG] '
 labels: bug
 assignees: ''
@@ -23,16 +23,15 @@ A clear and concise description of what you expected to happen.
 **Screenshots**
 If applicable, add screenshots to help explain your problem.
 
-**Desktop (please complete the following information):**
- - OS: [e.g. iOS]
+**Environment (please complete the following information):**
+ - OS: [e.g. Windows, macOS, Linux]
  - Browser [e.g. chrome, safari]
  - Version [e.g. 22]
-
-**Smartphone (please complete the following information):**
- - Device: [e.g. iPhone6]
- - OS: [e.g. iOS8.1]
- - Browser [e.g. stock browser, safari]
- - Version [e.g. 22]
+ - Device: [e.g. iPhone6, Desktop]
 
 **Additional context**
 Add any other context about the problem here.
+
+**AI Tool Context (if applicable)**
+- Were you using any AI coding assistants when you encountered this bug?
+- Which AI tools were involved (if any)?
