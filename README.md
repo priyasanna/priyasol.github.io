@@ -159,8 +159,6 @@ Every technique in our guides was used to build this portfolio:
 
 MIT License - feel free to use this template for your own portfolio!
 
-## Contact
-
 ```bibtex
 @portfolio{elamcb2025,
     address = {USA},
