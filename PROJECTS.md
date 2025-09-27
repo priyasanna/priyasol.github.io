@@ -2,7 +2,7 @@
 
 Complete overview of all projects and frameworks developed as part of the AI-First Quality Engineering portfolio.
 
-## 🚀 Production Frameworks
+## Production Frameworks
 
 ### LLMGuardian - AI Testing Framework
 **Status**: Production Ready | **Type**: Framework | **Language**: JavaScript/Node.js
@@ -62,7 +62,7 @@ Gradual AI integration solution for enterprise systems without disruption.
 
 ---
 
-## 🎯 Automation Projects
+## Automation Projects
 
 ### Job Search Automation Suite
 **Status**: Production Ready | **Type**: Automation System | **Language**: Python + TypeScript
@@ -91,7 +91,7 @@ Ethical AI-powered automation for job searching and career management.
 
 ---
 
-## 📈 Financial Systems
+## Financial Systems
 
 ### Algorithmic Trading System
 **Status**: Production Ready | **Type**: Quantitative Strategy | **Language**: Python
@@ -129,7 +129,7 @@ class MeanReversionStrategy:
 
 ---
 
-## 🧠 AI Knowledge Systems
+## AI Knowledge Systems
 
 ### QA & SDET AI Prompt Library
 **Status**: Active Development | **Type**: Knowledge Base | **Language**: Markdown
@@ -153,7 +153,7 @@ Curated collection of AI prompts for Quality Assurance Engineers and Software De
 
 ---
 
-## 📚 Educational Resources
+## Educational Resources
 
 ### AI-First Development Learning Hub
 **Status**: Complete | **Type**: Educational | **Language**: Markdown + HTML
@@ -176,7 +176,7 @@ Comprehensive learning resources for traditional developers transitioning to AI-
 
 ---
 
-## 🔧 Development Infrastructure
+## Development Infrastructure
 
 ### Portfolio Website & CI/CD
 **Status**: Production | **Type**: Infrastructure | **Language**: HTML/CSS/JavaScript
@@ -200,7 +200,7 @@ Modern, responsive portfolio website with automated deployment and validation.
 
 ---
 
-## 📊 Project Statistics
+## Project Statistics
 
 ### Development Metrics
 - **Total Projects**: 6 major projects + educational resources
@@ -223,7 +223,7 @@ Modern, responsive portfolio website with automated deployment and validation.
 
 ---
 
-## 🚀 Future Roadmap
+## Future Roadmap
 
 ### Planned Projects
 1. **Multi-Agent Testing Framework** - Collaborative AI agents for comprehensive testing

@@ -16,7 +16,7 @@
 ![AI/ML](https://img.shields.io/badge/AI/ML-FF6B6B?style=flat-square&logo=tensorflow&logoColor=white)
 ![RAG](https://img.shields.io/badge/RAG-4ECDC4?style=flat-square&logo=openai&logoColor=white)
 
-## 🚀 Featured Projects
+## Featured Projects
 
 ### LLMGuardian - Production AI Testing Framework
 *Advanced validation for Large Language Models with RAG, MCP, and safety testing*
@@ -48,7 +48,7 @@
 
 [**View All Projects →**](./PROJECTS.md)
 
-## 🏆 Recognition
+## Recognition
 
 ### GitHub Metrics
 ![GitHub Forks](https://img.shields.io/github/forks/ElaMCB/ElaMCB.github.io?style=social)
@@ -62,23 +62,23 @@
 - **Testing Coverage**: 85%+ automated validation
 - **AI Frameworks**: RAG, MCP, LLM testing, safety validation
 
-## 🌟 Star History
+## Star History
 [![Star History Chart](https://api.star-history.com/svg?repos=ElaMCB/ElaMCB.github.io&type=Date)](https://star-history.com/#ElaMCB/ElaMCB.github.io&Date)
 
-## 🤝 Contributing
+## Contributing
 
 Found this useful? Here's how you can help:
-- ⭐ **Star the repo** to show support
-- 🐛 **Report issues** you encounter  
-- 💡 **Suggest improvements** via [discussions](https://github.com/ElaMCB/ElaMCB.github.io/discussions)
-- 🔄 **Share** with your network
+- **Star the repo** to show support
+- **Report issues** you encounter  
+- **Suggest improvements** via [discussions](https://github.com/ElaMCB/ElaMCB.github.io/discussions)
+- **Share** with your network
 
 ### Community Engagement
 - **[Discussions](https://github.com/ElaMCB/ElaMCB.github.io/discussions)**: Join the conversation about AI-First development
 - **[Issues](https://github.com/ElaMCB/ElaMCB.github.io/issues)**: Report bugs or request features
 - **[Contributors](https://github.com/ElaMCB/ElaMCB.github.io/graphs/contributors)**: See who's helping build this project
 
-## 📚 Learning Resources
+## Learning Resources
 
 ### AI-First Development Guides
 - **[Prompt Engineering Guide](./docs/PROMPT-ENGINEERING-GUIDE.md)** - Master effective AI prompting techniques
@@ -91,7 +91,7 @@ Found this useful? Here's how you can help:
 
 **Want to customize this template?** See: **[Customization Guide](./docs/CUSTOMIZATION.md)**
 
-## 🔧 Architecture
+## Architecture
 
 ### Repository Structure
 ```
@@ -152,10 +152,10 @@ Every technique in our guides was used to build this portfolio:
 
 **Perfect for**: Developers wanting to 10x their productivity, QA engineers transitioning to AI-first practices, and teams adopting AI-assisted development workflows.
 
-## 📊 Repository Activity
+## Repository Activity
 ![GitHub Activity](https://repobeats.axiom.co/api/embed/e8b2d0c4c8f5a6b7d9e0f1a2b3c4d5e6f7g8h9i0.svg)
 
-## 📄 License
+## License
 
 MIT License - feel free to use this template for your own portfolio!
 

@@ -2,7 +2,7 @@
 
 Thank you for your interest in contributing! This project demonstrates AI-First development practices and welcomes contributions from the community.
 
-## 🤝 Ways to Contribute
+## Ways to Contribute
 
 ### 1. Report Issues
 Found a bug or have a suggestion? Please check existing [issues](https://github.com/ElaMCB/ElaMCB.github.io/issues) first, then create a new one.
@@ -29,7 +29,7 @@ Help make the learning resources better:
 - Share success stories or lessons learned
 - Contribute to discussions about AI-First development practices
 
-## 🚀 Development Guidelines
+## Development Guidelines
 
 ### AI-First Development Approach
 This project embraces AI-assisted development. When contributing:
@@ -52,7 +52,7 @@ This project embraces AI-assisted development. When contributing:
 - Links must be functional
 - Responsive design must work across devices
 
-## 📋 Pull Request Process
+## Pull Request Process
 
 ### Before You Start
 1. Fork the repository
@@ -78,7 +78,7 @@ This project embraces AI-assisted development. When contributing:
 - Address any feedback promptly
 - Once approved, your PR will be merged
 
-## 🏷️ Issue Labels
+## Issue Labels
 
 - `bug` - Something isn't working
 - `enhancement` - New feature or improvement
@@ -87,7 +87,7 @@ This project embraces AI-assisted development. When contributing:
 - `help wanted` - Extra attention needed
 - `ai-generated` - Content created with AI assistance
 
-## 📚 Learning Resources for Contributors
+## Learning Resources for Contributors
 
 ### New to AI-First Development?
 - Start with our [START HERE Guide](./docs/START-HERE.md)
@@ -99,14 +99,14 @@ This project embraces AI-assisted development. When contributing:
 - [JavaScript Best Practices](./docs/DEVELOPMENT-TIMELINE.md)
 - [AI Workflow Integration](./docs/AI-WORKFLOW-INTEGRATION.md)
 
-## 🌟 Recognition
+## Recognition
 
 Contributors will be:
 - Listed in the repository's contributors section
 - Mentioned in release notes for significant contributions
 - Featured in the learning resources if they contribute educational content
 
-## 💬 Community Guidelines
+## Community Guidelines
 
 ### Be Respectful
 - Use inclusive language
@@ -124,7 +124,7 @@ Contributors will be:
 - Help others solve problems
 - Share best practices and tips
 
-## 🔧 Development Setup
+## Development Setup
 
 ### Prerequisites
 - Modern web browser
@@ -144,7 +144,7 @@ Contributors will be:
 - **Accessibility**: Use browser accessibility tools
 - **Performance**: Check with Lighthouse
 
-## 📞 Getting Help
+## Getting Help
 
 ### Stuck on Something?
 1. Check the [documentation](./docs/)
@@ -157,7 +157,7 @@ Contributors will be:
 - **GitHub Discussions**: For questions and general discussion
 - **Email**: [elena.mereanu@gmail.com](mailto:elena.mereanu@gmail.com) for direct contact
 
-## 🎯 Contribution Ideas
+## Contribution Ideas
 
 ### Easy Contributions
 - Fix typos in documentation
@@ -177,7 +177,7 @@ Contributors will be:
 - Build educational tools
 - Implement performance optimizations
 
-## 📄 License
+## License
 
 By contributing, you agree that your contributions will be licensed under the MIT License.
 
@@ -185,4 +185,4 @@ By contributing, you agree that your contributions will be licensed under the MI
 
 **Ready to contribute?** Check out our [good first issues](https://github.com/ElaMCB/ElaMCB.github.io/issues?q=is%3Aissue+is%3Aopen+label%3A%22good+first+issue%22) to get started!
 
-**Questions?** Don't hesitate to ask in [discussions](https://github.com/ElaMCB/ElaMCB.github.io/discussions) - we're here to help! 🚀
+**Questions?** Don't hesitate to ask in [discussions](https://github.com/ElaMCB/ElaMCB.github.io/discussions) - we're here to help!
