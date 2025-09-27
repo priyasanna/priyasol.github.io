@@ -218,7 +218,7 @@ Modern, responsive portfolio website with automated deployment and validation.
 ### Community Engagement
 - **GitHub Stars**: Growing community interest
 - **Forks**: Template usage by other developers
-- **Issues/Discussions**: Active community feedback
+- **Issues**: Active community feedback
 - **Educational Impact**: 50+ professionals using resources
 
 ---

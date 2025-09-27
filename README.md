@@ -70,11 +70,11 @@
 Found this useful? Here's how you can help:
 - **Star the repo** to show support
 - **Report issues** you encounter  
-- **Suggest improvements** via [discussions](https://github.com/ElaMCB/ElaMCB.github.io/discussions)
+- **Suggest improvements** via [issues](https://github.com/ElaMCB/ElaMCB.github.io/issues)
 - **Share** with your network
 
 ### Community Engagement
-- **[Discussions](https://github.com/ElaMCB/ElaMCB.github.io/discussions)**: Join the conversation about AI-First development
+- **[Issues](https://github.com/ElaMCB/ElaMCB.github.io/issues)**: Join the conversation about AI-First development
 - **[Issues](https://github.com/ElaMCB/ElaMCB.github.io/issues)**: Report bugs or request features
 - **[Contributors](https://github.com/ElaMCB/ElaMCB.github.io/graphs/contributors)**: See who's helping build this project
 

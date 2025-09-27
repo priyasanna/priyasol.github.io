@@ -138,7 +138,7 @@ Once you're comfortable with basic AI assistance, explore these resources:
 ## Get Support
 
 **Stuck or have questions?**
-- Check out [GitHub Discussions](https://github.com/ElaMCB/ElaMCB.github.io/discussions)
+- Check out [GitHub Issues](https://github.com/ElaMCB/ElaMCB.github.io/issues)
 - Look at the [examples and templates](../qa-prompts/examples/)
 - Start with simple tasks and build confidence
 

@@ -121,7 +121,7 @@ Built-in accessibility features:
 ## Getting Help
 
 - Check existing [Issues](https://github.com/ElaMCB/ElaMCB.github.io/issues)
-- Open a [Discussion](https://github.com/ElaMCB/ElaMCB.github.io/discussions)
+- Open an [Issue](https://github.com/ElaMCB/ElaMCB.github.io/issues)
 - Submit a [Bug Report](https://github.com/ElaMCB/ElaMCB.github.io/issues/new?template=bug_report.md)
 
 ## Sharing Your Customization

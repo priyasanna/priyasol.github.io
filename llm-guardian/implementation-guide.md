@@ -861,7 +861,7 @@ const asyncValidation = {
 
 ### Getting Help
 - **Documentation**: [LLMGuardian Docs](./README.md)
-- **Community**: [GitHub Discussions](https://github.com/ElaMCB/ElaMCB.github.io/discussions)
+- **Community**: [GitHub Issues](https://github.com/ElaMCB/ElaMCB.github.io/issues)
 - **Expert Support**: [elena.mereanu@gmail.com](mailto:elena.mereanu@gmail.com)
 
 ### Additional Resources
@@ -871,4 +871,4 @@ const asyncValidation = {
 
 ---
 
-**Implementation successful?** Share your experience and help others by contributing to our [case studies](./case-studies/) or [community discussions](https://github.com/ElaMCB/ElaMCB.github.io/discussions)!
+**Implementation successful?** Share your experience and help others by contributing to our [case studies](./case-studies/) or [community issues](https://github.com/ElaMCB/ElaMCB.github.io/issues)!

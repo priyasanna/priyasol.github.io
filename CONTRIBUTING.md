@@ -15,7 +15,7 @@ Found a bug or have a suggestion? Please check existing [issues](https://github.
 - Screenshots if applicable
 
 ### 2. Suggest Features
-Have an idea for improvement? Open a [feature request](https://github.com/ElaMCB/ElaMCB.github.io/issues/new?template=feature_request.md) or start a [discussion](https://github.com/ElaMCB/ElaMCB.github.io/discussions).
+Have an idea for improvement? Open a [feature request](https://github.com/ElaMCB/ElaMCB.github.io/issues/new?template=feature_request.md) or create an [issue](https://github.com/ElaMCB/ElaMCB.github.io/issues).
 
 ### 3. Improve Documentation
 Help make the learning resources better:
@@ -27,7 +27,7 @@ Help make the learning resources better:
 ### 4. Share Your Experience
 - Add case studies of how you've used the frameworks
 - Share success stories or lessons learned
-- Contribute to discussions about AI-First development practices
+- Contribute to conversations about AI-First development practices
 
 ## Development Guidelines
 
@@ -149,12 +149,12 @@ Contributors will be:
 ### Stuck on Something?
 1. Check the [documentation](./docs/)
 2. Search existing [issues](https://github.com/ElaMCB/ElaMCB.github.io/issues)
-3. Start a [discussion](https://github.com/ElaMCB/ElaMCB.github.io/discussions)
+3. Create an [issue](https://github.com/ElaMCB/ElaMCB.github.io/issues)
 4. Reach out to maintainers
 
 ### Contact Information
 - **GitHub Issues**: For bugs and feature requests
-- **GitHub Discussions**: For questions and general discussion
+- **GitHub Issues**: For questions and general discussion
 - **Email**: [elena.mereanu@gmail.com](mailto:elena.mereanu@gmail.com) for direct contact
 
 ## Contribution Ideas
@@ -185,4 +185,4 @@ By contributing, you agree that your contributions will be licensed under the MI
 
 **Ready to contribute?** Check out our [good first issues](https://github.com/ElaMCB/ElaMCB.github.io/issues?q=is%3Aissue+is%3Aopen+label%3A%22good+first+issue%22) to get started!
 
-**Questions?** Don't hesitate to ask in [discussions](https://github.com/ElaMCB/ElaMCB.github.io/discussions) - we're here to help!
+**Questions?** Don't hesitate to ask in [issues](https://github.com/ElaMCB/ElaMCB.github.io/issues) - we're here to help!
