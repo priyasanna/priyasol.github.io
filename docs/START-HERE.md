@@ -133,7 +133,7 @@ Once you're comfortable with basic AI assistance, explore these resources:
 
 ### Advanced Topics:
 - **[LLMGuardian Framework](../llm-guardian/)** - Real AI testing implementation
-- **[Learning Hub](../learn/)** - Comprehensive resources and examples
+- **[Learning Hub](https://elamcb.github.io/learn/)** - Comprehensive resources and examples
 
 ## Get Support
 

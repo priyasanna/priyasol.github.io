@@ -168,11 +168,11 @@ Comprehensive learning resources for traditional developers transitioning to AI-
 5. **[AI Adoption Roadmap](./docs/AI-ADOPTION-ROADMAP.md)** - Team adoption strategy
 
 #### Interactive Hub
-- **[Learning Portal](./learn/)** - Interactive web-based learning experience
+- **[Learning Portal](https://elamcb.github.io/learn/)** - Interactive web-based learning experience
 - **Progress Tracking**: Self-paced learning with milestones
 - **Community Integration**: Discussion forums and peer support
 
-**[Access Learning Hub →](./learn/)** | **[Browse All Guides →](./docs/)**
+**[Access Learning Hub →](https://elamcb.github.io/learn/)** | **[Browse All Guides →](./docs/)**
 
 ---
 
