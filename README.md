@@ -63,9 +63,7 @@
 - **AI Frameworks**: RAG, MCP, LLM testing, safety validation
 
 ## Star History
-<a href="https://star-history.com/#ElaMCB/ElaMCB.github.io&Date">
-  <img src="https://api.star-history.com/svg?repos=ElaMCB/ElaMCB.github.io&type=Date" alt="Star History Chart" width="100%" height="300">
-</a>
+[![Star History Chart](https://api.star-history.com/svg?repos=ElaMCB/ElaMCB.github.io&type=Date)](https://star-history.com/#ElaMCB/ElaMCB.github.io&Date)
 
 ## Contributing
 
