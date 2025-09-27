@@ -1736,42 +1736,42 @@
         <div class="container">
             <h2 data-text="Interactive Zone">Interactive Zone</h2>
             <p class="section-intro">Test your skills and have some fun with AI-powered challenges!</p>
-            
+
             <div class="fun-game">
                 <h3>AI vs Human: Guess Who Wrote This Code</h3>
                 <p>Can you tell the difference between AI-generated and human-written code? Test your skills!</p>
-                
+
                 <div class="game-container">
                     <div class="code-display">
                         <pre id="code-snippet"><code></code></pre>
                     </div>
-                    
+
                     <div class="game-controls">
                         <div class="guess-buttons">
-                            <button class="guess-btn ai-btn" onclick="makeGuess('ai')">
+                            <button type="button" class="guess-btn ai-btn" onclick="makeGuess('ai')">
                                 <i class="fas fa-robot"></i>
                                 AI Generated
                             </button>
-                            <button class="guess-btn human-btn" onclick="makeGuess('human')">
+                            <button type="button" class="guess-btn human-btn" onclick="makeGuess('human')">
                                 <i class="fas fa-user"></i>
                                 Human Written
                             </button>
                         </div>
-                        
+
                         <div class="game-info">
                             <div class="score-display">
                                 <span>Score: <span id="score">0</span>/<span id="total">0</span></span>
                                 <span class="accuracy">Accuracy: <span id="accuracy">0%</span></span>
                             </div>
-                            <button class="next-btn" onclick="nextQuestion()" style="display: none;">
+                            <button type="button" class="next-btn" onclick="nextQuestion()" style="display: none;">
                                 Next Challenge
                             </button>
                         </div>
                     </div>
-                    
+
                     <div id="result-feedback" class="feedback" style="display: none;"></div>
                 </div>
-                
+
                 <div class="game-stats">
                     <p><strong>Challenge yourself:</strong> AI-generated code often has certain patterns, while human code shows personal style and creative problem-solving approaches.</p>
                 </div>
