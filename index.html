@@ -410,6 +410,271 @@
             0% { left: -100%; }
             100% { left: 100%; }
         }
+
+        /* FUN INTERACTIVE GAME SECTION */
+        #fun-zone {
+            background: linear-gradient(135deg, var(--dark) 0%, #1a1a2e 50%, var(--dark) 100%);
+            padding: 4rem 0;
+            position: relative;
+            overflow: hidden;
+        }
+
+        #fun-zone::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(circle at 20% 80%, rgba(255, 121, 198, 0.1) 0%, transparent 50%),
+                        radial-gradient(circle at 80% 20%, rgba(139, 233, 253, 0.1) 0%, transparent 50%);
+            pointer-events: none;
+        }
+
+        .section-intro {
+            text-align: center;
+            font-size: 1.2rem;
+            color: var(--accent);
+            margin-bottom: 2rem;
+        }
+
+        .fun-game {
+            background: rgba(68, 71, 90, 0.8);
+            border-radius: 20px;
+            padding: 2rem;
+            margin: 2rem 0;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(139, 233, 253, 0.3);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+        }
+
+        .fun-game h3 {
+            color: var(--secondary);
+            text-align: center;
+            margin-bottom: 1rem;
+            font-size: 1.8rem;
+        }
+
+        .game-container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .code-display {
+            background: #0d1117;
+            border-radius: 12px;
+            padding: 1.5rem;
+            margin: 2rem 0;
+            border: 2px solid var(--accent);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .code-display::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: linear-gradient(90deg, var(--secondary), var(--accent), var(--success));
+            animation: codeGlow 2s ease-in-out infinite alternate;
+        }
+
+        @keyframes codeGlow {
+            0% { opacity: 0.5; }
+            100% { opacity: 1; }
+        }
+
+        #code-snippet {
+            margin: 0;
+            font-family: 'Courier New', monospace;
+            font-size: 1.1rem;
+            color: var(--light);
+            line-height: 1.6;
+            background: none;
+        }
+
+        #code-snippet code {
+            color: var(--light);
+            background: none;
+        }
+
+        .game-controls {
+            text-align: center;
+            margin: 2rem 0;
+        }
+
+        .guess-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            margin-bottom: 1.5rem;
+        }
+
+        .guess-btn {
+            background: linear-gradient(135deg, var(--accent) 0%, #4ecdc4 100%);
+            border: none;
+            padding: 1rem 2rem;
+            border-radius: 50px;
+            font-size: 1.1rem;
+            font-weight: bold;
+            color: var(--dark);
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            min-width: 180px;
+            justify-content: center;
+        }
+
+        .guess-btn:hover {
+            transform: translateY(-3px) scale(1.05);
+            box-shadow: 0 10px 25px rgba(139, 233, 253, 0.4);
+        }
+
+        .guess-btn:active {
+            transform: translateY(-1px) scale(1.02);
+        }
+
+        .ai-btn {
+            background: linear-gradient(135deg, #ff6b6b 0%, #ee5a24 100%);
+        }
+
+        .ai-btn:hover {
+            box-shadow: 0 10px 25px rgba(255, 107, 107, 0.4);
+        }
+
+        .human-btn {
+            background: linear-gradient(135deg, var(--success) 0%, #27ae60 100%);
+        }
+
+        .human-btn:hover {
+            box-shadow: 0 10px 25px rgba(80, 250, 123, 0.4);
+        }
+
+        .game-info {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .score-display {
+            display: flex;
+            gap: 2rem;
+            align-items: center;
+        }
+
+        .score-display span {
+            color: var(--accent);
+            font-weight: bold;
+            font-size: 1.1rem;
+        }
+
+        .accuracy {
+            color: var(--success) !important;
+        }
+
+        .next-btn {
+            background: linear-gradient(135deg, var(--secondary) 0%, #ff79c6 100%);
+            border: none;
+            padding: 0.8rem 1.5rem;
+            border-radius: 25px;
+            color: var(--dark);
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .next-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(255, 121, 198, 0.4);
+        }
+
+        .feedback {
+            background: rgba(139, 233, 253, 0.1);
+            border-radius: 12px;
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+            text-align: center;
+            border: 1px solid rgba(139, 233, 253, 0.3);
+            animation: fadeInScale 0.5s ease-out;
+        }
+
+        .feedback.correct {
+            background: rgba(80, 250, 123, 0.1);
+            border-color: rgba(80, 250, 123, 0.3);
+            color: var(--success);
+        }
+
+        .feedback.incorrect {
+            background: rgba(255, 107, 107, 0.1);
+            border-color: rgba(255, 107, 107, 0.3);
+            color: #ff6b6b;
+        }
+
+        @keyframes fadeInScale {
+            0% { 
+                opacity: 0; 
+                transform: scale(0.9);
+            }
+            100% { 
+                opacity: 1; 
+                transform: scale(1);
+            }
+        }
+
+        .celebrate {
+            animation: celebrate 0.6s ease-out;
+        }
+
+        @keyframes celebrate {
+            0% { transform: scale(1); }
+            25% { transform: scale(1.1) rotate(2deg); }
+            50% { transform: scale(1.05) rotate(-1deg); }
+            75% { transform: scale(1.08) rotate(1deg); }
+            100% { transform: scale(1) rotate(0deg); }
+        }
+
+        .game-stats {
+            margin-top: 2rem;
+            padding: 1.5rem;
+            background: rgba(139, 233, 253, 0.05);
+            border-radius: 10px;
+            border-left: 4px solid var(--accent);
+        }
+
+        .game-stats p {
+            margin: 0;
+            color: var(--light);
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+
+        /* Mobile responsiveness for fun section */
+        @media (max-width: 768px) {
+            .guess-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .guess-btn {
+                min-width: 200px;
+            }
+            
+            .game-info {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            .score-display {
+                flex-direction: column;
+                gap: 0.5rem;
+            }
+        }
         
         @keyframes movieTitleReveal {
             0% { 
@@ -1467,6 +1732,53 @@
         </div>
     </section>
 
+    <section id="fun-zone">
+        <div class="container">
+            <h2 data-text="Interactive Zone">Interactive Zone</h2>
+            <p class="section-intro">Test your skills and have some fun with AI-powered challenges!</p>
+            
+            <div class="fun-game">
+                <h3>AI vs Human: Guess Who Wrote This Code</h3>
+                <p>Can you tell the difference between AI-generated and human-written code? Test your skills!</p>
+                
+                <div class="game-container">
+                    <div class="code-display">
+                        <pre id="code-snippet"><code></code></pre>
+                    </div>
+                    
+                    <div class="game-controls">
+                        <div class="guess-buttons">
+                            <button class="guess-btn ai-btn" onclick="makeGuess('ai')">
+                                <i class="fas fa-robot"></i>
+                                AI Generated
+                            </button>
+                            <button class="guess-btn human-btn" onclick="makeGuess('human')">
+                                <i class="fas fa-user"></i>
+                                Human Written
+                            </button>
+                        </div>
+                        
+                        <div class="game-info">
+                            <div class="score-display">
+                                <span>Score: <span id="score">0</span>/<span id="total">0</span></span>
+                                <span class="accuracy">Accuracy: <span id="accuracy">0%</span></span>
+                            </div>
+                            <button class="next-btn" onclick="nextQuestion()" style="display: none;">
+                                Next Challenge
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <div id="result-feedback" class="feedback" style="display: none;"></div>
+                </div>
+                
+                <div class="game-stats">
+                    <p><strong>Challenge yourself:</strong> AI-generated code often has certain patterns, while human code shows personal style and creative problem-solving approaches.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <section id="contact">
         <div class="container">
                     <h2 data-text="Get In Touch">Get In Touch</h2>
@@ -1571,6 +1883,239 @@ Consider timing issues, selector problems, and dynamic content loading.`
                 });
             }
         }
+
+        // AI vs Human Code Game
+        const codeSnippets = [
+            {
+                code: `function add(a, b) { 
+    return a + b; 
+}`,
+                author: 'human',
+                explanation: 'Too simple - AI would typically overcomplicate this basic function!'
+            },
+            {
+                code: `const optimizeDatabaseQueries = async (queryParams) => {
+    const optimizedParams = await applyHeuristicOptimization(queryParams);
+    return await executeWithRetryLogic(optimizedParams);
+}`,
+                author: 'ai',
+                explanation: 'AI loves verbose async/await patterns and descriptive function names!'
+            },
+            {
+                code: `// TODO: fix this mess later
+let x = document.getElementById('thing');
+if(x) x.style.display='none';`,
+                author: 'human',
+                explanation: 'Classic human code - quick fix with TODO comment and inconsistent spacing!'
+            },
+            {
+                code: `/**
+ * Calculates the factorial of a given number using recursion
+ * @param {number} n - The number to calculate factorial for
+ * @returns {number} The factorial result
+ */
+const calculateFactorial = (n) => {
+    if (n <= 1) return 1;
+    return n * calculateFactorial(n - 1);
+};`,
+                author: 'ai',
+                explanation: 'Perfect JSDoc comments and clean recursive implementation - very AI-like!'
+            },
+            {
+                code: `const handleClick = (e) => {
+    e.preventDefault();
+    // Check if user is logged in
+    if (!user.isAuthenticated) {
+        showLoginModal();
+        return;
+    }
+    processUserAction(e.target.dataset.action);
+};`,
+                author: 'human',
+                explanation: 'Practical event handling with real-world concerns like authentication!'
+            },
+            {
+                code: `interface UserProfile {
+    id: string;
+    username: string;
+    email: string;
+    createdAt: Date;
+    lastLogin?: Date;
+}
+
+const validateUserProfile = (profile: UserProfile): boolean => {
+    return profile.id && profile.username && profile.email;
+};`,
+                author: 'ai',
+                explanation: 'Perfect TypeScript interfaces and validation - AI loves type safety!'
+            }
+        ];
+
+        let currentSnippet = 0;
+        let score = 0;
+        let totalQuestions = 0;
+        let gameStarted = false;
+
+        function initializeGame() {
+            if (!gameStarted) {
+                gameStarted = true;
+                shuffleArray(codeSnippets);
+            }
+            showCurrentSnippet();
+        }
+
+        function shuffleArray(array) {
+            for (let i = array.length - 1; i > 0; i--) {
+                const j = Math.floor(Math.random() * (i + 1));
+                [array[i], array[j]] = [array[j], array[i]];
+            }
+        }
+
+        function showCurrentSnippet() {
+            if (currentSnippet >= codeSnippets.length) {
+                showFinalScore();
+                return;
+            }
+
+            const snippet = codeSnippets[currentSnippet];
+            document.getElementById('code-snippet').innerHTML = `<code>${snippet.code}</code>`;
+            
+            // Enable guess buttons
+            document.querySelectorAll('.guess-btn').forEach(btn => {
+                btn.disabled = false;
+                btn.style.opacity = '1';
+            });
+            
+            // Hide feedback and next button
+            const feedback = document.getElementById('result-feedback');
+            const nextBtn = document.querySelector('.next-btn');
+            if (feedback) feedback.style.display = 'none';
+            if (nextBtn) nextBtn.style.display = 'none';
+        }
+
+        function makeGuess(guess) {
+            const snippet = codeSnippets[currentSnippet];
+            const isCorrect = guess === snippet.author;
+            
+            totalQuestions++;
+            if (isCorrect) score++;
+            
+            // Update score display
+            const scoreEl = document.getElementById('score');
+            const totalEl = document.getElementById('total');
+            const accuracyEl = document.getElementById('accuracy');
+            
+            if (scoreEl) scoreEl.textContent = score;
+            if (totalEl) totalEl.textContent = totalQuestions;
+            if (accuracyEl) accuracyEl.textContent = Math.round((score / totalQuestions) * 100) + '%';
+            
+            // Disable guess buttons
+            document.querySelectorAll('.guess-btn').forEach(btn => {
+                btn.disabled = true;
+                btn.style.opacity = '0.6';
+            });
+            
+            // Show result
+            showResult(isCorrect, snippet.explanation);
+            
+            // Show next button
+            const nextBtn = document.querySelector('.next-btn');
+            if (nextBtn) nextBtn.style.display = 'inline-block';
+        }
+
+        function showResult(isCorrect, explanation) {
+            const messages = {
+                correct: ['You got it!', 'AI genius!', 'Spot on!', 'Excellent!'],
+                incorrect: ['Almost!', 'Interesting guess!', 'Close but...', 'Good try!']
+            };
+            
+            const randomMsg = messages[isCorrect ? 'correct' : 'incorrect'][
+                Math.floor(Math.random() * 4)
+            ];
+            
+            const feedbackEl = document.getElementById('result-feedback');
+            if (feedbackEl) {
+                feedbackEl.innerHTML = `
+                    <div class="${isCorrect ? 'correct' : 'incorrect'}">
+                        <strong>${randomMsg}</strong><br>
+                        ${explanation}
+                    </div>
+                `;
+                feedbackEl.style.display = 'block';
+                feedbackEl.className = `feedback ${isCorrect ? 'correct' : 'incorrect'}`;
+                
+                if (isCorrect) {
+                    feedbackEl.classList.add('celebrate');
+                    setTimeout(() => feedbackEl.classList.remove('celebrate'), 600);
+                }
+            }
+        }
+
+        function nextQuestion() {
+            currentSnippet++;
+            showCurrentSnippet();
+        }
+
+        function showFinalScore() {
+            const accuracy = Math.round((score / totalQuestions) * 100);
+            let message = '';
+            
+            if (accuracy >= 80) {
+                message = 'AI Code Detective! You have an excellent eye for distinguishing AI from human code!';
+            } else if (accuracy >= 60) {
+                message = 'Pretty Good! You can spot some patterns but there\'s room to improve your AI detection skills.';
+            } else {
+                message = 'Keep Learning! AI and human code can be tricky to distinguish. Practice makes perfect!';
+            }
+            
+            const codeEl = document.getElementById('code-snippet');
+            if (codeEl) {
+                codeEl.innerHTML = `
+                    <div style="text-align: center; padding: 2rem;">
+                        <h3>Game Complete!</h3>
+                        <p style="font-size: 1.2rem; margin: 1rem 0;">Final Score: ${score}/${totalQuestions} (${accuracy}%)</p>
+                        <p style="font-size: 1.1rem; color: var(--accent);">${message}</p>
+                        <button onclick="resetGame()" style="margin-top: 1rem; padding: 0.8rem 1.5rem; background: var(--secondary); border: none; border-radius: 25px; color: var(--dark); font-weight: bold; cursor: pointer;">
+                            Play Again
+                        </button>
+                    </div>
+                `;
+            }
+            
+            // Hide game controls
+            const controls = document.querySelector('.game-controls');
+            const feedback = document.getElementById('result-feedback');
+            if (controls) controls.style.display = 'none';
+            if (feedback) feedback.style.display = 'none';
+        }
+
+        function resetGame() {
+            currentSnippet = 0;
+            score = 0;
+            totalQuestions = 0;
+            gameStarted = false;
+            
+            // Reset display
+            const scoreEl = document.getElementById('score');
+            const totalEl = document.getElementById('total');
+            const accuracyEl = document.getElementById('accuracy');
+            const controls = document.querySelector('.game-controls');
+            
+            if (scoreEl) scoreEl.textContent = '0';
+            if (totalEl) totalEl.textContent = '0';
+            if (accuracyEl) accuracyEl.textContent = '0%';
+            if (controls) controls.style.display = 'block';
+            
+            // Start new game
+            initializeGame();
+        }
+
+        // Initialize the game when the fun section is visible
+        setTimeout(() => {
+            if (document.getElementById('code-snippet')) {
+                initializeGame();
+            }
+        }, 1000);
     </script>
 </body>
 </html>
