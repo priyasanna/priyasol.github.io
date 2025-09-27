@@ -1,4 +1,4 @@
-# Elena Mereanu - AI-First Quality Engineer
+# [Elena Mereanu - AI-First Quality Engineer](https://elamcb.github.io)
 
 > Building reliable AI systems through rigorous testing and automation
 
