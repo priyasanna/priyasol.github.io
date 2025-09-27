@@ -176,5 +176,3 @@ Elena Mereanu, AI-First Quality Engineer. Portfolio, 2025.
 ```
 
 ---
-
-**This template helped you build an awesome portfolio? Consider contributing back to help others!**
