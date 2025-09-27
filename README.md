@@ -153,7 +153,7 @@ Every technique in our guides was used to build this portfolio:
 **Perfect for**: Developers wanting to 10x their productivity, QA engineers transitioning to AI-first practices, and teams adopting AI-assisted development workflows.
 
 ## Repository Activity
-![GitHub Activity](https://repobeats.axiom.co/api/embed/e8b2d0c4c8f5a6b7d9e0f1a2b3c4d5e6f7g8h9i0.svg)
+[![GitHub Activity](https://github-readme-activity-graph.vercel.app/graph?username=ElaMCB&repo=ElaMCB.github.io&theme=react-dark)](https://github.com/ElaMCB/ElaMCB.github.io/graphs/commit-activity)
 
 ## License
 
