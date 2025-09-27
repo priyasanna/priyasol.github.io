@@ -48,6 +48,24 @@
 
 [**View All Projects →**](./PROJECTS.md)
 
+## Fun
+
+### AI vs Human: Code Detective Challenge
+*Test your skills at distinguishing AI-generated code from human-written code*
+
+Can you spot the difference between code written by AI and code written by humans? This interactive game presents real code snippets and challenges you to identify their origin. Learn the subtle patterns that distinguish AI coding style from human creativity and problem-solving approaches.
+
+**Features:**
+- 6 diverse code examples from simple functions to complex implementations
+- Real-time scoring and accuracy tracking
+- Educational explanations for each code snippet
+- Mobile-responsive futuristic design
+- No registration required - jump right in!
+
+**[Play the Game →](https://elamcb.github.io#fun-zone)**
+
+*Challenge yourself: Can you achieve 80%+ accuracy and earn the "AI Code Detective" title?*
+
 ## Recognition
 
 ### GitHub Metrics
