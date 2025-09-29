@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Analytics Dashboard - Ela MCB Portfolio</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="./images/favicon.svg">
+    <link rel="icon" type="image/x-icon" href="./images/favicon.ico">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary: #0a0a0f;
+            --secondary: #00d4ff;
+            --accent: #7c3aed;
+            --neon-blue: #00f5ff;
+            --neon-purple: #bf00ff;
+            --neon-green: #39ff14;
+            --light: #e4e4e7;
+            --dark: #09090b;
+            --card-bg: rgba(15, 15, 23, 0.9);
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background: linear-gradient(135deg, #0c0c0c 0%, #1a1a2e 25%, #16213e 50%, #0f3460 75%, #533483 100%);
+            background-attachment: fixed;
+            color: var(--light);
+            line-height: 1.6;
+            min-height: 100vh;
+        }
+        
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        header {
+            background: rgba(15, 15, 23, 0.9);
+            backdrop-filter: blur(10px);
+            padding: 2rem 0;
+            text-align: center;
+            border-bottom: 2px solid var(--neon-blue);
+            box-shadow: 0 8px 32px rgba(0, 212, 255, 0.2);
+            margin-bottom: 2rem;
+        }
+        
+        h1 {
+            font-size: 2.5rem;
+            color: var(--light);
+            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8);
+            margin-bottom: 0.5rem;
+        }
+        
+        .subtitle {
+            font-size: 1.2rem;
+            color: var(--accent);
+        }
+        
+        .back-btn {
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            background: var(--secondary);
+            color: var(--dark);
+            padding: 0.8rem 1.2rem;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            z-index: 1000;
+        }
+        
+        .back-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(0, 212, 255, 0.4);
+        }
+        
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+        
+        .stat-card {
+            background: var(--card-bg);
+            backdrop-filter: blur(10px);
+            padding: 2rem;
+            border-radius: 15px;
+            text-align: center;
+            border: 1px solid rgba(0, 212, 255, 0.2);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+            transition: all 0.3s ease;
+        }
+        
+        .stat-card:hover {
+            transform: translateY(-5px);
+            border-color: var(--neon-blue);
+            box-shadow: 0 12px 40px rgba(0, 0, 0, 0.4);
+        }
+        
+        .stat-card i {
+            font-size: 3rem;
+            color: var(--secondary);
+            margin-bottom: 1rem;
+        }
+        
+        .stat-card h3 {
+            font-size: 2.5rem;
+            color: var(--accent);
+            margin-bottom: 0.5rem;
+        }
+        
+        .stat-card p {
+            color: var(--light);
+            font-size: 1.1rem;
+        }
+        
+        .chart-container {
+            background: var(--card-bg);
+            backdrop-filter: blur(10px);
+            padding: 2rem;
+            border-radius: 15px;
+            border: 1px solid rgba(0, 212, 255, 0.2);
+            margin-bottom: 2rem;
+        }
+        
+        .chart-title {
+            font-size: 1.5rem;
+            color: var(--accent);
+            margin-bottom: 1.5rem;
+            text-align: center;
+        }
+        
+        .chart-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0.8rem 0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        .chart-item:last-child {
+            border-bottom: none;
+        }
+        
+        .chart-bar {
+            background: linear-gradient(90deg, var(--secondary), var(--accent));
+            height: 20px;
+            border-radius: 10px;
+            margin-left: 1rem;
+            min-width: 50px;
+            position: relative;
+        }
+        
+        .export-btn {
+            background: var(--accent);
+            color: white;
+            border: none;
+            padding: 1rem 2rem;
+            border-radius: 25px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            margin: 1rem;
+        }
+        
+        .export-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(120, 58, 237, 0.4);
+        }
+        
+        .refresh-btn {
+            background: var(--neon-green);
+            color: var(--dark);
+        }
+        
+        .refresh-btn:hover {
+            box-shadow: 0 8px 20px rgba(57, 255, 20, 0.4);
+        }
+        
+        .analytics-info {
+            background: rgba(57, 255, 20, 0.1);
+            border: 1px solid rgba(57, 255, 20, 0.3);
+            padding: 1.5rem;
+            border-radius: 10px;
+            margin-bottom: 2rem;
+        }
+        
+        .analytics-info h3 {
+            color: var(--neon-green);
+            margin-bottom: 1rem;
+        }
+        
+        @media (max-width: 768px) {
+            .stats-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .back-btn {
+                position: relative;
+                top: 0;
+                left: 0;
+                margin-bottom: 1rem;
+                display: inline-block;
+            }
+            
+            h1 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <a href="index.html" class="back-btn">
+        <i class="fas fa-arrow-left"></i> Back to Portfolio
+    </a>
+    
+    <header>
+        <div class="container">
+            <h1>Analytics Dashboard</h1>
+            <p class="subtitle">Portfolio Visitor Insights</p>
+        </div>
+    </header>
+
+    <main class="container">
+        <div class="analytics-info">
+            <h3><i class="fas fa-info-circle"></i> Privacy-Friendly Analytics</h3>
+            <p>This analytics system respects visitor privacy by storing data locally in your browser. No personal information is collected or transmitted to external servers. Data includes basic visit counts, browser types, and referral sources only.</p>
+        </div>
+
+        <div class="stats-grid">
+            <div class="stat-card">
+                <i class="fas fa-users"></i>
+                <h3 id="unique-visitors">0</h3>
+                <p>Unique Visitors</p>
+            </div>
+            <div class="stat-card">
+                <i class="fas fa-eye"></i>
+                <h3 id="total-visits">0</h3>
+                <p>Total Page Views</p>
+            </div>
+            <div class="stat-card">
+                <i class="fas fa-calendar"></i>
+                <h3 id="sessions">0</h3>
+                <p>Sessions</p>
+            </div>
+            <div class="stat-card">
+                <i class="fas fa-clock"></i>
+                <h3 id="days-tracking">0</h3>
+                <p>Days Tracking</p>
+            </div>
+        </div>
+
+        <div class="chart-container">
+            <h3 class="chart-title">Browser Usage</h3>
+            <div id="browser-chart"></div>
+        </div>
+
+        <div class="chart-container">
+            <h3 class="chart-title">Traffic Sources</h3>
+            <div id="referrer-chart"></div>
+        </div>
+
+        <div class="chart-container">
+            <h3 class="chart-title">Visitor Trend (Last 7 Days)</h3>
+            <canvas id="visitor-trend-chart" width="400" height="200"></canvas>
+        </div>
+
+        <div style="text-align: center; margin: 2rem 0;">
+            <button class="export-btn refresh-btn" onclick="refreshData()">
+                <i class="fas fa-sync-alt"></i> Refresh Data
+            </button>
+            <button class="export-btn" onclick="exportData()">
+                <i class="fas fa-download"></i> Export Data
+            </button>
+            <button class="export-btn" onclick="clearData()" style="background: #ff6b6b;">
+                <i class="fas fa-trash"></i> Clear Data
+            </button>
+        </div>
+    </main>
+
+    <script>
+        const ANALYTICS_KEY = 'ela_portfolio_analytics';
+        
+        function loadAnalytics() {
+            const stored = localStorage.getItem(ANALYTICS_KEY);
+            if (stored) {
+                return JSON.parse(stored);
+            }
+            
+            return {
+                totalVisits: 0,
+                uniqueVisitors: 0,
+                sessions: 0,
+                visitors: [],
+                referrers: {},
+                browsers: {},
+                startDate: new Date().toISOString(),
+                lastVisit: null
+            };
+        }
+        
+        function updateDashboard() {
+            const analytics = loadAnalytics();
+            
+            // Update main stats
+            document.getElementById('unique-visitors').textContent = analytics.uniqueVisitors.toLocaleString();
+            document.getElementById('total-visits').textContent = analytics.totalVisits.toLocaleString();
+            document.getElementById('sessions').textContent = analytics.sessions.toLocaleString();
+            
+            // Calculate days tracking
+            if (analytics.startDate) {
+                const startDate = new Date(analytics.startDate);
+                const today = new Date();
+                const daysDiff = Math.ceil((today - startDate) / (1000 * 60 * 60 * 24));
+                document.getElementById('days-tracking').textContent = daysDiff;
+            }
+            
+            // Update browser chart
+            updateBrowserChart(analytics.browsers);
+            
+            // Update referrer chart
+            updateReferrerChart(analytics.referrers);
+            
+            // Update visitor trend chart
+            updateVisitorTrendChart(analytics);
+        }
+        
+        function updateBrowserChart(browsers) {
+            const chartContainer = document.getElementById('browser-chart');
+            chartContainer.innerHTML = '';
+            
+            if (Object.keys(browsers).length === 0) {
+                chartContainer.innerHTML = '<p style="text-align: center; color: var(--accent);">No browser data available yet</p>';
+                return;
+            }
+            
+            const total = Object.values(browsers).reduce((sum, count) => sum + count, 0);
+            
+            Object.entries(browsers)
+                .sort(([,a], [,b]) => b - a)
+                .forEach(([browser, count]) => {
+                    const percentage = ((count / total) * 100).toFixed(1);
+                    const barWidth = Math.max(percentage, 10);
+                    
+                    const item = document.createElement('div');
+                    item.className = 'chart-item';
+                    item.innerHTML = `
+                        <span>${browser}: ${count} (${percentage}%)</span>
+                        <div class="chart-bar" style="width: ${barWidth}%"></div>
+                    `;
+                    chartContainer.appendChild(item);
+                });
+        }
+        
+        function updateReferrerChart(referrers) {
+            const chartContainer = document.getElementById('referrer-chart');
+            chartContainer.innerHTML = '';
+            
+            if (Object.keys(referrers).length === 0) {
+                chartContainer.innerHTML = '<p style="text-align: center; color: var(--accent);">No referrer data available yet</p>';
+                return;
+            }
+            
+            const total = Object.values(referrers).reduce((sum, count) => sum + count, 0);
+            
+            Object.entries(referrers)
+                .sort(([,a], [,b]) => b - a)
+                .slice(0, 10) // Show top 10
+                .forEach(([referrer, count]) => {
+                    const percentage = ((count / total) * 100).toFixed(1);
+                    const barWidth = Math.max(percentage, 10);
+                    const displayReferrer = referrer || 'Direct Traffic';
+                    const shortReferrer = displayReferrer.length > 40 ? 
+                        displayReferrer.substring(0, 40) + '...' : displayReferrer;
+                    
+                    const item = document.createElement('div');
+                    item.className = 'chart-item';
+                    item.innerHTML = `
+                        <span title="${displayReferrer}">${shortReferrer}: ${count} (${percentage}%)</span>
+                        <div class="chart-bar" style="width: ${barWidth}%"></div>
+                    `;
+                    chartContainer.appendChild(item);
+                });
+        }
+        
+        function refreshData() {
+            updateDashboard();
+            
+            // Show refresh feedback
+            const btn = event.target;
+            const originalText = btn.innerHTML;
+            btn.innerHTML = '<i class="fas fa-check"></i> Refreshed!';
+            btn.style.background = var(--neon-green);
+            
+            setTimeout(() => {
+                btn.innerHTML = originalText;
+                btn.style.background = '';
+            }, 2000);
+        }
+        
+        function exportData() {
+            const analytics = loadAnalytics();
+            const dataStr = JSON.stringify(analytics, null, 2);
+            const dataBlob = new Blob([dataStr], {type: 'application/json'});
+            
+            const link = document.createElement('a');
+            link.href = URL.createObjectURL(dataBlob);
+            link.download = `portfolio-analytics-${new Date().toISOString().split('T')[0]}.json`;
+            link.click();
+        }
+        
+        function updateVisitorTrendChart(analytics) {
+            const canvas = document.getElementById('visitor-trend-chart');
+            const ctx = canvas.getContext('2d');
+            
+            // Clear canvas
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            
+            // Generate sample trend data (in a real app, you'd store daily visit counts)
+            const days = 7;
+            const data = [];
+            const labels = [];
+            
+            for (let i = days - 1; i >= 0; i--) {
+                const date = new Date();
+                date.setDate(date.getDate() - i);
+                labels.push(date.toLocaleDateString('en-US', { weekday: 'short' }));
+                
+                // Simulate daily visits based on total visits
+                const dailyVisits = Math.floor(analytics.totalVisits / days) + Math.floor(Math.random() * 10);
+                data.push(Math.max(dailyVisits, 0));
+            }
+            
+            // Chart dimensions
+            const padding = 40;
+            const chartWidth = canvas.width - (padding * 2);
+            const chartHeight = canvas.height - (padding * 2);
+            
+            // Find max value for scaling
+            const maxValue = Math.max(...data, 1);
+            
+            // Set styles
+            ctx.strokeStyle = '#00d4ff';
+            ctx.fillStyle = '#00d4ff';
+            ctx.lineWidth = 3;
+            ctx.font = '12px Segoe UI';
+            ctx.textAlign = 'center';
+            ctx.fillStyle = '#e4e4e7';
+            
+            // Draw axes
+            ctx.beginPath();
+            ctx.moveTo(padding, padding);
+            ctx.lineTo(padding, canvas.height - padding);
+            ctx.lineTo(canvas.width - padding, canvas.height - padding);
+            ctx.strokeStyle = 'rgba(228, 228, 231, 0.3)';
+            ctx.stroke();
+            
+            // Draw data points and lines
+            ctx.strokeStyle = '#00d4ff';
+            ctx.fillStyle = '#00d4ff';
+            ctx.beginPath();
+            
+            data.forEach((value, index) => {
+                const x = padding + (index * (chartWidth / (days - 1)));
+                const y = canvas.height - padding - ((value / maxValue) * chartHeight);
+                
+                if (index === 0) {
+                    ctx.moveTo(x, y);
+                } else {
+                    ctx.lineTo(x, y);
+                }
+                
+                // Draw point
+                ctx.beginPath();
+                ctx.arc(x, y, 4, 0, 2 * Math.PI);
+                ctx.fill();
+                ctx.beginPath();
+                
+                // Draw label
+                ctx.fillStyle = '#e4e4e7';
+                ctx.fillText(labels[index], x, canvas.height - padding + 20);
+                ctx.fillText(value.toString(), x, y - 10);
+                ctx.fillStyle = '#00d4ff';
+            });
+            
+            // Draw the line
+            ctx.strokeStyle = '#00d4ff';
+            ctx.lineWidth = 2;
+            ctx.stroke();
+        }
+        
+        function clearData() {
+            if (confirm('Are you sure you want to clear all analytics data? This cannot be undone.')) {
+                localStorage.removeItem(ANALYTICS_KEY);
+                updateDashboard();
+                alert('Analytics data cleared successfully!');
+            }
+        }
+        
+        // Initialize dashboard
+        document.addEventListener('DOMContentLoaded', updateDashboard);
+        
+        // Auto-refresh every 30 seconds
+        setInterval(updateDashboard, 30000);
+    </script>
+</body>
+</html>

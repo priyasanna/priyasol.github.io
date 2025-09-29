@@ -10,6 +10,115 @@
     <link rel="icon" type="image/x-icon" href="./images/favicon.ico">
     <link rel="manifest" href="./images/site.webmanifest">
 
+    <!-- Simple Visitor Analytics -->
+    <script>
+        // Privacy-friendly visitor tracking
+        const ANALYTICS_KEY = 'ela_portfolio_analytics';
+        
+        function initAnalytics() {
+            const analytics = getAnalytics();
+            
+            // Update visit count
+            analytics.totalVisits++;
+            analytics.lastVisit = new Date().toISOString();
+            
+            // Track unique visitors (basic fingerprinting)
+            const fingerprint = getBasicFingerprint();
+            if (!analytics.visitors.includes(fingerprint)) {
+                analytics.visitors.push(fingerprint);
+                analytics.uniqueVisitors++;
+            }
+            
+            // Track page views per session
+            const sessionKey = 'ela_portfolio_session';
+            if (!sessionStorage.getItem(sessionKey)) {
+                sessionStorage.setItem(sessionKey, 'active');
+                analytics.sessions++;
+            }
+            
+            // Track referrer
+            if (document.referrer && !analytics.referrers[document.referrer]) {
+                analytics.referrers[document.referrer] = 0;
+            }
+            if (document.referrer) {
+                analytics.referrers[document.referrer]++;
+            }
+            
+            // Track browser info
+            const browser = getBrowserInfo();
+            if (!analytics.browsers[browser]) {
+                analytics.browsers[browser] = 0;
+            }
+            analytics.browsers[browser]++;
+            
+            saveAnalytics(analytics);
+            updateVisitorDisplay();
+        }
+        
+        function getAnalytics() {
+            const stored = localStorage.getItem(ANALYTICS_KEY);
+            if (stored) {
+                return JSON.parse(stored);
+            }
+            
+            return {
+                totalVisits: 0,
+                uniqueVisitors: 0,
+                sessions: 0,
+                visitors: [],
+                referrers: {},
+                browsers: {},
+                startDate: new Date().toISOString(),
+                lastVisit: null
+            };
+        }
+        
+        function saveAnalytics(analytics) {
+            localStorage.setItem(ANALYTICS_KEY, JSON.stringify(analytics));
+        }
+        
+        function getBasicFingerprint() {
+            // Simple, privacy-friendly fingerprint
+            const canvas = document.createElement('canvas');
+            const ctx = canvas.getContext('2d');
+            ctx.textBaseline = 'top';
+            ctx.font = '14px Arial';
+            ctx.fillText('Analytics fingerprint', 2, 2);
+            
+            return btoa(
+                navigator.userAgent.slice(0, 20) + 
+                screen.width + 'x' + screen.height + 
+                new Date().getTimezoneOffset() +
+                canvas.toDataURL().slice(-20)
+            ).slice(0, 16);
+        }
+        
+        function getBrowserInfo() {
+            const ua = navigator.userAgent;
+            if (ua.includes('Chrome')) return 'Chrome';
+            if (ua.includes('Firefox')) return 'Firefox';
+            if (ua.includes('Safari')) return 'Safari';
+            if (ua.includes('Edge')) return 'Edge';
+            return 'Other';
+        }
+        
+        function updateVisitorDisplay() {
+            const analytics = getAnalytics();
+            const visitorCountEl = document.getElementById('visitor-count');
+            if (visitorCountEl) {
+                visitorCountEl.textContent = analytics.uniqueVisitors.toLocaleString();
+            }
+            
+            const totalVisitsEl = document.getElementById('total-visits');
+            if (totalVisitsEl) {
+                totalVisitsEl.textContent = analytics.totalVisits.toLocaleString();
+            }
+        }
+        
+        // Initialize on page load
+        document.addEventListener('DOMContentLoaded', initAnalytics);
+    </script>
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         :root {
@@ -1418,6 +1527,7 @@
                 <div class="social-links">
                     <a href="https://github.com/ElaMCB" target="_blank" aria-label="GitHub Profile"><i class="fab fa-github"></i></a>
                     <a href="https://linkedin.com/in/elenamereanu" target="_blank" aria-label="LinkedIn Profile"><i class="fab fa-linkedin"></i></a>
+                    <a href="analytics.html" aria-label="Analytics Dashboard"><i class="fas fa-chart-bar"></i></a>
                 </div>
             </div>
         </div>
@@ -1709,24 +1819,24 @@
                     <h2 data-text="Portfolio Impact">Portfolio Impact</h2>
             <div class="github-stats">
                 <div class="stat-card">
+                    <i class="fas fa-users"></i>
+                    <h3 id="visitor-count">0</h3>
+                    <p>Unique Visitors</p>
+                </div>
+                <div class="stat-card">
+                    <i class="fas fa-eye"></i>
+                    <h3 id="total-visits">0</h3>
+                    <p>Total Views</p>
+                </div>
+                <div class="stat-card">
                     <i class="fas fa-rocket"></i>
                     <h3>10x</h3>
                     <p>Development Speed</p>
                 </div>
                 <div class="stat-card">
-                    <i class="fas fa-clock"></i>
-                    <h3>1-2</h3>
-                    <p>Days to Build</p>
-                </div>
-                <div class="stat-card">
                     <i class="fas fa-brain"></i>
                     <h3>3</h3>
                     <p>AI Systems Used</p>
-                </div>
-                <div class="stat-card">
-                    <i class="fas fa-check-circle"></i>
-                    <h3>100%</h3>
-                    <p>Production Ready</p>
                 </div>
             </div>
         </div>
