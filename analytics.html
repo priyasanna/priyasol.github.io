@@ -282,6 +282,9 @@
             <button class="export-btn refresh-btn" onclick="refreshData()">
                 <i class="fas fa-sync-alt"></i> Refresh Data
             </button>
+            <button class="export-btn" onclick="debugAnalytics()">
+                <i class="fas fa-bug"></i> Debug Analytics
+            </button>
             <button class="export-btn" onclick="exportData()">
                 <i class="fas fa-download"></i> Export Data
             </button>
@@ -297,9 +300,21 @@
         function loadAnalytics() {
             const stored = localStorage.getItem(ANALYTICS_KEY);
             if (stored) {
-                return JSON.parse(stored);
+                try {
+                    const data = JSON.parse(stored);
+                    console.log('Dashboard loaded analytics data:', data);
+                    return data;
+                } catch (e) {
+                    console.error('Error parsing analytics data:', e);
+                    return getDefaultAnalytics();
+                }
             }
             
+            console.log('No analytics data found, returning defaults');
+            return getDefaultAnalytics();
+        }
+        
+        function getDefaultAnalytics() {
             return {
                 totalVisits: 0,
                 uniqueVisitors: 0,
@@ -307,6 +322,7 @@
                 visitors: [],
                 referrers: {},
                 browsers: {},
+                dailyVisits: {},
                 startDate: new Date().toISOString(),
                 lastVisit: null
             };
@@ -314,11 +330,25 @@
         
         function updateDashboard() {
             const analytics = loadAnalytics();
+            console.log('Updating dashboard with:', analytics);
             
             // Update main stats
-            document.getElementById('unique-visitors').textContent = analytics.uniqueVisitors.toLocaleString();
-            document.getElementById('total-visits').textContent = analytics.totalVisits.toLocaleString();
-            document.getElementById('sessions').textContent = analytics.sessions.toLocaleString();
+            const uniqueVisitorsEl = document.getElementById('unique-visitors');
+            const totalVisitsEl = document.getElementById('total-visits');
+            const sessionsEl = document.getElementById('sessions');
+            
+            if (uniqueVisitorsEl) {
+                uniqueVisitorsEl.textContent = analytics.uniqueVisitors.toLocaleString();
+                console.log('Updated unique visitors:', analytics.uniqueVisitors);
+            }
+            if (totalVisitsEl) {
+                totalVisitsEl.textContent = analytics.totalVisits.toLocaleString();
+                console.log('Updated total visits:', analytics.totalVisits);
+            }
+            if (sessionsEl) {
+                sessionsEl.textContent = analytics.sessions.toLocaleString();
+                console.log('Updated sessions:', analytics.sessions);
+            }
             
             // Calculate days tracking
             if (analytics.startDate) {
@@ -405,12 +435,40 @@
             const btn = event.target;
             const originalText = btn.innerHTML;
             btn.innerHTML = '<i class="fas fa-check"></i> Refreshed!';
-            btn.style.background = var(--neon-green);
+            btn.style.background = '#39ff14';
             
             setTimeout(() => {
                 btn.innerHTML = originalText;
                 btn.style.background = '';
             }, 2000);
+        }
+        
+        function debugAnalytics() {
+            const analytics = loadAnalytics();
+            const rawData = localStorage.getItem(ANALYTICS_KEY);
+            
+            console.log('=== ANALYTICS DEBUG ===');
+            console.log('Raw localStorage data:', rawData);
+            console.log('Parsed analytics data:', analytics);
+            console.log('localStorage key:', ANALYTICS_KEY);
+            console.log('All localStorage keys:', Object.keys(localStorage));
+            
+            const debugInfo = `
+Analytics Debug Report:
+- Total Visits: ${analytics.totalVisits}
+- Unique Visitors: ${analytics.uniqueVisitors}
+- Sessions: ${analytics.sessions}
+- Start Date: ${analytics.startDate}
+- Last Visit: ${analytics.lastVisit}
+- Browsers: ${JSON.stringify(analytics.browsers)}
+- Referrers: ${JSON.stringify(analytics.referrers)}
+- Daily Visits: ${JSON.stringify(analytics.dailyVisits)}
+
+Raw Data Length: ${rawData ? rawData.length : 'No data'} characters
+            `;
+            
+            alert(debugInfo);
+            console.log(debugInfo);
         }
         
         function exportData() {
