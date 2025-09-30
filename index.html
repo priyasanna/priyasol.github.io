@@ -1477,6 +1477,30 @@
             margin-top: 1rem;
         }
         
+        .debug-panel {
+            margin-top: 1rem;
+            padding: 1rem;
+            background: rgba(0, 0, 0, 0.3);
+            border-radius: 10px;
+            font-size: 0.9rem;
+        }
+        
+        .debug-btn {
+            background: var(--accent);
+            color: white;
+            border: none;
+            padding: 0.5rem 1rem;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 0.5rem;
+            transition: all 0.3s ease;
+        }
+        
+        .debug-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(120, 58, 237, 0.4);
+        }
+        
         @media (max-width: 768px) {
             .profile h1 {
                 font-size: 2rem;
@@ -1594,10 +1618,10 @@
                 </div>
                 
                 <!-- Temporary Debug Info -->
-                <div style="margin-top: 1rem; padding: 1rem; background: rgba(0,0,0,0.3); border-radius: 10px; font-size: 0.9rem;">
+                <div class="debug-panel">
                     <p>🔧 <strong>Analytics Debug:</strong></p>
                     <p>Visitors: <span id="debug-visitors">Loading...</span> | Views: <span id="debug-views">Loading...</span></p>
-                    <button onclick="testAnalytics()" style="background: var(--accent); color: white; border: none; padding: 0.5rem 1rem; border-radius: 5px; cursor: pointer; margin-top: 0.5rem;">Test Analytics</button>
+                    <button type="button" onclick="testAnalytics()" class="debug-btn">Test Analytics</button>
                 </div>
             </div>
         </div>
