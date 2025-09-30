@@ -145,6 +145,41 @@
         window.resetAnalytics = resetAndInitAnalytics;
         window.getAnalyticsData = () => getAnalytics();
         window.initAnalytics = initAnalytics;
+        
+        // Test function for debug button
+        function testAnalytics() {
+            const analytics = getAnalytics();
+            console.log('Current analytics data:', analytics);
+            
+            // Force increment for testing
+            analytics.totalVisits++;
+            const fingerprint = getBasicFingerprint();
+            if (!analytics.visitors.includes(fingerprint)) {
+                analytics.visitors.push(fingerprint);
+                analytics.uniqueVisitors++;
+            }
+            
+            saveAnalytics(analytics);
+            updateVisitorDisplay();
+            updateDebugDisplay();
+            
+            alert(`Analytics Test!\nVisitors: ${analytics.uniqueVisitors}\nViews: ${analytics.totalVisits}\nCheck console for full data.`);
+        }
+        
+        // Update debug display
+        function updateDebugDisplay() {
+            const analytics = getAnalytics();
+            const debugVisitors = document.getElementById('debug-visitors');
+            const debugViews = document.getElementById('debug-views');
+            
+            if (debugVisitors) debugVisitors.textContent = analytics.uniqueVisitors;
+            if (debugViews) debugViews.textContent = analytics.totalVisits;
+        }
+        
+        // Update debug display on load
+        document.addEventListener('DOMContentLoaded', function() {
+            setTimeout(updateDebugDisplay, 1000);
+        });
     </script>
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -1556,6 +1591,13 @@
                     <a href="https://github.com/ElaMCB" target="_blank" aria-label="GitHub Profile"><i class="fab fa-github"></i></a>
                     <a href="https://linkedin.com/in/elenamereanu" target="_blank" aria-label="LinkedIn Profile"><i class="fab fa-linkedin"></i></a>
                     <a href="analytics.html" aria-label="Analytics Dashboard"><i class="fas fa-chart-bar"></i></a>
+                </div>
+                
+                <!-- Temporary Debug Info -->
+                <div style="margin-top: 1rem; padding: 1rem; background: rgba(0,0,0,0.3); border-radius: 10px; font-size: 0.9rem;">
+                    <p>🔧 <strong>Analytics Debug:</strong></p>
+                    <p>Visitors: <span id="debug-visitors">Loading...</span> | Views: <span id="debug-views">Loading...</span></p>
+                    <button onclick="testAnalytics()" style="background: var(--accent); color: white; border: none; padding: 0.5rem 1rem; border-radius: 5px; cursor: pointer; margin-top: 0.5rem;">Test Analytics</button>
                 </div>
             </div>
         </div>
