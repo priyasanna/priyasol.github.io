@@ -36,13 +36,12 @@
                 analytics.sessions++;
             }
             
-            // Track referrer
-            if (document.referrer && !analytics.referrers[document.referrer]) {
-                analytics.referrers[document.referrer] = 0;
+            // Track referrer (handle both empty and non-empty referrers)
+            const referrer = document.referrer || 'Direct Traffic';
+            if (!analytics.referrers[referrer]) {
+                analytics.referrers[referrer] = 0;
             }
-            if (document.referrer) {
-                analytics.referrers[document.referrer]++;
-            }
+            analytics.referrers[referrer]++;
             
             // Track browser info
             const browser = getBrowserInfo();
@@ -51,8 +50,23 @@
             }
             analytics.browsers[browser]++;
             
+            // Initialize daily tracking if not exists
+            if (!analytics.dailyVisits) {
+                analytics.dailyVisits = {};
+            }
+            
+            // Track daily visits
+            const today = new Date().toISOString().split('T')[0];
+            if (!analytics.dailyVisits[today]) {
+                analytics.dailyVisits[today] = 0;
+            }
+            analytics.dailyVisits[today]++;
+            
             saveAnalytics(analytics);
             updateVisitorDisplay();
+            
+            // Debug log for testing
+            console.log('Analytics initialized:', analytics);
         }
         
         function getAnalytics() {
@@ -68,6 +82,7 @@
                 visitors: [],
                 referrers: {},
                 browsers: {},
+                dailyVisits: {},
                 startDate: new Date().toISOString(),
                 lastVisit: null
             };
@@ -117,6 +132,19 @@
         
         // Initialize on page load
         document.addEventListener('DOMContentLoaded', initAnalytics);
+        
+        // Manual initialization function for testing
+        function resetAndInitAnalytics() {
+            localStorage.removeItem(ANALYTICS_KEY);
+            sessionStorage.removeItem('ela_portfolio_session');
+            initAnalytics();
+            console.log('Analytics reset and reinitialized');
+        }
+        
+        // Make functions available globally for debugging
+        window.resetAnalytics = resetAndInitAnalytics;
+        window.getAnalyticsData = () => getAnalytics();
+        window.initAnalytics = initAnalytics;
     </script>
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">

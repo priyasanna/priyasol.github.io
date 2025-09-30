@@ -324,8 +324,10 @@
             if (analytics.startDate) {
                 const startDate = new Date(analytics.startDate);
                 const today = new Date();
-                const daysDiff = Math.ceil((today - startDate) / (1000 * 60 * 60 * 24));
+                const daysDiff = Math.max(1, Math.ceil((today - startDate) / (1000 * 60 * 60 * 24)));
                 document.getElementById('days-tracking').textContent = daysDiff;
+            } else {
+                document.getElementById('days-tracking').textContent = '1';
             }
             
             // Update browser chart
@@ -429,7 +431,7 @@
             // Clear canvas
             ctx.clearRect(0, 0, canvas.width, canvas.height);
             
-            // Generate sample trend data (in a real app, you'd store daily visit counts)
+            // Use real daily data if available
             const days = 7;
             const data = [];
             const labels = [];
@@ -437,11 +439,12 @@
             for (let i = days - 1; i >= 0; i--) {
                 const date = new Date();
                 date.setDate(date.getDate() - i);
+                const dateStr = date.toISOString().split('T')[0];
                 labels.push(date.toLocaleDateString('en-US', { weekday: 'short' }));
                 
-                // Simulate daily visits based on total visits
-                const dailyVisits = Math.floor(analytics.totalVisits / days) + Math.floor(Math.random() * 10);
-                data.push(Math.max(dailyVisits, 0));
+                // Use actual daily visits if available, otherwise 0
+                const dailyVisits = analytics.dailyVisits && analytics.dailyVisits[dateStr] ? analytics.dailyVisits[dateStr] : 0;
+                data.push(dailyVisits);
             }
             
             // Chart dimensions
