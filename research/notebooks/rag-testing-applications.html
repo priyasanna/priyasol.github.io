@@ -1,122 +1,240 @@
-<!DOCTYPE html>
+<!DOCTYPE html><!DOCTYPE html>
 
-<html lang="en">
-<head><meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>rag-testing-applications</title><script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
-<style type="text/css">
-    pre { line-height: 125%; }
-td.linenos .normal { color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px; }
-span.linenos { color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px; }
-td.linenos .special { color: #000000; background-color: #ffffc0; padding-left: 5px; padding-right: 5px; }
-span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 5px; padding-right: 5px; }
-.highlight .hll { background-color: var(--jp-cell-editor-active-background) }
-.highlight { background: var(--jp-cell-editor-background); color: var(--jp-mirror-editor-variable-color) }
-.highlight .c { color: var(--jp-mirror-editor-comment-color); font-style: italic } /* Comment */
-.highlight .err { color: var(--jp-mirror-editor-error-color) } /* Error */
-.highlight .k { color: var(--jp-mirror-editor-keyword-color); font-weight: bold } /* Keyword */
-.highlight .o { color: var(--jp-mirror-editor-operator-color); font-weight: bold } /* Operator */
-.highlight .p { color: var(--jp-mirror-editor-punctuation-color) } /* Punctuation */
-.highlight .ch { color: var(--jp-mirror-editor-comment-color); font-style: italic } /* Comment.Hashbang */
-.highlight .cm { color: var(--jp-mirror-editor-comment-color); font-style: italic } /* Comment.Multiline */
-.highlight .cp { color: var(--jp-mirror-editor-comment-color); font-style: italic } /* Comment.Preproc */
-.highlight .cpf { color: var(--jp-mirror-editor-comment-color); font-style: italic } /* Comment.PreprocFile */
-.highlight .c1 { color: var(--jp-mirror-editor-comment-color); font-style: italic } /* Comment.Single */
-.highlight .cs { color: var(--jp-mirror-editor-comment-color); font-style: italic } /* Comment.Special */
-.highlight .kc { color: var(--jp-mirror-editor-keyword-color); font-weight: bold } /* Keyword.Constant */
-.highlight .kd { color: var(--jp-mirror-editor-keyword-color); font-weight: bold } /* Keyword.Declaration */
-.highlight .kn { color: var(--jp-mirror-editor-keyword-color); font-weight: bold } /* Keyword.Namespace */
-.highlight .kp { color: var(--jp-mirror-editor-keyword-color); font-weight: bold } /* Keyword.Pseudo */
-.highlight .kr { color: var(--jp-mirror-editor-keyword-color); font-weight: bold } /* Keyword.Reserved */
-.highlight .kt { color: var(--jp-mirror-editor-keyword-color); font-weight: bold } /* Keyword.Type */
-.highlight .m { color: var(--jp-mirror-editor-number-color) } /* Literal.Number */
-.highlight .s { color: var(--jp-mirror-editor-string-color) } /* Literal.String */
-.highlight .ow { color: var(--jp-mirror-editor-operator-color); font-weight: bold } /* Operator.Word */
-.highlight .pm { color: var(--jp-mirror-editor-punctuation-color) } /* Punctuation.Marker */
-.highlight .w { color: var(--jp-mirror-editor-variable-color) } /* Text.Whitespace */
-.highlight .mb { color: var(--jp-mirror-editor-number-color) } /* Literal.Number.Bin */
-.highlight .mf { color: var(--jp-mirror-editor-number-color) } /* Literal.Number.Float */
-.highlight .mh { color: var(--jp-mirror-editor-number-color) } /* Literal.Number.Hex */
-.highlight .mi { color: var(--jp-mirror-editor-number-color) } /* Literal.Number.Integer */
-.highlight .mo { color: var(--jp-mirror-editor-number-color) } /* Literal.Number.Oct */
-.highlight .sa { color: var(--jp-mirror-editor-string-color) } /* Literal.String.Affix */
-.highlight .sb { color: var(--jp-mirror-editor-string-color) } /* Literal.String.Backtick */
-.highlight .sc { color: var(--jp-mirror-editor-string-color) } /* Literal.String.Char */
-.highlight .dl { color: var(--jp-mirror-editor-string-color) } /* Literal.String.Delimiter */
-.highlight .sd { color: var(--jp-mirror-editor-string-color) } /* Literal.String.Doc */
-.highlight .s2 { color: var(--jp-mirror-editor-string-color) } /* Literal.String.Double */
-.highlight .se { color: var(--jp-mirror-editor-string-color) } /* Literal.String.Escape */
-.highlight .sh { color: var(--jp-mirror-editor-string-color) } /* Literal.String.Heredoc */
-.highlight .si { color: var(--jp-mirror-editor-string-color) } /* Literal.String.Interpol */
-.highlight .sx { color: var(--jp-mirror-editor-string-color) } /* Literal.String.Other */
-.highlight .sr { color: var(--jp-mirror-editor-string-color) } /* Literal.String.Regex */
-.highlight .s1 { color: var(--jp-mirror-editor-string-color) } /* Literal.String.Single */
-.highlight .ss { color: var(--jp-mirror-editor-string-color) } /* Literal.String.Symbol */
-.highlight .il { color: var(--jp-mirror-editor-number-color) } /* Literal.Number.Integer.Long */
-  </style>
-<style type="text/css">
-/*-----------------------------------------------------------------------------
-| Copyright (c) Jupyter Development Team.
-| Distributed under the terms of the Modified BSD License.
-|----------------------------------------------------------------------------*/
+<html>
+
+<head><html lang="en">
+
+    <meta charset="UTF-8"><head><meta charset="utf-8"/>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1"><meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+
+    <title>RAG Applications in Software Testing - Research Notebook</title><title>rag-testing-applications</title><script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
+
+    <style><style type="text/css">
+
+        body {    pre { line-height: 125%; }
+
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;td.linenos .normal { color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px; }
+
+            line-height: 1.6;span.linenos { color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px; }
+
+            color: #333;td.linenos .special { color: #000000; background-color: #ffffc0; padding-left: 5px; padding-right: 5px; }
+
+            max-width: 900px;span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 5px; padding-right: 5px; }
+
+            margin: 0 auto;.highlight .hll { background-color: var(--jp-cell-editor-active-background) }
+
+            padding: 2rem;.highlight { background: var(--jp-cell-editor-background); color: var(--jp-mirror-editor-variable-color) }
+
+            background: #f8f9fa;.highlight .c { color: var(--jp-mirror-editor-comment-color); font-style: italic } /* Comment */
+
+        }.highlight .err { color: var(--jp-mirror-editor-error-color) } /* Error */
+
+        h1, h2, h3 { color: #2c3e50; }.highlight .k { color: var(--jp-mirror-editor-keyword-color); font-weight: bold } /* Keyword */
+
+        .metadata {.highlight .o { color: var(--jp-mirror-editor-operator-color); font-weight: bold } /* Operator */
+
+            background: #edf2f7;.highlight .p { color: var(--jp-mirror-editor-punctuation-color) } /* Punctuation */
+
+            padding: 1rem;.highlight .ch { color: var(--jp-mirror-editor-comment-color); font-style: italic } /* Comment.Hashbang */
+
+            border-radius: 4px;.highlight .cm { color: var(--jp-mirror-editor-comment-color); font-style: italic } /* Comment.Multiline */
+
+            margin: 1rem 0;.highlight .cp { color: var(--jp-mirror-editor-comment-color); font-style: italic } /* Comment.Preproc */
+
+        }.highlight .cpf { color: var(--jp-mirror-editor-comment-color); font-style: italic } /* Comment.PreprocFile */
+
+        .cell {.highlight .c1 { color: var(--jp-mirror-editor-comment-color); font-style: italic } /* Comment.Single */
+
+            margin: 1rem 0;.highlight .cs { color: var(--jp-mirror-editor-comment-color); font-style: italic } /* Comment.Special */
+
+            padding: 1rem;.highlight .kc { color: var(--jp-mirror-editor-keyword-color); font-weight: bold } /* Keyword.Constant */
+
+            background: white;.highlight .kd { color: var(--jp-mirror-editor-keyword-color); font-weight: bold } /* Keyword.Declaration */
+
+            border: 1px solid #e2e8f0;.highlight .kn { color: var(--jp-mirror-editor-keyword-color); font-weight: bold } /* Keyword.Namespace */
+
+            border-radius: 4px;.highlight .kp { color: var(--jp-mirror-editor-keyword-color); font-weight: bold } /* Keyword.Pseudo */
+
+        }.highlight .kr { color: var(--jp-mirror-editor-keyword-color); font-weight: bold } /* Keyword.Reserved */
+
+        .code {.highlight .kt { color: var(--jp-mirror-editor-keyword-color); font-weight: bold } /* Keyword.Type */
+
+            font-family: 'Menlo', 'Monaco', 'Courier New', monospace;.highlight .m { color: var(--jp-mirror-editor-number-color) } /* Literal.Number */
+
+            background: #f7fafc;.highlight .s { color: var(--jp-mirror-editor-string-color) } /* Literal.String */
+
+            padding: 1rem;.highlight .ow { color: var(--jp-mirror-editor-operator-color); font-weight: bold } /* Operator.Word */
+
+            border-radius: 4px;.highlight .pm { color: var(--jp-mirror-editor-punctuation-color) } /* Punctuation.Marker */
+
+            overflow-x: auto;.highlight .w { color: var(--jp-mirror-editor-variable-color) } /* Text.Whitespace */
+
+        }.highlight .mb { color: var(--jp-mirror-editor-number-color) } /* Literal.Number.Bin */
+
+        .tag {.highlight .mf { color: var(--jp-mirror-editor-number-color) } /* Literal.Number.Float */
+
+            display: inline-block;.highlight .mh { color: var(--jp-mirror-editor-number-color) } /* Literal.Number.Hex */
+
+            padding: 0.2rem 0.5rem;.highlight .mi { color: var(--jp-mirror-editor-number-color) } /* Literal.Number.Integer */
+
+            margin: 0.2rem;.highlight .mo { color: var(--jp-mirror-editor-number-color) } /* Literal.Number.Oct */
+
+            background: #e2e8f0;.highlight .sa { color: var(--jp-mirror-editor-string-color) } /* Literal.String.Affix */
+
+            border-radius: 4px;.highlight .sb { color: var(--jp-mirror-editor-string-color) } /* Literal.String.Backtick */
+
+            font-size: 0.9rem;.highlight .sc { color: var(--jp-mirror-editor-string-color) } /* Literal.String.Char */
+
+        }.highlight .dl { color: var(--jp-mirror-editor-string-color) } /* Literal.String.Delimiter */
+
+    </style>.highlight .sd { color: var(--jp-mirror-editor-string-color) } /* Literal.String.Doc */
+
+</head>.highlight .s2 { color: var(--jp-mirror-editor-string-color) } /* Literal.String.Double */
+
+<body>.highlight .se { color: var(--jp-mirror-editor-string-color) } /* Literal.String.Escape */
+
+    <div class="notebook">.highlight .sh { color: var(--jp-mirror-editor-string-color) } /* Literal.String.Heredoc */
+
+        <h1>RAG Applications in Software Testing: Research and Implementation</h1>.highlight .si { color: var(--jp-mirror-editor-string-color) } /* Literal.String.Interpol */
+
+        .highlight .sx { color: var(--jp-mirror-editor-string-color) } /* Literal.String.Other */
+
+        <div class="metadata">.highlight .sr { color: var(--jp-mirror-editor-string-color) } /* Literal.String.Regex */
+
+            <strong>Author:</strong> Ela MCB<br>.highlight .s1 { color: var(--jp-mirror-editor-string-color) } /* Literal.String.Single */
+
+            <strong>Date:</strong> October 2025<br>.highlight .ss { color: var(--jp-mirror-editor-string-color) } /* Literal.String.Symbol */
+
+            <div>.highlight .il { color: var(--jp-mirror-editor-number-color) } /* Literal.Number.Integer.Long */
+
+                <strong>Tags:</strong>  </style>
+
+                <span class="tag">RAG</span><style type="text/css">
+
+                <span class="tag">Testing</span>/*-----------------------------------------------------------------------------
+
+                <span class="tag">AI</span>| Copyright (c) Jupyter Development Team.
+
+                <span class="tag">Automation</span>| Distributed under the terms of the Modified BSD License.
+
+            </div>|----------------------------------------------------------------------------*/
+
+        </div>
 
 /*
- * Mozilla scrollbar styling
- */
 
-/* use standard opaque scrollbars for most nodes */
+        <div class="cell"> * Mozilla scrollbar styling
+
+            <h2>Abstract</h2> */
+
+            <p>This notebook explores practical applications of Retrieval Augmented Generation (RAG) in software testing scenarios, demonstrating how RAG can enhance test case generation, coverage analysis, and testing strategies through intelligent knowledge retrieval and contextual understanding.</p>
+
+        </div>/* use standard opaque scrollbars for most nodes */
+
 [data-jp-theme-scrollbars='true'] {
-  scrollbar-color: rgb(var(--jp-scrollbar-thumb-color))
-    var(--jp-scrollbar-background-color);
-}
 
-/* for code nodes, use a transparent style of scrollbar. These selectors
- * will match lower in the tree, and so will override the above */
-[data-jp-theme-scrollbars='true'] .CodeMirror-hscrollbar,
-[data-jp-theme-scrollbars='true'] .CodeMirror-vscrollbar {
-  scrollbar-color: rgba(var(--jp-scrollbar-thumb-color), 0.5) transparent;
-}
+        <div class="cell">  scrollbar-color: rgb(var(--jp-scrollbar-thumb-color))
 
-/* tiny scrollbar */
+            <h2>Introduction</h2>    var(--jp-scrollbar-background-color);
+
+            <p>Retrieval Augmented Generation (RAG) represents a significant advancement in AI technology, combining the power of large language models with precise information retrieval. This research investigates how RAG can be leveraged to improve various aspects of software testing.</p>}
+
+
+
+            <h3>Key Areas of Investigation</h3>/* for code nodes, use a transparent style of scrollbar. These selectors
+
+            <ol> * will match lower in the tree, and so will override the above */
+
+                <li><strong>Test Case Generation</strong> - Using RAG to create comprehensive test suites</li>[data-jp-theme-scrollbars='true'] .CodeMirror-hscrollbar,
+
+                <li><strong>Coverage Analysis</strong> - Leveraging RAG for identifying testing gaps</li>[data-jp-theme-scrollbars='true'] .CodeMirror-vscrollbar {
+
+                <li><strong>Documentation</strong> - Automated generation of test documentation</li>  scrollbar-color: rgba(var(--jp-scrollbar-thumb-color), 0.5) transparent;
+
+                <li><strong>Testing Strategy</strong> - Context-aware testing recommendations</li>}
+
+                <li><strong>Framework Integration</strong> - Seamless integration with existing test tools</li>
+
+            </ol>/* tiny scrollbar */
+
+        </div>
 
 .jp-scrollbar-tiny {
-  scrollbar-color: rgba(var(--jp-scrollbar-thumb-color), 0.5) transparent;
-  scrollbar-width: thin;
-}
 
-/* tiny scrollbar */
+        <div class="cell">  scrollbar-color: rgba(var(--jp-scrollbar-thumb-color), 0.5) transparent;
 
-.jp-scrollbar-tiny::-webkit-scrollbar,
+            <h2>1. Setting Up Vector Database and Dependencies</h2>  scrollbar-width: thin;
+
+            <div class="code">}
+
+                <pre># Install required packages
+
+!pip install langchain faiss-cpu openai python-dotenv pandas numpy pytest</pre>/* tiny scrollbar */
+
+            </div>
+
+        </div>.jp-scrollbar-tiny::-webkit-scrollbar,
+
 .jp-scrollbar-tiny::-webkit-scrollbar-corner {
-  background-color: transparent;
-  height: 4px;
-  width: 4px;
-}
 
-.jp-scrollbar-tiny::-webkit-scrollbar-thumb {
-  background: rgba(var(--jp-scrollbar-thumb-color), 0.5);
-}
+        <div class="cell">  background-color: transparent;
 
-.jp-scrollbar-tiny::-webkit-scrollbar-track:horizontal {
-  border-left: 0 solid transparent;
+            <div class="code">  height: 4px;
+
+                <pre># Import required libraries  width: 4px;
+
+import os}
+
+from dotenv import load_dotenv
+
+from langchain.vectorstores import FAISS.jp-scrollbar-tiny::-webkit-scrollbar-thumb {
+
+from langchain.embeddings import OpenAIEmbeddings  background: rgba(var(--jp-scrollbar-thumb-color), 0.5);
+
+from langchain.text_splitter import RecursiveCharacterTextSplitter}
+
+from langchain.document_loaders import TextLoader
+
+from langchain.chains import RetrievalQA.jp-scrollbar-tiny::-webkit-scrollbar-track:horizontal {
+
+from langchain.llms import OpenAI  border-left: 0 solid transparent;
+
   border-right: 0 solid transparent;
-}
+
+# Load environment variables}
+
+load_dotenv()
 
 .jp-scrollbar-tiny::-webkit-scrollbar-track:vertical {
-  border-top: 0 solid transparent;
-  border-bottom: 0 solid transparent;
+
+# Initialize OpenAI embeddings  border-top: 0 solid transparent;
+
+embeddings = OpenAIEmbeddings()  border-bottom: 0 solid transparent;
+
 }
 
-/*
- * Lumino
- */
+# Initialize text splitter for document processing
 
-.lm-ScrollBar[data-orientation='horizontal'] {
-  min-height: 16px;
-  max-height: 16px;
-  min-width: 45px;
-  border-top: 1px solid #a0a0a0;
-}
+text_splitter = RecursiveCharacterTextSplitter(/*
+
+    chunk_size=1000, * Lumino
+
+    chunk_overlap=200, */
+
+    length_function=len,
+
+)</pre>.lm-ScrollBar[data-orientation='horizontal'] {
+
+            </div>  min-height: 16px;
+
+        </div>  max-height: 16px;
+
+    </div>  min-width: 45px;
+
+</body>  border-top: 1px solid #a0a0a0;
+
+</html>}
 
 .lm-ScrollBar[data-orientation='vertical'] {
   min-width: 16px;
