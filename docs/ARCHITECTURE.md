@@ -20,14 +20,15 @@ This portfolio demonstrates modern web development practices and AI-augmented te
 │  │  │   └── notebooks/         # Jupyter notebooks        │ │
 │  │  │       ├── *.ipynb        # Research notebooks       │ │
 │  │  │       └── *.html         # HTML viewers             │ │
-│  │  ├── algorithmic-trading/   # Trading project          │ │
-│  │  ├── job-search-automation/ # Automation suite         │ │
-│  │  ├── llm-guardian/          # LLM testing framework    │ │
+│  │  ├── llm-guardian/          # LLM Testing Framework    │ │
 │  │  ├── legacy-ai-bridge/      # Enterprise AI bridge     │ │
-│  │  ├── qa-prompts/            # QA prompt library        │ │
-│  │  ├── docs/                  # Documentation            │ │
-│  │  ├── images/                # Assets & media           │ │
-│  │  └── scripts/               # Automation scripts       │ │
+│  │  ├── job-search-automation/ # AI automation project    │ │
+│  │  ├── algorithmic-trading/   # Quantitative trading     │ │
+│  │  ├── qa-prompts/            # AI prompt library        │ │
+│  │  ├── docs/                  # Learning resources       │ │
+│  │  ├── learn/                 # Interactive learning hub │ │
+│  │  ├── .github/               # CI/CD workflows          │ │
+│  │  └── images/                # Assets & media           │ │
 │  └─────────────────────────────────────────────────────────┘ │
 ├─────────────────────────────────────────────────────────────┤
 │                     Frontend Layer                          │
@@ -188,20 +189,41 @@ research/
 
 ### Project Directories
 ```
-├── algorithmic-trading/       # Trading system project
-├── job-search-automation/     # Automation suite project
-├── legacy-ai-bridge/         # Enterprise AI integration
-├── llm-guardian/             # LLM testing framework
-└── qa-prompts/               # QA prompt library
+├── llm-guardian/                 # LLM Testing Framework (Flagship Project)
+│   ├── README.md                 # Framework documentation
+│   ├── demo.html                 # Interactive demonstrations
+│   ├── src/                      # Core framework code
+│   ├── examples/                 # Usage examples
+│   └── case-studies/             # Real-world implementations
+├── legacy-ai-bridge/             # Enterprise AI integration framework
+│   ├── README.md                 # Framework overview
+│   ├── assessment-template.md    # Legacy system evaluation
+│   └── implementation-guide.md   # Step-by-step technical guide
+├── job-search-automation/        # AI automation project
+│   ├── README.md                 # Project documentation
+│   └── demo-screenshots.md       # Visual demonstrations
+├── algorithmic-trading/          # Quantitative trading project
+│   ├── README.md                 # Strategy overview and results
+│   └── strategy-implementation.md # Technical implementation
+└── qa-prompts/                   # AI prompt library for QA/SDET
+    ├── README.md                 # Library overview
+    └── prompts/                  # Categorized prompt collections
 ```
 
 ### Supporting Infrastructure
 ```
-├── docs/                     # Documentation and guides
-├── images/                   # Assets and media files
-├── learn/                    # Learning resources
-├── scripts/                  # Automation scripts
-└── screenshots/              # Project screenshots
+├── docs/                         # Learning resources and guides
+│   ├── PROMPT-ENGINEERING-GUIDE.md
+│   ├── AI-WORKFLOW-INTEGRATION.md
+│   ├── AI-FIRST-MANIFESTO.md
+│   ├── AI-ADOPTION-ROADMAP.md
+│   ├── START-HERE.md
+│   └── CUSTOMIZATION.md
+├── learn/                        # Interactive learning hub
+│   └── index.html                # Learning portal
+├── .github/                      # GitHub configuration
+│   └── workflows/                # CI/CD pipelines
+└── images/                       # Assets and media
 ```
 
 ## Future Enhancements
