@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Research - Ela MCB</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="../images/favicon.svg">
+    <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary: #0a0a0f;
+            --secondary: #00d4ff;
+            --accent: #7c3aed;
+            --neon-blue: #00f5ff;
+            --neon-purple: #bf00ff;
+            --neon-green: #39ff14;
+            --light: #e4e4e7;
+            --dark: #09090b;
+            --card-bg: rgba(15, 15, 23, 0.9);
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background: linear-gradient(135deg, #0c0c0c 0%, #1a1a2e 25%, #16213e 50%, #0f3460 75%, #533483 100%);
+            background-attachment: fixed;
+            color: var(--light);
+            line-height: 1.6;
+            min-height: 100vh;
+        }
+        
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        header {
+            background: rgba(15, 15, 23, 0.9);
+            backdrop-filter: blur(10px);
+            padding: 2rem 0;
+            text-align: center;
+            border-bottom: 2px solid var(--neon-blue);
+            box-shadow: 0 8px 32px rgba(0, 212, 255, 0.2);
+            margin-bottom: 2rem;
+        }
+        
+        h1 {
+            font-size: 2.5rem;
+            color: var(--light);
+            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8);
+            margin-bottom: 0.5rem;
+        }
+        
+        .subtitle {
+            font-size: 1.2rem;
+            color: var(--accent);
+        }
+        
+        .back-btn {
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            background: var(--secondary);
+            color: var(--dark);
+            padding: 0.8rem 1.2rem;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            z-index: 1000;
+        }
+        
+        .back-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(0, 212, 255, 0.4);
+        }
+        
+        .research-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+        
+        .research-card {
+            background: var(--card-bg);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            overflow: hidden;
+            transition: all 0.4s ease;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+            border: 1px solid rgba(120, 58, 237, 0.3);
+            position: relative;
+        }
+        
+        .research-card:hover {
+            transform: translateY(-8px) scale(1.02);
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
+            border-color: var(--neon-blue);
+        }
+        
+        .research-header {
+            background: linear-gradient(135deg, #2a2a2a 0%, #3a3a3a 50%, #2a2a2a 100%);
+            padding: 1.5rem;
+            text-align: center;
+            color: #e8e8e8;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .research-header i {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            display: block;
+            color: var(--accent);
+        }
+        
+        .research-header h3 {
+            font-size: 1.4rem;
+            margin: 0;
+        }
+        
+        .research-content {
+            padding: 1.5rem;
+        }
+        
+        .research-content p {
+            margin-bottom: 1.5rem;
+            color: var(--light);
+        }
+        
+        .research-meta {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .meta-tag {
+            background: rgba(139, 233, 253, 0.2);
+            color: var(--accent);
+            padding: 0.3rem 0.7rem;
+            border-radius: 20px;
+            font-size: 0.8rem;
+        }
+        
+        .research-links {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+        
+        .research-btn {
+            background: var(--accent);
+            color: white;
+            text-decoration: none;
+            padding: 0.8rem 1.5rem;
+            border-radius: 25px;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .research-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(120, 58, 237, 0.4);
+        }
+        
+        .notebook-btn {
+            background: var(--secondary);
+            color: var(--dark);
+        }
+        
+        .notebook-btn:hover {
+            box-shadow: 0 8px 20px rgba(0, 212, 255, 0.4);
+        }
+        
+        .coming-soon {
+            background: rgba(255, 107, 107, 0.1);
+            border: 1px solid rgba(255, 107, 107, 0.3);
+            padding: 2rem;
+            border-radius: 15px;
+            text-align: center;
+            margin: 2rem 0;
+        }
+        
+        .coming-soon h3 {
+            color: #ff6b6b;
+            margin-bottom: 1rem;
+        }
+        
+        @media (max-width: 768px) {
+            .research-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .back-btn {
+                position: relative;
+                top: 0;
+                left: 0;
+                margin-bottom: 1rem;
+                display: inline-block;
+            }
+            
+            h1 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <a href="../index.html" class="back-btn">
+        <i class="fas fa-arrow-left"></i> Back to Portfolio
+    </a>
+    
+    <header>
+        <div class="container">
+            <h1>AI Research</h1>
+            <p class="subtitle">Exploring the Frontiers of Artificial Intelligence</p>
+        </div>
+    </header>
+
+    <main class="container">
+        <div class="research-grid">
+            <!-- Sample Research Card - Replace with your actual research -->
+            <div class="research-card">
+                <div class="research-header">
+                    <i class="fas fa-brain"></i>
+                    <h3>LLM Testing Methodologies</h3>
+                </div>
+                <div class="research-content">
+                    <p>Comprehensive analysis of testing approaches for Large Language Models, including hallucination detection, bias measurement, and safety validation frameworks.</p>
+                    
+                    <div class="research-meta">
+                        <span class="meta-tag">Machine Learning</span>
+                        <span class="meta-tag">Testing</span>
+                        <span class="meta-tag">LLMs</span>
+                        <span class="meta-tag">Safety</span>
+                    </div>
+                    
+                    <div class="research-links">
+                        <a href="notebooks/llm-testing-analysis.html" class="research-btn notebook-btn">
+                            <i class="fas fa-book"></i> View Notebook
+                        </a>
+                        <a href="#" class="research-btn">
+                            <i class="fab fa-github"></i> Code
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Sample Research Card 2 -->
+            <div class="research-card">
+                <div class="research-header">
+                    <i class="fas fa-shield-alt"></i>
+                    <h3>AI Safety Metrics</h3>
+                </div>
+                <div class="research-content">
+                    <p>Research into quantifiable metrics for AI safety, including prompt injection detection, output toxicity measurement, and model reliability scoring.</p>
+                    
+                    <div class="research-meta">
+                        <span class="meta-tag">AI Safety</span>
+                        <span class="meta-tag">Metrics</span>
+                        <span class="meta-tag">Evaluation</span>
+                        <span class="meta-tag">Security</span>
+                    </div>
+                    
+                    <div class="research-links">
+                        <a href="notebooks/ai-safety-metrics.html" class="research-btn notebook-btn">
+                            <i class="fas fa-book"></i> View Notebook
+                        </a>
+                        <a href="#" class="research-btn">
+                            <i class="fas fa-download"></i> Dataset
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Sample Research Card 3 -->
+            <div class="research-card">
+                <div class="research-header">
+                    <i class="fas fa-chart-line"></i>
+                    <h3>Automated Testing Patterns</h3>
+                </div>
+                <div class="research-content">
+                    <p>Analysis of emerging patterns in AI-augmented test automation, including test generation, maintenance, and execution optimization strategies.</p>
+                    
+                    <div class="research-meta">
+                        <span class="meta-tag">Automation</span>
+                        <span class="meta-tag">Testing</span>
+                        <span class="meta-tag">Patterns</span>
+                        <span class="meta-tag">AI-Augmented</span>
+                    </div>
+                    
+                    <div class="research-links">
+                        <a href="notebooks/automated-testing-patterns.html" class="research-btn notebook-btn">
+                            <i class="fas fa-book"></i> View Notebook
+                        </a>
+                        <a href="#" class="research-btn">
+                            <i class="fas fa-external-link-alt"></i> Paper
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="coming-soon">
+            <h3><i class="fas fa-flask"></i> More Research Coming Soon</h3>
+            <p>I'm actively working on new research in AI testing, model validation, and safety frameworks. Check back regularly for updates, or follow my work on GitHub.</p>
+        </div>
+    </main>
+</body>
+</html>
