@@ -176,9 +176,9 @@ This portfolio demonstrates modern web development practices and AI-augmented te
 
 ### Research Section
 ```
-research/
-├── index.html                 # Research landing page
-└── notebooks/
+research/                         # AI Research & Jupyter Notebooks
+├── index.html                    # Research landing page
+└── notebooks/                    # Jupyter notebook collection
     ├── llm-testing-analysis.ipynb          # LLM testing research
     ├── llm-testing-analysis.html           # HTML viewer
     ├── ai-safety-metrics.ipynb             # AI safety research
