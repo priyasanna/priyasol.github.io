@@ -10,6 +10,26 @@ This portfolio demonstrates modern web development practices and AI-augmented te
 ┌─────────────────────────────────────────────────────────────┐
 │                    GitHub Pages Hosting                     │
 ├─────────────────────────────────────────────────────────────┤
+│                  Repository Structure                       │
+│  ┌─────────────────────────────────────────────────────────┐ │
+│  │  /                          # Root                      │ │
+│  │  ├── index.html             # Main portfolio            │ │
+│  │  ├── analytics.html         # Analytics dashboard      │ │
+│  │  ├── research/              # AI Research Section       │ │
+│  │  │   ├── index.html         # Research landing         │ │
+│  │  │   └── notebooks/         # Jupyter notebooks        │ │
+│  │  │       ├── *.ipynb        # Research notebooks       │ │
+│  │  │       └── *.html         # HTML viewers             │ │
+│  │  ├── algorithmic-trading/   # Trading project          │ │
+│  │  ├── job-search-automation/ # Automation suite         │ │
+│  │  ├── llm-guardian/          # LLM testing framework    │ │
+│  │  ├── legacy-ai-bridge/      # Enterprise AI bridge     │ │
+│  │  ├── qa-prompts/            # QA prompt library        │ │
+│  │  ├── docs/                  # Documentation            │ │
+│  │  ├── images/                # Assets & media           │ │
+│  │  └── scripts/               # Automation scripts       │ │
+│  └─────────────────────────────────────────────────────────┘ │
+├─────────────────────────────────────────────────────────────┤
 │                     Frontend Layer                          │
 │  ┌─────────────┐ ┌─────────────┐ ┌─────────────────────────┐ │
 │  │   HTML5     │ │    CSS3     │ │      JavaScript         │ │
@@ -21,6 +41,7 @@ This portfolio demonstrates modern web development practices and AI-augmented te
 │  ┌─────────────┐ ┌─────────────┐ ┌─────────────────────────┐ │
 │  │ AI Research │ │   Project   │ │    QA Prompt Library    │ │
 │  │ Notebooks   │ │ Showcase    │ │   Organized Content     │ │
+│  │ (.ipynb)    │ │ Portfolio   │ │   Interactive Demos     │ │
 │  └─────────────┘ └─────────────┘ └─────────────────────────┘ │
 ├─────────────────────────────────────────────────────────────┤
 │                   Analytics Layer                           │
