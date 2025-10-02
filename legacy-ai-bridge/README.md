@@ -286,3 +286,4 @@ class LegacyIntegrator:
 ---
 
 *Legacy systems don't have to be barriers to AI adoption. With the right approach, they can become the foundation for intelligent, AI-enhanced operations.*
+

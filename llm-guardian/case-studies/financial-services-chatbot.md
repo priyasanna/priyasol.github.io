@@ -204,3 +204,4 @@ LLMGuardian's implementation in financial services demonstrates the critical imp
 
 **Interested in implementing LLMGuardian in your financial services organization?**  
 [Contact us](mailto:elena.mereanu@gmail.com) for a customized assessment and implementation plan.
+

@@ -346,3 +346,4 @@ const advancedConfig = {
 **Ready to implement LLMGuardian?** [Contact us](mailto:elena.mereanu@gmail.com) for expert guidance and implementation support tailored to your specific assessment results.
 
 **Questions about the assessment?** Review our [implementation guide](./implementation-guide.md) or reach out for clarification on any assessment criteria.
+

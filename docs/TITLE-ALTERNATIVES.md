@@ -51,3 +51,4 @@ The new format uses:
 - **Quality gates** as checkboxes
 
 This makes the content more scannable and engaging than traditional paragraph format.
+

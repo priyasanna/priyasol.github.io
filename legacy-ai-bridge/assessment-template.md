@@ -227,3 +227,4 @@ Use this template to evaluate whether your legacy systems are ready for AI integ
 ---
 
 *This assessment should be reviewed quarterly and updated as system capabilities and business needs evolve.*
+

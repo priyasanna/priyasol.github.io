@@ -72,3 +72,4 @@ We welcome contributions of real-world case studies that demonstrate LLMGuardian
 ---
 
 *All case studies are based on real implementations with client details anonymized for confidentiality.*
+
