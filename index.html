@@ -141,6 +141,141 @@
         // Make reset function available for maintenance if needed
         window.resetAnalytics = resetAndInitAnalytics;
         
+        // Email notification system for private analytics
+        function sendAnalyticsEmail() {
+            const analytics = getAnalytics();
+            const currentTime = new Date().toISOString();
+            
+            // Prepare detailed analytics report
+            const report = {
+                timestamp: currentTime,
+                metrics: {
+                    uniqueVisitors: analytics.uniqueVisitors,
+                    totalVisits: analytics.totalVisits,
+                    sessions: analytics.sessions,
+                    lastVisit: analytics.lastVisit,
+                    trackingDuration: calculateTrackingDuration(analytics.startDate)
+                },
+                browserBreakdown: analytics.browsers,
+                trafficSources: analytics.referrers,
+                dailyVisits: analytics.dailyVisits,
+                fingerprints: analytics.visitors.length // For debugging
+            };
+            
+            // Create email content
+            const emailSubject = `Portfolio Analytics Report - ${new Date().toLocaleDateString()}`;
+            const emailBody = generateEmailReport(report);
+            
+            // Use EmailJS or similar service (you'll need to set this up)
+            // For now, we'll use a simple mailto link with the data
+            const mailtoLink = `mailto:elena.mereanu@gmail.com?subject=${encodeURIComponent(emailSubject)}&body=${encodeURIComponent(emailBody)}`;
+            
+            // Also log to console for immediate viewing
+            console.log('=== PRIVATE ANALYTICS REPORT ===');
+            console.log(JSON.stringify(report, null, 2));
+            
+            // Store report for later retrieval
+            localStorage.setItem('latest_analytics_report', JSON.stringify(report));
+            
+            return report;
+        }
+        
+        function calculateTrackingDuration(startDate) {
+            if (!startDate) return 'Unknown';
+            const start = new Date(startDate);
+            const now = new Date();
+            const days = Math.ceil((now - start) / (1000 * 60 * 60 * 24));
+            return `${days} days`;
+        }
+        
+        function generateEmailReport(report) {
+            return `
+PORTFOLIO ANALYTICS REPORT
+Generated: ${new Date(report.timestamp).toLocaleString()}
+
+KEY METRICS:
+- Unique Visitors: ${report.metrics.uniqueVisitors}
+- Total Page Views: ${report.metrics.totalVisits}
+- Sessions: ${report.metrics.sessions}
+- Tracking Duration: ${report.metrics.trackingDuration}
+- Last Visit: ${report.metrics.lastVisit ? new Date(report.metrics.lastVisit).toLocaleString() : 'Never'}
+
+BROWSER BREAKDOWN:
+${Object.entries(report.browserBreakdown).map(([browser, count]) => 
+    `- ${browser}: ${count} visits`).join('\n')}
+
+TRAFFIC SOURCES:
+${Object.entries(report.trafficSources).map(([source, count]) => 
+    `- ${source || 'Direct Traffic'}: ${count} visits`).join('\n')}
+
+DAILY VISITS:
+${Object.entries(report.dailyVisits).map(([date, count]) => 
+    `- ${date}: ${count} visits`).join('\n')}
+
+RECRUITER INSIGHTS:
+- Peak activity days: ${getPeakActivityDays(report.dailyVisits)}
+- Most common browser: ${getMostCommonBrowser(report.browserBreakdown)}
+- Professional traffic: ${getProfessionalTrafficIndicators(report.trafficSources)}
+
+This report is generated automatically by your portfolio analytics system.
+Data is stored locally and not shared with any third parties.
+            `.trim();
+        }
+        
+        function getPeakActivityDays(dailyVisits) {
+            if (!dailyVisits || Object.keys(dailyVisits).length === 0) return 'No data';
+            const sorted = Object.entries(dailyVisits).sort(([,a], [,b]) => b - a);
+            return sorted.slice(0, 3).map(([date, count]) => `${date} (${count})`).join(', ');
+        }
+        
+        function getMostCommonBrowser(browsers) {
+            if (!browsers || Object.keys(browsers).length === 0) return 'No data';
+            const sorted = Object.entries(browsers).sort(([,a], [,b]) => b - a);
+            return sorted[0] ? `${sorted[0][0]} (${sorted[0][1]} visits)` : 'No data';
+        }
+        
+        function getProfessionalTrafficIndicators(sources) {
+            const professionalDomains = ['linkedin.com', 'indeed.com', 'glassdoor.com', 'monster.com', 'ziprecruiter.com'];
+            let professionalCount = 0;
+            
+            Object.keys(sources).forEach(source => {
+                if (professionalDomains.some(domain => source.includes(domain))) {
+                    professionalCount += sources[source];
+                }
+            });
+            
+            return professionalCount > 0 ? `${professionalCount} visits from job sites` : 'No job site referrals detected';
+        }
+        
+        // Auto-send weekly reports (runs on page load)
+        function checkAndSendWeeklyReport() {
+            const lastReportDate = localStorage.getItem('last_analytics_report_date');
+            const today = new Date().toDateString();
+            const daysSinceLastReport = lastReportDate ? 
+                Math.floor((new Date() - new Date(lastReportDate)) / (1000 * 60 * 60 * 24)) : 7;
+            
+            // Send report if it's been 7 days or more, or if there's significant activity
+            const analytics = getAnalytics();
+            const significantActivity = analytics.uniqueVisitors >= 5 || analytics.totalVisits >= 10;
+            
+            if (daysSinceLastReport >= 7 || (significantActivity && daysSinceLastReport >= 3)) {
+                const report = sendAnalyticsEmail();
+                localStorage.setItem('last_analytics_report_date', today);
+                
+                // Show discrete notification
+                console.log('📧 Analytics report generated. Check console or localStorage for details.');
+            }
+        }
+        
+        // Make functions available globally
+        window.sendAnalyticsEmail = sendAnalyticsEmail;
+        window.getPrivateReport = () => JSON.parse(localStorage.getItem('latest_analytics_report') || '{}');
+        
+        // Check for weekly report on page load
+        document.addEventListener('DOMContentLoaded', function() {
+            setTimeout(checkAndSendWeeklyReport, 2000); // Delay to ensure analytics are initialized
+        });
+        
     </script>
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">

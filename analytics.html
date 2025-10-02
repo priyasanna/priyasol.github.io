@@ -285,6 +285,9 @@
             <button class="export-btn" onclick="debugAnalytics()">
                 <i class="fas fa-bug"></i> Debug Analytics
             </button>
+            <button class="export-btn" onclick="generatePrivateReport()" style="background: #28a745;">
+                <i class="fas fa-envelope"></i> Email Report
+            </button>
             <button class="export-btn" onclick="exportData()">
                 <i class="fas fa-download"></i> Export Data
             </button>
@@ -561,6 +564,122 @@ Raw Data Length: ${rawData ? rawData.length : 'No data'} characters
             ctx.strokeStyle = '#00d4ff';
             ctx.lineWidth = 2;
             ctx.stroke();
+        }
+        
+        function generatePrivateReport() {
+            // Access the main portfolio's analytics functions
+            const analytics = loadAnalytics();
+            
+            // Generate comprehensive report
+            const report = {
+                timestamp: new Date().toISOString(),
+                metrics: {
+                    uniqueVisitors: analytics.uniqueVisitors,
+                    totalVisits: analytics.totalVisits,
+                    sessions: analytics.sessions,
+                    lastVisit: analytics.lastVisit,
+                    trackingDuration: calculateTrackingDuration(analytics.startDate)
+                },
+                browserBreakdown: analytics.browsers,
+                trafficSources: analytics.referrers,
+                dailyVisits: analytics.dailyVisits || {},
+                fingerprints: analytics.visitors ? analytics.visitors.length : 0
+            };
+            
+            // Generate email content
+            const emailSubject = `Portfolio Analytics Report - ${new Date().toLocaleDateString()}`;
+            const emailBody = generateEmailReport(report);
+            
+            // Create mailto link
+            const mailtoLink = `mailto:elena.mereanu@gmail.com?subject=${encodeURIComponent(emailSubject)}&body=${encodeURIComponent(emailBody)}`;
+            
+            // Open email client
+            window.open(mailtoLink);
+            
+            // Also copy to clipboard for easy access
+            navigator.clipboard.writeText(emailBody).then(() => {
+                alert('📧 Email report opened in your email client!\n\n📋 Report also copied to clipboard for easy pasting.');
+            }).catch(() => {
+                alert('📧 Email report opened in your email client!');
+            });
+            
+            // Log to console
+            console.log('=== PRIVATE ANALYTICS REPORT ===');
+            console.log(JSON.stringify(report, null, 2));
+            
+            return report;
+        }
+        
+        function calculateTrackingDuration(startDate) {
+            if (!startDate) return 'Unknown';
+            const start = new Date(startDate);
+            const now = new Date();
+            const days = Math.ceil((now - start) / (1000 * 60 * 60 * 24));
+            return `${days} days`;
+        }
+        
+        function generateEmailReport(report) {
+            return `
+PORTFOLIO ANALYTICS REPORT
+Generated: ${new Date(report.timestamp).toLocaleString()}
+
+KEY METRICS:
+- Unique Visitors: ${report.metrics.uniqueVisitors}
+- Total Page Views: ${report.metrics.totalVisits}
+- Sessions: ${report.metrics.sessions}
+- Tracking Duration: ${report.metrics.trackingDuration}
+- Last Visit: ${report.metrics.lastVisit ? new Date(report.metrics.lastVisit).toLocaleString() : 'Never'}
+
+BROWSER BREAKDOWN:
+${Object.entries(report.browserBreakdown).map(([browser, count]) => 
+    `- ${browser}: ${count} visits`).join('\n')}
+
+TRAFFIC SOURCES:
+${Object.entries(report.trafficSources).map(([source, count]) => 
+    `- ${source || 'Direct Traffic'}: ${count} visits`).join('\n')}
+
+DAILY VISITS:
+${Object.entries(report.dailyVisits).map(([date, count]) => 
+    `- ${date}: ${count} visits`).join('\n')}
+
+RECRUITER INSIGHTS:
+- Peak activity days: ${getPeakActivityDays(report.dailyVisits)}
+- Most common browser: ${getMostCommonBrowser(report.browserBreakdown)}
+- Professional traffic: ${getProfessionalTrafficIndicators(report.trafficSources)}
+
+ENGAGEMENT ANALYSIS:
+- Average visits per visitor: ${(report.metrics.totalVisits / Math.max(report.metrics.uniqueVisitors, 1)).toFixed(1)}
+- Return visitor rate: ${((report.metrics.sessions - report.metrics.uniqueVisitors) / Math.max(report.metrics.sessions, 1) * 100).toFixed(1)}%
+- Daily engagement: ${(report.metrics.totalVisits / Math.max(Object.keys(report.dailyVisits).length, 1)).toFixed(1)} visits/day
+
+This report is generated automatically by your portfolio analytics system.
+Data is stored locally and not shared with any third parties.
+            `.trim();
+        }
+        
+        function getPeakActivityDays(dailyVisits) {
+            if (!dailyVisits || Object.keys(dailyVisits).length === 0) return 'No data';
+            const sorted = Object.entries(dailyVisits).sort(([,a], [,b]) => b - a);
+            return sorted.slice(0, 3).map(([date, count]) => `${date} (${count})`).join(', ');
+        }
+        
+        function getMostCommonBrowser(browsers) {
+            if (!browsers || Object.keys(browsers).length === 0) return 'No data';
+            const sorted = Object.entries(browsers).sort(([,a], [,b]) => b - a);
+            return sorted[0] ? `${sorted[0][0]} (${sorted[0][1]} visits)` : 'No data';
+        }
+        
+        function getProfessionalTrafficIndicators(sources) {
+            const professionalDomains = ['linkedin.com', 'indeed.com', 'glassdoor.com', 'monster.com', 'ziprecruiter.com', 'dice.com', 'careerbuilder.com'];
+            let professionalCount = 0;
+            
+            Object.keys(sources).forEach(source => {
+                if (professionalDomains.some(domain => source.includes(domain))) {
+                    professionalCount += sources[source];
+                }
+            });
+            
+            return professionalCount > 0 ? `${professionalCount} visits from job sites` : 'No job site referrals detected';
         }
         
         function clearData() {
