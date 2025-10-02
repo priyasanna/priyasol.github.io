@@ -174,19 +174,6 @@ This portfolio demonstrates modern web development practices and AI-augmented te
 └── ANALYTICS-README.md        # Analytics system documentation
 ```
 
-### Research Section
-```
-research/                         # AI Research & Jupyter Notebooks
-├── index.html                    # Research landing page
-└── notebooks/                    # Jupyter notebook collection
-    ├── llm-testing-analysis.ipynb          # LLM testing research
-    ├── llm-testing-analysis.html           # HTML viewer
-    ├── ai-safety-metrics.ipynb             # AI safety research
-    ├── ai-safety-metrics.html              # HTML viewer
-    ├── automated-testing-patterns.ipynb    # Testing patterns research
-    └── automated-testing-patterns.html     # HTML viewer
-```
-
 ### Project Directories
 ```
 ├── llm-guardian/                 # LLM Testing Framework (Flagship Project)
@@ -205,9 +192,18 @@ research/                         # AI Research & Jupyter Notebooks
 ├── algorithmic-trading/          # Quantitative trading project
 │   ├── README.md                 # Strategy overview and results
 │   └── strategy-implementation.md # Technical implementation
-└── qa-prompts/                   # AI prompt library for QA/SDET
-    ├── README.md                 # Library overview
-    └── prompts/                  # Categorized prompt collections
+├── qa-prompts/                   # AI prompt library for QA/SDET
+│   ├── README.md                 # Library overview
+│   └── prompts/                  # Categorized prompt collections
+└── research/                     # AI Research & Jupyter Notebooks
+    ├── index.html                # Research landing page
+    └── notebooks/                # Jupyter notebook collection
+        ├── llm-testing-analysis.ipynb          # LLM testing research
+        ├── llm-testing-analysis.html           # HTML viewer
+        ├── ai-safety-metrics.ipynb             # AI safety research
+        ├── ai-safety-metrics.html              # HTML viewer
+        ├── automated-testing-patterns.ipynb    # Testing patterns research
+        └── automated-testing-patterns.html     # HTML viewer
 ```
 
 ### Supporting Infrastructure
