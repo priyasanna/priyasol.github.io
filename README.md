@@ -132,6 +132,15 @@ Found this useful? Here's how you can help:
 ├── qa-prompts/                   # AI prompt library for QA/SDET
 │   ├── README.md                 # Library overview
 │   └── prompts/                  # Categorized prompt collections
+├── research/                     # AI Research & Jupyter Notebooks
+│   ├── index.html                # Research landing page
+│   └── notebooks/                # Jupyter notebook collection
+│       ├── llm-testing-analysis.ipynb          # LLM testing research
+│       ├── llm-testing-analysis.html           # HTML viewer
+│       ├── ai-safety-metrics.ipynb             # AI safety research
+│       ├── ai-safety-metrics.html              # HTML viewer
+│       ├── automated-testing-patterns.ipynb    # Testing patterns research
+│       └── automated-testing-patterns.html     # HTML viewer
 ├── docs/                         # Learning resources and guides
 │   ├── PROMPT-ENGINEERING-GUIDE.md
 │   ├── AI-WORKFLOW-INTEGRATION.md
