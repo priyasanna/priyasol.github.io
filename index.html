@@ -1437,6 +1437,132 @@ Data is stored locally and not shared with any third parties.
             min-width: 300px;
         }
 
+        .about-text p {
+            margin-bottom: 1.5rem;
+            font-size: 1.2rem;
+            line-height: 1.8;
+            color: var(--light);
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+        }
+
+        .expertise-areas {
+            margin: 2rem 0;
+            padding: 1.5rem;
+            background: rgba(68, 71, 90, 0.3);
+            border-radius: 12px;
+            border: 1px solid rgba(120, 58, 237, 0.2);
+        }
+
+        .expertise-areas h3 {
+            color: var(--secondary);
+            margin-bottom: 1rem;
+            font-size: 1.3rem;
+            text-align: center;
+        }
+
+        .expertise-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.8rem;
+            justify-content: center;
+        }
+
+        .expertise-tag {
+            background: rgba(120, 58, 237, 0.2);
+            color: var(--light);
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 500;
+            border: 1px solid rgba(120, 58, 237, 0.3);
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .expertise-tag:hover {
+            background: rgba(120, 58, 237, 0.4);
+            border-color: var(--secondary);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(120, 58, 237, 0.3);
+            color: white;
+        }
+
+        .expertise-tag:not([href]) {
+            cursor: default;
+        }
+
+        .mission-statement {
+            margin: 2rem 0;
+            padding: 1.5rem;
+            background: linear-gradient(135deg, rgba(0, 212, 255, 0.1), rgba(120, 58, 237, 0.1));
+            border-left: 4px solid var(--secondary);
+            border-radius: 8px;
+            font-style: italic;
+        }
+
+        .mission-statement p {
+            margin: 0;
+            font-size: 1.1rem;
+            color: var(--accent);
+        }
+
+        .research-highlight {
+            margin: 2rem 0;
+            padding: 1.5rem;
+            background: rgba(0, 0, 0, 0.2);
+            border-radius: 12px;
+            border: 1px solid rgba(0, 212, 255, 0.3);
+        }
+
+        .research-highlight h4 {
+            color: var(--secondary);
+            margin-bottom: 1rem;
+            font-size: 1.2rem;
+        }
+
+        .research-highlight p {
+            margin-bottom: 1rem;
+            font-size: 1rem;
+        }
+
+        .research-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: var(--secondary);
+            color: var(--dark);
+            padding: 0.7rem 1.5rem;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            font-size: 0.9rem;
+        }
+
+        .research-link:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(0, 212, 255, 0.4);
+            background: #00d4ff;
+        }
+
+        .about-text a {
+            color: var(--secondary);
+            text-decoration: none;
+            border-bottom: 1px solid transparent;
+            transition: all 0.3s ease;
+        }
+
+        .about-text a:hover {
+            color: #00d4ff;
+            border-bottom-color: #00d4ff;
+        }
+
+        .about-text strong {
+            color: var(--accent);
+            font-weight: 600;
+        }
+
 
         .share-portfolio {
             margin-top: 2rem;
@@ -2140,9 +2266,30 @@ Data is stored locally and not shared with any third parties.
                 <div class="about-text">
                     <p>I am an AI-First Quality Engineer dedicated to solving the fundamental challenge of reliability in generative AI and LLM applications. My expertise lies in building validation frameworks that ensure AI systems are safe, accurate, and trustworthy before they reach production.</p>
 
-                    <p>Specializing in LLM Testing, AI Model Validation, Prompt Engineering, and AI Safety protocols, I create systematic approaches to test the unpredictable nature of AI systems. My frameworks catch hallucinations, prevent prompt injections, and measure model drift before they impact users.</p>
+                    <div class="expertise-areas">
+                        <h3>Core Expertise</h3>
+                        <div class="expertise-tags">
+                            <a href="research/notebooks/llm-testing-analysis.html" class="expertise-tag">LLM Testing</a>
+                            <span class="expertise-tag">AI Model Validation</span>
+                            <span class="expertise-tag">Prompt Engineering</span>
+                            <a href="research/notebooks/ai-safety-metrics.html" class="expertise-tag">AI Safety Protocols</a>
+                            <a href="research/notebooks/mcp-software-testing.html" class="expertise-tag">Model Context Protocol</a>
+                            <span class="expertise-tag">Test Automation</span>
+                            <a href="research/notebooks/automated-testing-patterns.html" class="expertise-tag">AI-Augmented Testing</a>
+                        </div>
+                    </div>
 
-                    <p>My mission is to be the quality assurance layer that AI companies need but often overlook - ensuring their innovative systems don't embarrass them, lose customers, or create liability issues.</p>
+                    <p>I create systematic approaches to test the unpredictable nature of AI systems. My frameworks catch <strong>hallucinations</strong>, prevent <strong>prompt injections</strong>, and measure <strong>model drift</strong> before they impact users. Current research focuses on <a href="research/notebooks/mcp-software-testing.html">Model Context Protocol integration</a> for context-aware testing automation.</p>
+
+                    <div class="mission-statement">
+                        <p>My mission is to be the quality assurance layer that AI companies need but often overlook - ensuring their innovative systems don't embarrass them, lose customers, or create liability issues.</p>
+                    </div>
+
+                    <div class="research-highlight">
+                        <h4>Current Research Focus</h4>
+                        <p>Pioneering the integration of <a href="research/notebooks/mcp-software-testing.html">Model Context Protocol (MCP)</a> with testing frameworks to create intelligent, context-aware test automation systems. This work bridges the cognitive gap between AI capabilities and software quality assurance.</p>
+                        <a href="research/" class="research-link">View All Research</a>
+                    </div>
                 </div>
             </div>
         </div>
