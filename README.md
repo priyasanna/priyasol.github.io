@@ -20,6 +20,12 @@
 
 ### Research Map
 
+**9 Research Notebooks Organized in 3 Categories:**
+
+- 🟢 **Practical Applications** - Healthcare AI Agents, RAG Testing, MCP Testing
+- 🔵 **Academic Research** - Multi-Agent Orchestration, Model Evaluation, LLM Testing
+- 🟡 **Frameworks & Tools** - Agentic Testing, Automated Patterns, AI Safety
+
 ```mermaid
 graph TB
     Research[AI Testing Research Portfolio]
