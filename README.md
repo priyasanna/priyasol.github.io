@@ -74,33 +74,52 @@ graph TB
 ### Featured Research
 
 <details>
-<summary><b>Why Use AI Agents for Testing? - Healthcare Case Study</b> (Practical)</summary>
+<summary><b>CI/CD Test Optimization Tool</b> (Production-Ready)</summary>
+
+**Impact:** 40% time reduction • 80% risk coverage  
+**Focus:** Ingests test history, runs 10,000 Monte Carlo simulations, outputs optimized suite  
+**Exports:** JSON, pytest, GitHub Actions  
+**Tags:** `CI-CD` `monte-carlo` `test-optimization` `DevOps`  
+**[View](./research/notebooks/ci-test-optimization-monte-carlo.html)** | **[Download](./research/notebooks/ci-test-optimization-monte-carlo.ipynb)**
+</details>
+
+<details>
+<summary><b>Healthcare AI Agents Case Study</b> (Practical)</summary>
 
 **Impact:** 487% ROI • 92% coverage • 88% faster tests  
-**Focus:** Autonomous testing with 7 specialized agents (Explorer, Generator, Security, Compliance)  
+**Focus:** Why QA pros use AI agents - 7 agent types with HIPAA compliance  
 **Tags:** `AI-agents` `healthcare-QA` `HIPAA-compliance` `autonomous-testing`  
 **[View](./research/notebooks/ai-agents-qa-healthcare.html)** | **[Download](./research/notebooks/ai-agents-qa-healthcare.ipynb)**
 </details>
 
 <details>
-<summary><b>Multi-Agent Orchestration Framework</b> (Academic Research)</summary>
+<summary><b>Multi-Agent Orchestration Framework</b> (Academic)</summary>
 
-**Impact:** 80.2% detection • 31% cost reduction • 15% improvement  
-**Focus:** Comparing 4 architectures (Monolithic, Manager-Worker, Swarm, Pipeline) with 50-trial validation  
-**Tags:** `multi-agent-systems` `test-orchestration` `manager-worker` `agent-architecture`  
+**Impact:** 80.2% detection • 31% cost reduction • ANOVA validated  
+**Focus:** 4 architectures, 50 trials, statistical validation  
+**Tags:** `multi-agent-systems` `test-orchestration` `manager-worker`  
 **[View](./research/notebooks/multi-agent-orchestration-framework.html)** | **[Download](./research/notebooks/multi-agent-orchestration-framework.ipynb)**
 </details>
 
 <details>
-<summary><b>Evaluating AI Models for Software Testing</b> (Framework)</summary>
+<summary><b>Monte Carlo Testing Framework</b> (Research)</summary>
 
-**Impact:** Comprehensive model comparison framework  
-**Focus:** GPT-4 • Claude 3.5 • Gemini Pro • CodeLlama benchmarking  
-**Tags:** `AI-model-evaluation` `LLM-benchmarking` `GPT-4` `Claude`  
+**Impact:** POFOD estimation • Statistical reliability assessment  
+**Focus:** Risk-based testing, fuzzing, chaos engineering  
+**Tags:** `monte-carlo` `statistical-testing` `POFOD`  
+**[View](./research/notebooks/monte-carlo-testing-framework.html)** | **[Download](./research/notebooks/monte-carlo-testing-framework.ipynb)**
+</details>
+
+<details>
+<summary><b>AI Model Evaluation Framework</b> (Comparative)</summary>
+
+**Impact:** Comprehensive model comparison  
+**Focus:** GPT-4 • Claude 3.5 • Gemini Pro • CodeLlama  
+**Tags:** `AI-model-evaluation` `LLM-benchmarking` `GPT-4`  
 **[View](./research/notebooks/model-evaluation-software-testing.html)** | **[Download](./research/notebooks/model-evaluation-software-testing.ipynb)**
 </details>
 
-**[View All 9 Research Notebooks →](./research/)** | **[Complete Research Index](./research/notebooks/README.md)**
+**[View All 11 Research Notebooks →](./research/)** | **[Complete Research Index](./research/notebooks/README.md)**
 
 ---
 
