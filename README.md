@@ -49,20 +49,20 @@ graph TB
 
 | Research Paper | Type | Key Results | Primary Focus | Tech Stack |
 |----------------|------|-------------|---------------|------------|
-| [Healthcare AI Agents](./research/notebooks/ai-agents-qa-healthcare.html) | 🏥 Case Study | 487% ROI, 92% coverage | Why use AI agents? | LangChain, Playwright |
-| [Multi-Agent Orchestration](./research/notebooks/multi-agent-orchestration-framework.html) | 📊 Academic | 80.2% detection, 31% cost ↓ | Optimal architecture | ATAO Framework |
-| [Model Evaluation](./research/notebooks/model-evaluation-software-testing.html) | ⚖️ Framework | GPT-4 vs Claude vs Gemini | Which AI model to use? | Python, pandas |
-| [Agentic Testing](./research/notebooks/agentic-testing-integration.html) | 🤖 Integration | Multi-agent systems | Implementation guide | AutoGPT, LangChain |
-| [MCP Testing](./research/notebooks/mcp-software-testing.html) | 🔌 Framework | Context-aware testing | Dynamic adaptation | MCP Protocol |
-| [RAG Testing](./research/notebooks/rag-testing-applications.html) | 📚 Applications | Test generation from docs | Knowledge retrieval | RAG, Vector DBs |
-| [LLM Methodologies](./research/notebooks/llm-testing-analysis.html) | 🧠 Analysis | Hallucination detection | Testing LLMs | Safety frameworks |
-| [AI Safety Metrics](./research/notebooks/ai-safety-metrics.html) | 🛡️ Metrics | Prompt injection detection | Security validation | Safety evaluators |
-| [Testing Patterns](./research/notebooks/automated-testing-patterns.html) | 📋 Patterns | AI-augmented automation | Best practices | Pytest, CI/CD |
+| [Healthcare AI Agents](./research/notebooks/ai-agents-qa-healthcare.html) | Case Study | 487% ROI, 92% coverage | Why use AI agents? | LangChain, Playwright |
+| [Multi-Agent Orchestration](./research/notebooks/multi-agent-orchestration-framework.html) | Academic | 80.2% detection, 31% cost ↓ | Optimal architecture | ATAO Framework |
+| [Model Evaluation](./research/notebooks/model-evaluation-software-testing.html) | Framework | GPT-4 vs Claude vs Gemini | Which AI model to use? | Python, pandas |
+| [Agentic Testing](./research/notebooks/agentic-testing-integration.html) | Integration | Multi-agent systems | Implementation guide | AutoGPT, LangChain |
+| [MCP Testing](./research/notebooks/mcp-software-testing.html) | Framework | Context-aware testing | Dynamic adaptation | MCP Protocol |
+| [RAG Testing](./research/notebooks/rag-testing-applications.html) | Applications | Test generation from docs | Knowledge retrieval | RAG, Vector DBs |
+| [LLM Methodologies](./research/notebooks/llm-testing-analysis.html) | Analysis | Hallucination detection | Testing LLMs | Safety frameworks |
+| [AI Safety Metrics](./research/notebooks/ai-safety-metrics.html) | Metrics | Prompt injection detection | Security validation | Safety evaluators |
+| [Testing Patterns](./research/notebooks/automated-testing-patterns.html) | Patterns | AI-augmented automation | Best practices | Pytest, CI/CD |
 
 ### Featured Research
 
 <details>
-<summary><b>🏥 Why Use AI Agents for Testing? - Healthcare Case Study</b> (Practical)</summary>
+<summary><b>Why Use AI Agents for Testing? - Healthcare Case Study</b> (Practical)</summary>
 
 **Impact:** 487% ROI • 92% coverage • 88% faster tests  
 **Focus:** Autonomous testing with 7 specialized agents (Explorer, Generator, Security, Compliance)  
@@ -71,7 +71,7 @@ graph TB
 </details>
 
 <details>
-<summary><b>📊 Multi-Agent Orchestration Framework</b> (Academic Research)</summary>
+<summary><b>Multi-Agent Orchestration Framework</b> (Academic Research)</summary>
 
 **Impact:** 80.2% detection • 31% cost reduction • 15% improvement  
 **Focus:** Comparing 4 architectures (Monolithic, Manager-Worker, Swarm, Pipeline) with 50-trial validation  
@@ -80,7 +80,7 @@ graph TB
 </details>
 
 <details>
-<summary><b>⚖️ Evaluating AI Models for Software Testing</b> (Framework)</summary>
+<summary><b>Evaluating AI Models for Software Testing</b> (Framework)</summary>
 
 **Impact:** Comprehensive model comparison framework  
 **Focus:** GPT-4 • Claude 3.5 • Gemini Pro • CodeLlama benchmarking  
@@ -88,7 +88,7 @@ graph TB
 **[View](./research/notebooks/model-evaluation-software-testing.html)** | **[Download](./research/notebooks/model-evaluation-software-testing.ipynb)**
 </details>
 
-**[📚 View All 9 Research Notebooks →](./research/)** | **[📖 Complete Research Index](./research/notebooks/README.md)**
+**[View All 9 Research Notebooks →](./research/)** | **[Complete Research Index](./research/notebooks/README.md)**
 
 ---
 
