@@ -20,10 +20,10 @@
 
 ### Research Map
 
-**9 Research Notebooks Organized in 3 Categories:**
+**11 Research Notebooks Organized in 3 Categories:**
 
-- 🟢 **Practical Applications** - Healthcare AI Agents, RAG Testing, MCP Testing
-- 🔵 **Academic Research** - Multi-Agent Orchestration, Model Evaluation, LLM Testing
+- 🟢 **Practical Applications** - Healthcare AI Agents, CI/CD Optimization, RAG Testing, MCP Testing
+- 🔵 **Academic Research** - Multi-Agent Orchestration, Monte Carlo Testing, Model Evaluation, LLM Testing
 - 🟡 **Frameworks & Tools** - Agentic Testing, Automated Patterns, AI Safety
 
 ```mermaid
@@ -35,10 +35,12 @@ graph TB
     Research --> Tools[Frameworks & Tools]
     
     Practical --> Healthcare[Healthcare AI Agents<br/>487% ROI]
+    Practical --> CICD[CI/CD Optimization<br/>40% Time Saved]
     Practical --> RAG[RAG Testing<br/>Applications]
     Practical --> MCP[MCP in Testing<br/>Context-Aware]
     
     Academic --> MultiAgent[Multi-Agent Orchestration<br/>80.2% Detection]
+    Academic --> MonteCarlo[Monte Carlo Testing<br/>POFOD Estimation]
     Academic --> Evaluation[Model Evaluation<br/>GPT-4 vs Claude]
     Academic --> LLMTest[LLM Testing<br/>Methodologies]
     
@@ -47,7 +49,9 @@ graph TB
     Tools --> Safety[AI Safety<br/>Metrics]
     
     style Healthcare fill:#51cf66,stroke:#2f9e44,color:#000
+    style CICD fill:#51cf66,stroke:#2f9e44,color:#000
     style MultiAgent fill:#51cf66,stroke:#2f9e44,color:#000
+    style MonteCarlo fill:#74c0fc,stroke:#1971c2,color:#000
     style Evaluation fill:#74c0fc,stroke:#1971c2,color:#000
 ```
 
@@ -56,8 +60,10 @@ graph TB
 | Research Paper | Type | Key Results | Primary Focus | Tech Stack |
 |----------------|------|-------------|---------------|------------|
 | [Healthcare AI Agents](./research/notebooks/ai-agents-qa-healthcare.html) | Case Study | 487% ROI, 92% coverage | Why use AI agents? | LangChain, Playwright |
+| [CI/CD Test Optimization](./research/notebooks/ci-test-optimization-monte-carlo.html) | Tool | 40% time reduction | Optimize pipeline | Monte Carlo, Python |
 | [Multi-Agent Orchestration](./research/notebooks/multi-agent-orchestration-framework.html) | Academic | 80.2% detection, 31% cost ↓ | Optimal architecture | ATAO Framework |
-| [Model Evaluation](./research/notebooks/model-evaluation-software-testing.html) | Framework | GPT-4 vs Claude vs Gemini | Which AI model to use? | Python, pandas |
+| [Monte Carlo Testing](./research/notebooks/monte-carlo-testing-framework.html) | Research | POFOD estimation | Statistical testing | Monte Carlo, scipy |
+| [Model Evaluation](./research/notebooks/model-evaluation-software-testing.html) | Framework | GPT-4 vs Claude vs Gemini | Which AI model? | Python, pandas |
 | [Agentic Testing](./research/notebooks/agentic-testing-integration.html) | Integration | Multi-agent systems | Implementation guide | AutoGPT, LangChain |
 | [MCP Testing](./research/notebooks/mcp-software-testing.html) | Framework | Context-aware testing | Dynamic adaptation | MCP Protocol |
 | [RAG Testing](./research/notebooks/rag-testing-applications.html) | Applications | Test generation from docs | Knowledge retrieval | RAG, Vector DBs |
