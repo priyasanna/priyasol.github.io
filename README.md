@@ -139,43 +139,94 @@ Found this useful? Here's how you can help:
 ├── llm-guardian/                 # LLM Testing Framework (Flagship Project)
 │   ├── README.md                 # Framework documentation
 │   ├── demo.html                 # Interactive demonstrations
+│   ├── index.html                # Main entry point
 │   ├── src/                      # Core framework code
+│   │   ├── evaluators/           # Testing evaluators
+│   │   ├── llm-tester.js         # Main testing interface
+│   │   ├── rag-evaluator.js      # RAG system evaluation
+│   │   ├── safety-evaluator.js   # Safety validation
+│   │   └── mcp-server.js         # MCP integration
 │   ├── examples/                 # Usage examples
-│   └── case-studies/             # Real-world implementations
+│   │   └── demo.js               # Demo implementations
+│   ├── case-studies/             # Real-world implementations
+│   │   ├── README.md
+│   │   ├── financial-services-chatbot.md
+│   │   └── ecommerce-recommendations.md
+│   └── reasoning-examples/       # Extended thinking examples
+│       └── test-planning-reasoning.md
 ├── legacy-ai-bridge/             # Enterprise AI integration framework
 │   ├── README.md                 # Framework overview
-│   ├── assessment-template.md    # Legacy system evaluation
-│   └── implementation-guide.md   # Step-by-step technical guide
+│   └── assessment-template.md    # Legacy system evaluation
 ├── job-search-automation/        # AI automation project
 │   ├── README.md                 # Project documentation
-│   └── demo-screenshots.md       # Visual demonstrations
+│   ├── demo-screenshots.md       # Visual demonstrations
+│   └── ethical-automation-guide.md
 ├── algorithmic-trading/          # Quantitative trading project
 │   ├── README.md                 # Strategy overview and results
 │   └── strategy-implementation.md # Technical implementation
 ├── qa-prompts/                   # AI prompt library for QA/SDET
 │   ├── README.md                 # Library overview
-│   └── prompts/                  # Categorized prompt collections
+│   ├── prompts/                  # Categorized prompt collections
+│   │   ├── test-generation.md
+│   │   ├── api-testing.md
+│   │   ├── code-generation.md
+│   │   └── mobile-testing.md
+│   └── examples/
+│       └── sample-outputs.md
 ├── research/                     # AI Research & Jupyter Notebooks
 │   ├── index.html                # Research landing page
-│   └── notebooks/                # Jupyter notebook collection
-│       ├── llm-testing-analysis.ipynb          # LLM testing research
-│       ├── llm-testing-analysis.html           # HTML viewer
-│       ├── ai-safety-metrics.ipynb             # AI safety research
-│       ├── ai-safety-metrics.html              # HTML viewer
-│       ├── automated-testing-patterns.ipynb    # Testing patterns research
-│       └── automated-testing-patterns.html     # HTML viewer
+│   ├── notebooks/                # Jupyter notebook collection
+│   │   ├── README.md             # Complete notebook index with tags
+│   │   ├── ai-agents-qa-healthcare.ipynb       # Healthcare AI agents case study
+│   │   ├── ai-agents-qa-healthcare.html        # HTML viewer
+│   │   ├── model-evaluation-software-testing.ipynb # AI model evaluation framework
+│   │   ├── model-evaluation-software-testing.html  # HTML viewer
+│   │   ├── agentic-testing-integration.ipynb   # Agentic testing research
+│   │   ├── agentic-testing-integration.html    # HTML viewer
+│   │   ├── mcp-software-testing.ipynb          # MCP applications
+│   │   ├── mcp-software-testing.html           # HTML viewer
+│   │   ├── rag-testing-applications.ipynb      # RAG for testing
+│   │   ├── rag-testing-applications.html       # HTML viewer
+│   │   ├── llm-testing-analysis.ipynb          # LLM testing methodologies
+│   │   ├── llm-testing-analysis.html           # HTML viewer
+│   │   ├── ai-safety-metrics.ipynb             # AI safety metrics
+│   │   ├── ai-safety-metrics.html              # HTML viewer
+│   │   ├── automated-testing-patterns.ipynb    # Testing patterns
+│   │   └── automated-testing-patterns.html     # HTML viewer
+│   └── papers/                   # Research papers
+│       ├── automated-testing-patterns.md
+│       └── automated-testing-patterns.html
 ├── docs/                         # Learning resources and guides
 │   ├── PROMPT-ENGINEERING-GUIDE.md
 │   ├── AI-WORKFLOW-INTEGRATION.md
 │   ├── AI-FIRST-MANIFESTO.md
+│   ├── AI-FIRST-PRINCIPLES.md
 │   ├── AI-ADOPTION-ROADMAP.md
 │   ├── START-HERE.md
-│   └── CUSTOMIZATION.md
+│   ├── CUSTOMIZATION.md
+│   ├── ARCHITECTURE.md
+│   ├── FEATURES.md
+│   ├── DEVELOPMENT-TIMELINE.md
+│   └── SEO-AND-DISCOVERABILITY-GUIDE.md
 ├── learn/                        # Interactive learning hub
-│   └── index.html                # Learning portal
+│   ├── index.html                # Learning portal
+│   └── README.md
+├── screenshots/                  # Project screenshots
+│   └── README.md
 ├── .github/                      # GitHub configuration
 │   └── workflows/                # CI/CD pipelines
-└── images/                       # Assets and media
+├── images/                       # Assets and media
+│   ├── profile.jpg
+│   ├── ela-mcb-metallic.jpg
+│   ├── favicon.svg
+│   └── site.webmanifest
+├── index.html                    # Main portfolio page
+├── analytics.html                # Analytics dashboard
+├── ANALYTICS-README.md           # Analytics documentation
+├── PROJECTS.md                   # Complete project list
+├── CONTRIBUTING.md               # Contribution guidelines
+├── LICENSE                       # MIT License
+└── README.md                     # This file
 ```
 
 ### Development Approach
