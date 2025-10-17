@@ -175,11 +175,33 @@
         
         function getBrowserInfo() {
             const ua = navigator.userAgent;
-            if (ua.includes('Chrome')) return 'Chrome';
-            if (ua.includes('Firefox')) return 'Firefox';
-            if (ua.includes('Safari')) return 'Safari';
-            if (ua.includes('Edge')) return 'Edge';
-            return 'Other';
+            const isMobile = /Mobile|Android|iPhone|iPad|iPod/i.test(ua);
+            
+            // Check in specific order (Chrome/Edge contain "Safari" in UA, so check them first)
+            if (ua.includes('Edg')) {
+                return isMobile ? 'Edge Mobile' : 'Edge';
+            }
+            if (ua.includes('Chrome') && !ua.includes('Edg')) {
+                return isMobile ? 'Chrome Mobile' : 'Chrome';
+            }
+            if (ua.includes('Firefox')) {
+                return isMobile ? 'Firefox Mobile' : 'Firefox';
+            }
+            if (ua.includes('Safari') && !ua.includes('Chrome')) {
+                // iOS detection
+                if (ua.includes('iPhone') || ua.includes('iPad')) {
+                    return 'Safari iOS';
+                }
+                return isMobile ? 'Safari Mobile' : 'Safari';
+            }
+            if (ua.includes('Opera') || ua.includes('OPR')) {
+                return isMobile ? 'Opera Mobile' : 'Opera';
+            }
+            if (ua.includes('Samsung')) {
+                return 'Samsung Internet';
+            }
+            
+            return isMobile ? 'Mobile Other' : 'Other';
         }
         
         function updateVisitorDisplay() {
