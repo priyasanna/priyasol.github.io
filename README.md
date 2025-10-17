@@ -16,7 +16,7 @@
 ![AI/ML](https://img.shields.io/badge/AI/ML-FF6B6B?style=flat-square&logo=tensorflow&logoColor=white)
 ![RAG](https://img.shields.io/badge/RAG-4ECDC4?style=flat-square&logo=openai&logoColor=white)
 
-## 🔬 AI Research Notebooks
+## AI Research Notebooks
 
 ### [Why Use AI Agents for Testing? - Healthcare Case Study](./research/notebooks/ai-agents-qa-healthcare.html)
 *Practical guide demonstrating 487% ROI with autonomous testing agents*
@@ -38,7 +38,7 @@
 
 ---
 
-## 🚀 Featured Projects
+## Featured Projects
 
 ### LLMGuardian - Production AI Testing Framework
 *Advanced validation for Large Language Models with RAG, MCP, and safety testing*
