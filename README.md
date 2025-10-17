@@ -18,31 +18,77 @@
 
 ## AI Research Notebooks
 
-### [Why Use AI Agents for Testing? - Healthcare Case Study](./research/notebooks/ai-agents-qa-healthcare.html)
-*Practical guide demonstrating 487% ROI with autonomous testing agents*
+### Research Map
 
-**Results:** 92% coverage • 88% faster tests • 91% security detection • 487% ROI  
-**Tech:** LangChain, Python, Playwright, OWASP ZAP  
-**Tags:** `AI-agents` `agentic-testing` `healthcare-QA` `HIPAA-compliance` `autonomous-testing`  
-**[View Notebook](./research/notebooks/ai-agents-qa-healthcare.html)** | **[Download](./research/notebooks/ai-agents-qa-healthcare.ipynb)**
+```mermaid
+graph TB
+    Research[AI Testing Research Portfolio]
+    
+    Research --> Practical[Practical Applications]
+    Research --> Academic[Academic Research]
+    Research --> Tools[Frameworks & Tools]
+    
+    Practical --> Healthcare[Healthcare AI Agents<br/>487% ROI]
+    Practical --> RAG[RAG Testing<br/>Applications]
+    Practical --> MCP[MCP in Testing<br/>Context-Aware]
+    
+    Academic --> MultiAgent[Multi-Agent Orchestration<br/>80.2% Detection]
+    Academic --> Evaluation[Model Evaluation<br/>GPT-4 vs Claude]
+    Academic --> LLMTest[LLM Testing<br/>Methodologies]
+    
+    Tools --> Agentic[Agentic Testing<br/>Integration]
+    Tools --> Patterns[Automated Testing<br/>Patterns]
+    Tools --> Safety[AI Safety<br/>Metrics]
+    
+    style Healthcare fill:#51cf66,stroke:#2f9e44,color:#000
+    style MultiAgent fill:#51cf66,stroke:#2f9e44,color:#000
+    style Evaluation fill:#74c0fc,stroke:#1971c2,color:#000
+```
 
-### [Evaluating AI Models for Software Testing](./research/notebooks/model-evaluation-software-testing.html)
-*Comprehensive framework comparing GPT-4, Claude, Gemini, and CodeLlama for QA*
+### Quick Reference Table
 
-**Models:** GPT-4 • Claude 3.5 • Gemini Pro • CodeLlama  
-**Tech:** Python, pandas, matplotlib, LLM APIs  
-**Tags:** `AI-model-evaluation` `LLM-benchmarking` `GPT-4` `Claude` `testing-AI`  
-**[View Notebook](./research/notebooks/model-evaluation-software-testing.html)** | **[Download](./research/notebooks/model-evaluation-software-testing.ipynb)**
+| Research Paper | Type | Key Results | Primary Focus | Tech Stack |
+|----------------|------|-------------|---------------|------------|
+| [Healthcare AI Agents](./research/notebooks/ai-agents-qa-healthcare.html) | 🏥 Case Study | 487% ROI, 92% coverage | Why use AI agents? | LangChain, Playwright |
+| [Multi-Agent Orchestration](./research/notebooks/multi-agent-orchestration-framework.html) | 📊 Academic | 80.2% detection, 31% cost ↓ | Optimal architecture | ATAO Framework |
+| [Model Evaluation](./research/notebooks/model-evaluation-software-testing.html) | ⚖️ Framework | GPT-4 vs Claude vs Gemini | Which AI model to use? | Python, pandas |
+| [Agentic Testing](./research/notebooks/agentic-testing-integration.html) | 🤖 Integration | Multi-agent systems | Implementation guide | AutoGPT, LangChain |
+| [MCP Testing](./research/notebooks/mcp-software-testing.html) | 🔌 Framework | Context-aware testing | Dynamic adaptation | MCP Protocol |
+| [RAG Testing](./research/notebooks/rag-testing-applications.html) | 📚 Applications | Test generation from docs | Knowledge retrieval | RAG, Vector DBs |
+| [LLM Methodologies](./research/notebooks/llm-testing-analysis.html) | 🧠 Analysis | Hallucination detection | Testing LLMs | Safety frameworks |
+| [AI Safety Metrics](./research/notebooks/ai-safety-metrics.html) | 🛡️ Metrics | Prompt injection detection | Security validation | Safety evaluators |
+| [Testing Patterns](./research/notebooks/automated-testing-patterns.html) | 📋 Patterns | AI-augmented automation | Best practices | Pytest, CI/CD |
 
-### [Multi-Agent Orchestration Framework](./research/notebooks/multi-agent-orchestration-framework.html)
-*Academic research comparing 4 AI testing architectures with 50-trial empirical validation*
+### Featured Research
 
-**Results:** 80.2% detection • 31% cost reduction • 15% improvement over monolithic  
-**Tech:** Python, pandas, matplotlib, Statistical Analysis, ATAO Framework  
-**Tags:** `multi-agent-systems` `test-orchestration` `manager-worker` `collaborative-swarm` `agent-architecture` `AI-research`  
-**[View Research](./research/notebooks/multi-agent-orchestration-framework.html)** | **[Download](./research/notebooks/multi-agent-orchestration-framework.ipynb)**
+<details>
+<summary><b>🏥 Why Use AI Agents for Testing? - Healthcare Case Study</b> (Practical)</summary>
 
-**[View All Research →](./research/)** | **[Research Index](./research/notebooks/README.md)**
+**Impact:** 487% ROI • 92% coverage • 88% faster tests  
+**Focus:** Autonomous testing with 7 specialized agents (Explorer, Generator, Security, Compliance)  
+**Tags:** `AI-agents` `healthcare-QA` `HIPAA-compliance` `autonomous-testing`  
+**[View](./research/notebooks/ai-agents-qa-healthcare.html)** | **[Download](./research/notebooks/ai-agents-qa-healthcare.ipynb)**
+</details>
+
+<details>
+<summary><b>📊 Multi-Agent Orchestration Framework</b> (Academic Research)</summary>
+
+**Impact:** 80.2% detection • 31% cost reduction • 15% improvement  
+**Focus:** Comparing 4 architectures (Monolithic, Manager-Worker, Swarm, Pipeline) with 50-trial validation  
+**Tags:** `multi-agent-systems` `test-orchestration` `manager-worker` `agent-architecture`  
+**[View](./research/notebooks/multi-agent-orchestration-framework.html)** | **[Download](./research/notebooks/multi-agent-orchestration-framework.ipynb)**
+</details>
+
+<details>
+<summary><b>⚖️ Evaluating AI Models for Software Testing</b> (Framework)</summary>
+
+**Impact:** Comprehensive model comparison framework  
+**Focus:** GPT-4 • Claude 3.5 • Gemini Pro • CodeLlama benchmarking  
+**Tags:** `AI-model-evaluation` `LLM-benchmarking` `GPT-4` `Claude`  
+**[View](./research/notebooks/model-evaluation-software-testing.html)** | **[Download](./research/notebooks/model-evaluation-software-testing.ipynb)**
+</details>
+
+**[📚 View All 9 Research Notebooks →](./research/)** | **[📖 Complete Research Index](./research/notebooks/README.md)**
 
 ---
 
