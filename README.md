@@ -242,8 +242,10 @@ This portfolio demonstrates **AI-First development practices** using advanced AI
 ### AI Contributors
 This project was built using AI-First development practices with:
 - **[Cursor AI Agentic Mode](https://cursor.sh)** - Advanced code generation and pair programming
+- **[Void IDE](https://voideditor.com)** - AI-powered development environment and workflow automation
 - **[Claude 4 Sonnet](https://claude.ai)** - Architecture planning, documentation, and complex reasoning
 - **[DeepSeek AI](https://deepseek.com)** - Rapid iteration and optimization support
+- **[DeepSeek Coder](https://deepseek.com)** - Specialized code generation and technical implementation
 
 ### Real-World Examples
 Every technique in our guides was used to build this portfolio:
