@@ -16,13 +16,36 @@
 ![AI/ML](https://img.shields.io/badge/AI/ML-FF6B6B?style=flat-square&logo=tensorflow&logoColor=white)
 ![RAG](https://img.shields.io/badge/RAG-4ECDC4?style=flat-square&logo=openai&logoColor=white)
 
-## Featured Projects
+## 🔬 AI Research Notebooks
+
+### [Why Use AI Agents for Testing? - Healthcare Case Study](./research/notebooks/ai-agents-qa-healthcare.html)
+*Practical guide demonstrating 487% ROI with autonomous testing agents*
+
+**Results:** 92% coverage • 88% faster tests • 91% security detection • 487% ROI  
+**Tech:** LangChain, Python, Playwright, OWASP ZAP  
+**Tags:** `AI-agents` `agentic-testing` `healthcare-QA` `HIPAA-compliance` `autonomous-testing`  
+**[View Notebook](./research/notebooks/ai-agents-qa-healthcare.html)** | **[Download](./research/notebooks/ai-agents-qa-healthcare.ipynb)**
+
+### [Evaluating AI Models for Software Testing](./research/notebooks/model-evaluation-software-testing.html)
+*Comprehensive framework comparing GPT-4, Claude, Gemini, and CodeLlama for QA*
+
+**Models:** GPT-4 • Claude 3.5 • Gemini Pro • CodeLlama  
+**Tech:** Python, pandas, matplotlib, LLM APIs  
+**Tags:** `AI-model-evaluation` `LLM-benchmarking` `GPT-4` `Claude` `testing-AI`  
+**[View Notebook](./research/notebooks/model-evaluation-software-testing.html)** | **[Download](./research/notebooks/model-evaluation-software-testing.ipynb)**
+
+**[View All Research →](./research/)** | **[Research Index](./research/notebooks/README.md)**
+
+---
+
+## 🚀 Featured Projects
 
 ### LLMGuardian - Production AI Testing Framework
 *Advanced validation for Large Language Models with RAG, MCP, and safety testing*
 
 **Impact:** 23% accuracy improvement • 60% faster testing • 3 critical safety violations prevented  
 **Tech:** JavaScript/Node.js, AI APIs, RAG, MCP  
+**Tags:** `LLM-testing` `AI-safety` `RAG` `MCP` `production-AI`  
 **[Live Demo](./llm-guardian/demo.html)** | **[Documentation](./llm-guardian/)** | **[Case Studies](./llm-guardian/case-studies/)**
 
 ### Legacy-AI Bridge Framework  
