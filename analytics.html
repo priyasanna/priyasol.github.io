@@ -275,7 +275,7 @@
 
         <div class="chart-container">
             <h3 class="chart-title">Visitor Trend (Last 30 Days)</h3>
-            <canvas id="visitor-trend-chart" width="400" height="200"></canvas>
+            <canvas id="visitor-trend-chart" style="width: 100%; height: 300px;"></canvas>
         </div>
 
         <div style="text-align: center; margin: 2rem 0;">
@@ -489,8 +489,17 @@ Raw Data Length: ${rawData ? rawData.length : 'No data'} characters
             const canvas = document.getElementById('visitor-trend-chart');
             const ctx = canvas.getContext('2d');
             
+            // Set canvas to actual display size for high DPI
+            const rect = canvas.getBoundingClientRect();
+            canvas.width = rect.width * window.devicePixelRatio;
+            canvas.height = 300 * window.devicePixelRatio;
+            ctx.scale(window.devicePixelRatio, window.devicePixelRatio);
+            
+            const canvasWidth = rect.width;
+            const canvasHeight = 300;
+            
             // Clear canvas
-            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            ctx.clearRect(0, 0, canvasWidth, canvasHeight);
             
             // Use real daily data if available
             const days = 30;
@@ -509,9 +518,9 @@ Raw Data Length: ${rawData ? rawData.length : 'No data'} characters
             }
             
             // Chart dimensions
-            const padding = 40;
-            const chartWidth = canvas.width - (padding * 2);
-            const chartHeight = canvas.height - (padding * 2);
+            const padding = 50;
+            const chartWidth = canvasWidth - (padding * 2);
+            const chartHeight = canvasHeight - (padding * 2);
             
             // Find max value for scaling
             const maxValue = Math.max(...data, 1);
@@ -527,43 +536,82 @@ Raw Data Length: ${rawData ? rawData.length : 'No data'} characters
             // Draw axes
             ctx.beginPath();
             ctx.moveTo(padding, padding);
-            ctx.lineTo(padding, canvas.height - padding);
-            ctx.lineTo(canvas.width - padding, canvas.height - padding);
+            ctx.lineTo(padding, canvasHeight - padding);
+            ctx.lineTo(canvasWidth - padding, canvasHeight - padding);
             ctx.strokeStyle = 'rgba(228, 228, 231, 0.3)';
+            ctx.lineWidth = 2;
             ctx.stroke();
             
-            // Draw data points and lines
-            ctx.strokeStyle = '#00d4ff';
-            ctx.fillStyle = '#00d4ff';
+            // Draw horizontal grid lines
+            ctx.strokeStyle = 'rgba(228, 228, 231, 0.1)';
+            ctx.lineWidth = 1;
+            for (let i = 0; i <= 5; i++) {
+                const y = padding + (chartHeight / 5) * i;
+                ctx.beginPath();
+                ctx.moveTo(padding, y);
+                ctx.lineTo(canvasWidth - padding, y);
+                ctx.stroke();
+            }
+            
+            // Draw data line and points
             ctx.beginPath();
+            ctx.strokeStyle = '#00d4ff';
+            ctx.lineWidth = 3;
             
             data.forEach((value, index) => {
                 const x = padding + (index * (chartWidth / (days - 1)));
-                const y = canvas.height - padding - ((value / maxValue) * chartHeight);
+                const y = canvasHeight - padding - ((value / maxValue) * chartHeight);
                 
                 if (index === 0) {
                     ctx.moveTo(x, y);
                 } else {
                     ctx.lineTo(x, y);
                 }
+            });
+            
+            ctx.stroke();
+            
+            // Draw points and labels
+            ctx.fillStyle = '#00d4ff';
+            ctx.font = '11px Segoe UI';
+            ctx.textAlign = 'center';
+            
+            data.forEach((value, index) => {
+                const x = padding + (index * (chartWidth / (days - 1)));
+                const y = canvasHeight - padding - ((value / maxValue) * chartHeight);
                 
                 // Draw point
                 ctx.beginPath();
-                ctx.arc(x, y, 4, 0, 2 * Math.PI);
+                ctx.arc(x, y, 5, 0, 2 * Math.PI);
                 ctx.fill();
-                ctx.beginPath();
                 
-                // Draw label
-                ctx.fillStyle = '#e4e4e7';
-                ctx.fillText(labels[index], x, canvas.height - padding + 20);
-                ctx.fillText(value.toString(), x, y - 10);
-                ctx.fillStyle = '#00d4ff';
+                // Draw value label above point (only if value > 0)
+                if (value > 0) {
+                    ctx.fillStyle = '#e4e4e7';
+                    ctx.fillText(value.toString(), x, y - 12);
+                    ctx.fillStyle = '#00d4ff';
+                }
+                
+                // Draw date labels (show every 3rd label to avoid crowding)
+                if (index % 3 === 0 || index === days - 1) {
+                    ctx.fillStyle = '#e4e4e7';
+                    ctx.save();
+                    ctx.translate(x, canvasHeight - padding + 25);
+                    ctx.rotate(-Math.PI / 6);
+                    ctx.fillText(labels[index], 0, 0);
+                    ctx.restore();
+                    ctx.fillStyle = '#00d4ff';
+                }
             });
             
-            // Draw the line
-            ctx.strokeStyle = '#00d4ff';
-            ctx.lineWidth = 2;
-            ctx.stroke();
+            // Draw Y-axis labels
+            ctx.fillStyle = '#e4e4e7';
+            ctx.textAlign = 'right';
+            for (let i = 0; i <= 5; i++) {
+                const value = Math.round((maxValue / 5) * (5 - i));
+                const y = padding + (chartHeight / 5) * i;
+                ctx.fillText(value.toString(), padding - 10, y + 5);
+            }
         }
         
         function generatePrivateReport() {
