@@ -34,6 +34,14 @@
 **Tags:** `AI-model-evaluation` `LLM-benchmarking` `GPT-4` `Claude` `testing-AI`  
 **[View Notebook](./research/notebooks/model-evaluation-software-testing.html)** | **[Download](./research/notebooks/model-evaluation-software-testing.ipynb)**
 
+### [Multi-Agent Orchestration Framework](./research/notebooks/multi-agent-orchestration-framework.html)
+*Academic research comparing 4 AI testing architectures with 50-trial empirical validation*
+
+**Results:** 80.2% detection • 31% cost reduction • 15% improvement over monolithic  
+**Tech:** Python, pandas, matplotlib, Statistical Analysis, ATAO Framework  
+**Tags:** `multi-agent-systems` `test-orchestration` `manager-worker` `collaborative-swarm` `agent-architecture` `AI-research`  
+**[View Research](./research/notebooks/multi-agent-orchestration-framework.html)** | **[Download](./research/notebooks/multi-agent-orchestration-framework.ipynb)**
+
 **[View All Research →](./research/)** | **[Research Index](./research/notebooks/README.md)**
 
 ---
