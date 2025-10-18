@@ -1,4 +1,9 @@
-<!DOCTYPE html>
+#!/usr/bin/env python3
+"""
+Generate styled HTML for AutoTriage research paper
+"""
+
+html_content = """<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -600,3 +605,11 @@
     </div>
 </body>
 </html>
+"""
+
+# Write to file
+with open('research/notebooks/autotriage-research-paper.html', 'w', encoding='utf-8') as f:
+    f.write(html_content)
+
+print("✓ Styled AutoTriage research paper HTML created successfully!")
+
