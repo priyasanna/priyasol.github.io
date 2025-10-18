@@ -85,7 +85,7 @@ graph TB
 **Impact:** 40% time reduction • 80% risk coverage  
 **Focus:** Ingests test history, runs 10,000 Monte Carlo simulations, outputs optimized suite  
 **Exports:** JSON, pytest, GitHub Actions  
-**Tags:** `CI-CD` `monte-carlo` `test-optimization` `DevOps`  
+`CI-CD` `monte-carlo` `test-optimization` `DevOps`  
 **[View](./research/notebooks/ci-test-optimization-monte-carlo.html)** | **[Download](./research/notebooks/ci-test-optimization-monte-carlo.ipynb)**
 </details>
 
@@ -94,7 +94,7 @@ graph TB
 
 **Impact:** 487% ROI • 92% coverage • 88% faster tests  
 **Focus:** Why QA pros use AI agents - 7 agent types with HIPAA compliance  
-**Tags:** `AI-agents` `healthcare-QA` `HIPAA-compliance` `autonomous-testing`  
+`AI-agents` `healthcare-QA` `HIPAA-compliance` `autonomous-testing`  
 **[View](./research/notebooks/ai-agents-qa-healthcare.html)** | **[Download](./research/notebooks/ai-agents-qa-healthcare.ipynb)**
 </details>
 
@@ -103,7 +103,7 @@ graph TB
 
 **Impact:** 80.2% detection • 31% cost reduction • ANOVA validated  
 **Focus:** 4 architectures, 50 trials, statistical validation  
-**Tags:** `multi-agent-systems` `test-orchestration` `manager-worker`  
+`multi-agent-systems` `test-orchestration` `manager-worker`  
 **[View](./research/notebooks/multi-agent-orchestration-framework.html)** | **[Download](./research/notebooks/multi-agent-orchestration-framework.ipynb)**
 </details>
 
@@ -112,7 +112,7 @@ graph TB
 
 **Impact:** POFOD estimation • Statistical reliability assessment  
 **Focus:** Risk-based testing, fuzzing, chaos engineering  
-**Tags:** `monte-carlo` `statistical-testing` `POFOD`  
+`monte-carlo` `statistical-testing` `POFOD`  
 **[View](./research/notebooks/monte-carlo-testing-framework.html)** | **[Download](./research/notebooks/monte-carlo-testing-framework.ipynb)**
 </details>
 
@@ -121,7 +121,7 @@ graph TB
 
 **Impact:** Comprehensive model comparison  
 **Focus:** GPT-4 • Claude 3.5 • Gemini Pro • CodeLlama  
-**Tags:** `AI-model-evaluation` `LLM-benchmarking` `GPT-4`  
+`AI-model-evaluation` `LLM-benchmarking` `GPT-4`  
 **[View](./research/notebooks/model-evaluation-software-testing.html)** | **[Download](./research/notebooks/model-evaluation-software-testing.ipynb)**
 </details>
 
@@ -136,7 +136,7 @@ graph TB
 
 **Impact:** 23% accuracy improvement • 60% faster testing • 3 critical safety violations prevented  
 **Tech:** JavaScript/Node.js, AI APIs, RAG, MCP  
-**Tags:** `LLM-testing` `AI-safety` `RAG` `MCP` `production-AI`  
+`LLM-testing` `AI-safety` `RAG` `MCP` `production-AI`  
 **[Live Demo](./llm-guardian/demo.html)** | **[Documentation](./llm-guardian/)** | **[Case Studies](./llm-guardian/case-studies/)**
 
 ### Legacy-AI Bridge Framework  
