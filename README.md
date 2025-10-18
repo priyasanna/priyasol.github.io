@@ -20,9 +20,9 @@
 
 ### Research Map
 
-**11 Research Notebooks Organized in 3 Categories:**
+**12 Research Notebooks Organized in 3 Categories:**
 
-- 🟢 **Practical Applications** - Healthcare AI Agents, CI/CD Optimization, RAG Testing, MCP Testing
+- 🟢 **Practical Applications** - AutoTriage Assessment, Healthcare AI Agents, CI/CD Optimization, RAG Testing, MCP Testing
 - 🔵 **Academic Research** - Multi-Agent Orchestration, Monte Carlo Testing, Model Evaluation, LLM Testing
 - 🟡 **Frameworks & Tools** - Agentic Testing, Automated Patterns, AI Safety
 
@@ -34,6 +34,7 @@ graph TB
     Research --> Academic[Academic Research]
     Research --> Tools[Frameworks & Tools]
     
+    Practical --> AutoTriage[AutoTriage Assessment<br/>3.2x ROI]
     Practical --> Healthcare[Healthcare AI Agents<br/>487% ROI]
     Practical --> CICD[CI/CD Optimization<br/>40% Time Saved]
     Practical --> RAG[RAG Testing<br/>Applications]
@@ -48,6 +49,7 @@ graph TB
     Tools --> Patterns[Automated Testing<br/>Patterns]
     Tools --> Safety[AI Safety<br/>Metrics]
     
+    style AutoTriage fill:#51cf66,stroke:#2f9e44,color:#000
     style Healthcare fill:#51cf66,stroke:#2f9e44,color:#000
     style CICD fill:#51cf66,stroke:#2f9e44,color:#000
     style MultiAgent fill:#51cf66,stroke:#2f9e44,color:#000
@@ -60,6 +62,7 @@ graph TB
 | Research Paper | Type | Key Results | Primary Focus | Tech Stack |
 |----------------|------|-------------|---------------|------------|
 | [Healthcare AI Agents](./research/notebooks/ai-agents-qa-healthcare.html) | Case Study | 487% ROI, 92% coverage | Why use AI agents? | LangChain, Playwright |
+| [AutoTriage Assessment](./research/notebooks/autotriage-manual-test-assessment.html) | Tool | 85% accuracy, 3.2x ROI | Manual test assessment | Business Value Analysis |
 | [CI/CD Test Optimization](./research/notebooks/ci-test-optimization-monte-carlo.html) | Tool | 40% time reduction | Optimize pipeline | Monte Carlo, Python |
 | [Multi-Agent Orchestration](./research/notebooks/multi-agent-orchestration-framework.html) | Academic | 80.2% detection, 31% cost ↓ | Optimal architecture | ATAO Framework |
 | [Monte Carlo Testing](./research/notebooks/monte-carlo-testing-framework.html) | Research | POFOD estimation | Statistical testing | Monte Carlo, scipy |
@@ -119,7 +122,7 @@ graph TB
 **[View](./research/notebooks/model-evaluation-software-testing.html)** | **[Download](./research/notebooks/model-evaluation-software-testing.ipynb)**
 </details>
 
-**[View All 11 Research Notebooks →](./research/)** | **[Complete Research Index](./research/notebooks/README.md)**
+**[View All 12 Research Notebooks →](./research/)** | **[Complete Research Index](./research/notebooks/README.md)**
 
 ---
 
