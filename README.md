@@ -20,10 +20,10 @@
 
 ### Research Map
 
-**12 Research Notebooks Organized in 3 Categories:**
+**13 Research Notebooks Organized in 3 Categories:**
 
 - 🟢 **Practical Applications** - AutoTriage Assessment, Healthcare AI Agents, CI/CD Optimization, RAG Testing, MCP Testing
-- 🔵 **Academic Research** - Multi-Agent Orchestration, Monte Carlo Testing, Model Evaluation, LLM Testing
+- 🔵 **Academic Research** - AutoTriage Research, Multi-Agent Orchestration, Monte Carlo Testing, Model Evaluation, LLM Testing
 - 🟡 **Frameworks & Tools** - Agentic Testing, Automated Patterns, AI Safety
 
 ```mermaid
@@ -40,6 +40,7 @@ graph TB
     Practical --> RAG[RAG Testing<br/>Applications]
     Practical --> MCP[MCP in Testing<br/>Context-Aware]
     
+    Academic --> AutoTriageResearch[AutoTriage Research<br/>85% Accuracy]
     Academic --> MultiAgent[Multi-Agent Orchestration<br/>80.2% Detection]
     Academic --> MonteCarlo[Monte Carlo Testing<br/>POFOD Estimation]
     Academic --> Evaluation[Model Evaluation<br/>GPT-4 vs Claude]
@@ -52,6 +53,7 @@ graph TB
     style AutoTriage fill:#51cf66,stroke:#2f9e44,color:#000
     style Healthcare fill:#51cf66,stroke:#2f9e44,color:#000
     style CICD fill:#51cf66,stroke:#2f9e44,color:#000
+    style AutoTriageResearch fill:#74c0fc,stroke:#1971c2,color:#000
     style MultiAgent fill:#51cf66,stroke:#2f9e44,color:#000
     style MonteCarlo fill:#74c0fc,stroke:#1971c2,color:#000
     style Evaluation fill:#74c0fc,stroke:#1971c2,color:#000
@@ -62,7 +64,8 @@ graph TB
 | Research Paper | Type | Key Results | Primary Focus | Tech Stack |
 |----------------|------|-------------|---------------|------------|
 | [Healthcare AI Agents](./research/notebooks/ai-agents-qa-healthcare.html) | Case Study | 487% ROI, 92% coverage | Why use AI agents? | LangChain, Playwright |
-| [AutoTriage Assessment](./research/notebooks/autotriage-manual-test-assessment.html) | Tool | 85% accuracy, 3.2x ROI | Manual test assessment | Business Value Analysis |
+| [AutoTriage Research Paper](./research/notebooks/autotriage-research-paper.html) | Academic | 85% accuracy, 3.2x ROI | Test automation triage | Ensemble AI Framework |
+| [AutoTriage Assessment Tool](./research/notebooks/autotriage-manual-test-assessment.html) | Tool | 4-tier prioritization | Manual test assessment | Business Value Analysis |
 | [CI/CD Test Optimization](./research/notebooks/ci-test-optimization-monte-carlo.html) | Tool | 40% time reduction | Optimize pipeline | Monte Carlo, Python |
 | [Multi-Agent Orchestration](./research/notebooks/multi-agent-orchestration-framework.html) | Academic | 80.2% detection, 31% cost ↓ | Optimal architecture | ATAO Framework |
 | [Monte Carlo Testing](./research/notebooks/monte-carlo-testing-framework.html) | Research | POFOD estimation | Statistical testing | Monte Carlo, scipy |
@@ -122,7 +125,7 @@ graph TB
 **[View](./research/notebooks/model-evaluation-software-testing.html)** | **[Download](./research/notebooks/model-evaluation-software-testing.ipynb)**
 </details>
 
-**[View All 12 Research Notebooks →](./research/)** | **[Complete Research Index](./research/notebooks/README.md)**
+**[View All 13 Research Notebooks →](./research/)** | **[Complete Research Index](./research/notebooks/README.md)**
 
 ---
 
