@@ -22,9 +22,9 @@
 
 **13 Research Notebooks Organized in 3 Categories:**
 
-- 🟢 **Practical Applications** - AutoTriage Assessment, Healthcare AI Agents, CI/CD Optimization, RAG Testing, MCP Testing
-- 🔵 **Academic Research** - AutoTriage Research, Multi-Agent Orchestration, Monte Carlo Testing, Model Evaluation, LLM Testing
-- 🟡 **Frameworks & Tools** - Agentic Testing, Automated Patterns, AI Safety
+🟢 **Practical Applications** - AutoTriage Assessment, Healthcare AI Agents, CI/CD Optimization, RAG Testing, MCP Testing  
+🔵 **Academic Research** - AutoTriage Research, Multi-Agent Orchestration, Monte Carlo Testing, Model Evaluation, LLM Testing  
+🟡 **Frameworks & Tools** - Agentic Testing, Automated Patterns, AI Safety
 
 ```mermaid
 graph TB
