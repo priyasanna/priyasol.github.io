@@ -197,6 +197,102 @@
             font-family: 'Courier New', monospace;
         }
 
+        /* Table of Contents Styling */
+        .toc-container {
+            background: linear-gradient(135deg, rgba(0, 212, 255, 0.1) 0%, rgba(124, 58, 237, 0.1) 100%);
+            border: 2px solid var(--secondary);
+            border-radius: 20px;
+            padding: 3rem 2rem;
+            margin: 3rem 0;
+            backdrop-filter: blur(15px);
+        }
+
+        .toc-container h2 {
+            text-align: center;
+            font-size: 2.2rem;
+            margin-bottom: 2.5rem;
+            background: linear-gradient(135deg, var(--neon-blue), var(--neon-purple));
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .toc-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .toc-item {
+            background: rgba(0, 0, 0, 0.5);
+            border: 2px solid rgba(0, 212, 255, 0.3);
+            border-radius: 15px;
+            padding: 1.5rem;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .toc-item::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(0, 245, 255, 0.2), transparent);
+            transition: left 0.5s ease;
+        }
+
+        .toc-item:hover::before {
+            left: 100%;
+        }
+
+        .toc-item:hover {
+            transform: translateY(-8px) scale(1.02);
+            border-color: var(--neon-blue);
+            box-shadow: 0 15px 35px rgba(0, 245, 255, 0.4);
+        }
+
+        .toc-item a {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            color: var(--light);
+            text-decoration: none;
+            font-size: 1.1rem;
+            font-weight: 500;
+            position: relative;
+            z-index: 1;
+        }
+
+        .toc-item a i {
+            font-size: 1.5rem;
+            color: var(--neon-blue);
+            transition: all 0.3s ease;
+        }
+
+        .toc-item:hover a i {
+            color: var(--neon-green);
+            transform: scale(1.2) rotate(5deg);
+        }
+
+        .toc-item a span {
+            flex: 1;
+        }
+
+        .toc-number {
+            position: absolute;
+            top: 8px;
+            right: 12px;
+            font-size: 0.75rem;
+            color: rgba(0, 212, 255, 0.5);
+            font-weight: bold;
+        }
+
         ul, ol {
             margin: 1rem 0;
             padding-left: 2rem;
@@ -380,17 +476,65 @@
             </div>
         </header>
 
-        <div class="toc">
+        <div class="toc-container">
             <h2>Table of Contents</h2>
-            <ul>
-                <li><a href="#introduction">Introduction</a></li>
-                <li><a href="#workflow">Development Workflow Integration</a></li>
-                <li><a href="#code-generation">Code Generation Prompts</a></li>
-                <li><a href="#testing-qa">Testing & QA Prompts</a></li>
-                <li><a href="#documentation">Documentation Prompts</a></li>
-                <li><a href="#debugging">Debugging & Problem Solving</a></li>
-                <li><a href="#best-practices">Best Practices</a></li>
-                <li><a href="#advanced">Advanced Techniques</a></li>
+            <ul class="toc-grid">
+                <li class="toc-item">
+                    <a href="#introduction">
+                        <i class="fas fa-rocket"></i>
+                        <span>Introduction</span>
+                    </a>
+                    <div class="toc-number">01</div>
+                </li>
+                <li class="toc-item">
+                    <a href="#workflow">
+                        <i class="fas fa-project-diagram"></i>
+                        <span>Development Workflow</span>
+                    </a>
+                    <div class="toc-number">02</div>
+                </li>
+                <li class="toc-item">
+                    <a href="#code-generation">
+                        <i class="fas fa-code"></i>
+                        <span>Code Generation</span>
+                    </a>
+                    <div class="toc-number">03</div>
+                </li>
+                <li class="toc-item">
+                    <a href="#testing-qa">
+                        <i class="fas fa-vial"></i>
+                        <span>Testing & QA</span>
+                    </a>
+                    <div class="toc-number">04</div>
+                </li>
+                <li class="toc-item">
+                    <a href="#documentation">
+                        <i class="fas fa-book"></i>
+                        <span>Documentation</span>
+                    </a>
+                    <div class="toc-number">05</div>
+                </li>
+                <li class="toc-item">
+                    <a href="#debugging">
+                        <i class="fas fa-bug"></i>
+                        <span>Debugging & Problem Solving</span>
+                    </a>
+                    <div class="toc-number">06</div>
+                </li>
+                <li class="toc-item">
+                    <a href="#best-practices">
+                        <i class="fas fa-star"></i>
+                        <span>Best Practices</span>
+                    </a>
+                    <div class="toc-number">07</div>
+                </li>
+                <li class="toc-item">
+                    <a href="#advanced">
+                        <i class="fas fa-brain"></i>
+                        <span>Advanced Techniques</span>
+                    </a>
+                    <div class="toc-number">08</div>
+                </li>
             </ul>
         </div>
 
