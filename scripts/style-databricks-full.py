@@ -399,13 +399,13 @@ html_content = """<!DOCTYPE html>
             </ul>
             <pre><code>class DeltaLakeTestPipeline:
     def ingest_raw_test_results(self, test_results):
-        """Bronze layer: Raw test execution data"""
+        # Bronze layer: Raw test execution data
         
     def transform_to_silver(self):
-        """Silver layer: Cleaned and enriched metrics"""
+        # Silver layer: Cleaned and enriched metrics
         
     def generate_gold_insights(self):
-        """Gold layer: AI-powered insights"""</code></pre>
+        # Gold layer: AI-powered insights</code></pre>
             <p><strong>Output:</strong> Identifies high-risk components and optimization opportunities</p>
         </div>
         
