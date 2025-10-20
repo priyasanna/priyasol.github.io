@@ -1056,70 +1056,213 @@ Provide before/after comparison with explanations.</pre>
             <div class="card">
                 <h3>1. Chain of Thought Prompting</h3>
                 
-                <div class="prompt-box">
-                    <pre>Think through this step-by-step:
+                <div class="interactive-prompt">
+                    <div class="prompt-header">
+                        <span class="prompt-level level-advanced">Advanced</span>
+                        <button class="copy-btn" onclick="copyPrompt(this)">Copy</button>
+                    </div>
+                    <textarea class="prompt-textarea">Think through this step-by-step:
 
-Problem: [COMPLEX_PROBLEM]
+Problem: Design a caching strategy for a high-traffic API that serves personalized user recommendations while maintaining data freshness and minimizing database load.
+
+Constraints:
+- 100,000 requests/minute peak load
+- User data updates every 5 minutes
+- Recommendation algorithm runs ML inference (expensive)
+- Budget: $500/month for caching infrastructure
 
 Step 1: Analyze the requirements
+- What are the access patterns?
+- What data changes frequently vs. rarely?
+- What's acceptable staleness?
+
 Step 2: Identify potential approaches
+- Redis with TTL expiration
+- CDN edge caching with cache-control headers
+- Application-level in-memory cache
+- Hybrid multi-layer approach
+
 Step 3: Evaluate pros/cons of each approach
-Step 4: Choose the best solution
-Step 5: Implement with detailed explanation
-Step 6: Identify testing strategy</pre>
+For each option above, analyze:
+- Performance characteristics
+- Cost implications
+- Complexity and maintenance
+- Failure modes and fallback strategies
+
+Step 4: Choose the best solution with justification
+- Why this approach over others?
+- What metrics will validate the choice?
+
+Step 5: Design the implementation
+- Architecture diagram
+- Cache invalidation strategy
+- Monitoring and alerts
+
+Step 6: Identify testing strategy
+- Load testing scenarios
+- Cache hit/miss ratio targets
+- Failover testing</textarea>
+                    <div class="prompt-tips">
+                        <strong>Advanced tip:</strong> This forces the AI to show its reasoning at each step. Try changing the problem to "design a database schema for multi-tenant SaaS" or "optimize a React app with 10-second load time" to see how chain-of-thought adapts.
+                    </div>
+                </div>
+                
+                <div class="example-output">
+                    <strong>Example Output:</strong> You'll get a comprehensive 6-step analysis with the AI's reasoning visible at each stage. For example: "Step 2 identifies 4 approaches, Step 3 might reveal Redis costs $200/mo but handles 1M ops/sec, while CloudFront costs $50/mo but has higher latency for dynamic content."
                 </div>
             </div>
 
             <div class="card">
-                <h3>2. Role-Based Prompting</h3>
+                <h3>2. Role-Based Prompting with Domain Expertise</h3>
                 
-                <div class="prompt-box">
-                    <pre>Act as a [ROLE] with [X] years of experience in [DOMAIN].
+                <div class="interactive-prompt">
+                    <div class="prompt-header">
+                        <span class="prompt-level level-advanced">Advanced</span>
+                        <button class="copy-btn" onclick="copyPrompt(this)">Copy</button>
+                    </div>
+                    <textarea class="prompt-textarea">Act as a Principal Security Engineer with 15 years of experience in financial services systems and PCI-DSS compliance.
 
-[SPECIFIC_TASK_REQUEST]
+Task: Review this payment processing implementation and identify security vulnerabilities:
+
+```javascript
+app.post('/process-payment', async (req, res) => {
+    const { cardNumber, cvv, amount, userId } = req.body;
+    
+    // Store payment info
+    await db.payments.insert({
+        user_id: userId,
+        card_number: cardNumber,
+        cvv: cvv,
+        amount: amount,
+        timestamp: Date.now()
+    });
+    
+    // Process payment
+    const result = await paymentGateway.charge(cardNumber, amount);
+    res.json({ success: result.success });
+});
+```
 
 Consider:
-- Industry best practices
-- Common pitfalls to avoid
-- Performance implications
-- Scalability concerns
-- Maintenance considerations</pre>
+- PCI-DSS compliance violations (specifically Requirements 3, 4, 6)
+- Data encryption at rest and in transit
+- Common payment processing pitfalls that lead to breaches
+- Secure logging practices (what NOT to log)
+- Rate limiting and fraud prevention
+- Database injection risks
+- Secrets management
+- Tokenization best practices
+- Audit trail requirements
+- Scalability concerns for high-volume transactions
+
+Provide specific code fixes for each vulnerability identified.</textarea>
+                    <div class="prompt-tips">
+                        <strong>Why this works:</strong> Specifying "15 years" and "PCI-DSS compliance" activates domain-specific knowledge. The AI will cite actual PCI requirements and industry-specific patterns. Try roles like "Staff DevOps Engineer with Kubernetes certification" or "Senior Accessibility Consultant WCAG 2.1 certified".
+                    </div>
+                </div>
+                
+                <div class="example-output">
+                    <strong>Example Output:</strong> You'll receive a detailed security audit citing specific PCI-DSS requirements like "Requirement 3.2: Do not store sensitive authentication data after authorization" with 8-10 specific vulnerabilities identified (storing CVV, plain text card numbers, no encryption, missing rate limiting) plus complete secure implementation examples using tokenization.
                 </div>
             </div>
 
             <div class="card">
-                <h3>3. Multi-Step Problem Solving</h3>
+                <h3>3. Multi-Step Problem Solving (Iterative Refinement)</h3>
                 
-                <div class="prompt-box">
-                    <pre>I need to implement [COMPLEX_FEATURE]. Let's break this down:
+                <div class="interactive-prompt">
+                    <div class="prompt-header">
+                        <span class="prompt-level level-advanced">Advanced</span>
+                        <button class="copy-btn" onclick="copyPrompt(this)">Copy</button>
+                    </div>
+                    <textarea class="prompt-textarea">I need to implement a real-time collaborative document editor (like Google Docs) with operational transformation. Let's break this down methodically:
 
-1. First, help me understand the technical requirements
-2. Then, design the architecture
-3. Next, create the implementation plan
-4. Finally, identify testing and deployment strategies
+**Step 1 (Start Here):** Analyze the technical requirements
+- What are the core functional requirements for real-time collaboration?
+- What consistency guarantees do we need?
+- What are the latency constraints?
+- How many concurrent users per document?
+- What conflict resolution approach is most appropriate?
 
-Start with step 1, and I'll ask for each subsequent step.</pre>
+After you provide Step 1 analysis, I'll ask for Step 2.
+
+**Step 2 (Next):** Design the architecture
+Based on Step 1 findings, propose:
+- WebSocket vs SSE vs long-polling decision
+- Operational Transformation (OT) vs CRDT algorithm choice
+- Backend architecture (monolith vs microservices)
+- Database selection for document storage and change history
+- Real-time sync protocol design
+
+**Step 3 (Then):** Create detailed implementation plan
+- Technology stack with specific versions
+- Data structures for operations and conflicts
+- API endpoints and WebSocket event schema
+- State synchronization algorithm pseudocode
+
+**Step 4 (Finally):** Testing and deployment strategies
+- How to test OT conflict resolution?
+- Load testing for 1000 concurrent editors
+- Deployment approach for zero-downtime updates
+- Monitoring and alerting setup</textarea>
+                    <div class="prompt-tips">
+                        <strong>Pro strategy:</strong> Don't send this all at once. Send ONLY Step 1 first, review the analysis, THEN send Step 2 with context from Step 1. This builds a conversation where each response informs the next, creating deeper solutions. Try with "implement distributed tracing" or "migrate monolith to microservices".
+                    </div>
+                </div>
+                
+                <div class="example-output">
+                    <strong>Example Output for Step 1:</strong> The AI will analyze that you need: eventual consistency (not strict), sub-100ms latency, support for 50 concurrent users per doc, and likely recommend OT over CRDT for text (explaining why). Then Step 2 builds on this with specific WebSocket architecture and MongoDB change streams.
                 </div>
             </div>
 
             <div class="card">
-                <h3>4. Comparative Analysis</h3>
+                <h3>4. Comparative Analysis with Trade-off Matrix</h3>
                 
-                <div class="prompt-box">
-                    <pre>Compare these approaches for [TASK]:
+                <div class="interactive-prompt">
+                    <div class="prompt-header">
+                        <span class="prompt-level level-advanced">Advanced</span>
+                        <button class="copy-btn" onclick="copyPrompt(this)">Copy</button>
+                    </div>
+                    <textarea class="prompt-textarea">Compare these state management approaches for a React e-commerce application with 50+ components and real-time inventory updates:
 
-Approach 1: [OPTION_1]
-Approach 2: [OPTION_2]
-Approach 3: [OPTION_3]
+Approach 1: Redux Toolkit with RTK Query
+- Global store with normalized data
+- Built-in caching and request deduplication
+- DevTools for time-travel debugging
+
+Approach 2: React Query + Context API
+- Server state managed by React Query
+- UI state in Context
+- Automatic background refetching
+
+Approach 3: Zustand with middleware
+- Lightweight store (1KB)
+- Immer for immutability
+- Persist middleware for localStorage
+
+Approach 4: Jotai (Atomic state)
+- Bottom-up atomic approach
+- Minimal boilerplate
+- Built-in async support
 
 Evaluate each on:
-- Performance
-- Maintainability
-- Scalability
-- Development time
-- Browser compatibility
+- Performance (bundle size, re-render efficiency, memory usage)
+- Developer Experience (learning curve, debugging tools, TypeScript support)
+- Scalability (handling 100+ async data sources, code splitting compatibility)
+- Maintenance (community support, migration path, testing ease)
+- Specific fit for real-time inventory (optimistic updates, conflict resolution)
 
-Recommend the best approach with justification.</pre>
+Provide:
+1. Comparison table with scores (1-10)
+2. Recommended approach with detailed justification
+3. Migration strategy if currently using Redux classic
+4. Code example showing the winning approach</textarea>
+                    <div class="prompt-tips">
+                        <strong>Advanced technique:</strong> Notice how we provide SPECIFIC options with technical details, not vague choices. This forces the AI to do deep technical comparison. Try with: "database options for time-series data (InfluxDB vs TimescaleDB vs Cassandra)" or "CI/CD platforms (GitHub Actions vs GitLab CI vs CircleCI)".
+                    </div>
+                </div>
+                
+                <div class="example-output">
+                    <strong>Example Output:</strong> You'll get a detailed comparison table, plus insights like "React Query + Context wins for this use case (8.5/10) because real-time inventory needs background refetching (built-in), bundle size is critical for e-commerce (smaller than Redux), and server-state/UI-state separation reduces complexity. Migration: install React Query, wrap providers, gradually move async logic from Redux thunks to useQuery hooks."
                 </div>
             </div>
         </section>
