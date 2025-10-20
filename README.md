@@ -20,9 +20,9 @@
 
 ### Research Map
 
-**13 Research Notebooks Organized in 3 Categories:**
+**14 Research Notebooks Organized in 3 Categories:**
 
-🟢 **Practical Applications** - AutoTriage Assessment, Healthcare AI Agents, CI/CD Optimization, RAG Testing, MCP Testing  
+🟢 **Practical Applications** - Databricks Testing, AutoTriage Assessment, Healthcare AI Agents, CI/CD Optimization, RAG Testing, MCP Testing  
 🔵 **Academic Research** - AutoTriage Research, Multi-Agent Orchestration, Monte Carlo Testing, Model Evaluation, LLM Testing  
 🟡 **Frameworks & Tools** - Agentic Testing, Automated Patterns, AI Safety
 
@@ -34,6 +34,7 @@ graph TB
     Research --> Academic[Academic Research]
     Research --> Tools[Frameworks & Tools]
     
+    Practical --> Databricks[Databricks Testing<br/>64% Time Reduction]
     Practical --> AutoTriage[AutoTriage Assessment<br/>3.2x ROI]
     Practical --> Healthcare[Healthcare AI Agents<br/>487% ROI]
     Practical --> CICD[CI/CD Optimization<br/>40% Time Saved]
@@ -50,6 +51,7 @@ graph TB
     Tools --> Patterns[Automated Testing<br/>Patterns]
     Tools --> Safety[AI Safety<br/>Metrics]
     
+    style Databricks fill:#51cf66,stroke:#2f9e44,color:#000
     style AutoTriage fill:#51cf66,stroke:#2f9e44,color:#000
     style Healthcare fill:#51cf66,stroke:#2f9e44,color:#000
     style CICD fill:#51cf66,stroke:#2f9e44,color:#000
@@ -63,6 +65,7 @@ graph TB
 
 | Research Paper | Type | Key Results | Primary Focus | Tech Stack |
 |----------------|------|-------------|---------------|------------|
+| [Databricks Testing Framework](./research/notebooks/databricks-testing-framework.html) | Practical | 64% time ↓, $1.2M savings | Unified testing platform | Databricks, Delta Lake, MLflow |
 | [Healthcare AI Agents](./research/notebooks/ai-agents-qa-healthcare.html) | Case Study | 487% ROI, 92% coverage | Why use AI agents? | LangChain, Playwright |
 | [AutoTriage Research Paper](./research/notebooks/autotriage-research-paper.html) | Academic | 85% accuracy, 3.2x ROI | Test automation triage | Ensemble AI Framework |
 | [AutoTriage Assessment Tool](./research/notebooks/autotriage-manual-test-assessment.html) | Tool | 4-tier prioritization | Manual test assessment | Business Value Analysis |
@@ -125,7 +128,7 @@ graph TB
 **[View](./research/notebooks/model-evaluation-software-testing.html)** | **[Download](./research/notebooks/model-evaluation-software-testing.ipynb)**
 </details>
 
-**[View All 13 Research Notebooks →](./research/)** | **[Complete Research Index](./research/notebooks/README.md)**
+**[View All 14 Research Notebooks →](./research/)** | **[Complete Research Index](./research/notebooks/README.md)**
 
 ---
 
