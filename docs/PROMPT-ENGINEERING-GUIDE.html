@@ -179,6 +179,115 @@
             font-weight: bold;
             letter-spacing: 2px;
         }
+        
+        .interactive-prompt {
+            background: rgba(0, 0, 0, 0.7);
+            border: 2px solid var(--neon-blue);
+            border-radius: 10px;
+            margin: 1.5rem 0;
+            position: relative;
+        }
+        
+        .prompt-header {
+            background: rgba(0, 212, 255, 0.1);
+            padding: 1rem 1.5rem;
+            border-bottom: 1px solid rgba(0, 212, 255, 0.3);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .prompt-level {
+            display: inline-block;
+            padding: 0.3rem 0.8rem;
+            border-radius: 15px;
+            font-size: 0.75rem;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        
+        .level-beginner {
+            background: var(--success);
+            color: var(--primary);
+        }
+        
+        .level-intermediate {
+            background: var(--neon-blue);
+            color: var(--primary);
+        }
+        
+        .level-advanced {
+            background: var(--neon-purple);
+            color: white;
+        }
+        
+        .copy-btn {
+            background: var(--secondary);
+            color: var(--primary);
+            border: none;
+            padding: 0.5rem 1rem;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            font-size: 0.85rem;
+        }
+        
+        .copy-btn:hover {
+            transform: scale(1.05);
+            box-shadow: 0 5px 15px rgba(0, 212, 255, 0.4);
+        }
+        
+        .copy-btn.copied {
+            background: var(--success);
+            color: white;
+        }
+        
+        .prompt-textarea {
+            width: 100%;
+            background: rgba(0, 0, 0, 0.8);
+            color: var(--light);
+            border: 1px solid rgba(0, 212, 255, 0.3);
+            border-radius: 5px;
+            padding: 1.5rem;
+            font-family: 'Courier New', monospace;
+            font-size: 0.9rem;
+            line-height: 1.6;
+            resize: vertical;
+            min-height: 120px;
+            margin: 0;
+        }
+        
+        .prompt-textarea:focus {
+            outline: none;
+            border-color: var(--neon-blue);
+            box-shadow: 0 0 10px rgba(0, 212, 255, 0.3);
+        }
+        
+        .prompt-tips {
+            background: rgba(57, 255, 20, 0.1);
+            border-left: 4px solid var(--neon-green);
+            padding: 1rem 1.5rem;
+            margin-top: 1rem;
+            border-radius: 5px;
+        }
+        
+        .prompt-tips strong {
+            color: var(--neon-green);
+        }
+        
+        .example-output {
+            background: rgba(124, 58, 237, 0.1);
+            border-left: 4px solid var(--neon-purple);
+            padding: 1rem 1.5rem;
+            margin-top: 1rem;
+            border-radius: 5px;
+        }
+        
+        .example-output strong {
+            color: var(--neon-purple);
+        }
 
         pre {
             background: rgba(0, 0, 0, 0.8);
@@ -455,6 +564,34 @@
             }
         }
     </style>
+    <script>
+        // Copy to clipboard functionality
+        function copyPrompt(button) {
+            const promptBox = button.closest('.interactive-prompt');
+            const textarea = promptBox.querySelector('.prompt-textarea');
+            
+            textarea.select();
+            document.execCommand('copy');
+            
+            button.textContent = '✓ Copied!';
+            button.classList.add('copied');
+            
+            setTimeout(() => {
+                button.textContent = 'Copy';
+                button.classList.remove('copied');
+            }, 2000);
+        }
+        
+        // Initialize all copy buttons
+        document.addEventListener('DOMContentLoaded', function() {
+            const copyButtons = document.querySelectorAll('.copy-btn');
+            copyButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    copyPrompt(this);
+                });
+            });
+        });
+    </script>
 </head>
 <body>
     <div class="container">
@@ -575,24 +712,33 @@
                 <h3>1. Project Planning Phase</h3>
                 <h4>Task: Breaking down a new feature</h4>
                 
-                <div class="prompt-box">
-                    <pre>Act as a senior software architect. I need to implement [FEATURE_NAME] for a [PROJECT_TYPE].
+                <div class="interactive-prompt">
+                    <div class="prompt-header">
+                        <span class="prompt-level level-beginner">Beginner</span>
+                        <button class="copy-btn" onclick="copyPrompt(this)">Copy</button>
+                    </div>
+                    <textarea class="prompt-textarea">Act as a senior software architect. I need to implement a user authentication system with OAuth2 for a web application.
 
 Requirements:
-- [Requirement 1]
-- [Requirement 2]
-- [Requirement 3]
+- Support Google and GitHub login
+- JWT token-based session management
+- Role-based access control (admin, user, guest)
+- Password reset functionality
+- Two-factor authentication option
 
 Please provide:
 1. Technical approach and architecture
 2. File structure and organization
 3. Implementation steps in priority order
 4. Potential challenges and solutions
-5. Testing strategy</pre>
+5. Testing strategy</textarea>
+                    <div class="prompt-tips">
+                        <strong>Try editing:</strong> Change "OAuth2" to "passwordless authentication with magic links" or swap the requirements to match your actual project needs.
+                    </div>
                 </div>
                 
-                <div class="highlight-box">
-                    <strong>Example Output:</strong> Detailed implementation plan with clear next steps
+                <div class="example-output">
+                    <strong>Example Output:</strong> You'll receive a detailed 5-section implementation plan including: recommended tech stack (e.g., Passport.js, JWT), folder structure (/auth, /middleware, /models), step-by-step implementation guide, common OAuth pitfalls, and a comprehensive testing checklist.
                 </div>
             </div>
 
@@ -600,19 +746,31 @@ Please provide:
                 <h3>2. Code Generation Phase</h3>
                 <h4>Task: Creating HTML components</h4>
                 
-                <div class="prompt-box">
-                    <pre>Create a responsive HTML component for [COMPONENT_NAME] with these requirements:
-- [Specific requirements]
-- Modern CSS (Grid/Flexbox)
-- Mobile-first approach
-- Accessibility compliant (ARIA labels, semantic HTML)
+                <div class="interactive-prompt">
+                    <div class="prompt-header">
+                        <span class="prompt-level level-intermediate">Intermediate</span>
+                        <button class="copy-btn" onclick="copyPrompt(this)">Copy</button>
+                    </div>
+                    <textarea class="prompt-textarea">Create a responsive pricing cards component with these requirements:
+- Three pricing tiers (Free, Pro, Enterprise)
+- Feature comparison checkmarks
+- "Most Popular" badge on middle card
+- Smooth hover animations that elevate the card
+- Modern CSS Grid layout
+- Mobile-first approach (stacks vertically on mobile)
+- Accessibility compliant (ARIA labels, keyboard navigation)
+- Dark mode support via CSS variables
 - No JavaScript frameworks
 
 Include:
-- Complete HTML structure
-- CSS styles with CSS variables
-- Hover effects and animations
-- Mobile breakpoints</pre>
+- Complete HTML structure with semantic tags
+- CSS with custom properties for theming
+- Scale and glow animations on hover
+- Mobile breakpoints (@media queries)
+- Optional: pulse animation on CTA buttons</textarea>
+                    <div class="prompt-tips">
+                        <strong>Make it yours:</strong> Change "pricing cards" to "testimonial slider", "feature comparison table", or "team member cards". Adjust the tier names and features to match your product.
+                    </div>
                 </div>
             </div>
 
@@ -689,23 +847,38 @@ Style requirements:
             <div class="card">
                 <h3>Test Case Generation</h3>
                 
-                <div class="prompt-box">
-                    <pre>Generate comprehensive test cases for [FEATURE_NAME]:
+                <div class="interactive-prompt">
+                    <div class="prompt-header">
+                        <span class="prompt-level level-intermediate">Intermediate</span>
+                        <button class="copy-btn" onclick="copyPrompt(this)">Copy</button>
+                    </div>
+                    <textarea class="prompt-textarea">Generate comprehensive test cases for a shopping cart checkout flow:
 
 Functional Requirements:
-- [Requirement 1]
-- [Requirement 2]
+- User can add/remove items from cart
+- Apply discount codes
+- Calculate tax and shipping based on location
+- Support multiple payment methods (Credit Card, PayPal, Apple Pay)
+- Send order confirmation email
+- Handle out-of-stock scenarios
 
 Include:
-1. Positive test scenarios
-2. Negative test scenarios
-3. Edge cases and boundary conditions
-4. Cross-browser compatibility tests
-5. Mobile device testing scenarios
-6. Accessibility testing checklist
-7. Performance testing considerations
+1. Positive test scenarios (happy path)
+2. Negative test scenarios (invalid inputs)
+3. Edge cases and boundary conditions (empty cart, maximum quantity)
+4. Cross-browser compatibility tests (Chrome, Safari, Firefox)
+5. Mobile device testing scenarios (iOS, Android)
+6. Accessibility testing checklist (screen reader, keyboard navigation)
+7. Performance testing (concurrent users, large cart size)
 
-Format as: Test ID | Test Description | Expected Result | Priority</pre>
+Format as: Test ID | Test Description | Expected Result | Priority</textarea>
+                    <div class="prompt-tips">
+                        <strong>Pro tip:</strong> Add "Given-When-Then format" at the end for BDD-style test cases, or specify your test framework like "Playwright" or "Cypress" for framework-specific examples.
+                    </div>
+                </div>
+                
+                <div class="example-output">
+                    <strong>Example Output:</strong> You'll get 15-25 structured test cases like: "TC-001 | User adds item to cart | Item appears with correct price | High" plus accessibility checks for ARIA labels, keyboard navigation, and screen reader compatibility.
                 </div>
             </div>
 
