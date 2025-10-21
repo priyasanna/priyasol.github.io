@@ -20,10 +20,10 @@
 
 ### Research Map
 
-**14 Research Notebooks Organized in 3 Categories:**
+**15 Research Notebooks Organized in 3 Categories:**
 
 🟢 **Practical Applications** - Databricks Testing, AutoTriage Assessment, Healthcare AI Agents, CI/CD Optimization, RAG Testing, MCP Testing  
-🔵 **Academic Research** - AutoTriage Research, Multi-Agent Orchestration, Monte Carlo Testing, Model Evaluation, LLM Testing  
+🔵 **Academic Research** - I QA Workforce Transformation, AutoTriage Research, Multi-Agent Orchestration, Monte Carlo Testing, Model Evaluation, LLM Testing  
 🟡 **Frameworks & Tools** - Agentic Testing, Automated Patterns, AI Safety
 
 ```mermaid
@@ -41,6 +41,7 @@ graph TB
     Practical --> RAG[RAG Testing<br/>Applications]
     Practical --> MCP[MCP in Testing<br/>Context-Aware]
     
+    Academic --> IQA[I QA Transformation<br/>Workforce Forecasting]
     Academic --> AutoTriageResearch[AutoTriage Research<br/>85% Accuracy]
     Academic --> MultiAgent[Multi-Agent Orchestration<br/>80.2% Detection]
     Academic --> MonteCarlo[Monte Carlo Testing<br/>POFOD Estimation]
@@ -55,6 +56,7 @@ graph TB
     style AutoTriage fill:#51cf66,stroke:#2f9e44,color:#000
     style Healthcare fill:#51cf66,stroke:#2f9e44,color:#000
     style CICD fill:#51cf66,stroke:#2f9e44,color:#000
+    style IQA fill:#74c0fc,stroke:#1971c2,color:#000
     style AutoTriageResearch fill:#74c0fc,stroke:#1971c2,color:#000
     style MultiAgent fill:#51cf66,stroke:#2f9e44,color:#000
     style MonteCarlo fill:#74c0fc,stroke:#1971c2,color:#000
@@ -65,6 +67,7 @@ graph TB
 
 | Research Paper | Type | Key Results | Primary Focus | Tech Stack |
 |----------------|------|-------------|---------------|------------|
+| [I, QA: Workforce Transformation](./research/notebooks/llm-qa-workforce-transformation.html) | Academic | 70-85% automation by 2028 | QA profession forecasting | Bass Diffusion, Monte Carlo |
 | [Databricks Testing Framework](./research/notebooks/databricks-testing-framework.html) | Practical | 64% time ↓, $1.2M savings | Unified testing platform | Databricks, Delta Lake, MLflow |
 | [Healthcare AI Agents](./research/notebooks/ai-agents-qa-healthcare.html) | Case Study | 487% ROI, 92% coverage | Why use AI agents? | LangChain, Playwright |
 | [AutoTriage Research Paper](./research/notebooks/autotriage-research-paper.html) | Academic | 85% accuracy, 3.2x ROI | Test automation triage | Ensemble AI Framework |
@@ -128,7 +131,7 @@ graph TB
 **[View](./research/notebooks/model-evaluation-software-testing.html)** | **[Download](./research/notebooks/model-evaluation-software-testing.ipynb)**
 </details>
 
-**[View All 14 Research Notebooks →](./research/)** | **[Complete Research Index](./research/notebooks/README.md)**
+**[View All 15 Research Notebooks →](./research/)** | **[Complete Research Index](./research/notebooks/README.md)**
 
 ---
 
