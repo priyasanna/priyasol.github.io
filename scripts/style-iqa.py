@@ -1,4 +1,9 @@
-<!DOCTYPE html>
+#!/usr/bin/env python3
+"""
+Generate fully styled HTML for I, QA: Workforce Transformation research paper
+"""
+
+html_content = """<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -552,3 +557,14 @@
     </div>
 </body>
 </html>
+"""
+
+# Write to file
+with open('research/notebooks/llm-qa-workforce-transformation.html', 'w', encoding='utf-8') as f:
+    f.write(html_content)
+
+print("✓ Styled I, QA research paper HTML created successfully!")
+print("  Beautiful dark gradient background")
+print("  Professional academic styling")
+print("  Matches all other research papers")
+
