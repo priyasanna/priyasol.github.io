@@ -157,7 +157,15 @@ graph TB
 
 **Impact:** 60% time reduction • 85% job matching accuracy • Improved application quality  
 **Tech:** Python, Playwright, AI/ML, React/TypeScript  
-**[Project Details](./job-search-automation/)** | **[Demo Screenshots](./job-search-automation/demo-screenshots.md)**
+**[Quick Start](./job-search-automation/quick-start.html)** | **[Try Dashboard](./job-search-automation/app.html)** | **[Documentation](./job-search-automation/)**
+
+### AI IDE Collection - Gotta Code 'Em All
+*Interactive comparison of 10 AI-powered development environments*
+
+**Analysis:** 100+ hours testing • S-Tier through B-Tier rankings • Real-world performance insights  
+**IDEs:** Cursor, Windsurf, Void, Continue.dev, GitHub Copilot, Zed, Replit AI, CodeWhisperer, Tabnine  
+`developer-tools` `AI-assistants` `IDE-comparison` `code-editors`  
+**[View Comparison](./ai-ide-comparison/)** | **[Source Code](https://github.com/ElaMCB/ElaMCB.github.io/tree/main/ai-ide-comparison)**
 
 ### Algorithmic Trading System
 *Systematic quantitative trading with risk management*
@@ -256,8 +264,17 @@ Found this useful? Here's how you can help:
 │   └── assessment-template.md    # Legacy system evaluation
 ├── job-search-automation/        # AI automation project
 │   ├── README.md                 # Project documentation
-│   ├── demo-screenshots.md       # Visual demonstrations
+│   ├── quick-start.html          # Interactive setup guide
+│   ├── app.html                  # Production dashboard
+│   ├── backend/                  # FastAPI backend
+│   │   ├── main.py               # API server
+│   │   ├── job_scraper.py        # Job board integration
+│   │   ├── resume_parser.py      # Resume parsing
+│   │   └── job_matcher.py        # AI matching engine
 │   └── ethical-automation-guide.md
+├── ai-ide-comparison/            # AI IDE comparison project
+│   ├── index.html                # Interactive comparison tool
+│   └── README.md                 # Project documentation
 ├── algorithmic-trading/          # Quantitative trading project
 │   ├── README.md                 # Strategy overview and results
 │   └── strategy-implementation.md # Technical implementation
