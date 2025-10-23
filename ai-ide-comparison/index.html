@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AI IDE Collection - Gotta Code 'Em All</title>
     
+    <link rel="icon" type="image/svg+xml" href="../images/favicon.svg">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
     <style>
@@ -43,21 +44,23 @@
         }
         
         .back-btn {
-            position: absolute;
+            position: fixed;
             top: 2rem;
             left: 2rem;
             background: var(--secondary);
             color: var(--primary);
-            padding: 0.8rem 1.5rem;
+            padding: 1rem 2rem;
             border-radius: 25px;
             text-decoration: none;
             font-weight: bold;
             transition: all 0.3s ease;
+            z-index: 1000;
+            box-shadow: 0 4px 15px rgba(0, 212, 255, 0.3);
         }
         
         .back-btn:hover {
             transform: translateY(-2px);
-            box-shadow: 0 8px 20px rgba(0, 212, 255, 0.4);
+            box-shadow: 0 8px 20px rgba(0, 212, 255, 0.5);
         }
         
         h1 {
@@ -95,6 +98,30 @@
         .stat-label {
             font-size: 0.9rem;
             color: rgba(228, 228, 231, 0.7);
+        }
+        
+        .personal-favorite {
+            background: linear-gradient(135deg, rgba(255, 215, 0, 0.2), rgba(255, 215, 0, 0.1));
+            border: 2px solid var(--gold) !important;
+            box-shadow: 0 0 30px rgba(255, 215, 0, 0.3) !important;
+        }
+        
+        .favorite-badge {
+            position: absolute;
+            top: 1rem;
+            left: 1rem;
+            background: var(--gold);
+            color: #000;
+            padding: 0.4rem 1rem;
+            border-radius: 15px;
+            font-weight: bold;
+            font-size: 0.85rem;
+            animation: pulse 2s infinite;
+        }
+        
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.05); }
         }
         
         .container {
@@ -186,6 +213,7 @@
         .ide-icon {
             font-size: 3rem;
             margin-bottom: 1rem;
+            filter: grayscale(0);
         }
         
         .ide-name {
@@ -404,12 +432,12 @@
         
         <div class="collection-stats">
             <div class="stat">
-                <div class="stat-value">10</div>
+                <div class="stat-value">11</div>
                 <div class="stat-label">AI IDEs Tested</div>
             </div>
             <div class="stat">
-                <div class="stat-value">S-Tier</div>
-                <div class="stat-label">Best Overall: Cursor</div>
+                <div class="stat-value"><i class="fas fa-trophy" style="color: var(--gold);"></i> Cursor</div>
+                <div class="stat-label">My Personal Favorite</div>
             </div>
             <div class="stat">
                 <div class="stat-value">100+</div>
@@ -432,9 +460,10 @@
         <!-- IDE Cards Grid -->
         <div class="ide-grid" id="ide-grid">
             <!-- Cursor -->
-            <div class="ide-card" data-tier="s" data-pricing="paid" data-local="true">
+            <div class="ide-card personal-favorite" data-tier="s" data-pricing="paid" data-local="true">
+                <div class="favorite-badge"><i class="fas fa-star"></i> MY FAVORITE</div>
                 <div class="tier-badge tier-s">S-TIER</div>
-                <div class="ide-icon">⚡</div>
+                <div class="ide-icon"><i class="fas fa-bolt"></i></div>
                 <div class="ide-name">Cursor</div>
                 <div class="ide-tagline">The AI-first code editor built for pair programming</div>
                 
@@ -489,7 +518,7 @@
             <!-- Windsurf (Codeium) -->
             <div class="ide-card" data-tier="s" data-pricing="free" data-local="true">
                 <div class="tier-badge tier-s">S-TIER</div>
-                <div class="ide-icon">🌊</div>
+                <div class="ide-icon"><i class="fas fa-water"></i></div>
                 <div class="ide-name">Windsurf (Codeium)</div>
                 <div class="ide-tagline">Agentic IDE with cascade flows - completely free</div>
                 
@@ -544,7 +573,7 @@
             <!-- Void -->
             <div class="ide-card" data-tier="a" data-pricing="free" data-local="true">
                 <div class="tier-badge tier-a">A-TIER</div>
-                <div class="ide-icon">🕳️</div>
+                <div class="ide-icon"><i class="fas fa-circle"></i></div>
                 <div class="ide-name">Void</div>
                 <div class="ide-tagline">Open-source Cursor alternative with local-first AI</div>
                 
@@ -599,7 +628,7 @@
             <!-- Continue.dev -->
             <div class="ide-card" data-tier="a" data-pricing="free" data-local="true">
                 <div class="tier-badge tier-a">A-TIER</div>
-                <div class="ide-icon">🔄</div>
+                <div class="ide-icon"><i class="fas fa-sync"></i></div>
                 <div class="ide-name">Continue.dev</div>
                 <div class="ide-tagline">Open-source AI code assistant for VS Code & JetBrains</div>
                 
@@ -654,7 +683,7 @@
             <!-- GitHub Copilot -->
             <div class="ide-card" data-tier="a" data-pricing="paid" data-local="true">
                 <div class="tier-badge tier-a">A-TIER</div>
-                <div class="ide-icon">🤖</div>
+                <div class="ide-icon"><i class="fab fa-github"></i></div>
                 <div class="ide-name">GitHub Copilot</div>
                 <div class="ide-tagline">The OG AI pair programmer from GitHub</div>
                 
@@ -709,7 +738,7 @@
             <!-- Zed -->
             <div class="ide-card" data-tier="a" data-pricing="free" data-local="true">
                 <div class="tier-badge tier-a">A-TIER</div>
-                <div class="ide-icon">⚡</div>
+                <div class="ide-icon"><i class="fas fa-terminal"></i></div>
                 <div class="ide-name">Zed</div>
                 <div class="ide-tagline">Blazing fast multiplayer code editor with AI</div>
                 
@@ -764,7 +793,7 @@
             <!-- Replit AI -->
             <div class="ide-card" data-tier="b" data-pricing="paid" data-local="false">
                 <div class="tier-badge tier-b">B-TIER</div>
-                <div class="ide-icon">🔁</div>
+                <div class="ide-icon"><i class="fas fa-repeat"></i></div>
                 <div class="ide-name">Replit AI</div>
                 <div class="ide-tagline">Browser-based coding with AI agent</div>
                 
@@ -817,7 +846,7 @@
             <!-- Amazon CodeWhisperer -->
             <div class="ide-card" data-tier="b" data-pricing="free" data-local="true">
                 <div class="tier-badge tier-b">B-TIER</div>
-                <div class="ide-icon">🟠</div>
+                <div class="ide-icon"><i class="fab fa-aws"></i></div>
                 <div class="ide-name">Amazon CodeWhisperer</div>
                 <div class="ide-tagline">AWS-powered AI coding companion</div>
                 
@@ -870,7 +899,7 @@
             <!-- Tabnine -->
             <div class="ide-card" data-tier="b" data-pricing="paid" data-local="true">
                 <div class="tier-badge tier-b">B-TIER</div>
-                <div class="ide-icon">🔮</div>
+                <div class="ide-icon"><i class="fas fa-lightbulb"></i></div>
                 <div class="ide-name">Tabnine</div>
                 <div class="ide-tagline">AI code completion trained on your codebase</div>
                 
@@ -915,6 +944,61 @@
                 
                 <div class="ide-links">
                     <a href="https://www.tabnine.com" target="_blank" class="ide-btn">
+                        <i class="fas fa-external-link-alt"></i> Visit Site
+                    </a>
+                </div>
+            </div>
+            
+            <!-- Trae -->
+            <div class="ide-card" data-tier="a" data-pricing="free" data-local="true">
+                <div class="tier-badge tier-a">A-TIER</div>
+                <div class="ide-icon"><i class="fas fa-code"></i></div>
+                <div class="ide-name">Trae</div>
+                <div class="ide-tagline">AI-powered VS Code extension with chat and code generation</div>
+                
+                <div class="rating">
+                    <i class="fas fa-star star"></i>
+                    <i class="fas fa-star star"></i>
+                    <i class="fas fa-star star"></i>
+                    <i class="fas fa-star star"></i>
+                    <i class="fas fa-star star empty"></i>
+                </div>
+                
+                <div class="pricing">
+                    <div class="price">FREE</div>
+                    <div style="font-size: 0.85rem; margin-top: 0.3rem;">Pro: $10/month</div>
+                </div>
+                
+                <div class="features-list">
+                    <div class="feature-item"><i class="fas fa-check-circle"></i> VS Code extension</div>
+                    <div class="feature-item"><i class="fas fa-check-circle"></i> Multiple AI models</div>
+                    <div class="feature-item"><i class="fas fa-check-circle"></i> Code explanation & refactoring</div>
+                    <div class="feature-item"><i class="fas fa-check-circle"></i> Context-aware suggestions</div>
+                    <div class="feature-item"><i class="fas fa-check-circle"></i> Bug detection</div>
+                </div>
+                
+                <div class="pros-cons">
+                    <div class="pros">
+                        <h4><i class="fas fa-thumbs-up"></i> Pros</h4>
+                        <ul>
+                            <li>Generous free tier</li>
+                            <li>Good VS Code integration</li>
+                            <li>Multiple AI models</li>
+                            <li>Lightweight</li>
+                        </ul>
+                    </div>
+                    <div class="cons">
+                        <h4><i class="fas fa-thumbs-down"></i> Cons</h4>
+                        <ul>
+                            <li>Less known/smaller community</li>
+                            <li>Limited multi-file editing</li>
+                            <li>Newer product</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="ide-links">
+                    <a href="https://trae.ai" target="_blank" class="ide-btn">
                         <i class="fas fa-external-link-alt"></i> Visit Site
                     </a>
                 </div>
@@ -993,6 +1077,15 @@
                         <td><i class="fas fa-times cross"></i></td>
                         <td><i class="fas fa-check check"></i></td>
                         <td><i class="fas fa-check check"></i></td>
+                    </tr>
+                    <tr>
+                        <td><strong>Trae</strong></td>
+                        <td>Free ($10 Pro)</td>
+                        <td><i class="fas fa-check check"></i></td>
+                        <td><i class="fas fa-check check"></i></td>
+                        <td><i class="fas fa-times cross"></i></td>
+                        <td><i class="fas fa-check check"></i></td>
+                        <td><i class="fas fa-times cross"></i></td>
                     </tr>
                 </tbody>
             </table>
