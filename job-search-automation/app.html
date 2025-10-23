@@ -60,6 +60,25 @@
             -webkit-text-fill-color: transparent;
         }
         
+        .back-to-portfolio {
+            background: rgba(0, 212, 255, 0.2);
+            color: var(--secondary);
+            padding: 0.6rem 1.2rem;
+            border-radius: 20px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.9rem;
+            transition: all 0.3s ease;
+            border: 2px solid var(--secondary);
+        }
+        
+        .back-to-portfolio:hover {
+            background: var(--secondary);
+            color: var(--primary);
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0, 212, 255, 0.4);
+        }
+        
         .header-stats {
             display: flex;
             gap: 2rem;
@@ -494,8 +513,13 @@
     <!-- Header -->
     <div class="header">
         <div class="header-content">
-            <div class="logo">
-                <i class="fas fa-briefcase"></i> Job Search Pro
+            <div style="display: flex; align-items: center; gap: 2rem;">
+                <a href="../" class="back-to-portfolio">
+                    <i class="fas fa-arrow-left"></i> Back to Portfolio
+                </a>
+                <div class="logo">
+                    <i class="fas fa-briefcase"></i> Job Search Pro
+                </div>
             </div>
             <div class="header-stats">
                 <div class="stat">
