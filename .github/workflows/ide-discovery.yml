@@ -23,17 +23,34 @@ jobs:
         run: |
           cd ai-ide-comparison
           node auto-discover.js
+        continue-on-error: true
+      
+      - name: Check if discoveries were made
+        id: check_discoveries
+        run: |
+          cd ai-ide-comparison
+          if ls discoveries-*.json 1> /dev/null 2>&1; then
+            echo "has_discoveries=true" >> $GITHUB_OUTPUT
+            count=$(cat discoveries-*.json | jq 'length')
+            echo "discovery_count=$count" >> $GITHUB_OUTPUT
+          else
+            echo "has_discoveries=false" >> $GITHUB_OUTPUT
+            echo "No new AI IDEs discovered this week"
+          fi
       
       - name: Create Pull Request if discoveries found
+        if: steps.check_discoveries.outputs.has_discoveries == 'true'
         uses: peter-evans/create-pull-request@v5
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
           commit-message: 'feat: Weekly AI IDE discovery results'
-          title: '🔍 New AI IDEs Discovered - Weekly Scan'
+          title: '🔍 ${{ steps.check_discoveries.outputs.discovery_count }} New AI IDEs Discovered'
           body: |
             ## Automated AI IDE Discovery
             
             This PR contains the results of the weekly AI IDE discovery scan.
+            
+            **Discoveries:** ${{ steps.check_discoveries.outputs.discovery_count }} new AI IDEs found
             
             **Review the discoveries:**
             - Check `ai-ide-comparison/discoveries-*.md` for the full report
@@ -49,8 +66,16 @@ jobs:
           branch: ide-discovery-automated
           delete-branch: true
       
+      - name: Create summary comment
+        if: steps.check_discoveries.outputs.has_discoveries == 'false'
+        run: |
+          echo "✅ Discovery scan completed successfully"
+          echo "📊 Result: No new AI IDEs found"
+          echo "🔍 All major AI IDEs are already tracked in the comparison"
+          echo "⏰ Next scan: Next Monday at 9 AM UTC"
+      
       - name: Comment on issue if discoveries found
-        if: success()
+        if: steps.check_discoveries.outputs.has_discoveries == 'true'
         uses: actions/github-script@v6
         with:
           script: |
