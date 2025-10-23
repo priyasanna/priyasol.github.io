@@ -43,33 +43,15 @@ jobs:
             echo "No new AI IDEs discovered this week"
           fi
       
-      - name: Create Pull Request if discoveries found
+      - name: Commit discoveries directly to main
         if: steps.check_discoveries.outputs.has_discoveries == 'true'
-        uses: peter-evans/create-pull-request@v5
-        with:
-          token: ${{ secrets.GITHUB_TOKEN }}
-          commit-message: 'feat: Weekly AI IDE discovery results'
-          title: '🔍 ${{ steps.check_discoveries.outputs.discovery_count }} New AI IDEs Discovered'
-          body: |
-            ## Automated AI IDE Discovery
-            
-            This PR contains the results of the weekly AI IDE discovery scan.
-            
-            **Discoveries:** ${{ steps.check_discoveries.outputs.discovery_count }} new AI IDEs found
-            
-            **Review the discoveries:**
-            - Check `ai-ide-comparison/discoveries-*.md` for the full report
-            - Manually test promising IDEs
-            - Update the comparison page if warranted
-            
-            **Next Steps:**
-            1. Review each discovery
-            2. Test viable candidates (2-4 hours each)
-            3. Assign tier (S/A/B)
-            4. Update `ai-ide-comparison/index.html`
-            5. Merge this PR
-          branch: ide-discovery-automated
-          delete-branch: true
+        run: |
+          cd ai-ide-comparison
+          git config user.name "GitHub Actions Bot"
+          git config user.email "actions@github.com"
+          git add discoveries-*.json discoveries-*.md
+          git commit -m "feat: Weekly AI IDE discovery results - ${{ steps.check_discoveries.outputs.discovery_count }} new IDEs found"
+          git push origin main
       
       - name: Create summary comment
         if: steps.check_discoveries.outputs.has_discoveries == 'false'
@@ -79,7 +61,7 @@ jobs:
           echo "🔍 All major AI IDEs are already tracked in the comparison"
           echo "⏰ Next scan: Next Monday at 9 AM UTC"
       
-      - name: Comment on issue if discoveries found
+      - name: Create issue for discoveries
         if: steps.check_discoveries.outputs.has_discoveries == 'true'
         uses: actions/github-script@v6
         with:
@@ -90,12 +72,13 @@ jobs:
             
             if (discoveries.length > 0) {
               const data = JSON.parse(fs.readFileSync(`ai-ide-comparison/${discoveries[0]}`, 'utf8'));
+              const filename = discoveries[0];
               
               github.rest.issues.create({
                 owner: context.repo.owner,
                 repo: context.repo.repo,
-                title: `🔍 ${data.length} New AI IDEs Discovered`,
-                body: `Automated discovery found ${data.length} potential new AI IDEs.\n\nCheck the PR for details and manual review.`,
+                title: `🔍 ${data.length} New AI IDEs Discovered - Weekly Scan`,
+                body: `## Automated AI IDE Discovery\n\n**Discoveries:** ${data.length} new AI IDEs found\n\n**Review the discoveries:**\n- Check \`ai-ide-comparison/${filename}\` for the full data\n- Check \`ai-ide-comparison/${filename.replace('.json', '.md')}\` for the report\n- The discoveries are now live on the [comparison page](https://elamcb.github.io/ai-ide-comparison/)\n\n**Next Steps:**\n1. Review each discovery\n2. Test viable candidates (2-4 hours each)\n3. Assign tier (S/A/B)\n4. Update comparison page if warranted\n5. Close this issue when done`,
                 labels: ['ai-ides', 'automated-discovery', 'needs-review']
               });
             }
