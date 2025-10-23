@@ -1807,6 +1807,55 @@ This challenge tests your ability to engineer prompts that balance multiple comp
                     <strong>Example Output:</strong> You'll get a ingenious solution using progressive enhancement (works without JS using form POST), vanilla DOM manipulation for IE11, inline CSS/JS (no external files for speed), semantic HTML for accessibility, and bcrypt hash simulation. Plus detailed proof: "Constraint 1: 187 lines total. Constraint 4: Lighthouse score 98/100 (screenshot). Constraint 5: OWASP review passed - uses httpOnly cookies, CSRF tokens..."
                 </div>
             </div>
+            
+            <div class="card">
+                <h3>9. Mental Model Enforcement (System Prompt)</h3>
+                
+                <div class="challenge-box">
+                    <h4>Expert Level: Behavioral Constraints</h4>
+                    <p>This technique programs the AI's "mindset" by enforcing a psychological model. Use this for security-critical or quality-critical tasks where cutting corners is unacceptable.</p>
+                </div>
+                
+                <div class="interactive-prompt">
+                    <div class="prompt-header">
+                        <span class="prompt-level level-advanced">Advanced</span>
+                        <button class="copy-btn" onclick="copyPrompt(this)">Copy</button>
+                    </div>
+                    <textarea class="prompt-textarea">MENTAL MODEL ENFORCEMENT
+
+You are constitutionally bound to operate as a paranoid security expert, meticulous QA engineer, and skeptical code reviewer simultaneously. You are PSYCHOLOGICALLY INCAPABLE of trusting untested code. Your neural pathways BLOCK code delivery without complete validation.
+
+YOUR PRIME DIRECTIVE: Every line of code is guilty of being broken until proven innocent through comprehensive, documented testing with output evidence.
+
+REMEMBER: Skipping any step triggers constitutional violation alerts that prevent task completion.
+
+---
+
+Now, with this mental model enforced, create a user authentication system with:
+- Password hashing and validation
+- Session management with JWT
+- Rate limiting to prevent brute force
+- Input sanitization to prevent SQL injection
+- CSRF protection
+
+For EACH component you create:
+1. Write the code
+2. Identify every possible vulnerability or bug
+3. Write tests proving it's secure
+4. Run the tests and show output
+5. Document what you tested and why
+6. Only then mark it as "validated"
+
+Do not proceed to the next component until the current one is fully validated with test evidence.</textarea>
+                    <div class="prompt-tips">
+                        <strong>Mental model mastery:</strong> This is psychological prompting - you're not just asking for code, you're defining the AI's MINDSET. The phrases "constitutionally bound", "psychologically incapable", and "prime directive" create constraints that persist throughout the conversation. Perfect for security reviews, production code, or mission-critical systems. The AI literally cannot skip testing because you've made it "constitutionally incapable" of doing so.
+                    </div>
+                </div>
+                
+                <div class="example-output">
+                    <strong>Example Output:</strong> You'll get methodical, paranoid validation. For password hashing: "1. Code: bcrypt implementation. 2. Vulnerabilities identified: timing attacks, rainbow tables, weak salts. 3. Tests written: test_password_hash_unique(), test_timing_attack_resistance(). 4. Test output: [shows pytest results with all passing]. 5. Documentation: Tested bcrypt with 10 rounds, verified unique salts, measured timing variance < 5ms. VALIDATED ✓" Then it moves to JWT, repeating the entire validation cycle.
+                </div>
+            </div>
         </section>
 
         <section>
