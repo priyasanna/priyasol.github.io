@@ -213,11 +213,26 @@ function saveDiscoveries(discoveries) {
     
     console.log(`\n📝 Report saved to: ${filename}`);
     
-    // Also save JSON for programmatic processing
+    // Save JSON for programmatic processing AND web display
     const jsonFilename = `discoveries-${timestamp}.json`;
-    fs.writeFileSync(jsonFilename, JSON.stringify(discoveries, null, 2));
+    const jsonData = {
+        scanDate: timestamp,
+        totalDiscoveries: discoveries.length,
+        discoveries: discoveries.map(d => ({
+            name: d.name,
+            description: d.description,
+            url: d.url,
+            stars: d.stars || null,
+            points: d.points || null,
+            language: d.language || null,
+            source: d.source
+        }))
+    };
+    
+    fs.writeFileSync(jsonFilename, JSON.stringify(jsonData.discoveries, null, 2));
     
     console.log(`📊 JSON data saved to: ${jsonFilename}`);
+    console.log(`🌐 This file will be automatically displayed on the comparison page`);
 }
 
 /**
