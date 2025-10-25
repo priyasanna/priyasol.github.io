@@ -432,7 +432,7 @@
         
         <div class="collection-stats">
             <div class="stat">
-                <div class="stat-value">11</div>
+                <div class="stat-value">12</div>
                 <div class="stat-label">AI IDEs Tested</div>
             </div>
             <div class="stat">
@@ -447,23 +447,23 @@
     </div>
     
     <div class="container">
-        <!-- Tier System Legend -->
-        <div style="background: rgba(124, 58, 237, 0.1); border-left: 4px solid var(--accent); padding: 1.5rem; border-radius: 15px; margin-bottom: 2rem;">
-            <h3 style="color: var(--accent); margin-top: 0; margin-bottom: 1rem;">
-                <i class="fas fa-info-circle"></i> Tier System Explained
+        <!-- GitHub Services Explanation -->
+        <div style="background: rgba(0, 212, 255, 0.1); border-left: 4px solid var(--secondary); padding: 1.5rem; border-radius: 15px; margin-bottom: 2rem;">
+            <h3 style="color: var(--secondary); margin-top: 0; margin-bottom: 1rem;">
+                <i class="fab fa-github"></i> GitHub AI Offerings - What's the Difference?
             </h3>
-            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem;">
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem;">
                 <div>
-                    <span style="background: linear-gradient(135deg, #ffd700, #ffed4e); color: #000; padding: 0.3rem 0.8rem; border-radius: 10px; font-weight: bold; font-size: 0.85rem;">S-TIER</span>
-                    <p style="margin: 0.5rem 0 0 0; font-size: 0.9rem; color: rgba(228, 228, 231, 0.8);">Best-in-class, cutting-edge features</p>
+                    <strong style="color: var(--accent);">GitHub Copilot</strong> - AI Assistant
+                    <p style="margin: 0.5rem 0 0 0; font-size: 0.9rem; color: rgba(228, 228, 231, 0.8);">AI coding assistant that provides autocomplete and chat. Install in your IDE.</p>
                 </div>
                 <div>
-                    <span style="background: linear-gradient(135deg, #c0c0c0, #e8e8e8); color: #000; padding: 0.3rem 0.8rem; border-radius: 10px; font-weight: bold; font-size: 0.85rem;">A-TIER</span>
-                    <p style="margin: 0.5rem 0 0 0; font-size: 0.9rem; color: rgba(228, 228, 231, 0.8);">Excellent with minor trade-offs</p>
+                    <strong style="color: var(--accent);">GitHub Codespaces</strong> - Cloud IDE
+                    <p style="margin: 0.5rem 0 0 0; font-size: 0.9rem; color: rgba(228, 228, 231, 0.8);">Full VS Code environment in the cloud with compute + integrated Copilot.</p>
                 </div>
                 <div>
-                    <span style="background: linear-gradient(135deg, #cd7f32, #daa520); color: #fff; padding: 0.3rem 0.8rem; border-radius: 10px; font-weight: bold; font-size: 0.85rem;">B-TIER</span>
-                    <p style="margin: 0.5rem 0 0 0; font-size: 0.9rem; color: rgba(228, 228, 231, 0.8);">Good for specific use cases</p>
+                    <strong style="color: rgba(228, 228, 231, 0.6);">GitHub.dev</strong> - Not Included
+                    <p style="margin: 0.5rem 0 0 0; font-size: 0.9rem; color: rgba(228, 228, 231, 0.5);">Lightweight browser editor (no AI, no compute). Too minimal for comparison.</p>
                 </div>
             </div>
         </div>
@@ -751,6 +751,61 @@
                 
                 <div class="ide-links">
                     <a href="https://github.com/features/copilot" target="_blank" class="ide-btn">
+                        <i class="fas fa-external-link-alt"></i> Visit Site
+                    </a>
+                </div>
+            </div>
+            
+            <!-- GitHub Codespaces -->
+            <div class="ide-card" data-tier="a" data-pricing="paid" data-local="false">
+                <div class="tier-badge tier-a">A-TIER</div>
+                <div class="ide-icon"><i class="fas fa-cloud"></i></div>
+                <div class="ide-name">GitHub Codespaces</div>
+                <div class="ide-tagline">VS Code in the cloud with AI superpowers</div>
+                
+                <div class="rating">
+                    <i class="fas fa-star star"></i>
+                    <i class="fas fa-star star"></i>
+                    <i class="fas fa-star star"></i>
+                    <i class="fas fa-star star"></i>
+                    <i class="fas fa-star star empty"></i>
+                </div>
+                
+                <div class="pricing">
+                    <div class="price">60h/month free</div>
+                    <div style="font-size: 0.85rem; margin-top: 0.3rem;">$0.18/hour after</div>
+                </div>
+                
+                <div class="features-list">
+                    <div class="feature-item"><i class="fas fa-check-circle"></i> Full VS Code in browser/desktop</div>
+                    <div class="feature-item"><i class="fas fa-check-circle"></i> Integrated GitHub Copilot</div>
+                    <div class="feature-item"><i class="fas fa-check-circle"></i> Linux compute environment</div>
+                    <div class="feature-item"><i class="fas fa-check-circle"></i> Prebuilt dev containers</div>
+                    <div class="feature-item"><i class="fas fa-check-circle"></i> Starts in seconds</div>
+                </div>
+                
+                <div class="pros-cons">
+                    <div class="pros">
+                        <h4><i class="fas fa-thumbs-up"></i> Pros</h4>
+                        <ul>
+                            <li>Zero local setup</li>
+                            <li>Full Linux environment</li>
+                            <li>Generous free tier</li>
+                            <li>Seamless GitHub integration</li>
+                        </ul>
+                    </div>
+                    <div class="cons">
+                        <h4><i class="fas fa-thumbs-down"></i> Cons</h4>
+                        <ul>
+                            <li>Requires internet</li>
+                            <li>Can get expensive</li>
+                            <li>Cloud-based (latency)</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="ide-links">
+                    <a href="https://github.com/features/codespaces" target="_blank" class="ide-btn">
                         <i class="fas fa-external-link-alt"></i> Visit Site
                     </a>
                 </div>
@@ -1147,6 +1202,25 @@
         </div>
         
         <hr style="border: none; height: 1px; background: linear-gradient(to right, transparent, var(--accent), transparent); margin: 3rem 0;">
+        
+        <!-- Tier System Legend -->
+        <div style="background: rgba(124, 58, 237, 0.05); border: 1px solid rgba(124, 58, 237, 0.3); padding: 1rem; border-radius: 10px; margin-bottom: 2rem;">
+            <p style="text-align: center; color: rgba(228, 228, 231, 0.7); font-size: 0.9rem; margin-bottom: 0.8rem;">Tier System</p>
+            <div style="display: flex; justify-content: center; gap: 2rem; flex-wrap: wrap;">
+                <div style="text-align: center;">
+                    <span style="background: linear-gradient(135deg, #ffd700, #ffed4e); color: #000; padding: 0.3rem 0.8rem; border-radius: 10px; font-weight: bold; font-size: 0.85rem;">S-TIER</span>
+                    <p style="margin: 0.3rem 0 0 0; font-size: 0.85rem; color: rgba(228, 228, 231, 0.6);">Best-in-class</p>
+                </div>
+                <div style="text-align: center;">
+                    <span style="background: linear-gradient(135deg, #c0c0c0, #e8e8e8); color: #000; padding: 0.3rem 0.8rem; border-radius: 10px; font-weight: bold; font-size: 0.85rem;">A-TIER</span>
+                    <p style="margin: 0.3rem 0 0 0; font-size: 0.85rem; color: rgba(228, 228, 231, 0.6);">Excellent</p>
+                </div>
+                <div style="text-align: center;">
+                    <span style="background: linear-gradient(135deg, #cd7f32, #daa520); color: #fff; padding: 0.3rem 0.8rem; border-radius: 10px; font-weight: bold; font-size: 0.85rem;">B-TIER</span>
+                    <p style="margin: 0.3rem 0 0 0; font-size: 0.85rem; color: rgba(228, 228, 231, 0.6);">Good</p>
+                </div>
+            </div>
+        </div>
         
         <div style="text-align: center;">
             <p style="font-size: 1.1rem; margin-bottom: 1.5rem;">Ready to level up your coding with AI?</p>
