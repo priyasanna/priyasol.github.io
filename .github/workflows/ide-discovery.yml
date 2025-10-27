@@ -36,7 +36,9 @@ jobs:
           cd ai-ide-comparison
           if ls discoveries-*.json 1> /dev/null 2>&1; then
             echo "has_discoveries=true" >> $GITHUB_OUTPUT
-            count=$(cat discoveries-*.json | jq 'length')
+            # Get the most recent discovery file
+            latest_file=$(ls -t discoveries-*.json | head -n1)
+            count=$(jq 'length' "$latest_file")
             echo "discovery_count=$count" >> $GITHUB_OUTPUT
           else
             echo "has_discoveries=false" >> $GITHUB_OUTPUT
@@ -50,7 +52,10 @@ jobs:
           git config user.name "GitHub Actions Bot"
           git config user.email "actions@github.com"
           git add discoveries-*.json discoveries-*.md
-          git commit -m "feat: Weekly AI IDE discovery results - ${{ steps.check_discoveries.outputs.discovery_count }} new IDEs found"
+          # Get the latest discovery file to count properly
+          latest_file=$(ls -t discoveries-*.json | head -n1)
+          count=$(jq 'length' "$latest_file")
+          git commit -m "feat: Weekly AI IDE discovery results - $count new IDEs found"
           git push origin main
       
       - name: Create summary comment
@@ -67,18 +72,26 @@ jobs:
         with:
           script: |
             const fs = require('fs');
-            const discoveries = fs.readdirSync('ai-ide-comparison')
-              .filter(f => f.startsWith('discoveries-') && f.endsWith('.json'));
+            const path = require('path');
             
-            if (discoveries.length > 0) {
-              const data = JSON.parse(fs.readFileSync(`ai-ide-comparison/${discoveries[0]}`, 'utf8'));
-              const filename = discoveries[0];
+            const directory = 'ai-ide-comparison';
+            const files = fs.readdirSync(directory)
+              .filter(f => f.startsWith('discoveries-') && f.endsWith('.json'))
+              .map(f => ({ name: f, time: fs.statSync(path.join(directory, f)).mtime }))
+              .sort((a, b) => b.time - a.time);
+            
+            if (files.length > 0) {
+              const filename = files[0].name;
+              const data = JSON.parse(fs.readFileSync(`ai-ide-comparison/${filename}`, 'utf8'));
+              
+              // Ensure data is an array
+              const count = Array.isArray(data) ? data.length : 0;
               
               github.rest.issues.create({
                 owner: context.repo.owner,
                 repo: context.repo.repo,
-                title: `🔍 ${data.length} New AI IDEs Discovered - Weekly Scan`,
-                body: `## Automated AI IDE Discovery\n\n**Discoveries:** ${data.length} new AI IDEs found\n\n**Review the discoveries:**\n- Check \`ai-ide-comparison/${filename}\` for the full data\n- Check \`ai-ide-comparison/${filename.replace('.json', '.md')}\` for the report\n- The discoveries are now live on the [comparison page](https://elamcb.github.io/ai-ide-comparison/)\n\n**Next Steps:**\n1. Review each discovery\n2. Test viable candidates (2-4 hours each)\n3. Assign tier (S/A/B)\n4. Update comparison page if warranted\n5. Close this issue when done`,
+                title: `🔍 ${count} New AI IDEs Discovered - Weekly Scan`,
+                body: `## Automated AI IDE Discovery\n\n**Discoveries:** ${count} new AI IDEs found\n\n**Review the discoveries:**\n- Check \`ai-ide-comparison/${filename}\` for the full data\n- Check \`ai-ide-comparison/${filename.replace('.json', '.md')}\` for the report\n- The discoveries are now live on the [comparison page](https://elamcb.github.io/ai-ide-comparison/)\n\n**Next Steps:**\n1. Review each discovery\n2. Test viable candidates (2-4 hours each)\n3. Assign tier (S/A/B)\n4. Update comparison page if warranted\n5. Close this issue when done`,
                 labels: ['ai-ides', 'automated-discovery', 'needs-review']
               });
             }
