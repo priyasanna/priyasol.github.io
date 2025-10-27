@@ -11,13 +11,14 @@
     <style>
         :root {
             --primary: #0a0a0f;
-            --secondary: #00d4ff;
-            --accent: #7c3aed;
-            --success: #51cf66;
-            --warning: #ff6b6b;
-            --gold: #ffd700;
-            --light: #e4e4e7;
-            --card: rgba(15, 15, 23, 0.95);
+            --secondary: #5b9bd5;
+            --accent: #6366f1;
+            --success: #4ade80;
+            --warning: #fb923c;
+            --gold: #fbbf24;
+            --light: #d1d5db;
+            --card: rgba(15, 15, 23, 0.8);
+            --border: rgba(100, 116, 139, 0.2);
         }
         
         * {
@@ -28,7 +29,7 @@
         }
         
         body {
-            background: linear-gradient(135deg, #0c0c0c 0%, #1a1a2e 50%, #16213e 100%);
+            background: linear-gradient(135deg, #0a0a0f 0%, #1a1625 50%, #0f1419 100%);
             background-attachment: fixed;
             color: var(--light);
             line-height: 1.6;
@@ -55,12 +56,12 @@
             font-weight: bold;
             transition: all 0.3s ease;
             z-index: 1000;
-            box-shadow: 0 4px 15px rgba(0, 212, 255, 0.3);
+            box-shadow: 0 4px 15px rgba(91, 155, 213, 0.2);
         }
         
         .back-btn:hover {
             transform: translateY(-2px);
-            box-shadow: 0 8px 20px rgba(0, 212, 255, 0.5);
+            box-shadow: 0 8px 20px rgba(91, 155, 213, 0.3);
         }
         
         h1 {
@@ -101,9 +102,9 @@
         }
         
         .personal-favorite {
-            background: linear-gradient(135deg, rgba(255, 215, 0, 0.2), rgba(255, 215, 0, 0.1));
+            background: linear-gradient(135deg, rgba(251, 191, 36, 0.1), rgba(251, 191, 36, 0.05));
             border: 2px solid var(--gold) !important;
-            box-shadow: 0 0 30px rgba(255, 215, 0, 0.3) !important;
+            box-shadow: 0 0 30px rgba(251, 191, 36, 0.15) !important;
         }
         
         .favorite-badge {
@@ -145,7 +146,7 @@
         .filter-btn {
             padding: 0.6rem 1.2rem;
             background: rgba(0, 0, 0, 0.5);
-            border: 2px solid rgba(0, 212, 255, 0.3);
+            border: 2px solid rgba(91, 155, 213, 0.2);
             border-radius: 20px;
             color: var(--light);
             cursor: pointer;
@@ -189,7 +190,7 @@
             left: -100%;
             width: 100%;
             height: 100%;
-            background: linear-gradient(90deg, transparent, rgba(0, 212, 255, 0.1), transparent);
+            background: linear-gradient(90deg, transparent, rgba(91, 155, 213, 0.08), transparent);
             transition: left 0.5s ease;
         }
         
@@ -199,7 +200,7 @@
         
         .ide-card:hover {
             transform: translateY(-10px);
-            box-shadow: 0 20px 40px rgba(0, 212, 255, 0.3);
+            box-shadow: 0 20px 40px rgba(91, 155, 213, 0.2);
             border-color: var(--secondary);
         }
         
@@ -254,17 +255,17 @@
         }
         
         .tier-s {
-            background: linear-gradient(135deg, #ffd700, #ffed4e);
+            background: linear-gradient(135deg, #fbbf24, #fcd34d);
             color: #000;
         }
         
         .tier-a {
-            background: linear-gradient(135deg, #c0c0c0, #e8e8e8);
+            background: linear-gradient(135deg, #9ca3af, #d1d5db);
             color: #000;
         }
         
         .tier-b {
-            background: linear-gradient(135deg, #cd7f32, #daa520);
+            background: linear-gradient(135deg, #b45309, #d97706);
             color: #fff;
         }
         
@@ -286,7 +287,7 @@
         }
         
         .pricing {
-            background: rgba(124, 58, 237, 0.2);
+            background: rgba(99, 102, 241, 0.1);
             padding: 1rem;
             border-radius: 10px;
             margin: 1rem 0;
@@ -312,12 +313,12 @@
         }
         
         .pros {
-            background: rgba(81, 207, 102, 0.1);
+            background: rgba(74, 222, 128, 0.08);
             border-left: 3px solid var(--success);
         }
         
         .cons {
-            background: rgba(255, 107, 107, 0.1);
+            background: rgba(251, 146, 60, 0.08);
             border-left: 3px solid var(--warning);
         }
         
@@ -389,7 +390,7 @@
         }
         
         th {
-            background: rgba(124, 58, 237, 0.3);
+            background: rgba(99, 102, 241, 0.15);
             color: var(--secondary);
             font-weight: bold;
             position: sticky;
@@ -436,8 +437,8 @@
                 <div class="stat-label">AI IDEs Tested</div>
             </div>
             <div class="stat">
-                <div class="stat-value"><i class="fas fa-trophy" style="color: var(--gold);"></i> Cursor</div>
-                <div class="stat-label">My Personal Favorite</div>
+                <div class="stat-value"><i class="fas fa-trophy" style="color: var(--gold);"></i> Cursor & Codespaces</div>
+                <div class="stat-label">My Personal Favorites</div>
             </div>
             <div class="stat">
                 <div class="stat-value">100+</div>
@@ -448,7 +449,7 @@
     
     <div class="container">
         <!-- GitHub Services Explanation -->
-        <div style="background: rgba(0, 212, 255, 0.1); border-left: 4px solid var(--secondary); padding: 1.5rem; border-radius: 15px; margin-bottom: 2rem;">
+        <div style="background: rgba(91, 155, 213, 0.08); border-left: 4px solid var(--secondary); padding: 1.5rem; border-radius: 15px; margin-bottom: 2rem;">
             <h3 style="color: var(--secondary); margin-top: 0; margin-bottom: 1rem;">
                 <i class="fab fa-github"></i> GitHub AI Offerings - What's the Difference?
             </h3>
@@ -484,7 +485,7 @@
             <div class="ide-card personal-favorite" data-tier="s" data-pricing="paid" data-local="true">
                 <div class="favorite-badge"><i class="fas fa-star"></i> MY FAVORITE</div>
                 <div class="tier-badge tier-s">S-TIER</div>
-                <div class="ide-icon"><i class="fas fa-bolt"></i></div>
+                <div class="ide-icon"><i class="fas fa-mouse-pointer"></i></div>
                 <div class="ide-name">Cursor</div>
                 <div class="ide-tagline">The AI-first code editor built for pair programming</div>
                 
@@ -539,7 +540,7 @@
             <!-- Windsurf (Codeium) -->
             <div class="ide-card" data-tier="s" data-pricing="free" data-local="true">
                 <div class="tier-badge tier-s">S-TIER</div>
-                <div class="ide-icon"><i class="fas fa-water"></i></div>
+                <div class="ide-icon"><i class="fas fa-wind"></i></div>
                 <div class="ide-name">Windsurf (Codeium)</div>
                 <div class="ide-tagline">Agentic IDE with cascade flows - completely free</div>
                 
@@ -594,7 +595,7 @@
             <!-- Void -->
             <div class="ide-card" data-tier="a" data-pricing="free" data-local="true">
                 <div class="tier-badge tier-a">A-TIER</div>
-                <div class="ide-icon"><i class="fas fa-circle"></i></div>
+                <div class="ide-icon"><i class="fas fa-circle-notch"></i></div>
                 <div class="ide-name">Void</div>
                 <div class="ide-tagline">Open-source Cursor alternative with local-first AI</div>
                 
@@ -649,7 +650,7 @@
             <!-- Continue.dev -->
             <div class="ide-card" data-tier="a" data-pricing="free" data-local="true">
                 <div class="tier-badge tier-a">A-TIER</div>
-                <div class="ide-icon"><i class="fas fa-sync"></i></div>
+                <div class="ide-icon"><i class="fas fa-arrow-right"></i></div>
                 <div class="ide-name">Continue.dev</div>
                 <div class="ide-tagline">Open-source AI code assistant for VS Code & JetBrains</div>
                 
@@ -757,9 +758,10 @@
             </div>
             
             <!-- GitHub Codespaces -->
-            <div class="ide-card" data-tier="a" data-pricing="paid" data-local="false">
+            <div class="ide-card personal-favorite" data-tier="a" data-pricing="paid" data-local="false">
+                <div class="favorite-badge"><i class="fas fa-star"></i> MY FAVORITE</div>
                 <div class="tier-badge tier-a">A-TIER</div>
-                <div class="ide-icon"><i class="fas fa-cloud"></i></div>
+                <div class="ide-icon"><i class="fas fa-cloud-upload-alt"></i></div>
                 <div class="ide-name">GitHub Codespaces</div>
                 <div class="ide-tagline">VS Code in the cloud with AI superpowers</div>
                 
@@ -815,7 +817,7 @@
             <!-- Zed -->
             <div class="ide-card" data-tier="a" data-pricing="free" data-local="true">
                 <div class="tier-badge tier-a">A-TIER</div>
-                <div class="ide-icon"><i class="fas fa-terminal"></i></div>
+                <div class="ide-icon"><i class="fas fa-bolt"></i></div>
                 <div class="ide-name">Zed</div>
                 <div class="ide-tagline">Blazing fast multiplayer code editor with AI</div>
                 
@@ -870,7 +872,7 @@
             <!-- Replit AI -->
             <div class="ide-card" data-tier="b" data-pricing="paid" data-local="false">
                 <div class="tier-badge tier-b">B-TIER</div>
-                <div class="ide-icon"><i class="fas fa-repeat"></i></div>
+                <div class="ide-icon"><i class="fas fa-play-circle"></i></div>
                 <div class="ide-name">Replit AI</div>
                 <div class="ide-tagline">Browser-based coding with AI agent</div>
                 
@@ -976,7 +978,7 @@
             <!-- Tabnine -->
             <div class="ide-card" data-tier="b" data-pricing="paid" data-local="true">
                 <div class="tier-badge tier-b">B-TIER</div>
-                <div class="ide-icon"><i class="fas fa-lightbulb"></i></div>
+                <div class="ide-icon"><i class="fas fa-keyboard"></i></div>
                 <div class="ide-name">Tabnine</div>
                 <div class="ide-tagline">AI code completion trained on your codebase</div>
                 
@@ -1029,7 +1031,7 @@
             <!-- Trae -->
             <div class="ide-card" data-tier="a" data-pricing="free" data-local="true">
                 <div class="tier-badge tier-a">A-TIER</div>
-                <div class="ide-icon"><i class="fas fa-code"></i></div>
+                <div class="ide-icon"><i class="fas fa-robot"></i></div>
                 <div class="ide-name">Trae</div>
                 <div class="ide-tagline">AI-powered VS Code extension with chat and code generation</div>
                 
@@ -1169,12 +1171,15 @@
         </div>
         
         <!-- Recommendation -->
-        <div style="background: rgba(81, 207, 102, 0.1); border-left: 4px solid var(--success); padding: 2rem; border-radius: 15px; margin: 3rem 0;">
+        <div style="background: rgba(81, 207, 102, 0.05); border-left: 4px solid var(--success); padding: 2rem; border-radius: 15px; margin: 3rem 0;">
             <h2 style="color: var(--success); margin-top: 0;">
-                <i class="fas fa-trophy"></i> My Recommendation
+                <i class="fas fa-trophy"></i> My Recommendations
             </h2>
-            <h3 style="color: var(--light); margin: 1rem 0;">For Serious Development: Cursor</h3>
-            <p>If you code professionally and can afford it, Cursor is unmatched. The Composer feature alone is worth it for complex refactoring.</p>
+            <h3 style="color: var(--light); margin: 1rem 0;">For Serious Local Development: Cursor</h3>
+            <p>If you code professionally and can afford it, Cursor is unmatched. The Composer feature alone is worth it for complex refactoring. Best for when you need powerful AI on your local machine.</p>
+            
+            <h3 style="color: var(--light); margin: 1rem 0;">For Cloud-Based Development: GitHub Codespaces</h3>
+            <p>Zero setup, full Linux environment, and seamless GitHub integration. Perfect when you need a pre-configured environment or working from different devices. The free tier is enough for hobby projects.</p>
             
             <h3 style="color: var(--light); margin: 1rem 0;">Best Free Option: Windsurf</h3>
             <p>Incredible that it's free. Agentic flows are powerful, and Supercomplete is faster than Cursor's autocomplete.</p>
@@ -1205,19 +1210,19 @@
         <hr style="border: none; height: 1px; background: linear-gradient(to right, transparent, var(--accent), transparent); margin: 3rem 0;">
         
         <!-- Tier System Legend -->
-        <div style="background: rgba(124, 58, 237, 0.05); border: 1px solid rgba(124, 58, 237, 0.3); padding: 1rem; border-radius: 10px; margin-bottom: 2rem;">
+        <div style="background: rgba(99, 102, 241, 0.05); border: 1px solid rgba(99, 102, 241, 0.2); padding: 1rem; border-radius: 10px; margin-bottom: 2rem;">
             <p style="text-align: center; color: rgba(228, 228, 231, 0.7); font-size: 0.9rem; margin-bottom: 0.8rem;">Tier System</p>
             <div style="display: flex; justify-content: center; gap: 2rem; flex-wrap: wrap;">
                 <div style="text-align: center;">
-                    <span style="background: linear-gradient(135deg, #ffd700, #ffed4e); color: #000; padding: 0.3rem 0.8rem; border-radius: 10px; font-weight: bold; font-size: 0.85rem;">S-TIER</span>
+                    <span style="background: linear-gradient(135deg, #fbbf24, #fcd34d); color: #000; padding: 0.3rem 0.8rem; border-radius: 10px; font-weight: bold; font-size: 0.85rem;">S-TIER</span>
                     <p style="margin: 0.3rem 0 0 0; font-size: 0.85rem; color: rgba(228, 228, 231, 0.6);">Best-in-class</p>
                 </div>
                 <div style="text-align: center;">
-                    <span style="background: linear-gradient(135deg, #c0c0c0, #e8e8e8); color: #000; padding: 0.3rem 0.8rem; border-radius: 10px; font-weight: bold; font-size: 0.85rem;">A-TIER</span>
+                    <span style="background: linear-gradient(135deg, #9ca3af, #d1d5db); color: #000; padding: 0.3rem 0.8rem; border-radius: 10px; font-weight: bold; font-size: 0.85rem;">A-TIER</span>
                     <p style="margin: 0.3rem 0 0 0; font-size: 0.85rem; color: rgba(228, 228, 231, 0.6);">Excellent</p>
                 </div>
                 <div style="text-align: center;">
-                    <span style="background: linear-gradient(135deg, #cd7f32, #daa520); color: #fff; padding: 0.3rem 0.8rem; border-radius: 10px; font-weight: bold; font-size: 0.85rem;">B-TIER</span>
+                    <span style="background: linear-gradient(135deg, #b45309, #d97706); color: #fff; padding: 0.3rem 0.8rem; border-radius: 10px; font-weight: bold; font-size: 0.85rem;">B-TIER</span>
                     <p style="margin: 0.3rem 0 0 0; font-size: 0.85rem; color: rgba(228, 228, 231, 0.6);">Good</p>
                 </div>
             </div>
@@ -1309,7 +1314,7 @@
             }
             
             let html = `
-                <div style="background: rgba(0, 212, 255, 0.1); padding: 1rem; border-radius: 10px; margin-bottom: 1.5rem; text-align: center;">
+                <div style="background: rgba(91, 155, 213, 0.08); padding: 1rem; border-radius: 10px; margin-bottom: 1.5rem; text-align: center;">
                     <i class="fas fa-clock" style="color: var(--secondary);"></i>
                     <strong>Last Scan:</strong> ${scanDate}
                     <span style="margin: 0 1rem;">ΓÇó</span>
@@ -1325,7 +1330,7 @@
                     <div style="background: rgba(0, 0, 0, 0.3); padding: 1.5rem; border-radius: 15px; border-left: 4px solid var(--accent);">
                         <div style="display: flex; justify-content: space-between; align-items: start; margin-bottom: 1rem;">
                             <h3 style="margin: 0; color: var(--light);">${index + 1}. ${ide.name || ide.title || 'Unknown IDE'}</h3>
-                            <span style="background: rgba(124, 58, 237, 0.3); padding: 0.3rem 0.8rem; border-radius: 10px; font-size: 0.85rem; white-space: nowrap;">
+                            <span style="background: rgba(99, 102, 241, 0.2); padding: 0.3rem 0.8rem; border-radius: 10px; font-size: 0.85rem; white-space: nowrap;">
                                 ${ide.source || 'Unknown'}
                             </span>
                         </div>
@@ -1338,7 +1343,7 @@
                             ${ide.points ? `<span style="color: var(--warning);"><i class="fas fa-arrow-up"></i> ${ide.points} points</span>` : ''}
                             ${ide.language ? `<span style="color: rgba(228, 228, 231, 0.6);"><i class="fas fa-code"></i> ${ide.language}</span>` : ''}
                         </div>
-                        <div style="background: rgba(255, 215, 0, 0.1); padding: 0.8rem; border-radius: 8px; margin-top: 1rem; font-size: 0.85rem; color: rgba(228, 228, 231, 0.7);">
+                        <div style="background: rgba(251, 191, 36, 0.1); padding: 0.8rem; border-radius: 8px; margin-top: 1rem; font-size: 0.85rem; color: rgba(228, 228, 231, 0.7);">
                             <i class="fas fa-info-circle" style="color: var(--gold);"></i>
                             <strong>Status:</strong> Under review - not yet tested or ranked
                         </div>
