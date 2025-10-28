@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lan&bull;="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AI IDE Collection - Gotta Code 'Em All</title>
+    <title>AI IDE Collection - &bull;otta Code 'Em All</title>
     
-    <link rel="icon" type="image/svg+xml" href="../images/favicon.svg">
+    <link rel="icon" type="ima&bull;e/sv&bull;+xml" href="../ima&bull;es/favicon.sv&bull;">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
     <style>
@@ -14,108 +14,108 @@
             --secondary: #5b9bd5;
             --accent: #6366f1;
             --success: #4ade80;
-            --warning: #fb923c;
-            --gold: #fbbf24;
-            --light: #d1d5db;
-            --card: rgba(15, 15, 23, 0.8);
-            --border: rgba(100, 116, 139, 0.2);
+            --warnin&bull;: #fb923c;
+            --&bull;old: #fbbf24;
+            --li&bull;ht: #d1d5db;
+            --card: r&bull;ba(15, 15, 23, 0.8);
+            --border: r&bull;ba(100, 116, 139, 0.2);
         }
         
         * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            mar&bull;in: 0;
+            paddin&bull;: 0;
+            box-sizin&bull;: border-box;
+            font-family: 'Se&bull;oe UI', Tahoma, &bull;eneva, Verdana, sans-serif;
         }
         
         body {
-            background: linear-gradient(135deg, #0a0a0f 0%, #1a1625 50%, #0f1419 100%);
-            background-attachment: fixed;
-            color: var(--light);
-            line-height: 1.6;
-            min-height: 100vh;
+            back&bull;round: linear-&bull;radient(135de&bull;, #0a0a0f 0%, #1a1625 50%, #0f1419 100%);
+            back&bull;round-attachment: fixed;
+            color: var(--li&bull;ht);
+            line-hei&bull;ht: 1.6;
+            min-hei&bull;ht: 100vh;
         }
         
         .header {
-            background: var(--card);
+            back&bull;round: var(--card);
             backdrop-filter: blur(10px);
-            padding: 2rem;
-            text-align: center;
-            box-shadow: 0 2px 20px rgba(0, 0, 0, 0.5);
+            paddin&bull;: 2rem;
+            text-ali&bull;n: center;
+            box-shadow: 0 2px 20px r&bull;ba(0, 0, 0, 0.5);
         }
         
         .back-btn {
             position: fixed;
             top: 2rem;
             left: 2rem;
-            background: var(--secondary);
+            back&bull;round: var(--secondary);
             color: var(--primary);
-            padding: 1rem 2rem;
+            paddin&bull;: 1rem 2rem;
             border-radius: 25px;
             text-decoration: none;
-            font-weight: bold;
+            font-wei&bull;ht: bold;
             transition: all 0.3s ease;
             z-index: 1000;
-            box-shadow: 0 4px 15px rgba(91, 155, 213, 0.2);
+            box-shadow: 0 4px 15px r&bull;ba(91, 155, 213, 0.2);
         }
         
         .back-btn:hover {
             transform: translateY(-2px);
-            box-shadow: 0 8px 20px rgba(91, 155, 213, 0.3);
+            box-shadow: 0 8px 20px r&bull;ba(91, 155, 213, 0.3);
         }
         
         h1 {
             font-size: 3rem;
-            background: linear-gradient(135deg, var(--secondary), var(--accent), var(--gold));
-            background-clip: text;
-            -webkit-background-clip: text;
+            back&bull;round: linear-&bull;radient(135de&bull;, var(--secondary), var(--accent), var(--&bull;old));
+            back&bull;round-clip: text;
+            -webkit-back&bull;round-clip: text;
             -webkit-text-fill-color: transparent;
-            margin-bottom: 0.5rem;
+            mar&bull;in-bottom: 0.5rem;
         }
         
         .subtitle {
             font-size: 1.3rem;
-            color: rgba(228, 228, 231, 0.8);
-            margin-bottom: 1rem;
+            color: r&bull;ba(228, 228, 231, 0.8);
+            mar&bull;in-bottom: 1rem;
         }
         
         .collection-stats {
             display: flex;
             justify-content: center;
-            gap: 3rem;
-            margin-top: 2rem;
+            &bull;ap: 3rem;
+            mar&bull;in-top: 2rem;
         }
         
         .stat {
-            text-align: center;
+            text-ali&bull;n: center;
         }
         
         .stat-value {
             font-size: 2.5rem;
-            font-weight: bold;
-            color: var(--gold);
+            font-wei&bull;ht: bold;
+            color: var(--&bull;old);
         }
         
         .stat-label {
             font-size: 0.9rem;
-            color: rgba(228, 228, 231, 0.7);
+            color: r&bull;ba(228, 228, 231, 0.7);
         }
         
         .personal-favorite {
-            background: linear-gradient(135deg, rgba(251, 191, 36, 0.1), rgba(251, 191, 36, 0.05));
-            border: 2px solid var(--gold) !important;
-            box-shadow: 0 0 30px rgba(251, 191, 36, 0.15) !important;
+            back&bull;round: linear-&bull;radient(135de&bull;, r&bull;ba(251, 191, 36, 0.1), r&bull;ba(251, 191, 36, 0.05));
+            border: 2px solid var(--&bull;old) !important;
+            box-shadow: 0 0 30px r&bull;ba(251, 191, 36, 0.15) !important;
         }
         
-        .favorite-badge {
+        .favorite-bad&bull;e {
             position: absolute;
             top: 1rem;
             left: 1rem;
-            background: var(--gold);
+            back&bull;round: var(--&bull;old);
             color: #000;
-            padding: 0.4rem 1rem;
+            paddin&bull;: 0.4rem 1rem;
             border-radius: 15px;
-            font-weight: bold;
+            font-wei&bull;ht: bold;
             font-size: 0.85rem;
             animation: pulse 2s infinite;
         }
@@ -127,35 +127,35 @@
         
         .container {
             max-width: 1400px;
-            margin: 0 auto;
-            padding: 2rem;
+            mar&bull;in: 0 auto;
+            paddin&bull;: 2rem;
         }
         
         .filter-bar {
-            background: var(--card);
+            back&bull;round: var(--card);
             backdrop-filter: blur(10px);
             border-radius: 15px;
-            padding: 1.5rem;
-            margin-bottom: 2rem;
+            paddin&bull;: 1.5rem;
+            mar&bull;in-bottom: 2rem;
             display: flex;
-            gap: 1rem;
+            &bull;ap: 1rem;
             flex-wrap: wrap;
-            align-items: center;
+            ali&bull;n-items: center;
         }
         
         .filter-btn {
-            padding: 0.6rem 1.2rem;
-            background: rgba(0, 0, 0, 0.5);
-            border: 2px solid rgba(91, 155, 213, 0.2);
+            paddin&bull;: 0.6rem 1.2rem;
+            back&bull;round: r&bull;ba(0, 0, 0, 0.5);
+            border: 2px solid r&bull;ba(91, 155, 213, 0.2);
             border-radius: 20px;
-            color: var(--light);
+            color: var(--li&bull;ht);
             cursor: pointer;
             transition: all 0.3s ease;
-            font-weight: 500;
+            font-wei&bull;ht: 500;
         }
         
         .filter-btn.active {
-            background: var(--secondary);
+            back&bull;round: var(--secondary);
             color: var(--primary);
             border-color: var(--secondary);
         }
@@ -165,18 +165,18 @@
             transform: translateY(-2px);
         }
         
-        .ide-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(380px, 1fr));
-            gap: 2rem;
-            margin-bottom: 3rem;
+        .ide-&bull;rid {
+            display: &bull;rid;
+            &bull;rid-template-columns: repeat(auto-fill, minmax(380px, 1fr));
+            &bull;ap: 2rem;
+            mar&bull;in-bottom: 3rem;
         }
         
         .ide-card {
-            background: var(--card);
+            back&bull;round: var(--card);
             backdrop-filter: blur(10px);
             border-radius: 20px;
-            padding: 2rem;
+            paddin&bull;: 2rem;
             transition: all 0.3s ease;
             border: 2px solid transparent;
             position: relative;
@@ -189,8 +189,8 @@
             top: 0;
             left: -100%;
             width: 100%;
-            height: 100%;
-            background: linear-gradient(90deg, transparent, rgba(91, 155, 213, 0.08), transparent);
+            hei&bull;ht: 100%;
+            back&bull;round: linear-&bull;radient(90de&bull;, transparent, r&bull;ba(91, 155, 213, 0.08), transparent);
             transition: left 0.5s ease;
         }
         
@@ -200,84 +200,84 @@
         
         .ide-card:hover {
             transform: translateY(-10px);
-            box-shadow: 0 20px 40px rgba(91, 155, 213, 0.2);
+            box-shadow: 0 20px 40px r&bull;ba(91, 155, 213, 0.2);
             border-color: var(--secondary);
         }
         
         .ide-header {
             display: flex;
             justify-content: space-between;
-            align-items: start;
-            margin-bottom: 1.5rem;
+            ali&bull;n-items: start;
+            mar&bull;in-bottom: 1.5rem;
         }
         
         .ide-icon {
             font-size: 3rem;
-            margin-bottom: 1rem;
-            filter: grayscale(0);
+            mar&bull;in-bottom: 1rem;
+            filter: &bull;rayscale(0);
         }
         
         .ide-name {
             font-size: 1.8rem;
-            color: var(--light);
-            font-weight: bold;
-            margin-bottom: 0.5rem;
+            color: var(--li&bull;ht);
+            font-wei&bull;ht: bold;
+            mar&bull;in-bottom: 0.5rem;
         }
         
-        .ide-tagline {
+        .ide-ta&bull;line {
             color: var(--accent);
             font-size: 0.95rem;
-            margin-bottom: 1rem;
+            mar&bull;in-bottom: 1rem;
         }
         
-        .rating {
+        .ratin&bull; {
             display: flex;
-            gap: 0.3rem;
+            &bull;ap: 0.3rem;
             font-size: 1.2rem;
         }
         
         .star {
-            color: var(--gold);
+            color: var(--&bull;old);
         }
         
         .star.empty {
-            color: rgba(251, 191, 36, 0.2);
+            color: r&bull;ba(251, 191, 36, 0.2);
         }
         
-        .tier-badge {
+        .tier-bad&bull;e {
             position: absolute;
             top: 1.5rem;
-            right: 1.5rem;
-            padding: 0.4rem 1rem;
+            ri&bull;ht: 1.5rem;
+            paddin&bull;: 0.4rem 1rem;
             border-radius: 15px;
-            font-weight: bold;
+            font-wei&bull;ht: bold;
             font-size: 0.85rem;
         }
         
         .tier-s {
-            background: linear-gradient(135deg, #fbbf24, #fcd34d);
+            back&bull;round: linear-&bull;radient(135de&bull;, #fbbf24, #fcd34d);
             color: #000;
         }
         
         .tier-a {
-            background: linear-gradient(135deg, #9ca3af, #d1d5db);
+            back&bull;round: linear-&bull;radient(135de&bull;, #9ca3af, #d1d5db);
             color: #000;
         }
         
         .tier-b {
-            background: linear-gradient(135deg, #b45309, #d97706);
+            back&bull;round: linear-&bull;radient(135de&bull;, #b45309, #d97706);
             color: #fff;
         }
         
         .features-list {
-            margin: 1rem 0;
+            mar&bull;in: 1rem 0;
         }
         
         .feature-item {
             display: flex;
-            align-items: center;
-            gap: 0.5rem;
-            margin: 0.5rem 0;
+            ali&bull;n-items: center;
+            &bull;ap: 0.5rem;
+            mar&bull;in: 0.5rem 0;
             font-size: 0.9rem;
         }
         
@@ -286,45 +286,45 @@
             font-size: 0.8rem;
         }
         
-        .pricing {
-            background: rgba(99, 102, 241, 0.1);
-            padding: 1rem;
+        .pricin&bull; {
+            back&bull;round: r&bull;ba(99, 102, 241, 0.1);
+            paddin&bull;: 1rem;
             border-radius: 10px;
-            margin: 1rem 0;
-            text-align: center;
+            mar&bull;in: 1rem 0;
+            text-ali&bull;n: center;
         }
         
         .price {
             font-size: 1.5rem;
-            font-weight: bold;
+            font-wei&bull;ht: bold;
             color: var(--accent);
         }
         
         .pros-cons {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 1rem;
-            margin: 1rem 0;
+            display: &bull;rid;
+            &bull;rid-template-columns: 1fr 1fr;
+            &bull;ap: 1rem;
+            mar&bull;in: 1rem 0;
         }
         
         .pros, .cons {
-            padding: 1rem;
+            paddin&bull;: 1rem;
             border-radius: 10px;
         }
         
         .pros {
-            background: rgba(74, 222, 128, 0.08);
+            back&bull;round: r&bull;ba(74, 222, 128, 0.08);
             border-left: 3px solid var(--success);
         }
         
         .cons {
-            background: rgba(251, 146, 60, 0.08);
-            border-left: 3px solid var(--warning);
+            back&bull;round: r&bull;ba(251, 146, 60, 0.08);
+            border-left: 3px solid var(--warnin&bull;);
         }
         
         .pros h4, .cons h4 {
             font-size: 0.9rem;
-            margin-bottom: 0.5rem;
+            mar&bull;in-bottom: 0.5rem;
         }
         
         .pros h4 {
@@ -332,49 +332,49 @@
         }
         
         .cons h4 {
-            color: var(--warning);
+            color: var(--warnin&bull;);
         }
         
         .pros ul, .cons ul {
             font-size: 0.85rem;
-            margin-left: 1.2rem;
+            mar&bull;in-left: 1.2rem;
         }
         
         .pros li, .cons li {
-            margin: 0.3rem 0;
+            mar&bull;in: 0.3rem 0;
         }
         
         .ide-links {
             display: flex;
-            gap: 0.5rem;
-            margin-top: 1.5rem;
+            &bull;ap: 0.5rem;
+            mar&bull;in-top: 1.5rem;
         }
         
         .ide-btn {
             flex: 1;
-            padding: 0.8rem;
-            background: var(--accent);
+            paddin&bull;: 0.8rem;
+            back&bull;round: var(--accent);
             color: white;
             text-decoration: none;
-            text-align: center;
+            text-ali&bull;n: center;
             border-radius: 10px;
-            font-weight: bold;
+            font-wei&bull;ht: bold;
             font-size: 0.9rem;
             transition: all 0.3s ease;
         }
         
         .ide-btn:hover {
-            background: var(--secondary);
+            back&bull;round: var(--secondary);
             color: var(--primary);
             transform: translateY(-2px);
         }
         
         .comparison-table {
-            background: var(--card);
+            back&bull;round: var(--card);
             backdrop-filter: blur(10px);
             border-radius: 20px;
-            padding: 2rem;
-            margin: 3rem 0;
+            paddin&bull;: 2rem;
+            mar&bull;in: 3rem 0;
             overflow-x: auto;
         }
         
@@ -384,21 +384,21 @@
         }
         
         th, td {
-            padding: 1rem;
-            text-align: left;
-            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            paddin&bull;: 1rem;
+            text-ali&bull;n: left;
+            border-bottom: 1px solid r&bull;ba(255, 255, 255, 0.1);
         }
         
         th {
-            background: rgba(99, 102, 241, 0.15);
+            back&bull;round: r&bull;ba(99, 102, 241, 0.15);
             color: var(--secondary);
-            font-weight: bold;
+            font-wei&bull;ht: bold;
             position: sticky;
             top: 0;
         }
         
         tr:hover {
-            background: rgba(255, 255, 255, 0.03);
+            back&bull;round: r&bull;ba(255, 255, 255, 0.03);
         }
         
         .check {
@@ -407,17 +407,17 @@
         }
         
         .cross {
-            color: var(--warning);
+            color: var(--warnin&bull;);
             font-size: 1.2rem;
         }
         
         @media (max-width: 768px) {
-            .ide-grid {
-                grid-template-columns: 1fr;
+            .ide-&bull;rid {
+                &bull;rid-template-columns: 1fr;
             }
             
             .pros-cons {
-                grid-template-columns: 1fr;
+                &bull;rid-template-columns: 1fr;
             }
         }
     </style>
@@ -429,7 +429,7 @@
     
     <div class="header">
         <h1><i class="fas fa-laptop-code"></i> AI IDE Collection</h1>
-        <p class="subtitle">Gotta Code 'Em All! A comprehensive comparison of AI-powered development environments</p>
+        <p class="subtitle">&bull;otta Code 'Em All! A comprehensive comparison of AI-powered development environments</p>
         
         <div class="collection-stats">
             <div class="stat">
@@ -437,7 +437,7 @@
                 <div class="stat-label">AI IDEs Tested</div>
             </div>
             <div class="stat">
-                <div class="stat-value"><i class="fas fa-trophy" style="color: var(--gold);"></i> Cursor & Codespaces</div>
+                <div class="stat-value"><i class="fas fa-trophy" style="color: var(--&bull;old);"></i> Cursor & Codespaces</div>
                 <div class="stat-label">My Personal Favorites</div>
             </div>
             <div class="stat">
@@ -448,30 +448,30 @@
     </div>
     
     <div class="container">
-        <!-- GitHub Services Explanation -->
-        <div style="background: rgba(91, 155, 213, 0.08); border-left: 4px solid var(--secondary); padding: 1.5rem; border-radius: 15px; margin-bottom: 2rem;">
-            <h3 style="color: var(--secondary); margin-top: 0; margin-bottom: 1rem;">
-                <i class="fab fa-github"></i> GitHub AI Offerings - What's the Difference?
+        <!-- &bull;itHub Services Explanation -->
+        <div style="back&bull;round: r&bull;ba(91, 155, 213, 0.08); border-left: 4px solid var(--secondary); paddin&bull;: 1.5rem; border-radius: 15px; mar&bull;in-bottom: 2rem;">
+            <h3 style="color: var(--secondary); mar&bull;in-top: 0; mar&bull;in-bottom: 1rem;">
+                <i class="fab fa-&bull;ithub"></i> &bull;itHub AI Offerin&bull;s - What's the Difference?
             </h3>
-            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem;">
+            <div style="display: &bull;rid; &bull;rid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); &bull;ap: 1.5rem;">
                 <div>
-                    <strong style="color: var(--accent);">GitHub Copilot</strong> - AI Assistant
-                    <p style="margin: 0.5rem 0 0 0; font-size: 0.9rem; color: rgba(228, 228, 231, 0.8);">AI coding assistant that provides autocomplete and chat. Install in your IDE.</p>
+                    <stron&bull; style="color: var(--accent);">&bull;itHub Copilot</stron&bull;> - AI Assistant
+                    <p style="mar&bull;in: 0.5rem 0 0 0; font-size: 0.9rem; color: r&bull;ba(228, 228, 231, 0.8);">AI codin&bull; assistant that provides autocomplete and chat. Install in your IDE.</p>
                 </div>
                 <div>
-                    <strong style="color: var(--accent);">GitHub Codespaces</strong> - Cloud IDE
-                    <p style="margin: 0.5rem 0 0 0; font-size: 0.9rem; color: rgba(228, 228, 231, 0.8);">Full VS Code environment in the cloud with compute + integrated Copilot.</p>
+                    <stron&bull; style="color: var(--accent);">&bull;itHub Codespaces</stron&bull;> - Cloud IDE
+                    <p style="mar&bull;in: 0.5rem 0 0 0; font-size: 0.9rem; color: r&bull;ba(228, 228, 231, 0.8);">Full VS Code environment in the cloud with compute + inte&bull;rated Copilot.</p>
                 </div>
                 <div>
-                    <strong style="color: rgba(228, 228, 231, 0.6);">GitHub.dev</strong> - Not Included
-                    <p style="margin: 0.5rem 0 0 0; font-size: 0.9rem; color: rgba(228, 228, 231, 0.5);">Lightweight browser editor (no AI, no compute). Too minimal for comparison.</p>
+                    <stron&bull; style="color: r&bull;ba(228, 228, 231, 0.6);">&bull;itHub.dev</stron&bull;> - Not Included
+                    <p style="mar&bull;in: 0.5rem 0 0 0; font-size: 0.9rem; color: r&bull;ba(228, 228, 231, 0.5);">Li&bull;htwei&bull;ht browser editor (no AI, no compute). Too minimal for comparison.</p>
                 </div>
             </div>
         </div>
         
         <!-- Filter Bar -->
         <div class="filter-bar">
-            <span style="font-weight: bold; margin-right: 1rem;">Filter by:</span>
+            <span style="font-wei&bull;ht: bold; mar&bull;in-ri&bull;ht: 1rem;">Filter by:</span>
             <button class="filter-btn active" onclick="filterIDEs('all')">All IDEs</button>
             <button class="filter-btn" onclick="filterIDEs('free')">Free Tier</button>
             <button class="filter-btn" onclick="filterIDEs('paid')">Paid Only</button>
@@ -479,17 +479,17 @@
             <button class="filter-btn" onclick="filterIDEs('local')">Runs Locally</button>
         </div>
         
-        <!-- IDE Cards Grid -->
-        <div class="ide-grid" id="ide-grid">
+        <!-- IDE Cards &bull;rid -->
+        <div class="ide-&bull;rid" id="ide-&bull;rid">
             <!-- Cursor -->
-            <div class="ide-card personal-favorite" data-tier="s" data-pricing="paid" data-local="true">
-                <div class="favorite-badge"><i class="fas fa-star"></i> MY FAVORITE</div>
-                <div class="tier-badge tier-s">S-TIER</div>
+            <div class="ide-card personal-favorite" data-tier="s" data-pricin&bull;="paid" data-local="true">
+                <div class="favorite-bad&bull;e"><i class="fas fa-star"></i> MY FAVORITE</div>
+                <div class="tier-bad&bull;e tier-s">S-TIER</div>
                 <div class="ide-icon"><i class="fas fa-mouse-pointer"></i></div>
                 <div class="ide-name">Cursor</div>
-                <div class="ide-tagline">The AI-first code editor built for pair programming</div>
+                <div class="ide-ta&bull;line">The AI-first code editor built for pair pro&bull;rammin&bull;</div>
                 
-                <div class="rating">
+                <div class="ratin&bull;">
                     <i class="fas fa-star star"></i>
                     <i class="fas fa-star star"></i>
                     <i class="fas fa-star star"></i>
@@ -497,25 +497,25 @@
                     <i class="fas fa-star star"></i>
                 </div>
                 
-                <div class="pricing">
+                <div class="pricin&bull;">
                     <div class="price">$20/month</div>
-                    <div style="font-size: 0.85rem; margin-top: 0.3rem;">Free tier available</div>
+                    <div style="font-size: 0.85rem; mar&bull;in-top: 0.3rem;">Free tier available</div>
                 </div>
                 
                 <div class="features-list">
                     <div class="feature-item"><i class="fas fa-check-circle"></i> Chat with your codebase</div>
-                    <div class="feature-item"><i class="fas fa-check-circle"></i> Inline AI editing (Cmd+K)</div>
+                    <div class="feature-item"><i class="fas fa-check-circle"></i> Inline AI editin&bull; (Cmd+K)</div>
                     <div class="feature-item"><i class="fas fa-check-circle"></i> Composer for multi-file edits</div>
                     <div class="feature-item"><i class="fas fa-check-circle"></i> VS Code fork with AI built-in</div>
-                    <div class="feature-item"><i class="fas fa-check-circle"></i> GPT-4, Claude, Gemini support</div>
+                    <div class="feature-item"><i class="fas fa-check-circle"></i> &bull;PT-4, Claude, &bull;emini support</div>
                 </div>
                 
                 <div class="pros-cons">
                     <div class="pros">
                         <h4><i class="fas fa-thumbs-up"></i> Pros</h4>
                         <ul>
-                            <li>Best AI integration</li>
-                            <li>Codebase understanding</li>
+                            <li>Best AI inte&bull;ration</li>
+                            <li>Codebase understandin&bull;</li>
                             <li>Multi-model support</li>
                             <li>Fast & responsive</li>
                         </ul>
@@ -531,20 +531,20 @@
                 </div>
                 
                 <div class="ide-links">
-                    <a href="https://cursor.sh" target="_blank" class="ide-btn">
+                    <a href="https://cursor.sh" tar&bull;et="_blank" class="ide-btn">
                         <i class="fas fa-external-link-alt"></i> Visit Site
                     </a>
                 </div>
             </div>
             
             <!-- Windsurf (Codeium) -->
-            <div class="ide-card" data-tier="s" data-pricing="free" data-local="true">
-                <div class="tier-badge tier-s">S-TIER</div>
+            <div class="ide-card" data-tier="s" data-pricin&bull;="free" data-local="true">
+                <div class="tier-bad&bull;e tier-s">S-TIER</div>
                 <div class="ide-icon"><i class="fas fa-wind"></i></div>
                 <div class="ide-name">Windsurf (Codeium)</div>
-                <div class="ide-tagline">Agentic IDE with cascade flows - completely free</div>
+                <div class="ide-ta&bull;line">A&bull;entic IDE with cascade flows - completely free</div>
                 
-                <div class="rating">
+                <div class="ratin&bull;">
                     <i class="fas fa-star star"></i>
                     <i class="fas fa-star star"></i>
                     <i class="fas fa-star star"></i>
@@ -552,13 +552,13 @@
                     <i class="fas fa-star star"></i>
                 </div>
                 
-                <div class="pricing">
+                <div class="pricin&bull;">
                     <div class="price">FREE</div>
-                    <div style="font-size: 0.85rem; margin-top: 0.3rem;">Unlimited usage</div>
+                    <div style="font-size: 0.85rem; mar&bull;in-top: 0.3rem;">Unlimited usa&bull;e</div>
                 </div>
                 
                 <div class="features-list">
-                    <div class="feature-item"><i class="fas fa-check-circle"></i> Cascade agentic flows</div>
+                    <div class="feature-item"><i class="fas fa-check-circle"></i> Cascade a&bull;entic flows</div>
                     <div class="feature-item"><i class="fas fa-check-circle"></i> Multi-file AI edits</div>
                     <div class="feature-item"><i class="fas fa-check-circle"></i> Supercomplete (context-aware)</div>
                     <div class="feature-item"><i class="fas fa-check-circle"></i> 100% free, no limits</div>
@@ -570,9 +570,9 @@
                         <h4><i class="fas fa-thumbs-up"></i> Pros</h4>
                         <ul>
                             <li>Completely free</li>
-                            <li>Agentic workflows</li>
+                            <li>A&bull;entic workflows</li>
                             <li>Fast autocomplete</li>
-                            <li>Great for beginners</li>
+                            <li>&bull;reat for be&bull;inners</li>
                         </ul>
                     </div>
                     <div class="cons">
@@ -586,20 +586,20 @@
                 </div>
                 
                 <div class="ide-links">
-                    <a href="https://codeium.com/windsurf" target="_blank" class="ide-btn">
+                    <a href="https://codeium.com/windsurf" tar&bull;et="_blank" class="ide-btn">
                         <i class="fas fa-external-link-alt"></i> Visit Site
                     </a>
                 </div>
             </div>
             
             <!-- Void -->
-            <div class="ide-card" data-tier="a" data-pricing="free" data-local="true">
-                <div class="tier-badge tier-a">A-TIER</div>
+            <div class="ide-card" data-tier="a" data-pricin&bull;="free" data-local="true">
+                <div class="tier-bad&bull;e tier-a">A-TIER</div>
                 <div class="ide-icon"><i class="fas fa-circle-notch"></i></div>
                 <div class="ide-name">Void</div>
-                <div class="ide-tagline">Open-source Cursor alternative with local-first AI</div>
+                <div class="ide-ta&bull;line">Open-source Cursor alternative with local-first AI</div>
                 
-                <div class="rating">
+                <div class="ratin&bull;">
                     <i class="fas fa-star star"></i>
                     <i class="fas fa-star star"></i>
                     <i class="fas fa-star star"></i>
@@ -607,14 +607,14 @@
                     <i class="fas fa-star star empty"></i>
                 </div>
                 
-                <div class="pricing">
+                <div class="pricin&bull;">
                     <div class="price">FREE</div>
-                    <div style="font-size: 0.85rem; margin-top: 0.3rem;">Open source</div>
+                    <div style="font-size: 0.85rem; mar&bull;in-top: 0.3rem;">Open source</div>
                 </div>
                 
                 <div class="features-list">
                     <div class="feature-item"><i class="fas fa-check-circle"></i> Run models locally (Ollama)</div>
-                    <div class="feature-item"><i class="fas fa-check-circle"></i> Privacy-first design</div>
+                    <div class="feature-item"><i class="fas fa-check-circle"></i> Privacy-first desi&bull;n</div>
                     <div class="feature-item"><i class="fas fa-check-circle"></i> VS Code extension</div>
                     <div class="feature-item"><i class="fas fa-check-circle"></i> Copilot-like autocomplete</div>
                     <div class="feature-item"><i class="fas fa-check-circle"></i> DeepSeek Coder support</div>
@@ -633,7 +633,7 @@
                     <div class="cons">
                         <h4><i class="fas fa-thumbs-down"></i> Cons</h4>
                         <ul>
-                            <li>Requires GPU for best performance</li>
+                            <li>Requires &bull;PU for best performance</li>
                             <li>Setup complexity</li>
                             <li>Less powerful than cloud models</li>
                         </ul>
@@ -641,20 +641,20 @@
                 </div>
                 
                 <div class="ide-links">
-                    <a href="https://voideditor.com" target="_blank" class="ide-btn">
+                    <a href="https://voideditor.com" tar&bull;et="_blank" class="ide-btn">
                         <i class="fas fa-external-link-alt"></i> Visit Site
                     </a>
                 </div>
             </div>
             
             <!-- Continue.dev -->
-            <div class="ide-card" data-tier="a" data-pricing="free" data-local="true">
-                <div class="tier-badge tier-a">A-TIER</div>
-                <div class="ide-icon"><i class="fas fa-arrow-right"></i></div>
+            <div class="ide-card" data-tier="a" data-pricin&bull;="free" data-local="true">
+                <div class="tier-bad&bull;e tier-a">A-TIER</div>
+                <div class="ide-icon"><i class="fas fa-arrow-ri&bull;ht"></i></div>
                 <div class="ide-name">Continue.dev</div>
-                <div class="ide-tagline">Open-source AI code assistant for VS Code & JetBrains</div>
+                <div class="ide-ta&bull;line">Open-source AI code assistant for VS Code & JetBrains</div>
                 
-                <div class="rating">
+                <div class="ratin&bull;">
                     <i class="fas fa-star star"></i>
                     <i class="fas fa-star star"></i>
                     <i class="fas fa-star star"></i>
@@ -662,9 +662,9 @@
                     <i class="fas fa-star star empty"></i>
                 </div>
                 
-                <div class="pricing">
+                <div class="pricin&bull;">
                     <div class="price">FREE</div>
-                    <div style="font-size: 0.85rem; margin-top: 0.3rem;">BYOK (Bring Your Own Key)</div>
+                    <div style="font-size: 0.85rem; mar&bull;in-top: 0.3rem;">BYOK (Brin&bull; Your Own Key)</div>
                 </div>
                 
                 <div class="features-list">
@@ -681,7 +681,7 @@
                         <ul>
                             <li>Fully open source</li>
                             <li>Use any AI model</li>
-                            <li>Great customization</li>
+                            <li>&bull;reat customization</li>
                             <li>Active community</li>
                         </ul>
                     </div>
@@ -696,20 +696,20 @@
                 </div>
                 
                 <div class="ide-links">
-                    <a href="https://continue.dev" target="_blank" class="ide-btn">
+                    <a href="https://continue.dev" tar&bull;et="_blank" class="ide-btn">
                         <i class="fas fa-external-link-alt"></i> Visit Site
                     </a>
                 </div>
             </div>
             
-            <!-- GitHub Copilot -->
-            <div class="ide-card" data-tier="a" data-pricing="paid" data-local="true">
-                <div class="tier-badge tier-a">A-TIER</div>
-                <div class="ide-icon"><i class="fab fa-github"></i></div>
-                <div class="ide-name">GitHub Copilot</div>
-                <div class="ide-tagline">The OG AI pair programmer from GitHub</div>
+            <!-- &bull;itHub Copilot -->
+            <div class="ide-card" data-tier="a" data-pricin&bull;="paid" data-local="true">
+                <div class="tier-bad&bull;e tier-a">A-TIER</div>
+                <div class="ide-icon"><i class="fab fa-&bull;ithub"></i></div>
+                <div class="ide-name">&bull;itHub Copilot</div>
+                <div class="ide-ta&bull;line">The O&bull; AI pair pro&bull;rammer from &bull;itHub</div>
                 
-                <div class="rating">
+                <div class="ratin&bull;">
                     <i class="fas fa-star star"></i>
                     <i class="fas fa-star star"></i>
                     <i class="fas fa-star star"></i>
@@ -717,16 +717,16 @@
                     <i class="fas fa-star star empty"></i>
                 </div>
                 
-                <div class="pricing">
+                <div class="pricin&bull;">
                     <div class="price">$10/month</div>
-                    <div style="font-size: 0.85rem; margin-top: 0.3rem;">Free for students/open source</div>
+                    <div style="font-size: 0.85rem; mar&bull;in-top: 0.3rem;">Free for students/open source</div>
                 </div>
                 
                 <div class="features-list">
-                    <div class="feature-item"><i class="fas fa-check-circle"></i> Inline code suggestions</div>
+                    <div class="feature-item"><i class="fas fa-check-circle"></i> Inline code su&bull;&bull;estions</div>
                     <div class="feature-item"><i class="fas fa-check-circle"></i> Works in VS Code, JetBrains, Neovim</div>
                     <div class="feature-item"><i class="fas fa-check-circle"></i> Chat interface</div>
-                    <div class="feature-item"><i class="fas fa-check-circle"></i> GitHub integration</div>
+                    <div class="feature-item"><i class="fas fa-check-circle"></i> &bull;itHub inte&bull;ration</div>
                     <div class="feature-item"><i class="fas fa-check-circle"></i> Most widely adopted</div>
                 </div>
                 
@@ -736,7 +736,7 @@
                         <ul>
                             <li>Most mature</li>
                             <li>Reliable autocomplete</li>
-                            <li>Huge training data</li>
+                            <li>Hu&bull;e trainin&bull; data</li>
                             <li>Enterprise support</li>
                         </ul>
                     </div>
@@ -744,28 +744,28 @@
                         <h4><i class="fas fa-thumbs-down"></i> Cons</h4>
                         <ul>
                             <li>Limited to autocomplete</li>
-                            <li>No codebase understanding</li>
+                            <li>No codebase understandin&bull;</li>
                             <li>Can't edit multiple files</li>
                         </ul>
                     </div>
                 </div>
                 
                 <div class="ide-links">
-                    <a href="https://github.com/features/copilot" target="_blank" class="ide-btn">
+                    <a href="https://&bull;ithub.com/features/copilot" tar&bull;et="_blank" class="ide-btn">
                         <i class="fas fa-external-link-alt"></i> Visit Site
                     </a>
                 </div>
             </div>
             
-            <!-- GitHub Codespaces -->
-            <div class="ide-card personal-favorite" data-tier="a" data-pricing="paid" data-local="false">
-                <div class="favorite-badge"><i class="fas fa-star"></i> MY FAVORITE</div>
-                <div class="tier-badge tier-a">A-TIER</div>
+            <!-- &bull;itHub Codespaces -->
+            <div class="ide-card personal-favorite" data-tier="a" data-pricin&bull;="paid" data-local="false">
+                <div class="favorite-bad&bull;e"><i class="fas fa-star"></i> MY FAVORITE</div>
+                <div class="tier-bad&bull;e tier-a">A-TIER</div>
                 <div class="ide-icon"><i class="fas fa-cloud-upload-alt"></i></div>
-                <div class="ide-name">GitHub Codespaces</div>
-                <div class="ide-tagline">VS Code in the cloud with AI superpowers</div>
+                <div class="ide-name">&bull;itHub Codespaces</div>
+                <div class="ide-ta&bull;line">VS Code in the cloud with AI superpowers</div>
                 
-                <div class="rating">
+                <div class="ratin&bull;">
                     <i class="fas fa-star star"></i>
                     <i class="fas fa-star star"></i>
                     <i class="fas fa-star star"></i>
@@ -773,14 +773,14 @@
                     <i class="fas fa-star star empty"></i>
                 </div>
                 
-                <div class="pricing">
+                <div class="pricin&bull;">
                     <div class="price">Limited free tier</div>
-                    <div style="font-size: 0.85rem; margin-top: 0.3rem;">~$0.18/hour after</div>
+                    <div style="font-size: 0.85rem; mar&bull;in-top: 0.3rem;">~$0.18/hour after</div>
                 </div>
                 
                 <div class="features-list">
                     <div class="feature-item"><i class="fas fa-check-circle"></i> Full VS Code in browser/desktop</div>
-                    <div class="feature-item"><i class="fas fa-check-circle"></i> Integrated GitHub Copilot</div>
+                    <div class="feature-item"><i class="fas fa-check-circle"></i> Inte&bull;rated &bull;itHub Copilot</div>
                     <div class="feature-item"><i class="fas fa-check-circle"></i> Linux compute environment</div>
                     <div class="feature-item"><i class="fas fa-check-circle"></i> Prebuilt dev containers</div>
                     <div class="feature-item"><i class="fas fa-check-circle"></i> Starts in seconds</div>
@@ -792,15 +792,15 @@
                         <ul>
                             <li>Zero local setup</li>
                             <li>Full Linux environment</li>
-                            <li>Seamless GitHub integration</li>
-                            <li>Pre-configured dev environments</li>
+                            <li>Seamless &bull;itHub inte&bull;ration</li>
+                            <li>Pre-confi&bull;ured dev environments</li>
                         </ul>
                     </div>
                     <div class="cons">
                         <h4><i class="fas fa-thumbs-down"></i> Cons</h4>
                         <ul>
                             <li>Very limited free tier</li>
-                            <li>Can get expensive quickly</li>
+                            <li>Can &bull;et expensive quickly</li>
                             <li>Requires constant internet</li>
                             <li>Cloud latency</li>
                         </ul>
@@ -808,20 +808,20 @@
                 </div>
                 
                 <div class="ide-links">
-                    <a href="https://github.com/features/codespaces" target="_blank" class="ide-btn">
+                    <a href="https://&bull;ithub.com/features/codespaces" tar&bull;et="_blank" class="ide-btn">
                         <i class="fas fa-external-link-alt"></i> Visit Site
                     </a>
                 </div>
             </div>
             
             <!-- Zed -->
-            <div class="ide-card" data-tier="a" data-pricing="free" data-local="true">
-                <div class="tier-badge tier-a">A-TIER</div>
+            <div class="ide-card" data-tier="a" data-pricin&bull;="free" data-local="true">
+                <div class="tier-bad&bull;e tier-a">A-TIER</div>
                 <div class="ide-icon"><i class="fas fa-bolt"></i></div>
                 <div class="ide-name">Zed</div>
-                <div class="ide-tagline">Blazing fast multiplayer code editor with AI</div>
+                <div class="ide-ta&bull;line">Blazin&bull; fast multiplayer code editor with AI</div>
                 
-                <div class="rating">
+                <div class="ratin&bull;">
                     <i class="fas fa-star star"></i>
                     <i class="fas fa-star star"></i>
                     <i class="fas fa-star star"></i>
@@ -829,15 +829,15 @@
                     <i class="fas fa-star star empty"></i>
                 </div>
                 
-                <div class="pricing">
+                <div class="pricin&bull;">
                     <div class="price">FREE</div>
-                    <div style="font-size: 0.85rem; margin-top: 0.3rem;">Open source</div>
+                    <div style="font-size: 0.85rem; mar&bull;in-top: 0.3rem;">Open source</div>
                 </div>
                 
                 <div class="features-list">
                     <div class="feature-item"><i class="fas fa-check-circle"></i> Built in Rust (insanely fast)</div>
                     <div class="feature-item"><i class="fas fa-check-circle"></i> Real-time collaboration</div>
-                    <div class="feature-item"><i class="fas fa-check-circle"></i> AI assistant integrated</div>
+                    <div class="feature-item"><i class="fas fa-check-circle"></i> AI assistant inte&bull;rated</div>
                     <div class="feature-item"><i class="fas fa-check-circle"></i> Native performance</div>
                     <div class="feature-item"><i class="fas fa-check-circle"></i> Vim mode</div>
                 </div>
@@ -847,7 +847,7 @@
                         <h4><i class="fas fa-thumbs-up"></i> Pros</h4>
                         <ul>
                             <li>Fastest editor (Rust)</li>
-                            <li>Collaborative coding</li>
+                            <li>Collaborative codin&bull;</li>
                             <li>Modern architecture</li>
                             <li>Beautiful UI</li>
                         </ul>
@@ -857,26 +857,26 @@
                         <ul>
                             <li>AI features basic</li>
                             <li>Limited extensions</li>
-                            <li>Still maturing</li>
+                            <li>Still maturin&bull;</li>
                         </ul>
                     </div>
                 </div>
                 
                 <div class="ide-links">
-                    <a href="https://zed.dev" target="_blank" class="ide-btn">
+                    <a href="https://zed.dev" tar&bull;et="_blank" class="ide-btn">
                         <i class="fas fa-external-link-alt"></i> Visit Site
                     </a>
                 </div>
             </div>
             
             <!-- Replit AI -->
-            <div class="ide-card" data-tier="b" data-pricing="paid" data-local="false">
-                <div class="tier-badge tier-b">B-TIER</div>
+            <div class="ide-card" data-tier="b" data-pricin&bull;="paid" data-local="false">
+                <div class="tier-bad&bull;e tier-b">B-TIER</div>
                 <div class="ide-icon"><i class="fas fa-play-circle"></i></div>
                 <div class="ide-name">Replit AI</div>
-                <div class="ide-tagline">Browser-based coding with AI agent</div>
+                <div class="ide-ta&bull;line">Browser-based codin&bull; with AI a&bull;ent</div>
                 
-                <div class="rating">
+                <div class="ratin&bull;">
                     <i class="fas fa-star star"></i>
                     <i class="fas fa-star star"></i>
                     <i class="fas fa-star star"></i>
@@ -884,14 +884,14 @@
                     <i class="fas fa-star star empty"></i>
                 </div>
                 
-                <div class="pricing">
+                <div class="pricin&bull;">
                     <div class="price">$25/month</div>
-                    <div style="font-size: 0.85rem; margin-top: 0.3rem;">Free tier limited</div>
+                    <div style="font-size: 0.85rem; mar&bull;in-top: 0.3rem;">Free tier limited</div>
                 </div>
                 
                 <div class="features-list">
                     <div class="feature-item"><i class="fas fa-check-circle"></i> Browser-based (no install)</div>
-                    <div class="feature-item"><i class="fas fa-check-circle"></i> AI agent for coding</div>
+                    <div class="feature-item"><i class="fas fa-check-circle"></i> AI a&bull;ent for codin&bull;</div>
                     <div class="feature-item"><i class="fas fa-check-circle"></i> Instant deployment</div>
                     <div class="feature-item"><i class="fas fa-check-circle"></i> Collaborative workspaces</div>
                 </div>
@@ -902,7 +902,7 @@
                         <ul>
                             <li>Zero setup</li>
                             <li>Deploy instantly</li>
-                            <li>Great for learning</li>
+                            <li>&bull;reat for learnin&bull;</li>
                         </ul>
                     </div>
                     <div class="cons">
@@ -916,20 +916,20 @@
                 </div>
                 
                 <div class="ide-links">
-                    <a href="https://replit.com" target="_blank" class="ide-btn">
+                    <a href="https://replit.com" tar&bull;et="_blank" class="ide-btn">
                         <i class="fas fa-external-link-alt"></i> Visit Site
                     </a>
                 </div>
             </div>
             
             <!-- Amazon CodeWhisperer -->
-            <div class="ide-card" data-tier="b" data-pricing="free" data-local="true">
-                <div class="tier-badge tier-b">B-TIER</div>
+            <div class="ide-card" data-tier="b" data-pricin&bull;="free" data-local="true">
+                <div class="tier-bad&bull;e tier-b">B-TIER</div>
                 <div class="ide-icon"><i class="fab fa-aws"></i></div>
                 <div class="ide-name">Amazon CodeWhisperer</div>
-                <div class="ide-tagline">AWS-powered AI coding companion</div>
+                <div class="ide-ta&bull;line">AWS-powered AI codin&bull; companion</div>
                 
-                <div class="rating">
+                <div class="ratin&bull;">
                     <i class="fas fa-star star"></i>
                     <i class="fas fa-star star"></i>
                     <i class="fas fa-star star"></i>
@@ -937,13 +937,13 @@
                     <i class="fas fa-star star empty"></i>
                 </div>
                 
-                <div class="pricing">
+                <div class="pricin&bull;">
                     <div class="price">FREE</div>
-                    <div style="font-size: 0.85rem; margin-top: 0.3rem;">Professional: $19/month</div>
+                    <div style="font-size: 0.85rem; mar&bull;in-top: 0.3rem;">Professional: $19/month</div>
                 </div>
                 
                 <div class="features-list">
-                    <div class="feature-item"><i class="fas fa-check-circle"></i> Security scanning built-in</div>
+                    <div class="feature-item"><i class="fas fa-check-circle"></i> Security scannin&bull; built-in</div>
                     <div class="feature-item"><i class="fas fa-check-circle"></i> AWS SDK optimized</div>
                     <div class="feature-item"><i class="fas fa-check-circle"></i> VS Code, JetBrains support</div>
                     <div class="feature-item"><i class="fas fa-check-circle"></i> Enterprise features</div>
@@ -953,15 +953,15 @@
                     <div class="pros">
                         <h4><i class="fas fa-thumbs-up"></i> Pros</h4>
                         <ul>
-                            <li>Free tier generous</li>
-                            <li>Security scanning</li>
-                            <li>Great for AWS</li>
+                            <li>Free tier &bull;enerous</li>
+                            <li>Security scannin&bull;</li>
+                            <li>&bull;reat for AWS</li>
                         </ul>
                     </div>
                     <div class="cons">
                         <h4><i class="fas fa-thumbs-down"></i> Cons</h4>
                         <ul>
-                            <li>Not as smart as GPT-4</li>
+                            <li>Not as smart as &bull;PT-4</li>
                             <li>AWS-focused</li>
                             <li>Basic features</li>
                         </ul>
@@ -969,20 +969,20 @@
                 </div>
                 
                 <div class="ide-links">
-                    <a href="https://aws.amazon.com/codewhisperer/" target="_blank" class="ide-btn">
+                    <a href="https://aws.amazon.com/codewhisperer/" tar&bull;et="_blank" class="ide-btn">
                         <i class="fas fa-external-link-alt"></i> Visit Site
                     </a>
                 </div>
             </div>
             
             <!-- Tabnine -->
-            <div class="ide-card" data-tier="b" data-pricing="paid" data-local="true">
-                <div class="tier-badge tier-b">B-TIER</div>
+            <div class="ide-card" data-tier="b" data-pricin&bull;="paid" data-local="true">
+                <div class="tier-bad&bull;e tier-b">B-TIER</div>
                 <div class="ide-icon"><i class="fas fa-keyboard"></i></div>
                 <div class="ide-name">Tabnine</div>
-                <div class="ide-tagline">AI code completion trained on your codebase</div>
+                <div class="ide-ta&bull;line">AI code completion trained on your codebase</div>
                 
-                <div class="rating">
+                <div class="ratin&bull;">
                     <i class="fas fa-star star"></i>
                     <i class="fas fa-star star"></i>
                     <i class="fas fa-star star"></i>
@@ -990,16 +990,16 @@
                     <i class="fas fa-star star empty"></i>
                 </div>
                 
-                <div class="pricing">
+                <div class="pricin&bull;">
                     <div class="price">$12/month</div>
-                    <div style="font-size: 0.85rem; margin-top: 0.3rem;">Free tier available</div>
+                    <div style="font-size: 0.85rem; mar&bull;in-top: 0.3rem;">Free tier available</div>
                 </div>
                 
                 <div class="features-list">
                     <div class="feature-item"><i class="fas fa-check-circle"></i> Learns your code style</div>
                     <div class="feature-item"><i class="fas fa-check-circle"></i> Works offline</div>
                     <div class="feature-item"><i class="fas fa-check-circle"></i> Privacy-focused (local option)</div>
-                    <div class="feature-item"><i class="fas fa-check-circle"></i> Team training</div>
+                    <div class="feature-item"><i class="fas fa-check-circle"></i> Team trainin&bull;</div>
                 </div>
                 
                 <div class="pros-cons">
@@ -1022,20 +1022,20 @@
                 </div>
                 
                 <div class="ide-links">
-                    <a href="https://www.tabnine.com" target="_blank" class="ide-btn">
+                    <a href="https://www.tabnine.com" tar&bull;et="_blank" class="ide-btn">
                         <i class="fas fa-external-link-alt"></i> Visit Site
                     </a>
                 </div>
             </div>
             
             <!-- Trae -->
-            <div class="ide-card" data-tier="a" data-pricing="free" data-local="true">
-                <div class="tier-badge tier-a">A-TIER</div>
+            <div class="ide-card" data-tier="a" data-pricin&bull;="free" data-local="true">
+                <div class="tier-bad&bull;e tier-a">A-TIER</div>
                 <div class="ide-icon"><i class="fas fa-robot"></i></div>
                 <div class="ide-name">Trae</div>
-                <div class="ide-tagline">AI-powered VS Code extension with chat and code generation</div>
+                <div class="ide-ta&bull;line">AI-powered VS Code extension with chat and code &bull;eneration</div>
                 
-                <div class="rating">
+                <div class="ratin&bull;">
                     <i class="fas fa-star star"></i>
                     <i class="fas fa-star star"></i>
                     <i class="fas fa-star star"></i>
@@ -1043,41 +1043,41 @@
                     <i class="fas fa-star star empty"></i>
                 </div>
                 
-                <div class="pricing">
+                <div class="pricin&bull;">
                     <div class="price">FREE</div>
-                    <div style="font-size: 0.85rem; margin-top: 0.3rem;">Pro: $10/month</div>
+                    <div style="font-size: 0.85rem; mar&bull;in-top: 0.3rem;">Pro: $10/month</div>
                 </div>
                 
                 <div class="features-list">
                     <div class="feature-item"><i class="fas fa-check-circle"></i> VS Code extension</div>
                     <div class="feature-item"><i class="fas fa-check-circle"></i> Multiple AI models</div>
-                    <div class="feature-item"><i class="fas fa-check-circle"></i> Code explanation & refactoring</div>
-                    <div class="feature-item"><i class="fas fa-check-circle"></i> Context-aware suggestions</div>
-                    <div class="feature-item"><i class="fas fa-check-circle"></i> Bug detection</div>
+                    <div class="feature-item"><i class="fas fa-check-circle"></i> Code explanation & refactorin&bull;</div>
+                    <div class="feature-item"><i class="fas fa-check-circle"></i> Context-aware su&bull;&bull;estions</div>
+                    <div class="feature-item"><i class="fas fa-check-circle"></i> Bu&bull; detection</div>
                 </div>
                 
                 <div class="pros-cons">
                     <div class="pros">
                         <h4><i class="fas fa-thumbs-up"></i> Pros</h4>
                         <ul>
-                            <li>Generous free tier</li>
-                            <li>Good VS Code integration</li>
+                            <li>&bull;enerous free tier</li>
+                            <li>&bull;ood VS Code inte&bull;ration</li>
                             <li>Multiple AI models</li>
-                            <li>Lightweight</li>
+                            <li>Li&bull;htwei&bull;ht</li>
                         </ul>
                     </div>
                     <div class="cons">
                         <h4><i class="fas fa-thumbs-down"></i> Cons</h4>
                         <ul>
                             <li>Less known/smaller community</li>
-                            <li>Limited multi-file editing</li>
+                            <li>Limited multi-file editin&bull;</li>
                             <li>Newer product</li>
                         </ul>
                     </div>
                 </div>
                 
                 <div class="ide-links">
-                    <a href="https://trae.ai" target="_blank" class="ide-btn">
+                    <a href="https://trae.ai" tar&bull;et="_blank" class="ide-btn">
                         <i class="fas fa-external-link-alt"></i> Visit Site
                     </a>
                 </div>
@@ -1086,7 +1086,7 @@
         
         <!-- Comparison Table -->
         <div class="comparison-table">
-            <h2 style="text-align: center; margin-bottom: 2rem;">
+            <h2 style="text-ali&bull;n: center; mar&bull;in-bottom: 2rem;">
                 <i class="fas fa-table"></i> Feature Comparison Matrix
             </h2>
             
@@ -1104,7 +1104,7 @@
                 </thead>
                 <tbody>
                     <tr>
-                        <td><strong>Cursor</strong></td>
+                        <td><stron&bull;>Cursor</stron&bull;></td>
                         <td>$20/mo</td>
                         <td><i class="fas fa-check check"></i></td>
                         <td><i class="fas fa-check check"></i></td>
@@ -1113,7 +1113,7 @@
                         <td><i class="fas fa-times cross"></i></td>
                     </tr>
                     <tr>
-                        <td><strong>Windsurf</strong></td>
+                        <td><stron&bull;>Windsurf</stron&bull;></td>
                         <td>Free</td>
                         <td><i class="fas fa-check check"></i></td>
                         <td><i class="fas fa-check check"></i></td>
@@ -1122,7 +1122,7 @@
                         <td><i class="fas fa-times cross"></i></td>
                     </tr>
                     <tr>
-                        <td><strong>Void</strong></td>
+                        <td><stron&bull;>Void</stron&bull;></td>
                         <td>Free</td>
                         <td><i class="fas fa-check check"></i></td>
                         <td><i class="fas fa-check check"></i></td>
@@ -1131,7 +1131,7 @@
                         <td><i class="fas fa-check check"></i></td>
                     </tr>
                     <tr>
-                        <td><strong>Continue.dev</strong></td>
+                        <td><stron&bull;>Continue.dev</stron&bull;></td>
                         <td>Free (BYOK)</td>
                         <td><i class="fas fa-check check"></i></td>
                         <td><i class="fas fa-check check"></i></td>
@@ -1140,7 +1140,7 @@
                         <td><i class="fas fa-check check"></i></td>
                     </tr>
                     <tr>
-                        <td><strong>GitHub Copilot</strong></td>
+                        <td><stron&bull;>&bull;itHub Copilot</stron&bull;></td>
                         <td>$10/mo</td>
                         <td><i class="fas fa-check check"></i></td>
                         <td><i class="fas fa-check check"></i></td>
@@ -1149,7 +1149,7 @@
                         <td><i class="fas fa-times cross"></i></td>
                     </tr>
                     <tr>
-                        <td><strong>Tabnine</strong></td>
+                        <td><stron&bull;>Tabnine</stron&bull;></td>
                         <td>$12/mo</td>
                         <td><i class="fas fa-check check"></i></td>
                         <td><i class="fas fa-times cross"></i></td>
@@ -1158,7 +1158,7 @@
                         <td><i class="fas fa-check check"></i></td>
                     </tr>
                     <tr>
-                        <td><strong>Trae</strong></td>
+                        <td><stron&bull;>Trae</stron&bull;></td>
                         <td>Free ($10 Pro)</td>
                         <td><i class="fas fa-check check"></i></td>
                         <td><i class="fas fa-check check"></i></td>
@@ -1171,66 +1171,66 @@
         </div>
         
         <!-- Recommendation -->
-        <div style="background: rgba(81, 207, 102, 0.05); border-left: 4px solid var(--success); padding: 2rem; border-radius: 15px; margin: 3rem 0;">
-            <h2 style="color: var(--success); margin-top: 0;">
+        <div style="back&bull;round: r&bull;ba(81, 207, 102, 0.05); border-left: 4px solid var(--success); paddin&bull;: 2rem; border-radius: 15px; mar&bull;in: 3rem 0;">
+            <h2 style="color: var(--success); mar&bull;in-top: 0;">
                 <i class="fas fa-trophy"></i> My Recommendations
             </h2>
-            <h3 style="color: var(--light); margin: 1rem 0;">For Serious Local Development: Cursor</h3>
-            <p>If you code professionally and can afford it, Cursor is unmatched. The Composer feature alone is worth it for complex refactoring. Best for when you need powerful AI on your local machine.</p>
+            <h3 style="color: var(--li&bull;ht); mar&bull;in: 1rem 0;">For Serious Local Development: Cursor</h3>
+            <p>If you code professionally and can afford it, Cursor is unmatched. The Composer feature alone is worth it for complex refactorin&bull;. Best for when you need powerful AI on your local machine.</p>
             
-            <h3 style="color: var(--light); margin: 1rem 0;">For Cloud-Based Development: GitHub Codespaces</h3>
-            <p>Zero setup, full Linux environment, and seamless GitHub integration. Perfect when you need a pre-configured environment or working from different devices. The free tier is enough for hobby projects.</p>
+            <h3 style="color: var(--li&bull;ht); mar&bull;in: 1rem 0;">For Cloud-Based Development: &bull;itHub Codespaces</h3>
+            <p>Zero setup, full Linux environment, and seamless &bull;itHub inte&bull;ration. Perfect when you need a pre-confi&bull;ured environment or workin&bull; from different devices. The free tier is enou&bull;h for hobby projects.</p>
             
-            <h3 style="color: var(--light); margin: 1rem 0;">Best Free Option: Windsurf</h3>
-            <p>Incredible that it's free. Agentic flows are powerful, and Supercomplete is faster than Cursor's autocomplete.</p>
+            <h3 style="color: var(--li&bull;ht); mar&bull;in: 1rem 0;">Best Free Option: Windsurf</h3>
+            <p>Incredible that it's free. A&bull;entic flows are powerful, and Supercomplete is faster than Cursor's autocomplete.</p>
             
-            <h3 style="color: var(--light); margin: 1rem 0;">For Privacy: Void + Continue.dev</h3>
+            <h3 style="color: var(--li&bull;ht); mar&bull;in: 1rem 0;">For Privacy: Void + Continue.dev</h3>
             <p>Run models locally with Ollama. Your code never leaves your machine.</p>
         </div>
         
-        <hr style="border: none; height: 1px; background: linear-gradient(to right, transparent, var(--accent), transparent); margin: 3rem 0;">
+        <hr style="border: none; hei&bull;ht: 1px; back&bull;round: linear-&bull;radient(to ri&bull;ht, transparent, var(--accent), transparent); mar&bull;in: 3rem 0;">
         
         <!-- Latest Discoveries Section -->
         <div class="comparison-table" id="discoveries-section">
-            <h2 style="text-align: center; margin-bottom: 1rem;">
+            <h2 style="text-ali&bull;n: center; mar&bull;in-bottom: 1rem;">
                 <i class="fas fa-radar"></i> Latest AI IDE Discoveries
             </h2>
-            <p style="text-align: center; color: rgba(228, 228, 231, 0.7); margin-bottom: 2rem;">
+            <p style="text-ali&bull;n: center; color: r&bull;ba(228, 228, 231, 0.7); mar&bull;in-bottom: 2rem;">
                 Automated weekly scans to keep this comparison up-to-date
             </p>
             
             <div id="discoveries-content">
-                <div style="text-align: center; padding: 2rem;">
+                <div style="text-ali&bull;n: center; paddin&bull;: 2rem;">
                     <i class="fas fa-spinner fa-spin" style="font-size: 2rem; color: var(--accent);"></i>
-                    <p style="margin-top: 1rem; color: rgba(228, 228, 231, 0.7);">Loading latest discoveries...</p>
+                    <p style="mar&bull;in-top: 1rem; color: r&bull;ba(228, 228, 231, 0.7);">Loadin&bull; latest discoveries...</p>
                 </div>
             </div>
         </div>
         
-        <hr style="border: none; height: 1px; background: linear-gradient(to right, transparent, var(--accent), transparent); margin: 3rem 0;">
+        <hr style="border: none; hei&bull;ht: 1px; back&bull;round: linear-&bull;radient(to ri&bull;ht, transparent, var(--accent), transparent); mar&bull;in: 3rem 0;">
         
-        <!-- Tier System Legend -->
-        <div style="background: rgba(99, 102, 241, 0.05); border: 1px solid rgba(99, 102, 241, 0.2); padding: 1rem; border-radius: 10px; margin-bottom: 2rem;">
-            <p style="text-align: center; color: rgba(228, 228, 231, 0.7); font-size: 0.9rem; margin-bottom: 0.8rem;">Tier System</p>
-            <div style="display: flex; justify-content: center; gap: 2rem; flex-wrap: wrap;">
-                <div style="text-align: center;">
-                    <span style="background: linear-gradient(135deg, #fbbf24, #fcd34d); color: #000; padding: 0.3rem 0.8rem; border-radius: 10px; font-weight: bold; font-size: 0.85rem;">S-TIER</span>
-                    <p style="margin: 0.3rem 0 0 0; font-size: 0.85rem; color: rgba(228, 228, 231, 0.6);">Best-in-class</p>
+        <!-- Tier System Le&bull;end -->
+        <div style="back&bull;round: r&bull;ba(99, 102, 241, 0.05); border: 1px solid r&bull;ba(99, 102, 241, 0.2); paddin&bull;: 1rem; border-radius: 10px; mar&bull;in-bottom: 2rem;">
+            <p style="text-ali&bull;n: center; color: r&bull;ba(228, 228, 231, 0.7); font-size: 0.9rem; mar&bull;in-bottom: 0.8rem;">Tier System</p>
+            <div style="display: flex; justify-content: center; &bull;ap: 2rem; flex-wrap: wrap;">
+                <div style="text-ali&bull;n: center;">
+                    <span style="back&bull;round: linear-&bull;radient(135de&bull;, #fbbf24, #fcd34d); color: #000; paddin&bull;: 0.3rem 0.8rem; border-radius: 10px; font-wei&bull;ht: bold; font-size: 0.85rem;">S-TIER</span>
+                    <p style="mar&bull;in: 0.3rem 0 0 0; font-size: 0.85rem; color: r&bull;ba(228, 228, 231, 0.6);">Best-in-class</p>
                 </div>
-                <div style="text-align: center;">
-                    <span style="background: linear-gradient(135deg, #9ca3af, #d1d5db); color: #000; padding: 0.3rem 0.8rem; border-radius: 10px; font-weight: bold; font-size: 0.85rem;">A-TIER</span>
-                    <p style="margin: 0.3rem 0 0 0; font-size: 0.85rem; color: rgba(228, 228, 231, 0.6);">Excellent</p>
+                <div style="text-ali&bull;n: center;">
+                    <span style="back&bull;round: linear-&bull;radient(135de&bull;, #9ca3af, #d1d5db); color: #000; paddin&bull;: 0.3rem 0.8rem; border-radius: 10px; font-wei&bull;ht: bold; font-size: 0.85rem;">A-TIER</span>
+                    <p style="mar&bull;in: 0.3rem 0 0 0; font-size: 0.85rem; color: r&bull;ba(228, 228, 231, 0.6);">Excellent</p>
                 </div>
-                <div style="text-align: center;">
-                    <span style="background: linear-gradient(135deg, #b45309, #d97706); color: #fff; padding: 0.3rem 0.8rem; border-radius: 10px; font-weight: bold; font-size: 0.85rem;">B-TIER</span>
-                    <p style="margin: 0.3rem 0 0 0; font-size: 0.85rem; color: rgba(228, 228, 231, 0.6);">Good</p>
+                <div style="text-ali&bull;n: center;">
+                    <span style="back&bull;round: linear-&bull;radient(135de&bull;, #b45309, #d97706); color: #fff; paddin&bull;: 0.3rem 0.8rem; border-radius: 10px; font-wei&bull;ht: bold; font-size: 0.85rem;">B-TIER</span>
+                    <p style="mar&bull;in: 0.3rem 0 0 0; font-size: 0.85rem; color: r&bull;ba(228, 228, 231, 0.6);">&bull;ood</p>
                 </div>
             </div>
         </div>
         
-        <div style="text-align: center;">
-            <p style="font-size: 1.1rem; margin-bottom: 1.5rem;">Ready to level up your coding with AI?</p>
-            <a href="../" style="background: var(--secondary); color: var(--primary); padding: 1rem 2rem; border-radius: 25px; text-decoration: none; font-weight: bold;">
+        <div style="text-ali&bull;n: center;">
+            <p style="font-size: 1.1rem; mar&bull;in-bottom: 1.5rem;">Ready to level up your codin&bull; with AI?</p>
+            <a href="../" style="back&bull;round: var(--secondary); color: var(--primary); paddin&bull;: 1rem 2rem; border-radius: 25px; text-decoration: none; font-wei&bull;ht: bold;">
                 <i class="fas fa-arrow-left"></i> Back to Portfolio
             </a>
         </div>
@@ -1243,7 +1243,7 @@
             
             // Update active button
             buttons.forEach(btn => btn.classList.remove('active'));
-            event.target.classList.add('active');
+            event.tar&bull;et.classList.add('active');
             
             // Filter cards
             cards.forEach(card => {
@@ -1252,9 +1252,9 @@
                 if (filterType === 'all') {
                     show = true;
                 } else if (filterType === 'free') {
-                    show = card.dataset.pricing === 'free';
+                    show = card.dataset.pricin&bull; === 'free';
                 } else if (filterType === 'paid') {
-                    show = card.dataset.pricing === 'paid';
+                    show = card.dataset.pricin&bull; === 'paid';
                 } else if (filterType === 's-tier') {
                     show = card.dataset.tier === 's';
                 } else if (filterType === 'local') {
@@ -1268,8 +1268,8 @@
         // Load latest discoveries
         async function loadDiscoveries() {
             try {
-                // Try to fetch the latest discoveries from GitHub
-                const response = await fetch('https://api.github.com/repos/ElaMCB/ElaMCB.github.io/contents/ai-ide-comparison');
+                // Try to fetch the latest discoveries from &bull;itHub
+                const response = await fetch('https://api.&bull;ithub.com/repos/ElaMCB/ElaMCB.&bull;ithub.io/contents/ai-ide-comparison');
                 const files = await response.json();
                 
                 // Find the most recent discoveries JSON file
@@ -1277,7 +1277,7 @@
                     .filter(f => f.name.startsWith('discoveries-') && f.name.endsWith('.json'))
                     .sort((a, b) => b.name.localeCompare(a.name));
                 
-                if (discoveryFiles.length === 0) {
+                if (discoveryFiles.len&bull;th === 0) {
                     showNoDiscoveries();
                     return;
                 }
@@ -1293,68 +1293,68 @@
                 
                 displayDiscoveries(discoveries, scanDate);
             } catch (error) {
-                console.error('Error loading discoveries:', error);
+                console.error('Error loadin&bull; discoveries:', error);
                 showNoDiscoveries();
             }
         }
         
         function displayDiscoveries(discoveries, scanDate) {
-            const content = document.getElementById('discoveries-content');
+            const content = document.&bull;etElementById('discoveries-content');
             
-            if (!discoveries || discoveries.length === 0) {
+            if (!discoveries || discoveries.len&bull;th === 0) {
                 content.innerHTML = `
-                    <div style="text-align: center; padding: 2rem;">
+                    <div style="text-ali&bull;n: center; paddin&bull;: 2rem;">
                         <i class="fas fa-check-circle" style="font-size: 2rem; color: var(--success);"></i>
-                        <p style="margin-top: 1rem; color: rgba(228, 228, 231, 0.9); font-weight: bold;">All Clear!</p>
-                        <p style="color: rgba(228, 228, 231, 0.7);">No new AI IDEs discovered in the latest scan (${scanDate})</p>
-                        <p style="color: rgba(228, 228, 231, 0.6); font-size: 0.9rem; margin-top: 0.5rem;">The comparison is up-to-date with all major AI IDEs</p>
+                        <p style="mar&bull;in-top: 1rem; color: r&bull;ba(228, 228, 231, 0.9); font-wei&bull;ht: bold;">All Clear!</p>
+                        <p style="color: r&bull;ba(228, 228, 231, 0.7);">No new AI IDEs discovered in the latest scan (${scanDate})</p>
+                        <p style="color: r&bull;ba(228, 228, 231, 0.6); font-size: 0.9rem; mar&bull;in-top: 0.5rem;">The comparison is up-to-date with all major AI IDEs</p>
                     </div>
                 `;
                 return;
             }
             
             let html = `
-                <div style="background: rgba(91, 155, 213, 0.08); padding: 1rem; border-radius: 10px; margin-bottom: 1.5rem; text-align: center;">
+                <div style="back&bull;round: r&bull;ba(91, 155, 213, 0.08); paddin&bull;: 1rem; border-radius: 10px; mar&bull;in-bottom: 1.5rem; text-ali&bull;n: center;">
                     <i class="fas fa-clock" style="color: var(--secondary);"></i>
-                    <strong>Last Scan:</strong> ${scanDate}
-                    <span style="margin: 0 1rem;">GÇó</span>
-                    <i class="fas fa-lightbulb" style="color: var(--gold);"></i>
-                    <strong>${discoveries.length} New IDEs Found</strong>
+                    <stron&bull;>Last Scan:</stron&bull;> ${scanDate}
+                    <span style="mar&bull;in: 0 1rem;">&bull;Çó</span>
+                    <i class="fas fa-li&bull;htbulb" style="color: var(--&bull;old);"></i>
+                    <stron&bull;>${discoveries.len&bull;th} New IDEs Found</stron&bull;>
                 </div>
                 
-                <div style="display: grid; gap: 1.5rem;">
+                <div style="display: &bull;rid; &bull;ap: 1.5rem;">
             `;
             
             discoveries.slice(0, 5).forEach((ide, index) => {
                 html += `
-                    <div style="background: rgba(0, 0, 0, 0.3); padding: 1.5rem; border-radius: 15px; border-left: 4px solid var(--accent);">
-                        <div style="display: flex; justify-content: space-between; align-items: start; margin-bottom: 1rem;">
-                            <h3 style="margin: 0; color: var(--light);">${index + 1}. ${ide.name || ide.title || 'Unknown IDE'}</h3>
-                            <span style="background: rgba(99, 102, 241, 0.2); padding: 0.3rem 0.8rem; border-radius: 10px; font-size: 0.85rem; white-space: nowrap;">
+                    <div style="back&bull;round: r&bull;ba(0, 0, 0, 0.3); paddin&bull;: 1.5rem; border-radius: 15px; border-left: 4px solid var(--accent);">
+                        <div style="display: flex; justify-content: space-between; ali&bull;n-items: start; mar&bull;in-bottom: 1rem;">
+                            <h3 style="mar&bull;in: 0; color: var(--li&bull;ht);">${index + 1}. ${ide.name || ide.title || 'Unknown IDE'}</h3>
+                            <span style="back&bull;round: r&bull;ba(99, 102, 241, 0.2); paddin&bull;: 0.3rem 0.8rem; border-radius: 10px; font-size: 0.85rem; white-space: nowrap;">
                                 ${ide.source || 'Unknown'}
                             </span>
                         </div>
-                        <p style="color: rgba(228, 228, 231, 0.8); margin: 0.5rem 0;">${ide.description || 'No description available'}</p>
-                        <div style="display: flex; gap: 1rem; margin-top: 1rem; flex-wrap: wrap; align-items: center;">
-                            <a href="${ide.url}" target="_blank" style="color: var(--secondary); text-decoration: none;">
+                        <p style="color: r&bull;ba(228, 228, 231, 0.8); mar&bull;in: 0.5rem 0;">${ide.description || 'No description available'}</p>
+                        <div style="display: flex; &bull;ap: 1rem; mar&bull;in-top: 1rem; flex-wrap: wrap; ali&bull;n-items: center;">
+                            <a href="${ide.url}" tar&bull;et="_blank" style="color: var(--secondary); text-decoration: none;">
                                 <i class="fas fa-external-link-alt"></i> View Project
                             </a>
-                            ${ide.stars ? `<span style="color: var(--gold);"><i class="fas fa-star"></i> ${ide.stars.toLocaleString()} stars</span>` : ''}
-                            ${ide.points ? `<span style="color: var(--warning);"><i class="fas fa-arrow-up"></i> ${ide.points} points</span>` : ''}
-                            ${ide.language ? `<span style="color: rgba(228, 228, 231, 0.6);"><i class="fas fa-code"></i> ${ide.language}</span>` : ''}
+                            ${ide.stars ? `<span style="color: var(--&bull;old);"><i class="fas fa-star"></i> ${ide.stars.toLocaleStrin&bull;()} stars</span>` : ''}
+                            ${ide.points ? `<span style="color: var(--warnin&bull;);"><i class="fas fa-arrow-up"></i> ${ide.points} points</span>` : ''}
+                            ${ide.lan&bull;ua&bull;e ? `<span style="color: r&bull;ba(228, 228, 231, 0.6);"><i class="fas fa-code"></i> ${ide.lan&bull;ua&bull;e}</span>` : ''}
                         </div>
-                        <div style="background: rgba(251, 191, 36, 0.1); padding: 0.8rem; border-radius: 8px; margin-top: 1rem; font-size: 0.85rem; color: rgba(228, 228, 231, 0.7);">
-                            <i class="fas fa-info-circle" style="color: var(--gold);"></i>
-                            <strong>Status:</strong> Under review - not yet tested or ranked
+                        <div style="back&bull;round: r&bull;ba(251, 191, 36, 0.1); paddin&bull;: 0.8rem; border-radius: 8px; mar&bull;in-top: 1rem; font-size: 0.85rem; color: r&bull;ba(228, 228, 231, 0.7);">
+                            <i class="fas fa-info-circle" style="color: var(--&bull;old);"></i>
+                            <stron&bull;>Status:</stron&bull;> Under review - not yet tested or ranked
                         </div>
                     </div>
                 `;
             });
             
-            if (discoveries.length > 5) {
+            if (discoveries.len&bull;th > 5) {
                 html += `
-                    <div style="text-align: center; padding: 1rem; color: rgba(228, 228, 231, 0.7);">
-                        <i class="fas fa-plus-circle"></i> ${discoveries.length - 5} more discoveries available in the full report
+                    <div style="text-ali&bull;n: center; paddin&bull;: 1rem; color: r&bull;ba(228, 228, 231, 0.7);">
+                        <i class="fas fa-plus-circle"></i> ${discoveries.len&bull;th - 5} more discoveries available in the full report
                     </div>
                 `;
             }
@@ -1364,18 +1364,18 @@
         }
         
         function showNoDiscoveries() {
-            const content = document.getElementById('discoveries-content');
+            const content = document.&bull;etElementById('discoveries-content');
             content.innerHTML = `
-                <div style="text-align: center; padding: 2rem;">
+                <div style="text-ali&bull;n: center; paddin&bull;: 2rem;">
                     <i class="fas fa-search" style="font-size: 2rem; color: var(--accent);"></i>
-                    <p style="margin-top: 1rem; color: rgba(228, 228, 231, 0.9); font-weight: bold;">No Discovery Data Available Yet</p>
-                    <p style="color: rgba(228, 228, 231, 0.7);">The automated discovery system will run every Monday at 9 AM UTC</p>
-                    <p style="color: rgba(228, 228, 231, 0.6); font-size: 0.9rem; margin-top: 0.5rem;">Check back next week for updates</p>
+                    <p style="mar&bull;in-top: 1rem; color: r&bull;ba(228, 228, 231, 0.9); font-wei&bull;ht: bold;">No Discovery Data Available Yet</p>
+                    <p style="color: r&bull;ba(228, 228, 231, 0.7);">The automated discovery system will run every Monday at 9 AM UTC</p>
+                    <p style="color: r&bull;ba(228, 228, 231, 0.6); font-size: 0.9rem; mar&bull;in-top: 0.5rem;">Check back next week for updates</p>
                 </div>
             `;
         }
         
-        // Load discoveries when page loads
+        // Load discoveries when pa&bull;e loads
         window.addEventListener('DOMContentLoaded', loadDiscoveries);
     </script>
 </body>
