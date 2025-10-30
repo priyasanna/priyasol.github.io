@@ -18,6 +18,9 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+          token: ${{ secrets.GITHUB_TOKEN }}
       
       - name: Setup Node.js
         uses: actions/setup-node@v3
@@ -47,12 +50,17 @@ jobs:
       - name: Commit discoveries directly to main
         if: steps.check_discoveries.outputs.has_discoveries == 'true'
         run: |
-          cd research/discoveries
           git config user.name "GitHub Actions Bot"
           git config user.email "actions@github.com"
+          # Pull latest changes to avoid conflicts
+          git fetch origin main
+          git rebase origin/main || git merge origin/main
+          # Add discovery files
+          cd research/discoveries
           git add innovations-*.json innovations-*.md
+          cd ../..
           # Get the latest discovery file to count properly
-          latest_file=$(ls -t innovations-*-simple.json | head -n1)
+          latest_file=$(ls -t research/discoveries/innovations-*-simple.json | head -n1)
           count=$(jq 'length' "$latest_file")
           git commit -m "research: Weekly AI innovations discovery - $count innovations found for QA testing" || echo "No changes to commit"
           git push origin main
