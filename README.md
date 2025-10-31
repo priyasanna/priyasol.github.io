@@ -1,11 +1,11 @@
-# [Lakshmipriya Solai - Test Automation Quality Engineer](https://priyasol.github.io)
+# [Lakshmipriya Solai - Test Automation Quality Engineer](https://priyasanna.github.io/priyasol/)
 
 > Building reliable software through rigorous testing and automation
 
-[![Portfolio](https://img.shields.io/badge/Portfolio-Live-green?style=for-the-badge&logo=github-pages)](https://priyasol.github.io)
+[![Portfolio](https://img.shields.io/badge/Portfolio-Live-green?style=for-the-badge&logo=github-pages)](https://priyasanna.github.io/priyasol/)
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-blue?style=for-the-badge&logo=linkedin)](https://linkedin.com/in/lakshmipriya-solai)
-[![GitHub Stars](https://img.shields.io/github/stars/priyasol/priyasol.github.io?style=for-the-badge&logo=github)](https://github.com/priyasol/priyasol.github.io/stargazers)
-[![Last Commit](https://img.shields.io/github/last-commit/priyasol/priyasol.github.io?style=for-the-badge&logo=git)](https://github.com/priyasol/priyasol.github.io/commits/main)
+[![GitHub Stars](https://img.shields.io/github/stars/priyasanna/priyasol.github.io?style=for-the-badge&logo=github)](https://github.com/priyasanna/priyasol.github.io/stargazers)
+[![Last Commit](https://img.shields.io/github/last-commit/priyasanna/priyasol.github.io?style=for-the-badge&logo=git)](https://github.com/priyasanna/priyasol.github.io/commits/main)
 
 ![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=flat-square&logo=html5&logoColor=white)
 ![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=flat-square&logo=css3&logoColor=white)
@@ -166,7 +166,7 @@ graph TB
 **Analysis:** 100+ hours testing • S-Tier through B-Tier rankings • Real-world performance insights  
 **IDEs:** Cursor, Windsurf, Void, Continue.dev, GitHub Copilot, Zed, Replit AI, CodeWhisperer, Tabnine  
 `developer-tools` `AI-assistants` `IDE-comparison` `code-editors`  
-**[View Comparison](./ai-ide-comparison/)** | **[Source Code](https://github.com/priyasol/priyasol.github.io/tree/main/ai-ide-comparison)**
+**[View Comparison](./ai-ide-comparison/)** | **[Source Code](https://github.com/priyasanna/priyasol.github.io/tree/main/ai-ide-comparison)**
 
 ### Algorithmic Trading System
 *Systematic quantitative trading with risk management*
@@ -191,17 +191,17 @@ Can you spot the difference between code written by AI and code written by human
 - Mobile-responsive futuristic design
 - No registration required - jump right in!
 
-**[Play the Game →](https://priyasol.github.io#fun-zone)**
+**[Play the Game →](https://priyasanna.github.io/priyasol/#fun-zone)**
 
 *Challenge yourself: Can you achieve 80%+ accuracy and earn the "AI Code Detective" title?*
 
 ## Recognition
 
 ### GitHub Metrics
-![GitHub Forks](https://img.shields.io/github/forks/priyasol/priyasol.github.io?style=social)
-![Watchers](https://img.shields.io/github/watchers/priyasol/priyasol.github.io?style=social)
-![Issues](https://img.shields.io/github/issues/priyasol/priyasol.github.io)
-![Pull Requests](https://img.shields.io/github/issues-pr/priyasol/priyasol.github.io)
+![GitHub Forks](https://img.shields.io/github/forks/priyasanna/priyasol.github.io?style=social)
+![Watchers](https://img.shields.io/github/watchers/priyasanna/priyasol.github.io?style=social)
+![Issues](https://img.shields.io/github/issues/priyasanna/priyasol.github.io)
+![Pull Requests](https://img.shields.io/github/issues-pr/priyasanna/priyasol.github.io)
 
 ### Impact Metrics
 - **Test Frameworks Built**: Multiple production-ready test automation frameworks
@@ -210,20 +210,20 @@ Can you spot the difference between code written by AI and code written by human
 - **CI/CD Integration**: Successfully integrated test automation into multiple CI/CD pipelines
 
 ## Star History
-[![Star History Chart](https://api.star-history.com/svg?repos=priyasol/priyasol.github.io&type=Date)](https://star-history.com/#priyasol/priyasol.github.io&Date)
+[![Star History Chart](https://api.star-history.com/svg?repos=priyasanna/priyasol.github.io&type=Date)](https://star-history.com/#priyasanna/priyasol.github.io&Date)
 
 ## Contributing
 
 Found this useful? Here's how you can help:
 - **Star the repo** to show support
 - **Report issues** you encounter  
-- **Suggest improvements** via [issues](https://github.com/priyasol/priyasol.github.io/issues)
+- **Suggest improvements** via [issues](https://github.com/priyasanna/priyasol.github.io/issues)
 - **Share** with your network
 
 ### Community Engagement
-- **[Issues](https://github.com/priyasol/priyasol.github.io/issues)**: Join the conversation about test automation and QA best practices
-- **[Issues](https://github.com/priyasol/priyasol.github.io/issues)**: Report bugs or request features
-- **[Contributors](https://github.com/priyasol/priyasol.github.io/graphs/contributors)**: See who's helping build this project
+- **[Issues](https://github.com/priyasanna/priyasol.github.io/issues)**: Join the conversation about test automation and QA best practices
+- **[Issues](https://github.com/priyasanna/priyasol.github.io/issues)**: Report bugs or request features
+- **[Contributors](https://github.com/priyasanna/priyasol.github.io/graphs/contributors)**: See who's helping build this project
 
 ## Learning Resources
 
@@ -362,7 +362,7 @@ Found this useful? Here's how you can help:
 **Perfect for**: Teams seeking experienced QA engineers who can build scalable test automation frameworks and ensure software quality at every stage of development.
 
 ## Repository Activity
-[![GitHub Activity](https://github-readme-activity-graph.vercel.app/graph?username=priyasol&repo=priyasol.github.io&theme=react-dark)](https://github.com/priyasol/priyasol.github.io/graphs/commit-activity)
+[![GitHub Activity](https://github-readme-activity-graph.vercel.app/graph?username=priyasanna&repo=priyasol.github.io&theme=react-dark)](https://github.com/priyasanna/priyasol.github.io/graphs/commit-activity)
 
 ## License
 
@@ -373,9 +373,9 @@ MIT License - feel free to use this template for your own portfolio!
     address = {USA},
     author = {Lakshmipriya Solai},
     title = {{Test Automation Quality Engineering Portfolio}},
-    url = {https://priyasol.github.io},
+    url = {https://priyasanna.github.io/priyasol/},
     linkedin = {https://linkedin.com/in/lakshmipriya-solai},
-    github = {https://github.com/priyasol},
+    github = {https://github.com/priyasanna},
     year = {2025}
 }
 ```
