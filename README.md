@@ -1,8 +1,8 @@
-# [Lakshmipriya Solai - Test Automation Quality Engineer](https://priyasanna.github.io/priyasol/)
+# [Lakshmipriya Solai - Test Automation Quality Engineer](https://priyasanna.github.io/priyasolai/)
 
 > Building reliable software through rigorous testing and automation
 
-[![Portfolio](https://img.shields.io/badge/Portfolio-Live-green?style=for-the-badge&logo=github-pages)](https://priyasanna.github.io/priyasol/)
+[![Portfolio](https://img.shields.io/badge/Portfolio-Live-green?style=for-the-badge&logo=github-pages)](https://priyasanna.github.io/priyasolai/)
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-blue?style=for-the-badge&logo=linkedin)](https://linkedin.com/in/lakshmipriya-solai)
 [![GitHub Stars](https://img.shields.io/github/stars/priyasanna/priyasol.github.io?style=for-the-badge&logo=github)](https://github.com/priyasanna/priyasol.github.io/stargazers)
 [![Last Commit](https://img.shields.io/github/last-commit/priyasanna/priyasol.github.io?style=for-the-badge&logo=git)](https://github.com/priyasanna/priyasol.github.io/commits/main)
@@ -191,7 +191,7 @@ Can you spot the difference between code written by AI and code written by human
 - Mobile-responsive futuristic design
 - No registration required - jump right in!
 
-**[Play the Game →](https://priyasanna.github.io/priyasol/#fun-zone)**
+**[Play the Game →](https://priyasanna.github.io/priyasolai/#fun-zone)**
 
 *Challenge yourself: Can you achieve 80%+ accuracy and earn the "AI Code Detective" title?*
 
@@ -373,7 +373,7 @@ MIT License - feel free to use this template for your own portfolio!
     address = {USA},
     author = {Lakshmipriya Solai},
     title = {{Test Automation Quality Engineering Portfolio}},
-    url = {https://priyasanna.github.io/priyasol/},
+    url = {https://priyasanna.github.io/priyasolai/},
     linkedin = {https://linkedin.com/in/lakshmipriya-solai},
     github = {https://github.com/priyasanna},
     year = {2025}
