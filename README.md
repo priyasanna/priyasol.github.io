@@ -1,20 +1,21 @@
-# [Elena Mereanu - AI-First Quality Engineer](https://elamcb.github.io)
+# [Lakshmipriya Solai - Test Automation Quality Engineer](https://priyasol.github.io)
 
-> Building reliable AI systems through rigorous testing and automation
+> Building reliable software through rigorous testing and automation
 
-[![Portfolio](https://img.shields.io/badge/Portfolio-Live-green?style=for-the-badge&logo=github-pages)](https://elamcb.github.io)
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-blue?style=for-the-badge&logo=linkedin)](https://linkedin.com/in/elenamereanu)
-[![GitHub Stars](https://img.shields.io/github/stars/ElaMCB/ElaMCB.github.io?style=for-the-badge&logo=github)](https://github.com/ElaMCB/ElaMCB.github.io/stargazers)
-[![Last Commit](https://img.shields.io/github/last-commit/ElaMCB/ElaMCB.github.io?style=for-the-badge&logo=git)](https://github.com/ElaMCB/ElaMCB.github.io/commits/main)
+[![Portfolio](https://img.shields.io/badge/Portfolio-Live-green?style=for-the-badge&logo=github-pages)](https://priyasol.github.io)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-blue?style=for-the-badge&logo=linkedin)](https://linkedin.com/in/lakshmipriya-solai)
+[![GitHub Stars](https://img.shields.io/github/stars/priyasol/priyasol.github.io?style=for-the-badge&logo=github)](https://github.com/priyasol/priyasol.github.io/stargazers)
+[![Last Commit](https://img.shields.io/github/last-commit/priyasol/priyasol.github.io?style=for-the-badge&logo=git)](https://github.com/priyasol/priyasol.github.io/commits/main)
 
 ![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=flat-square&logo=html5&logoColor=white)
 ![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=flat-square&logo=css3&logoColor=white)
 ![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=flat-square&logo=javascript&logoColor=black)
 ![Python](https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white)
 ![Playwright](https://img.shields.io/badge/Playwright-2EAD33?style=flat-square&logo=playwright&logoColor=white)
+![Selenium](https://img.shields.io/badge/Selenium-43B02A?style=flat-square&logo=selenium&logoColor=white)
 ![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?style=flat-square&logo=typescript&logoColor=white)
-![AI/ML](https://img.shields.io/badge/AI/ML-FF6B6B?style=flat-square&logo=tensorflow&logoColor=white)
-![RAG](https://img.shields.io/badge/RAG-4ECDC4?style=flat-square&logo=openai&logoColor=white)
+![Postman](https://img.shields.io/badge/Postman-FF6C37?style=flat-square&logo=postman&logoColor=white)
+![Rest Assured](https://img.shields.io/badge/Rest_Assured-5B9BD5?style=flat-square&logo=apache&logoColor=white)
 
 ## AI Research Notebooks
 
@@ -165,7 +166,7 @@ graph TB
 **Analysis:** 100+ hours testing • S-Tier through B-Tier rankings • Real-world performance insights  
 **IDEs:** Cursor, Windsurf, Void, Continue.dev, GitHub Copilot, Zed, Replit AI, CodeWhisperer, Tabnine  
 `developer-tools` `AI-assistants` `IDE-comparison` `code-editors`  
-**[View Comparison](./ai-ide-comparison/)** | **[Source Code](https://github.com/ElaMCB/ElaMCB.github.io/tree/main/ai-ide-comparison)**
+**[View Comparison](./ai-ide-comparison/)** | **[Source Code](https://github.com/priyasol/priyasol.github.io/tree/main/ai-ide-comparison)**
 
 ### Algorithmic Trading System
 *Systematic quantitative trading with risk management*
@@ -190,52 +191,49 @@ Can you spot the difference between code written by AI and code written by human
 - Mobile-responsive futuristic design
 - No registration required - jump right in!
 
-**[Play the Game →](https://elamcb.github.io#fun-zone)**
+**[Play the Game →](https://priyasol.github.io#fun-zone)**
 
 *Challenge yourself: Can you achieve 80%+ accuracy and earn the "AI Code Detective" title?*
 
 ## Recognition
 
 ### GitHub Metrics
-![GitHub Forks](https://img.shields.io/github/forks/ElaMCB/ElaMCB.github.io?style=social)
-![Watchers](https://img.shields.io/github/watchers/ElaMCB/ElaMCB.github.io?style=social)
-![Issues](https://img.shields.io/github/issues/ElaMCB/ElaMCB.github.io)
-![Pull Requests](https://img.shields.io/github/issues-pr/ElaMCB/ElaMCB.github.io)
+![GitHub Forks](https://img.shields.io/github/forks/priyasol/priyasol.github.io?style=social)
+![Watchers](https://img.shields.io/github/watchers/priyasol/priyasol.github.io?style=social)
+![Issues](https://img.shields.io/github/issues/priyasol/priyasol.github.io)
+![Pull Requests](https://img.shields.io/github/issues-pr/priyasol/priyasol.github.io)
 
 ### Impact Metrics
-- **Projects Deployed**: 4 production systems
-- **Performance Improvement**: 23-60% across projects  
-- **Testing Coverage**: 85%+ automated validation
-- **AI Frameworks**: RAG, MCP, LLM testing, safety validation
+- **Test Frameworks Built**: Multiple production-ready test automation frameworks
+- **Test Coverage Improvement**: Significant coverage increases across projects  
+- **Automation Efficiency**: Reduced manual testing time by 60-80% on average
+- **CI/CD Integration**: Successfully integrated test automation into multiple CI/CD pipelines
 
 ## Star History
-[![Star History Chart](https://api.star-history.com/svg?repos=ElaMCB/ElaMCB.github.io&type=Date)](https://star-history.com/#ElaMCB/ElaMCB.github.io&Date)
+[![Star History Chart](https://api.star-history.com/svg?repos=priyasol/priyasol.github.io&type=Date)](https://star-history.com/#priyasol/priyasol.github.io&Date)
 
 ## Contributing
 
 Found this useful? Here's how you can help:
 - **Star the repo** to show support
 - **Report issues** you encounter  
-- **Suggest improvements** via [issues](https://github.com/ElaMCB/ElaMCB.github.io/issues)
+- **Suggest improvements** via [issues](https://github.com/priyasol/priyasol.github.io/issues)
 - **Share** with your network
 
 ### Community Engagement
-- **[Issues](https://github.com/ElaMCB/ElaMCB.github.io/issues)**: Join the conversation about AI-First development
-- **[Issues](https://github.com/ElaMCB/ElaMCB.github.io/issues)**: Report bugs or request features
-- **[Contributors](https://github.com/ElaMCB/ElaMCB.github.io/graphs/contributors)**: See who's helping build this project
+- **[Issues](https://github.com/priyasol/priyasol.github.io/issues)**: Join the conversation about test automation and QA best practices
+- **[Issues](https://github.com/priyasol/priyasol.github.io/issues)**: Report bugs or request features
+- **[Contributors](https://github.com/priyasol/priyasol.github.io/graphs/contributors)**: See who's helping build this project
 
 ## Learning Resources
 
-### AI-First Development Guides
-- **[Prompt Engineering Guide](./docs/PROMPT-ENGINEERING-GUIDE.md)** - Master effective AI prompting techniques
-- **[AI Workflow Integration](./docs/AI-WORKFLOW-INTEGRATION.md)** - Integrate AI into daily development workflows  
-- **[AI-First Principles](./docs/AI-FIRST-PRINCIPLES.md)** - Core philosophy and development approach
-- **[AI Adoption Roadmap](./docs/AI-ADOPTION-ROADMAP.md)** - Step-by-step guide for teams adopting AI
+### Test Automation Resources
+- **[QA Prompt Library](./qa-prompts/)** - Curated prompts for test generation, API testing, and mobile testing
+- **[Test Automation Patterns](./research/papers/automated-testing-patterns.md)** - Best practices and patterns for test automation
+- **[CI/CD Test Optimization](./research/notebooks/ci-test-optimization-monte-carlo.html)** - Optimize your test suites for CI/CD pipelines
 
-### Quick Start
-**New to AI-First development?** Start here: **[START HERE Guide](./docs/START-HERE.md)**
-
-**Want to customize this template?** See: **[Customization Guide](./docs/CUSTOMIZATION.md)**
+### Portfolio Customization
+**Want to customize this template for your QA portfolio?** See: **[Customization Guide](./docs/CUSTOMIZATION.md)**
 
 ## Architecture
 
@@ -343,47 +341,41 @@ Found this useful? Here's how you can help:
 └── README.md                     # This file
 ```
 
-### Development Approach
+### Professional Focus
 
-This portfolio demonstrates **AI-First development practices** using advanced AI systems:
+**Test Automation & Quality Assurance Expertise:**
 
-- **Rapid Prototyping**: Complete portfolio architecture designed and implemented in 1-2 days instead of 2-3 weeks
-- **AI-Assisted Development**: Leveraged multiple AI systems for code generation, optimization, and rapid iteration
-- **Human-AI Collaboration**: Strategic decisions, domain expertise, and quality control maintained by human developer
-- **Efficiency Gains**: ~10x faster development cycle through intelligent automation and AI pair programming
-- **Technical Partnership**: Advanced AI systems as development accelerators and code generation partners
+- **Automated Testing Frameworks**: Building robust, maintainable test automation frameworks using Playwright, Selenium, and Python
+- **API Testing**: Comprehensive API testing with Postman, Rest Assured, and custom automation scripts
+- **CI/CD Integration**: Implementing test automation in CI/CD pipelines for continuous quality assurance
+- **Test Strategy & Planning**: Designing comprehensive test strategies, test plans, and risk-based testing approaches
+- **Quality Metrics & Reporting**: Tracking test coverage, defect metrics, and quality KPIs
 
-### AI Contributors
-This project was built using AI-First development practices with:
-- **[Cursor AI Agentic Mode](https://cursor.sh)** - Advanced code generation and pair programming
-- **[Void IDE](https://voideditor.com)** - AI-powered development environment and workflow automation
-- **[Claude 4 Sonnet](https://claude.ai)** - Architecture planning, documentation, and complex reasoning
-- **[DeepSeek AI](https://deepseek.com)** - Rapid iteration and optimization support
-- **[DeepSeek Coder](https://deepseek.com)** - Specialized code generation and technical implementation
+### Core Competencies
+- **Test Automation**: Playwright, Selenium WebDriver, Cypress, TestNG, JUnit, Pytest
+- **API Testing**: REST API testing, SOAP, GraphQL validation
+- **Programming**: Python, Java, JavaScript/TypeScript, Shell scripting
+- **Tools**: Postman, Jenkins, GitLab CI, GitHub Actions, Jira, TestRail
+- **Database Testing**: SQL queries, database validation, data integrity testing
+- **Mobile Testing**: Mobile web and app testing strategies
 
-### Real-World Examples
-Every technique in our guides was used to build this portfolio:
-- **Complete HTML/CSS generation** with AI assistance for rapid iteration
-- **Advanced AI frameworks** (RAG, MCP, LLM testing) implemented with AI assistance
-- **Production-ready CI/CD** pipeline configured with AI guidance
-
-**Perfect for**: Developers wanting to 10x their productivity, QA engineers transitioning to AI-first practices, and teams adopting AI-assisted development workflows.
+**Perfect for**: Teams seeking experienced QA engineers who can build scalable test automation frameworks and ensure software quality at every stage of development.
 
 ## Repository Activity
-[![GitHub Activity](https://github-readme-activity-graph.vercel.app/graph?username=ElaMCB&repo=ElaMCB.github.io&theme=react-dark)](https://github.com/ElaMCB/ElaMCB.github.io/graphs/commit-activity)
+[![GitHub Activity](https://github-readme-activity-graph.vercel.app/graph?username=priyasol&repo=priyasol.github.io&theme=react-dark)](https://github.com/priyasol/priyasol.github.io/graphs/commit-activity)
 
 ## License
 
 MIT License - feel free to use this template for your own portfolio!
 
 ```bibtex
-@portfolio{elamcb2025,
+@portfolio{priyasol2025,
     address = {USA},
-    author = {Elena Mereanu},
-    title = {{AI-First Quality Engineering Portfolio}},
-    url = {https://elamcb.github.io},
-    linkedin = {https://linkedin.com/in/elenamereanu},
-    github = {https://github.com/ElaMCB},
+    author = {Lakshmipriya Solai},
+    title = {{Test Automation Quality Engineering Portfolio}},
+    url = {https://priyasol.github.io},
+    linkedin = {https://linkedin.com/in/lakshmipriya-solai},
+    github = {https://github.com/priyasol},
     year = {2025}
 }
 ```
